@@ -185,7 +185,7 @@ class Dependency:
         while tmp["_nodetype"] in ["UnaryOp","StructRef","ID"]:
             if tmp["_nodetype"]=="ID":
                 var+=tmp["name"]
-                return var in self.dep[self.funcname]
+                return var in self.dep[self.funcname] or tmp["name"] in self.dep[self.funcname]
             elif tmp["_nodetype"]=="UnaryOp":
                 var+="*"
                 tmp=tmp["expr"]

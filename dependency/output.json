@@ -1,7 +1,7 @@
 {
     "test": {
         "args": {
-            "data": "int"
+            "data": "others"
         },
         "coord": "test.c:1:5",
         "retvaldep": {
