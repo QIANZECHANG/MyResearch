@@ -33,7 +33,9 @@ class Dependency:
         for i in range(len(self.ext)):
             if self.ext[i]["_nodetype"]=="FuncDef":
                 self.func[self.ext[i]["decl"]["name"]]=i
-        
+                self.dep[self.ext[i]["decl"]["name"]]=set()
+                self.var[self.ext[i]["decl"]["name"]]={}
+     
     def collect_dep(self,funcname,index,out):
         self.call_func(funcname,index)
         f=open(out,"w")
@@ -52,10 +54,7 @@ class Dependency:
         except:
             vartype="others"
         #add var to self.var
-        if funcname in self.var:
-            self.var[funcname][varname]=vartype
-        else:
-            self.var[funcname]={varname:vartype}
+        self.var[funcname][varname]=vartype
         #add var to self.res   
         if funcname in self.res:
             if varname in self.res[funcname]["args"].keys():
@@ -69,10 +68,7 @@ class Dependency:
                                 "dep":[]
                                }
         #add to self.dep
-        if funcname in self.dep:
-            self.dep[funcname].append(varname)
-        else:
-            self.dep[funcname]=[varname]
+        self.dep[funcname].add(varname)
             
         self.funcname=funcname
         for s in self.ext[self.func[funcname]]["body"]["block_items"]:
@@ -115,7 +111,7 @@ class Dependency:
         
         if self.check_assignment(cur_dic["rvalue"]):
             #add to self.dep
-            self.dep[self.funcname].append(var)
+            self.dep[self.funcname].add(var)
             #check type
             if "->" in var:return
             if "int" in self.var[self.funcname][var]:
@@ -152,7 +148,7 @@ class Dependency:
         if cur_dic["init"]:
             if self.check_assignment(cur_dic["init"]):
                 #add to self.dep
-                self.dep[self.funcname].append(var)
+                self.dep[self.funcname].add(var)
                 #check type
                 if "int" in self.var[self.funcname][var]:
                     star_num = len(self.var[self.funcname][var].split())-1

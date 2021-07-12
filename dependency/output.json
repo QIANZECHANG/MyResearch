@@ -26,7 +26,7 @@
         "args": {
             "arg1": "int"
         },
-        "coord": "test.c:13:5",
+        "coord": "test.c:15:5",
         "retvaldep": {
             "arg1": true
         },

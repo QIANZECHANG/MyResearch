@@ -7,6 +7,8 @@ int test(char* data,int size){
   a=c+func(x->v,c);
   a=a+1;
   *b=a;
+  a=0;
+  c=a;
   return 0;
 }
 
