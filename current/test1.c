@@ -1,13 +1,13 @@
 void func()
 { 
-  if(a<0){
-    z=3;
-  }else if(b<0){
-    i=1;j=2;m=malloc(1);k=3;
-  }else{
-    p=1;
-  }
-  q=1;r=3;return 0;
+    int *p=malloc(1);
+    int* q;
+    q=malloc(sizeof(int));
+    char* r;
+    r=(char*)malloc(sizeof(char));
+    float* f;
+    double* d;
+    unsigned int* ui=malloc(1);
 }
 
 

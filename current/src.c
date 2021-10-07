@@ -20,7 +20,7 @@ p11_dict_new (){
     dict = malloc (sizeof (p11_dict));
     if(num==1)p1_1=dict;
     if (dict) {
-        dict->buckets.aa = (dictbucket **)malloc (sizeof (dictbucket *));
+        dict->buckets = (dictbucket **)malloc (sizeof (dictbucket *));
         if(num==1)p1_2=dict->buckets;
         if(num==2)p2_1=dict->buckets;
         
