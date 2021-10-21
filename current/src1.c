@@ -1,8 +1,3 @@
-#include <stdlib.h>
-#include <stdbool.h>
-#include <ctype.h>
-#include <stdio.h>
-
 typedef struct _p11_dict {
     struct p11_dictbucket **buckets;
 }p11_dict;
@@ -25,17 +20,6 @@ p11_dict_new (){
     return dict;
 }
 
-
-p11_dict *
-func(int c){
-    p11_dict *dict;
-    dict =p11_dict_new();
-    if(c==0){
-        return NULL;
-    }
-    return dict;
-}
-
 p11_dict *
 p11_constant_reverse (int nick)
 {
@@ -48,6 +32,18 @@ p11_constant_reverse (int nick)
     }
 }
 
+p11_dict *
+func(int c){
+    num=2;
+    p11_dict *dict;
+    dict =p11_dict_new();
+    if(c==0){
+        free(dict);
+        return NULL;
+    }
+    return dict;
+}
+
 void p11(int nick){
     p11_dict *dict;
     dict=p11_constant_reverse (nick);
@@ -56,3 +52,5 @@ void p11(int nick){
         free(dict);
     }
 }
+
+

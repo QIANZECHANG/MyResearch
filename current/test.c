@@ -1,23 +1,53 @@
-int test(char* data,int size){
-  int *p,*q,num=0;
-  for(int i=0;i<size;i++){
-    if(! isdigit(*(data+i)))return 0;
-    num=num*10+ *(data+i)-'0';
-  }
-  p=malloc(4);
-  if(num<5)
-    q=p;
-  else{
-    q=malloc(4);
-  }
-  *q=1;
-  free(q);
-  return 0;
+typedef struct _p11_dict {
+    struct p11_dictbucket **buckets;
+}p11_dict;
+
+typedef struct p11_dictbucket {
+    struct p11_dictbucket *next;
+} dictbucket;
+
+p11_dict *
+p11_dict_new (){
+    p11_dict *dict;
+    dict = malloc (sizeof (p11_dict));
+    if (dict) {
+        dict->buckets = (dictbucket **)malloc (sizeof (dictbucket *));
+        if (!dict->buckets) {
+            free (dict);
+            return NULL;
+        }
+    }
+    return dict;
 }
 
-int LLVMFuzzerTestOneInput(char* data,int size ){
-  test(data,size);
-  return 0;
+
+p11_dict *
+func(int c){
+    p11_dict *dict;
+    dict =p11_dict_new();
+    if(c==0){
+        return NULL;
+    }
+    return dict;
 }
 
+p11_dict *
+p11_constant_reverse (int nick)
+{
+    p11_dict *lookups;
+    lookups = p11_dict_new ();
+    if (nick) {
+        return NULL;
+    } else {
+        return lookups;
+    }
+}
 
+void p11(int nick){
+    p11_dict *dict;
+    dict=p11_constant_reverse (nick);
+    if(dict){
+        free(dict->buckets);
+        free(dict);
+    }
+}
