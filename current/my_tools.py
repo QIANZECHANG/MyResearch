@@ -13,6 +13,25 @@ def get_type(s,decl_type):
             break
     return decl_type
 
+def get_name(s):
+    s_name=s
+    name=""
+    while True:
+        if s_name['_nodetype']=='ID':
+            name=s_name['name']+name
+            break
+        elif s_name['_nodetype']=='StructRef':
+            field=get_name(s_name["field"])
+            name=s_name['type']+field+name
+            s_name=s_name['name']
+        elif s_name['_nodetype']=='UnaryOp':
+            s_name=s_name["expr"]
+            if name:
+                name="(*"+get_name(s_name)+")"+name
+            else:
+                name="*"+get_name(s_name)
+            break
+    return name
 
 def go_to_func(file_dict,line,funcname):
     s=file_dict['ext']

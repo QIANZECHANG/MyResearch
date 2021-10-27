@@ -8,7 +8,7 @@ typedef struct p11_dictbucket {
 
 p11_dict *
 p11_dict_new (){
-    p11_dict *dict;
+    p11_dict *dict;**(*p)->a.b=b+c;
     dict = malloc (sizeof (p11_dict));
     if (dict) {
         dict->buckets = (dictbucket **)malloc (sizeof (dictbucket *));
