@@ -34,3 +34,9 @@ int LLVMFuzzerTestOneInput(char *data, int size)
 }
 
 
+int test1(int a, int* b){
+  while(a<10 && *b >10){
+      int c=a;
+      break;
+  }
+}
