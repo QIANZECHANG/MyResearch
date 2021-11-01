@@ -33,7 +33,7 @@ func(int c){
 
 p11_dict *
 p11_constant_reverse (int nick)
-{printf("instrument: (line : 35) nick : %d\n",nick);
+{fprintf(stderr,"instrument: (line : 35) nick : %d\n",nick);
     p11_dict *lookups;
     lookups = p11_dict_new ();
     if (nick) {

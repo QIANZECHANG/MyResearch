@@ -8,7 +8,7 @@ def get_dependency(fuzzer):
     for err in err_path:
         var={}
         while err["next"]:
-            filename=err["coord"].split(":")[0]
+            filename="dep_"+err["coord"].split(":")[0]
             file_dict = file_to_dict(filename)
             line=int(err["coord"].split(":")[-2])
             funcname=err["funcname"]

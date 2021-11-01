@@ -35,7 +35,7 @@ def instrument(dep):
             for l in vartype:
                 if l=="*":
                     deref+="*"
-            printf=f"printf(\"instrument: (line : {line}) {deref+varname} : %d\\n\",{deref+varname});\n"
+            printf=f"fprintf(stderr,\"instrument: (line : {line}) {deref+varname} : %d\\n\",{deref+varname});\n"
             if state=="var":
                 filelist[line-1]=filelist[line-1][:-1]+printf
             elif state=="input":
@@ -45,4 +45,4 @@ def instrument(dep):
                 filelist[tmp]=filelist[tmp][:-1]+printf
                 
         write_file("instrumented_"+filename,filelist)
-        
+    return "instrumented_"+filename
