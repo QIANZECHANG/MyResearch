@@ -1,6 +1,7 @@
 from convert_ast import from_dict,to_dict,file_to_dict
 from pycparser import parse_file, c_parser, c_generator, c_ast
 from my_tools import go_to_func,get_type,get_fuzzer_result,get_name
+from get_heap_object import *
 
 def get_dependency(fuzzer):
     err_path=get_fuzzer_result(fuzzer)
@@ -8,16 +9,29 @@ def get_dependency(fuzzer):
     for err in err_path:
         var={}
         while err["next"]:
-            filename="dep_"+err["coord"].split(":")[0]
+            filename="dep_"+err["coord"].split(":")[0] 
             file_dict = file_to_dict(filename)
             line=int(err["coord"].split(":")[-2])
+            o,otype=get_heap_object(file_dict,line)#heap object
             funcname=err["funcname"]
             func_dict=go_to_func(file_dict,line,funcname)
             dep, ret=Dependency(func_dict).result()
-            var[funcname]={"dep":dep,"ret":ret}
+            var[funcname]={"dep":dep,"ret":ret,"object":(o,otype,line)}
             err=err["next"]
         dependency.append(var)
     return dependency
+
+def get_func_tail(cur_dict):
+    coord=cur_dict["coord"]
+    for v in cur_dict.values():
+        if not v:
+            continue
+        if type(v)==dict:
+            coord=get_func_tail(v)
+        elif type(v)==list:
+            if type(v[-1])==dict:
+                coord=get_func_tail(v[-1])
+    return coord
 
 class Dependency:
     def __init__(self,dic):
@@ -53,8 +67,8 @@ class Dependency:
                 #print("_nodetype is "+stat["_nodetype"])
                 continue
             self.spec[stat["_nodetype"]](stat)
-          
-        return self.dep, self.ret        
+        tail=get_func_tail(stat)
+        return self.dep, self.ret+[{"coord":tail}]        
 
     def if_spec(self,cur_dic):
         if_true=cur_dic["iftrue"]

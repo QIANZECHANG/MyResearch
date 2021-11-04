@@ -1,0 +1,37 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3510528583
+INFO: Loaded 1 modules   (9 inline 8-bit counters): 9 [0x5aafe0, 0x5aafe9), 
+INFO: Loaded 1 PC tables (9 PCs): 9 [0x56e170,0x56e200), 
+instrument: (line : 5) a : 0
+instrument: (line : 7) *b : 0
+INFO: A corpus is not provided, starting from an empty corpus
+#2	INITED cov: 3 ft: 3 corp: 1/1b exec/s: 0 rss: 36Mb
+instrument: (line : 5) a : 5
+instrument: (line : 7) *b : 5
+	NEW_FUNC[1/1]: 0x5522b0 in func /home/test/saver/example/test/instrumented__src.c:5
+instrument: (line : 5) a : 5
+instrument: (line : 7) *b : 5
+
+=================================================================
+==16933==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 4 byte(s) in 1 object(s) allocated from:
+    #0 0x52204d in malloc (/home/test/saver/example/test/a.out+0x52204d)
+    #1 0x552474 in func /home/test/saver/example/test/instrumented__src.c:6:12
+    #2 0x5528a8 in LLVMFuzzerTestOneInput /home/test/saver/example/test/instrumented__src.c:25:5
+    #3 0x459711 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/test/saver/example/test/a.out+0x459711)
+    #4 0x458c1a in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/test/saver/example/test/a.out+0x458c1a)
+    #5 0x45a927 in fuzzer::Fuzzer::MutateAndTestOne() (/home/test/saver/example/test/a.out+0x45a927)
+    #6 0x45b4d5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/test/saver/example/test/a.out+0x45b4d5)
+    #7 0x44963b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/test/saver/example/test/a.out+0x44963b)
+    #8 0x4736f2 in main (/home/test/saver/example/test/a.out+0x4736f2)
+    #9 0x7fad35da40b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+SUMMARY: AddressSanitizer: 4 byte(s) leaked in 1 allocation(s).
+INFO: to ignore leaks on libFuzzer side use -detect_leaks=0.
+
+MS: 5 ShuffleBytes-ChangeByte-ChangeByte-ChangeByte-ChangeBit-; base unit: adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
+0x35,
+5
+artifact_prefix='./'; Test unit written to ./leak-ac3478d69a3c81fa62e60f5c3696165a4e5e6ac4
+Base64: NQ==

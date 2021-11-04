@@ -58,6 +58,8 @@ def get_fuzzer_result(filename):
     for inf in fuzzer_inf.split("\n\n"):
         if (("Direct leak" in inf) or ("Indirect leak" in inf)):
             leak.append(inf.split("\n"))
+    if not leak:
+        raise Exception('No Leak or have other error')
     path=[]
     for l in leak:
         data={}
@@ -75,3 +77,62 @@ def get_fuzzer_result(filename):
             path.append(data)
     file.close()
     return path
+
+def get_dynamic_value(filename):
+    file=open(filename,'r')
+    inf=file.read()
+    inst=[]
+    for i in inf.split("\n"):
+        if "instrument:" in i :
+            inst.append(i)
+    value={}
+    for v in inst:
+        v=v.split()
+        key=(v[4],v[3][:-1])
+        if key in value:
+            value[key].append(int(v[-1]))
+        else:
+            value[key]=[int(v[-1])]
+    return value
+
+def get_synthesis_inf(dep,filename):
+    inst = get_dynamic_value(filename)
+    syn_inf=[]
+    for v in inst.values(): 
+        l=len(v)-1
+        break
+    for d in dep:
+        tmp={"error":[0]*(l-1)+[1],"var":{}}
+        cur_tmp=tmp["var"]
+        for func,v in d.items():
+            ret=v["ret"]
+            cur_tmp[func]=[]
+            for var in v["dep"]:
+                key=(var["name"],var["coord"].split(":")[1])
+                if key not in inst:
+                    continue
+                cur_tmp[func].append({
+                    "state":var["state"],
+                    "type":var["type"],
+                    "name":var["name"],
+                    "coord":var["coord"],
+                    "value":inst[key][:-1],
+                    "ret":ret
+                })
+        syn_inf.append(tmp)
+    return syn_inf
+             
+def add_dynamic_value(syn_inf,filename):
+    inst = get_dynamic_value(filename)
+    for v in inst.values(): 
+        l=len(v)-1
+        break
+    for d in syn_inf:
+        d["error"]+=[0]*(l-1)+[1]
+        for func,v in d["var"].items():
+            for var in v:
+                key=(var["name"],var["coord"].split(":")[1])
+                if key not in inst:
+                    continue
+                var["value"]+=inst[key][:-1]
+               

@@ -17,6 +17,7 @@ def instrument(dep):
         for func in e.values():
             for var in func["dep"]:
                 filename=var["coord"].split(":")[0]
+                filename=filename[4:]
                 if filename not in instrument_dict:
                     instrument_dict[filename]=[]
                 if var not in instrument_dict[filename]:
