@@ -105,6 +105,8 @@ def get_synthesis_inf(dep,filename):
         tmp={"error":[0]*(l-1)+[1],"var":{}}
         cur_tmp=tmp["var"]
         for func,v in d.items():
+            if func == "error_object":
+                continue
             ret=v["ret"]
             cur_tmp[func]=[]
             for var in v["dep"]:
@@ -135,4 +137,23 @@ def add_dynamic_value(syn_inf,filename):
                 if key not in inst:
                     continue
                 var["value"]+=inst[key][:-1]
-               
+
+def get_error_object(dep,func):
+    if dep[func]["object"][1]==dep["object"][1]:
+        return dep[func]["object"]
+    else:
+        o = dep["object"][0]
+        otype = dep["object"][1]
+        line = dep[func]["object"][2]
+        if "->" in o:
+            namelist=o.split("->")
+            if "." in namelist[0]:
+                name=dep[func]["object"][0]+"."+".".join(namelist[0].split(".")[1:])+"->"+"->".join(namelist[1:])
+            else:
+                name=dep[func]["object"][0]+"->"+"->".join(namelist[1:])
+        elif "." in o:
+            namelist=o.split(".")
+            name=dep[func]["object"][0]+"."+".".join(namelist[1:])
+        else:
+            return 0,0,0
+        return (name,otype,line)

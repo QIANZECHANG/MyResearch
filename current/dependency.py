@@ -18,9 +18,20 @@ def get_dependency(fuzzer):
             dep, ret=Dependency(func_dict).result()
             var[funcname]={"dep":dep,"ret":ret,"object":(o,otype,line)}
             err=err["next"]
+        var["error_object"]=(o,otype,line)
         dependency.append(var)
-    return dependency
+    return dependency,get_error_feature(err_path)
 
+def get_error_feature(err_path):
+    res=[]
+    for err in err_path:
+        feature=[]
+        while err["next"]:
+            feature.append((err["coord"].split(":")[1],err["funcname"]))
+            err=err["next"]
+        res.append(feature)
+    return res
+     
 def get_func_tail(cur_dict):
     coord=cur_dict["coord"]
     for v in cur_dict.values():
