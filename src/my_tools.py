@@ -58,11 +58,16 @@ def get_fuzzer_result(filename):
     for inf in fuzzer_inf.split("\n\n"):
         if (("Direct leak" in inf) or ("Indirect leak" in inf)):
             leak.append(inf.split("\n"))
+        if  ("double-free" in inf):
+            leak.append("DF")
     if not leak:
         return []
         # raise Exception('No Leak or have other error')
     path=[]
     for l in leak:
+        if l=="DF":
+            path.append("DF")
+            continue
         data={}
         for i in range(1,len(l)):
             if("LLVMFuzzerTestOneInput" in l[i]):
@@ -79,6 +84,19 @@ def get_fuzzer_result(filename):
     file.close()
     return path
 
+def get_error_feature(err_path):
+    res=[]
+    for err in err_path:
+        if err=="DF":
+            res.append("DF")
+            continue
+        feature=[]
+        while err["next"]:
+            feature.append((err["coord"].split(":")[1],err["funcname"]))
+            err=err["next"]
+        res.append(feature)
+    return res
+     
 def get_dynamic_value(filename):
     file=open(filename,'r')
     inf=file.read()
@@ -103,7 +121,7 @@ def get_synthesis_inf(dep,filename):
         l=len(v)-1
         break
     for d in dep:
-        tmp={"error":[0]*(l-1)+[1],"var":{}}
+        tmp={"error":[0]*(l-2)+[1],"var":{}}
         cur_tmp=tmp["var"]
         for func,v in d.items():
             if func == "error_object":
@@ -119,7 +137,7 @@ def get_synthesis_inf(dep,filename):
                     "type":var["type"],
                     "name":var["name"],
                     "coord":var["coord"],
-                    "value":inst[key][:-1],
+                    "value":inst[key][1:-1],
                     "ret":ret
                 })
         syn_inf.append(tmp)
@@ -131,13 +149,13 @@ def add_dynamic_value(syn_inf,filename):
         l=len(v)-1
         break
     for d in syn_inf:
-        d["error"]+=[0]*(l-1)+[1]
+        d["error"]+=[0]*(l-2)+[1]
         for func,v in d["var"].items():
             for var in v:
                 key=(var["name"],var["coord"].split(":")[1])
                 if key not in inst:
                     continue
-                var["value"]+=inst[key][:-1]
+                var["value"]+=inst[key][1:-1]
 
 def get_error_object(dep,func):
     if dep[func]["object"][1]==dep["error_object"][1]:

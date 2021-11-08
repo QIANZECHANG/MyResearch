@@ -1,9 +1,12 @@
 def insert_tmp_var(filelist,patch_cand):
     patch={}
     for func,patch_dict in patch_cand.items():
+        if not patch_dict:
+            patch[func]=None
+            continue
         cur_filelist=filelist.copy()
         retloc=patch_dict["opr"][0]["ret"]
-        patch[func]={"patch":None,"ret":retloc}
+        patch[func]={"patch":None,"ret":retloc,"filelist":cur_filelist}
         if patch_dict["op"]=="1":
             continue
         patchlist=[]

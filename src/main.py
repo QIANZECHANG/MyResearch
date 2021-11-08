@@ -38,14 +38,15 @@ def main(filename):
     for i in range(100):
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
         add_dynamic_value(syn_inf,"inst_result")
-    print("collect dynamic value done")    
+    print("collect dynamic value done")  
+    print(f"current time: {time.time()-t0}")
     with open('instrumentation.json', 'w') as f:
         json.dump(syn_inf, f, indent=4)   
     # get file list (line)
     filelist = read_file(filename)
     inst_filelist = read_file(inst_filename)
     
-    print(f"have {len(error_feature)} errors")
+    print(f"have {len(error_feature)} error(s)")
     # try to fix each error
     for i in range(len(error_feature)):
         err_dep = dep[i]
@@ -53,7 +54,7 @@ def main(filename):
         t1=time.time()
         t=0
         not_fixed=1 # flag
-        while t<60 and not_fixed: # one error 5 min
+        while t<60 and not_fixed: # one error 1 min
             cur_inst_filelist=inst_filelist.copy()
             err_inf = syn_inf[i]
             # for each error, generate the patch of each function in the error patch 
@@ -66,9 +67,10 @@ def main(filename):
             if not_fixed:
                 print("collect new test cases")
                 write_file("inst_"+filename,cur_inst_filelist)
-                os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
-                os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-                add_dynamic_value(syn_inf,"inst_result")
+                os.system(f"clang-12 -g -fsanitize=address,fuzzer inst_{filename}")
+                for i in range(5)
+                    os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
+                    add_dynamic_value(syn_inf,"inst_result")
             t=time.time()-t1
         # if this error is fixed
         if not not_fixed:
@@ -91,6 +93,8 @@ def fix(patch,err_dep,err_fea,error_feature,inst_filelist):
     """
     # try the patch in each function
     for k,v in patch.items():
+        if not v:
+            continue
         cur_filelist=v["filelist"].copy()
         # get object type and name
         o,otype,line=get_error_object(err_dep,k)
@@ -123,11 +127,15 @@ def fix(patch,err_dep,err_fea,error_feature,inst_filelist):
                 inst_filelist=insert_patch(inst_filelist,patch_line,free)
                 continue
             # new error happened
+            flag=0
             for err in cur_err:
                 if err not in error_feature:
                     print("wrong patch/location")
+                    flag=1
                     # wrong patch
-                    continue
+                    break
+            if flag:
+                continue
             # not in current error
             if err_fea not in cur_err:
                 print("correct patch")

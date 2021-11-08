@@ -2,6 +2,7 @@ from convert_ast import from_dict,to_dict,file_to_dict
 from pycparser import parse_file, c_parser, c_generator, c_ast
 from my_tools import go_to_func,get_type,get_fuzzer_result,get_name
 from get_heap_object import *
+from my_tools import *
 
 def get_dependency(fuzzer):
     err_path=get_fuzzer_result(fuzzer)
@@ -22,16 +23,6 @@ def get_dependency(fuzzer):
         dependency.append(var)
     return dependency,get_error_feature(err_path)
 
-def get_error_feature(err_path):
-    res=[]
-    for err in err_path:
-        feature=[]
-        while err["next"]:
-            feature.append((err["coord"].split(":")[1],err["funcname"]))
-            err=err["next"]
-        res.append(feature)
-    return res
-     
 def get_func_tail(cur_dict):
     coord=cur_dict["coord"]
     for v in cur_dict.values():
