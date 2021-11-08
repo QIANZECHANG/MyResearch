@@ -9,7 +9,7 @@ def get_dependency(fuzzer):
     for err in err_path:
         var={}
         while err["next"]:
-            filename="dep_"+err["coord"].split(":")[0] 
+            filename="dep"+err["coord"].split(":")[0] 
             file_dict = file_to_dict(filename)
             line=int(err["coord"].split(":")[-2])
             o,otype=get_heap_object(file_dict,line)#heap object
@@ -101,21 +101,23 @@ class Dependency:
         
         #print("If")
     def while_spec(self,cur_dic):
+        pass
+        """
         if cur_dic["stmt"] and cur_dic["stmt"]["_nodetype"]=="Compound":
             for stat in cur_dic["stmt"]["block_items"]:
                 if stat["_nodetype"] not in self.spec:
-                    #print("_nodetype is "+stat["_nodetype"])
                     continue
                 self.spec[stat["_nodetype"]](stat)
-        #print("While")
+        """
     def for_spec(self,cur_dic):
+        pass
+        """
         if cur_dic["stmt"] and cur_dic["stmt"]["_nodetype"]=="Compound":
             for stat in cur_dic["stmt"]["block_items"]:
                 if stat["_nodetype"] not in self.spec:
-                    #print("_nodetype is "+stat["_nodetype"])
                     continue
                 self.spec[stat["_nodetype"]](stat)
-        #print("For")
+        """
     def funccall_spec(self,cur_dic):
         pass
         #print("FuncCall")

@@ -59,7 +59,8 @@ def get_fuzzer_result(filename):
         if (("Direct leak" in inf) or ("Indirect leak" in inf)):
             leak.append(inf.split("\n"))
     if not leak:
-        raise Exception('No Leak or have other error')
+        return []
+        # raise Exception('No Leak or have other error')
     path=[]
     for l in leak:
         data={}
@@ -139,11 +140,11 @@ def add_dynamic_value(syn_inf,filename):
                 var["value"]+=inst[key][:-1]
 
 def get_error_object(dep,func):
-    if dep[func]["object"][1]==dep["object"][1]:
+    if dep[func]["object"][1]==dep["error_object"][1]:
         return dep[func]["object"]
     else:
-        o = dep["object"][0]
-        otype = dep["object"][1]
+        o = dep["error_object"][0]
+        otype = dep["error_object"][1]
         line = dep[func]["object"][2]
         if "->" in o:
             namelist=o.split("->")

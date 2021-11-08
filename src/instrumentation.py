@@ -15,8 +15,11 @@ def instrument(dep):
     instrument_dict={}
     for e in dep:
         for func in e.values():
+            if type(func)!=dict:
+                continue
             for var in func["dep"]:
                 filename=var["coord"].split(":")[0]
+                filename=filename[4:]
                 if filename not in instrument_dict:
                     instrument_dict[filename]=[]
                 if var not in instrument_dict[filename]:
@@ -35,7 +38,7 @@ def instrument(dep):
             for l in vartype:
                 if l=="*":
                     deref+="*"
-            printf=f"printf(\"instrument: (line : {line}) {deref+varname} : %d\\n\",{deref+varname});\n"
+            printf=f"fprintf(stderr,\"instrument: (line : {line}) {varname} : %d\\n\",{deref+varname});\n"
             if state=="var":
                 filelist[line-1]=filelist[line-1][:-1]+printf
             elif state=="input":
@@ -45,4 +48,4 @@ def instrument(dep):
                 filelist[tmp]=filelist[tmp][:-1]+printf
                 
         write_file("instrumented_"+filename,filelist)
-        
+    return "instrumented_"+filename
