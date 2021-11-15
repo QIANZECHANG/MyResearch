@@ -1,7 +1,6 @@
-
-
-
-
+#include <stdlib.h>
+#include <ctype.h>
+#include <stdio.h>
 
 typedef struct N{
     struct N *next;

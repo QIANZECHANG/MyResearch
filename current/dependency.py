@@ -8,6 +8,8 @@ def get_dependency(fuzzer):
     err_path=get_fuzzer_result(fuzzer)
     dependency=[]
     for err in err_path:
+        if err=="DF" or err=="UAF":
+            raise Exception(f'{err} happened')
         var={}
         while err["next"]:
             filename="dep"+err["coord"].split(":")[0] 
@@ -70,6 +72,10 @@ class Dependency:
                 continue
             self.spec[stat["_nodetype"]](stat)
         tail=get_func_tail(stat)
+        tail_line=tail.split(":")[1]
+        for ret in self.ret:
+            if ret["coord"].split(":")[1] == tail_line:
+                return self.dep, self.ret
         return self.dep, self.ret+[{"coord":tail}]        
 
     def if_spec(self,cur_dic):
@@ -89,7 +95,6 @@ class Dependency:
                     continue
                 self.spec[stat["_nodetype"]](stat)
             
-        
         #print("If")
     def while_spec(self,cur_dic):
         pass

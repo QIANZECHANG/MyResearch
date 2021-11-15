@@ -1,26 +1,28 @@
-
-
-
-
+#include <stdlib.h>
+#include <ctype.h>
+#include <stdio.h>
 
 typedef struct N{
-    struct N *next;
+    struct M *m;
     int v;
 }node;
 
+typedef struct M{
+    struct M *next;    
+}field;
 
 node *new_node(int a){
     node *n=(node*)malloc(sizeof(node));
-    n->next=NULL;
+    n->m=(field*)malloc(sizeof(field));
+    n->m->next=NULL;
     n->v=a;
     return n;
 }
 
 
 int func(int a){
-    node *x=new_node(a);
-    x->next=new_node(a+1);
-    return 0;    
+    node *x=new_node(a);node* tmp_o0 = x;field* tmp_o1 = x->m;
+    free(tmp_o1);free(tmp_o0);return 0;    
 }
 
 

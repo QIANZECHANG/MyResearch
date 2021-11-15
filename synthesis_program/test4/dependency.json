@@ -1,0 +1,108 @@
+[
+    {
+        "func": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:23:14"
+                },
+                {
+                    "name": "x",
+                    "state": "var",
+                    "type": "node*",
+                    "coord": "dep_src.c:24:13"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:25:5"
+                }
+            ],
+            "object": [
+                "x",
+                "node*",
+                24
+            ]
+        },
+        "new_node": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:14:20"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:19:5"
+                }
+            ],
+            "object": [
+                "n",
+                "node*",
+                15
+            ]
+        },
+        "error_object": [
+            "n",
+            "node*",
+            15
+        ]
+    },
+    {
+        "func": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:23:14"
+                },
+                {
+                    "name": "x",
+                    "state": "var",
+                    "type": "node*",
+                    "coord": "dep_src.c:24:13"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:25:5"
+                }
+            ],
+            "object": [
+                "x",
+                "node*",
+                24
+            ]
+        },
+        "new_node": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:14:20"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:19:5"
+                }
+            ],
+            "object": [
+                "n->m",
+                "field*",
+                16
+            ]
+        },
+        "error_object": [
+            "n->m",
+            "field*",
+            16
+        ]
+    }
+]

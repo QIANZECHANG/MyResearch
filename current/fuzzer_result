@@ -1,32 +1,70 @@
 INFO: Running with entropic power schedule (0xFF, 100).
-INFO: Seed: 2418735589
-INFO: Loaded 1 modules   (9 inline 8-bit counters): 9 [0x5aaf58, 0x5aaf61), 
-INFO: Loaded 1 PC tables (9 PCs): 9 [0x56e078,0x56e108), 
+INFO: Seed: 2724436565
+INFO: Loaded 1 modules   (8 inline 8-bit counters): 8 [0x5aaf58, 0x5aaf60), 
+INFO: Loaded 1 PC tables (8 PCs): 8 [0x56e068,0x56e0e8), 
 INFO: A corpus is not provided, starting from an empty corpus
 #2	INITED cov: 3 ft: 3 corp: 1/1b exec/s: 0 rss: 36Mb
-	NEW_FUNC[1/1]: 0x552270 in func /home/test/saver/example/test/_src.c:5
-#85	NEW    cov: 8 ft: 9 corp: 2/2b lim: 2 exec/s: 0 rss: 38Mb L: 1/1 MS: 3 CrossOver-ChangeByte-ChangeBit-
+	NEW_FUNC[1/2]: 0x552270 in new_node /home/synthesis_program/test5/_src.c:11
+	NEW_FUNC[2/2]: 0x552350 in func /home/synthesis_program/test5/_src.c:19
 
 =================================================================
-==16949==ERROR: LeakSanitizer: detected memory leaks
+==12200==ERROR: LeakSanitizer: detected memory leaks
 
-Direct leak of 4 byte(s) in 1 object(s) allocated from:
-    #0 0x52204d in malloc (/home/test/saver/example/test/a.out+0x52204d)
-    #1 0x5523a7 in func /home/test/saver/example/test/_src.c:6:12
-    #2 0x552738 in LLVMFuzzerTestOneInput /home/test/saver/example/test/_src.c:25:5
-    #3 0x459711 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/test/saver/example/test/a.out+0x459711)
-    #4 0x458c1a in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/test/saver/example/test/a.out+0x458c1a)
-    #5 0x45a927 in fuzzer::Fuzzer::MutateAndTestOne() (/home/test/saver/example/test/a.out+0x45a927)
-    #6 0x45b4d5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/test/saver/example/test/a.out+0x45b4d5)
-    #7 0x44963b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/test/saver/example/test/a.out+0x44963b)
-    #8 0x4736f2 in main (/home/test/saver/example/test/a.out+0x4736f2)
-    #9 0x7f4315ff90b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+Direct leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x52204d in malloc (/home/synthesis_program/test5/a.out+0x52204d)
+    #1 0x5522c2 in new_node /home/synthesis_program/test5/_src.c:12:20
+    #2 0x5523a0 in func /home/synthesis_program/test5/_src.c:20:13
+    #3 0x552668 in LLVMFuzzerTestOneInput /home/synthesis_program/test5/_src.c:33:5
+    #4 0x459711 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/synthesis_program/test5/a.out+0x459711)
+    #5 0x45ad26 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/synthesis_program/test5/a.out+0x45ad26)
+    #6 0x45b1d9 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/synthesis_program/test5/a.out+0x45b1d9)
+    #7 0x44963b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/synthesis_program/test5/a.out+0x44963b)
+    #8 0x4736f2 in main (/home/synthesis_program/test5/a.out+0x4736f2)
+    #9 0x7fa2c5f840b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
 
-SUMMARY: AddressSanitizer: 4 byte(s) leaked in 1 allocation(s).
+Direct leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x52204d in malloc (/home/synthesis_program/test5/a.out+0x52204d)
+    #1 0x5522c2 in new_node /home/synthesis_program/test5/_src.c:12:20
+    #2 0x5523a0 in func /home/synthesis_program/test5/_src.c:20:13
+    #3 0x552668 in LLVMFuzzerTestOneInput /home/synthesis_program/test5/_src.c:33:5
+    #4 0x459711 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/synthesis_program/test5/a.out+0x459711)
+    #5 0x458c1a in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/synthesis_program/test5/a.out+0x458c1a)
+    #6 0x45a927 in fuzzer::Fuzzer::MutateAndTestOne() (/home/synthesis_program/test5/a.out+0x45a927)
+    #7 0x45b4d5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/synthesis_program/test5/a.out+0x45b4d5)
+    #8 0x44963b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/synthesis_program/test5/a.out+0x44963b)
+    #9 0x4736f2 in main (/home/synthesis_program/test5/a.out+0x4736f2)
+    #10 0x7fa2c5f840b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x52204d in malloc (/home/synthesis_program/test5/a.out+0x52204d)
+    #1 0x5522c2 in new_node /home/synthesis_program/test5/_src.c:12:20
+    #2 0x5523af in func /home/synthesis_program/test5/_src.c:21:13
+    #3 0x552668 in LLVMFuzzerTestOneInput /home/synthesis_program/test5/_src.c:33:5
+    #4 0x459711 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/synthesis_program/test5/a.out+0x459711)
+    #5 0x458c1a in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool, bool*) (/home/synthesis_program/test5/a.out+0x458c1a)
+    #6 0x45a927 in fuzzer::Fuzzer::MutateAndTestOne() (/home/synthesis_program/test5/a.out+0x45a927)
+    #7 0x45b4d5 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/synthesis_program/test5/a.out+0x45b4d5)
+    #8 0x44963b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/synthesis_program/test5/a.out+0x44963b)
+    #9 0x4736f2 in main (/home/synthesis_program/test5/a.out+0x4736f2)
+    #10 0x7fa2c5f840b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x52204d in malloc (/home/synthesis_program/test5/a.out+0x52204d)
+    #1 0x5522c2 in new_node /home/synthesis_program/test5/_src.c:12:20
+    #2 0x5523af in func /home/synthesis_program/test5/_src.c:21:13
+    #3 0x552668 in LLVMFuzzerTestOneInput /home/synthesis_program/test5/_src.c:33:5
+    #4 0x459711 in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) (/home/synthesis_program/test5/a.out+0x459711)
+    #5 0x45ad26 in fuzzer::Fuzzer::ReadAndExecuteSeedCorpora(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/synthesis_program/test5/a.out+0x45ad26)
+    #6 0x45b1d9 in fuzzer::Fuzzer::Loop(std::__Fuzzer::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) (/home/synthesis_program/test5/a.out+0x45b1d9)
+    #7 0x44963b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) (/home/synthesis_program/test5/a.out+0x44963b)
+    #8 0x4736f2 in main (/home/synthesis_program/test5/a.out+0x4736f2)
+    #9 0x7fa2c5f840b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+SUMMARY: AddressSanitizer: 64 byte(s) leaked in 4 allocation(s).
 INFO: to ignore leaks on libFuzzer side use -detect_leaks=0.
 
-MS: 1 CrossOver-; base unit: 1b6453892473a467d07372d45eb05abc2031647a
-0x34,0x34,
-44
-artifact_prefix='./'; Test unit written to ./leak-98fbc42faedc02492397cb5962ea3a3ffc0a9243
-Base64: NDQ=
+MS: 2 ChangeBit-ChangeByte-; base unit: adc83b19e793491b1c6ea0fd8b46cd9f32e592fc
+0x30,
+0
+artifact_prefix='./'; Test unit written to ./leak-b6589fc6ab0dc82cf12099d1c2d40ab994e8410c
+Base64: MA==

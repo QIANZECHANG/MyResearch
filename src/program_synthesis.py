@@ -33,6 +33,8 @@ class synthesis:
         res={}
         for name,spec in op.items():
             for ele in var:
+                if len(ele["value"])!=len(error):
+                    continue
                 s=Solver()
                 for i in range(len(error)):
                     if error[i]:
@@ -51,7 +53,7 @@ class synthesis:
                         "ret":ele["ret"]
                     })
                     return sat,res
-        return sat,res
+        return z3.z3.unsat,res
                 
     def binary_op(self,error,var):
         op={
@@ -66,6 +68,8 @@ class synthesis:
         #var op constant
         for name,spec in op.items():
             for ele in var:
+                if len(ele["value"])!=len(error):
+                    continue
                 s=Solver()
                 cons=Int('constant')
                 for i in range(len(error)):
@@ -97,6 +101,8 @@ class synthesis:
         for name,spec in op.items():
             var_comb=comb(var,2)
             for ele1,ele2 in var_comb:
+                if len(ele1["value"])!=len(error) or len(ele2["value"])!=len(error):
+                    continue
                 s=Solver()
                 for i in range(len(error)):
                     if error[i]:
@@ -124,7 +130,7 @@ class synthesis:
                     return sat,res
             
             
-        return sat,res
+        return z3.z3.unsat,res
 
     def triple_op(self,a,b,c):
         pass
@@ -133,7 +139,7 @@ class synthesis:
         error=data["error"]
         out={}
         for func,var in data["var"].items():
-            out[func]=[]
+            out[func]=None
             #unary operator
             sat,res=self.unary_op(error,var)
             if sat==z3.z3.sat:
