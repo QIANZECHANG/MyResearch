@@ -50,7 +50,7 @@ def instrument(dep):
         write_file("instrumented_"+filename,filelist)
     return "instrumented_"+filename
 
-def new_instrument(filelist,dep):
+def new_instrument(filelist,dep,name):
     instrument_dict={}
     for e in dep:
         for func in e.values():
@@ -85,5 +85,5 @@ def new_instrument(filelist,dep):
                     tmp+=1
                 filelist[tmp]=filelist[tmp][:-1]+printf
                 
-        write_file("instrumented_"+filename,filelist)
-    return "instrumented_"+filename
+        write_file(name,filelist)
+    

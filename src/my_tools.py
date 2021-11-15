@@ -89,6 +89,36 @@ def get_fuzzer_result(filename):
     file.close()
     return path
 
+def double_free(filename,filelist):
+    file=open(filename,'r')
+    fuzzer_inf=file.read()
+    df=[]
+    for inf in fuzzer_inf.split("\n\n"):
+        if ("double-free" in inf):
+            df.append(inf.split("\n"))
+    if not df:
+        return []
+    err_index=[]
+    flag=0
+    for e in df[:-1]:
+        for i in range(1,len(e)):
+            if("free" in e[i]):
+                flag=1
+                continue
+            if not flag and ("free" not in e[i]):
+                continue
+            ele=e[i].split()
+            coord=ele[4].split("/")[-1]
+            line=int(coord.split(":")[1])
+            column=int(coord.split(":")[2])
+            for s in filelist[line-1][column+8:column+11]:
+                if s.isdigit():
+                    err_index.append(int(s))
+                    break
+            break
+    return err_index
+
+
 def get_error_feature(err_path):
     res=[]
     for err in err_path:
@@ -145,13 +175,24 @@ def get_synthesis_inf(dep):
         syn_inf.append(tmp)
     return syn_inf
              
-def add_dynamic_value(syn_inf,filename,error_feature):
+def add_dynamic_value(syn_inf,filename,error_feature,filelist):
     inst = get_dynamic_value(filename)
     err = get_error_feature(get_fuzzer_result(filename))
-    tmp = error_feature.copy()
     for v in inst.values(): 
         l=len(v)-1
         break
+    if "DF" in err:
+        index=double_free(filename,filelist)
+        for i in index:
+            syn_inf[i]["error"]+=[0]*(l-1)+[1]
+            for func,v in syn_inf[i]["var"].items():
+                for var in v:
+                    key=(var["name"],var["coord"].split(":")[1])
+                    if key not in inst:
+                        continue
+                    var["value"]+=inst[key][1:]
+        return      
+    tmp = error_feature.copy()
     for e in err:   
         if e not in error_feature:
             continue

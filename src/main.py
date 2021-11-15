@@ -18,7 +18,7 @@ def main(filename):
     print("fuzzing")
     os.system(f"clang-12 -g -fsanitize=address,fuzzer _{filename}")
     err_num=0
-    for _ in range(20):
+    for _ in range(10):
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>fuzzer_result")
         err_path=get_fuzzer_result("fuzzer_result")
         if len(err_path)>err_num:
@@ -36,6 +36,8 @@ def main(filename):
     with open('dependency.json', 'w') as f:
         json.dump(dep, f, indent=4)
     print("dependency done")
+    # get file list (line)
+    filelist = read_file(filename)
     # source instrumentation 
     inst_filename = instrument(dep)
     
@@ -45,14 +47,14 @@ def main(filename):
     # run 10 times to get more dynamic value
     for i in range(10):
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-        add_dynamic_value(syn_inf,"inst_result",_error_feature)
+        add_dynamic_value(syn_inf,"inst_result",_error_feature,filelist)
+    with open('syn_inf.json', 'w') as f:
+        json.dump(syn_inf, f, indent=4) 
+        
     print("collect dynamic value done")  
-    print(f"current time: {time.time()-t0}")
-    
-    # get file list (line)
-    filelist = read_file(filename)
-    
+    print(f"current time: {time.time()-t0}")    
     print(f"have {len(error_feature)} error(s)")
+    
     queue=[i for i in range(len(error_feature))]
     to_fix_list=[]
     # try to fix each error
@@ -72,48 +74,53 @@ def main(filename):
             # insert temporary variable in each function and keep it filelist
             patch = insert_tmp_var(filelist,patch_cand)
             # try to fix this error
-            cur_filelist,not_fixed=fix(patch,err_dep,err_fea,error_feature,i)
+            cur_filelist,not_fixed=fix(patch,err_dep,err_fea,error_feature,i,dep)
             # if failed, instrument again and get new dynamic variable
             if not_fixed:
-                print("collect new test cases")
+                print("collect error test cases")
+                add_dynamic_value(syn_inf,"cur_fuzzer_result",_error_feature,filelist)
+                '''
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
                     add_dynamic_value(syn_inf,"inst_result",_error_feature)
+                '''
             t=time.time()-t1
         # if this error is fixed
         if not not_fixed:
             print(f"fixed error {i}, error feature: {err_fea}")
             # keep current patch
             filelist=cur_filelist.copy()
+            write_file("cur_"+filename,cur_filelist)
             error_feature.remove(_error_feature[i])
             flag=0
             if queue:
                 # clean dynamic value and collect new values
                 clean_inf(syn_inf)
-                write_file("cur_"+filename,cur_filelist)
-                inst_filename=new_instrument(cur_filelist.copy(),dep)
+                new_instrument(cur_filelist.copy(),dep,inst_filename)
                 print("collect new test cases")
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-                    add_dynamic_value(syn_inf,"inst_result",_error_feature)
+                    add_dynamic_value(syn_inf,"inst_result",_error_feature,filelist)
         else:
             # if time out, print error number
             print(f"failed to fix error {i}")
             queue.append(i)
             flag+=1
-        
+
+                
         os.system(r"rm -f leak*")
         os.system(r"rm -f crash*")
     # write file at last
     os.system(f"rm -f *_{filename}")
     os.system(f"rm -f *_result")
     os.system(f"rm a.out")
+    os.system(f"rm -f check_and_instrument.c")
     write_file("result_"+filename,filelist)
     print(f"total time: {time.time()-t0}")
-
-def fix(patch,err_dep,err_fea,error_feature,i):
+    
+def fix(patch,err_dep,err_fea,error_feature,i,dep):
     """ 
     k: funcname
     v: filelist, patch, return location
@@ -140,17 +147,21 @@ def fix(patch,err_dep,err_fea,error_feature,i):
             # insert patch
             cand_filelist=insert_patch(cur_filelist.copy(),patch_line,free)
             # test patched program
-            write_file("patched_"+filename,cand_filelist)
-            os.system(f"clang-12 -g -fsanitize=address,fuzzer patched_{filename}")
+            new_instrument(cand_filelist.copy(),dep,"check_and_instrument.c")
+            #write_file("patched_"+filename,cand_filelist)
+            os.system(f"clang-12 -g -fsanitize=address,fuzzer check_and_instrument.c")
             err_num=0
-            for _ in range(10):
+            f=0
+            for _ in range(20):
                 os.system(r"./a.out -max_total_time=5 -max_len=2 2>cur_fuzzer_result")
                 err_path=get_fuzzer_result("cur_fuzzer_result")
                 if len(err_path)>err_num:
+                    f=1
                     err_num=len(err_path)
                     os.system("cat cur_fuzzer_result > tmp")
-            os.system("cat tmp > cur_fuzzer_result")
-            os.system("rm -f tmp")
+            if f:
+                os.system("cat tmp > cur_fuzzer_result")
+                os.system("rm -f tmp")
             # collect current error
             cur_err=get_error_feature(get_fuzzer_result("cur_fuzzer_result"))
             # same with the original error
@@ -181,7 +192,7 @@ def fix(patch,err_dep,err_fea,error_feature,i):
                 print("correct patch")
                 return cand_filelist,0
     return None,1
-                    
+    
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='file name')
     parser.add_argument('f',type=str, help='file name')
