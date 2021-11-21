@@ -18,7 +18,7 @@ def main(filename):
     print("fuzzing")
     os.system(f"clang-12 -g -fsanitize=address,fuzzer _{filename}")
     err_num=0
-    for _ in range(10):
+    for _ in range(20):
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>fuzzer_result")
         err_path=get_fuzzer_result("fuzzer_result")
         if len(err_path)>err_num:
@@ -37,7 +37,7 @@ def main(filename):
         json.dump(dep, f, indent=4)
     print("dependency done")
     # get file list (line)
-    filelist = read_file(filename)
+    filelist = read_file("_"+filename)
     # source instrumentation 
     inst_filename = instrument(dep)
     
@@ -67,16 +67,20 @@ def main(filename):
         t1=time.time()
         t=0
         not_fixed=1 # flag
+        p=None
         while t<60 and not_fixed: # one error 1 min
             err_inf = syn_inf[i]
             # for each error, generate the patch of each function in the error patch 
             patch_cand = synthesis().synthesis(err_inf)
             # insert temporary variable in each function and keep it filelist
             patch = insert_tmp_var(filelist,patch_cand)
+            if p==patch:
+                break
+            p=patch
             # try to fix this error
             cur_filelist,not_fixed=fix(patch,err_dep,err_fea,error_feature,i,dep)
             # if failed, instrument again and get new dynamic variable
-            if not_fixed:
+            if not_fixed==1:
                 print("collect error test cases")
                 add_dynamic_value(syn_inf,"cur_fuzzer_result",_error_feature,filelist)
                 '''
@@ -87,7 +91,7 @@ def main(filename):
                 '''
             t=time.time()-t1
         # if this error is fixed
-        if not not_fixed:
+        if not_fixed==0:
             print(f"fixed error {i}, error feature: {err_fea}")
             # keep current patch
             filelist=cur_filelist.copy()
@@ -96,7 +100,7 @@ def main(filename):
             flag=0
             if queue:
                 # clean dynamic value and collect new values
-                clean_inf(syn_inf)
+                #clean_inf(syn_inf)
                 new_instrument(cur_filelist.copy(),dep,inst_filename)
                 print("collect new test cases")
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")

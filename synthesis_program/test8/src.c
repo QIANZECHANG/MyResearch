@@ -30,9 +30,6 @@ int func(int a){
     if(a<5){
         free(x);
     }
-    if(a>5){
-        free(y);
-    }
     return 0;    
 }
 

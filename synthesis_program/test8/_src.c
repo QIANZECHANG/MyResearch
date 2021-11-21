@@ -19,9 +19,9 @@ node *new_node(int a){
     return n;
 }
 
-int func(int a){int tmp_a = a;
-    node *x=new_node(a);field* tmp_o0 = x->m;node* tmp_o2 = x;
-    node *y=new_node(a);node* tmp_o1 = y;field* tmp_o3 = y->m;
+int func(int a){
+    node *x=new_node(a);
+    node *y=new_node(a);
     x->v=a;
     x->m->k=a+1;
     y->v=a;
@@ -30,7 +30,7 @@ int func(int a){int tmp_a = a;
     if(a<5){
         free(x);
     }
-    free(tmp_o3);if(tmp_a>=5)free(tmp_o2);free(tmp_o1);free(tmp_o0);return 0;
+    return 0;
 }
 
 
