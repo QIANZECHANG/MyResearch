@@ -175,22 +175,22 @@ def get_synthesis_inf(dep):
         syn_inf.append(tmp)
     return syn_inf
              
-def add_dynamic_value(syn_inf,filename,error_feature,filelist):
+def add_dynamic_value(syn_inf,filename,error_feature,err_index):
     inst = get_dynamic_value(filename)
     err = get_error_feature(get_fuzzer_result(filename))
     for v in inst.values(): 
         l=len(v)-1
         break
     if "DF" in err:
-        index=double_free(filename,filelist)
+        index=err_index#double_free(filename,filelist)
         for i in index:
-            syn_inf[i]["error"]+=[0]*(l-1)+[1]
+            syn_inf[i]["error"]+=[0]
             for func,v in syn_inf[i]["var"].items():
                 for var in v:
                     key=(var["name"],var["coord"].split(":")[1])
                     if key not in inst:
                         continue
-                    var["value"]+=inst[key][1:]
+                    var["value"].append(inst[key][-1])
         return      
     tmp = error_feature.copy()
     for e in err:   

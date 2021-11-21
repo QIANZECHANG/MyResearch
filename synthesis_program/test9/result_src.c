@@ -20,13 +20,17 @@ node *new_node(int a){
 }
 
 int func(int a){int tmp_a = a;
-    node *x=new_node(a);field* tmp_o1 = x->m;node* tmp_o0 = x;
+    node *x=new_node(a);field* tmp_o0 = x->m;node* tmp_o2 = x;
+    node *y=new_node(a);node* tmp_o1 = y;field* tmp_o3 = y->m;
     x->v=a;
     x->m->k=a+1;
+    y->v=a;
+    y->m->k=a+1;
+
     if(a<5){
         free(x);
     }
-    if(tmp_a>=5)free(tmp_o0);free(tmp_o1);return 0;
+    free(tmp_o3);if(tmp_a>=5)free(tmp_o2);free(tmp_o1);free(tmp_o0);return 0;
 }
 
 

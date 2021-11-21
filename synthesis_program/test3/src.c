@@ -3,22 +3,22 @@
 #include <stdio.h>
 
 typedef struct N{
-    struct N *next;
+    int* p1;
+    int* p2;
 }node;
 
-node *new_node(){
-    node *n=(node*)malloc(sizeof(node));
-    n->next=NULL;
-    return n;
-}
-
-
 int func(int a){
-    node *x=new_node();
+    node x;
+    x.p1=(int*)malloc(4);
+    x.p2=(int*)malloc(4);
+    int* n;
     if(a<5){
-        free(x);
-        return 0;
+        n=x.p1;
+    }else{
+        n=malloc(4);
     }
+    free(*(&x.p1+1));
+    free(n);
     return 1;    
 }
 

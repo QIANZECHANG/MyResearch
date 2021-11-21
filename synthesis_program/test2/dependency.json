@@ -7,20 +7,11 @@
                     "state": "input",
                     "type": "int",
                     "coord": "dep_src.c:5:14"
-                },
-                {
-                    "name": "b",
-                    "state": "var",
-                    "type": "int*",
-                    "coord": "dep_src.c:7:13"
                 }
             ],
             "ret": [
                 {
-                    "coord": "dep_src.c:10:9"
-                },
-                {
-                    "coord": "dep_src.c:12:5"
+                    "coord": "dep_src.c:15:5"
                 }
             ],
             "object": [

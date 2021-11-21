@@ -6,40 +6,24 @@
                     "name": "a",
                     "state": "input",
                     "type": "int",
-                    "coord": "dep_src.c:16:14"
+                    "coord": "dep_src.c:10:14"
                 }
             ],
             "ret": [
-                {
-                    "coord": "dep_src.c:20:9"
-                },
                 {
                     "coord": "dep_src.c:22:5"
                 }
             ],
             "object": [
-                "x",
-                "node*",
-                17
-            ]
-        },
-        "new_node": {
-            "dep": [],
-            "ret": [
-                {
-                    "coord": "dep_src.c:12:5"
-                }
-            ],
-            "object": [
-                "n",
-                "node*",
-                10
+                "x.p1",
+                "int*",
+                12
             ]
         },
         "error_object": [
-            "n",
-            "node*",
-            10
+            "x.p1",
+            "int*",
+            12
         ]
     }
 ]

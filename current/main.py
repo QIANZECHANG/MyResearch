@@ -47,9 +47,7 @@ def main(filename):
     # run 10 times to get more dynamic value
     for i in range(10):
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-        add_dynamic_value(syn_inf,"inst_result",_error_feature,filelist)
-    with open('syn_inf.json', 'w') as f:
-        json.dump(syn_inf, f, indent=4) 
+        add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
         
     print("collect dynamic value done")  
     print(f"current time: {time.time()-t0}")    
@@ -82,7 +80,7 @@ def main(filename):
             # if failed, instrument again and get new dynamic variable
             if not_fixed==1:
                 print("collect error test cases")
-                add_dynamic_value(syn_inf,"cur_fuzzer_result",_error_feature,filelist)
+                add_dynamic_value(syn_inf,"cur_fuzzer_result",_error_feature,[i])
                 '''
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
@@ -106,7 +104,7 @@ def main(filename):
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-                    add_dynamic_value(syn_inf,"inst_result",_error_feature,filelist)
+                    add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
         else:
             # if time out, print error number
             print(f"failed to fix error {i}")
@@ -122,6 +120,8 @@ def main(filename):
     os.system(f"rm a.out")
     os.system(f"rm -f check_and_instrument.c")
     write_file("result_"+filename,filelist)
+    with open('syn_inf.json', 'w') as f:
+        json.dump(syn_inf, f, indent=4) 
     print(f"total time: {time.time()-t0}")
     
 def fix(patch,err_dep,err_fea,error_feature,i,dep):
@@ -157,7 +157,10 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
             err_num=0
             f=0
             for _ in range(20):
+                t=time.time()
                 os.system(r"./a.out -max_total_time=5 -max_len=2 2>cur_fuzzer_result")
+                if time.time()-t>=5:
+                    break
                 err_path=get_fuzzer_result("cur_fuzzer_result")
                 if len(err_path)>err_num:
                     f=1

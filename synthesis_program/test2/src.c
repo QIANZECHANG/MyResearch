@@ -4,11 +4,14 @@
 
 int func(int a){
     int *p=malloc(4);
-    int *b=&a;
+    int *q;
     if(a<5){
-        free(p);
-        return 0;
+        q=p;
+    }else{
+        q=malloc(4);
     }
+    *p=1;
+    free(q);
     return 1;    
 }
 

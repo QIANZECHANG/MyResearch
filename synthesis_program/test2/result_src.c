@@ -4,12 +4,15 @@
 
 int func(int a){int tmp_a = a;
     int *p=malloc(4);int* tmp_o0 = p;
-    int *b=&a;
+    int *q;
     if(a<5){
-        free(p);
-        if(tmp_a>=5)free(tmp_o0);return 0;
+        q=p;
+    }else{
+        q=malloc(4);
     }
-    if(tmp_a>=5)free(tmp_o0);return 1;    
+    *p=1;
+    free(q);
+    if(tmp_a>=5)free(tmp_o0);return 1;
 }
 
 
