@@ -3,33 +3,29 @@
 #include <stdio.h>
 
 typedef struct N{
-    struct M *m;
     int v;
 }node;
 
-typedef struct M{
-    struct M *next;    
-    int k;
-}field;
-
-node *new_node(int a){
+node *new_node1(int a){
     node *n=(node*)malloc(sizeof(node));
-    n->m=(field*)malloc(sizeof(field));
-    n->m->next=NULL;
+    n->v=a;
+    return n;
+}
+
+node *new_node2(int a){
+    node *n=(node*)malloc(sizeof(node));
+    n->v=a*a;
     return n;
 }
 
 int func(int a){
-    node *x=new_node(a);
-    node *y=new_node(a);
-    x->v=a;
-    x->m->k=a+1;
-    y->v=a;
-    y->m->k=a+1;
-
+    node* (*p[])()={new_node1,new_node2};
+    node *x;
+    x=(*p[0])(a); 
     if(a<5){
-        free(x);
+        x=(*p[1])(a);
     }
+    x->v=10;
     return 0;    
 }
 

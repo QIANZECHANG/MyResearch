@@ -19,7 +19,7 @@ def get_dependency(fuzzer):
             funcname=err["funcname"]
             func_dict=go_to_func(file_dict,line,funcname)
             dep, ret=Dependency(func_dict).result()
-            var[funcname]={"dep":dep,"ret":ret,"object":(o,otype,line)}
+            var[funcname]={"dep":dep,"ret":ret,"object":(o,otype,line,int(func_dict["coord"].split(":")[1]))}
             err=err["next"]
         var["error_object"]=(o,otype,line)
         dependency.append(var)
@@ -139,14 +139,13 @@ class Dependency:
                 self.cur_dep.remove(varname)
 
         #print("Assignment")
-    def decl_spec(self,cur_dic):
-        vartype=get_type(cur_dic["type"],"")
-        varname=cur_dic["name"]
-        #add var to self.var
-        self.var[varname]=vartype
-        
+    def decl_spec(self,cur_dic):        
         if cur_dic["init"]:
             if self.check_dependency(cur_dic["init"]):
+                vartype=get_type(cur_dic["type"],"")
+                varname=cur_dic["name"]
+                #add var to self.var
+                self.var[varname]=vartype
                 #add to self.dep
                 self.cur_dep.add(varname)
                 param={

@@ -29,7 +29,8 @@
             "object": [
                 "x",
                 "node*",
-                23
+                23,
+                22
             ]
         },
         "new_node": {
@@ -49,7 +50,8 @@
             "object": [
                 "n->m",
                 "field*",
-                17
+                17,
+                15
             ]
         },
         "error_object": [
@@ -88,7 +90,8 @@
             "object": [
                 "y",
                 "node*",
-                24
+                24,
+                22
             ]
         },
         "new_node": {
@@ -108,7 +111,8 @@
             "object": [
                 "n",
                 "node*",
-                16
+                16,
+                15
             ]
         },
         "error_object": [
@@ -147,7 +151,8 @@
             "object": [
                 "x",
                 "node*",
-                23
+                23,
+                22
             ]
         },
         "new_node": {
@@ -167,7 +172,8 @@
             "object": [
                 "n",
                 "node*",
-                16
+                16,
+                15
             ]
         },
         "error_object": [
@@ -206,7 +212,8 @@
             "object": [
                 "y",
                 "node*",
-                24
+                24,
+                22
             ]
         },
         "new_node": {
@@ -226,7 +233,8 @@
             "object": [
                 "n->m",
                 "field*",
-                17
+                17,
+                15
             ]
         },
         "error_object": [

@@ -7,9 +7,9 @@ typedef struct N{
     int* p2;
 }node;
 
-int func(int a){int tmp_a = a;
+int func(int a){int tmp_a = a;int* tmp_o0;
     node x;
-    x.p1=(int*)malloc(4);int* tmp_o0 = x.p1;
+    x.p1=(int*)malloc(4);tmp_o0 = x.p1;
     x.p2=(int*)malloc(4);
     int* n;
     if(a<5){

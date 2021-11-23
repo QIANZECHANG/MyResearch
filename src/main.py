@@ -81,12 +81,10 @@ def main(filename):
             if not_fixed==1:
                 print("collect error test cases")
                 add_dynamic_value(syn_inf,"cur_fuzzer_result",_error_feature,[i])
-                '''
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-                    add_dynamic_value(syn_inf,"inst_result",_error_feature)
-                '''
+                    add_dynamic_value(syn_inf,"inst_result",_error_feature,[i])
             t=time.time()-t1
         # if this error is fixed
         if not_fixed==0:
@@ -98,7 +96,7 @@ def main(filename):
             flag=0
             if queue:
                 # clean dynamic value and collect new values
-                #clean_inf(syn_inf)
+                clean_inf(syn_inf)
                 new_instrument(cur_filelist.copy(),dep,inst_filename)
                 print("collect new test cases")
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
@@ -135,12 +133,12 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
             continue
         cur_filelist=v["filelist"].copy()
         # get object type and name
-        o,otype,line=get_error_object(err_dep,k)
+        o,otype,line,head=get_error_object(err_dep,k)
         # if failed to get object information, try the patch in next function 
         if o == 0:
             continue
         # insert temporary variable to keap the object
-        cur_filelist,o=insert_heap_object(cur_filelist.copy(),o,otype,line,i)
+        cur_filelist,o=insert_heap_object(cur_filelist.copy(),o,otype,line,head,i)
         # synthesis the patch: if(c)free(o);
         free=cur_patch(v["patch"],o)
         print(f"current patch is {free} in function {k}")
@@ -199,7 +197,7 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
                 print("correct patch")
                 return cand_filelist,0
     return None,1
-    
+
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='file name')
     parser.add_argument('f',type=str, help='file name')

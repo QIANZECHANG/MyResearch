@@ -24,17 +24,19 @@ def insert_tmp_var(filelist,patch_cand):
                     tmp=line-1
                     while "{" not in cur_filelist[tmp]:
                         tmp+=1
-                    if insert_stat not in cur_filelist[tmp]:
+                    if insert_stat[:-1] not in cur_filelist[tmp]:
                         cur_filelist[tmp]=cur_filelist[tmp][:-1]+insert_stat
                 for ret in opr["ret"]:
                     if ret in retloc and line>int(ret["coord"].split(":")[1]):
                         retloc.remove(ret)
         patch[func]["patch"]=patchlist[0]+patch_dict["op"]+patchlist[1]
         patch[func]["filelist"]=cur_filelist
-    return patch    
+    return patch 
             
-def insert_heap_object(filelist,o,otype,line,i):
-    insert_stat=f"{otype} tmp_o{i} = {o};\n"
+def insert_heap_object(filelist,o,otype,line,head,i):
+    decl=f"{otype} tmp_o{i};\n"
+    insert_stat=f"tmp_o{i} = {o};\n"
+    filelist[head-1]=filelist[head-1][:-1]+decl
     filelist[line-1]=filelist[line-1][:-1]+insert_stat
     return filelist,f"tmp_o{i}"
 

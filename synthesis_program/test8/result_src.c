@@ -19,9 +19,9 @@ node *new_node(int a){
     return n;
 }
 
-int func(int a){int tmp_a = a;
-    node *x=new_node(a);field* tmp_o0 = x->m;node* tmp_o2 = x;
-    node *y=new_node(a);node* tmp_o1 = y;field* tmp_o3 = y->m;
+int func(int a){field* tmp_o0;node* tmp_o1;int tmp_a = a;node* tmp_o2;field* tmp_o3;
+    node *x=new_node(a);tmp_o0 = x->m;tmp_o2 = x;
+    node *y=new_node(a);tmp_o1 = y;tmp_o3 = y->m;
     x->v=a;
     x->m->k=a+1;
     y->v=a;

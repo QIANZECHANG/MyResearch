@@ -17,7 +17,8 @@
             "object": [
                 "x.p1",
                 "int*",
-                12
+                12,
+                10
             ]
         },
         "error_object": [

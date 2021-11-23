@@ -217,7 +217,7 @@ def add_dynamic_value(syn_inf,filename,error_feature,err_index):
 
 def get_error_object(dep,func):
     if not dep[func]["object"][1]:
-        return (dep[func]["object"][0],dep["error_object"][1],dep[func]["object"][2])
+        return (dep[func]["object"][0],dep["error_object"][1],dep[func]["object"][2],dep[func]["object"][3])
     elif dep[func]["object"][1]==dep["error_object"][1]:
         return dep[func]["object"]
     else:
@@ -235,7 +235,7 @@ def get_error_object(dep,func):
             name=dep[func]["object"][0]+"."+".".join(namelist[1:])
         else:
             return 0,0,0
-        return (name,otype,line)
+        return (name,otype,line,dep[func]["object"][3])
     
 def clean_inf(syn_inf):
     for i in range(len(syn_inf)):
