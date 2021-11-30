@@ -1,0 +1,50 @@
+@INPROCEEDINGS{SAVER, 
+    author=       "Hong, Seongjoon and Lee, Junhee and Lee, Jeongsoo and Oh, Hakjoo",    
+    title=        "SAVER: Scalable, Precise, and Safe Memory-Error Repair",   
+    booktitle=    "2020 IEEE/ACM 42nd International Conference on Software Engineering (ICSE)", 
+    year=         2020,  
+    pages=        "271-283"}
+
+@inproceedings{CPR,
+author = {Shariffdeen, Ridwan and Noller, Yannic and Grunske, Lars and Roychoudhury, Abhik},
+title = {Concolic Program Repair},
+year = {2021},
+booktitle = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+pages = {390–405},
+series = {PLDI 2021}
+}
+
+@inproceedings{Memfix,
+author = {Lee, Junhee and Hong, Seongjoon and Oh, Hakjoo},
+title = {MemFix: Static Analysis-Based Repair of Memory Deallocation Errors for C},
+year = {2018},
+series = {ESEC/FSE 2018}
+}
+
+@INPROCEEDINGS{Angelix,  
+author={Mechtaev, Sergey and Yi, Jooyong and Roychoudhury, Abhik},  
+booktitle={2016 IEEE/ACM 38th International Conference on Software Engineering (ICSE)},   
+title={Angelix: Scalable Multiline Program Patch Synthesis via Symbolic Analysis},   
+year={2016},  
+pages={691-701}}
+
+
+@article{Extractfix,
+author = {Gao, Xiang and Wang, Bo and Duck, Gregory J. and Ji, Ruyi and Xiong, Yingfei and Roychoudhury, Abhik},
+title = {Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction},
+year = {2021},
+issue_date = {March 2021},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {30},
+number = {2},
+issn = {1049-331X},
+url = {https://doi.org/10.1145/3418461},
+doi = {10.1145/3418461},
+abstract = {Automated program repair is an emerging technology that seeks to automatically rectify program errors and vulnerabilities. Repair techniques are driven by a correctness criterion that is often in the form of a test suite. Such test-based repair may produce overfitting patches, where the patches produced fail on tests outside the test suite driving the repair. In this work, we present a repair method that fixes program vulnerabilities without the need for a voluminous test suite. Given a vulnerability as evidenced by an exploit, the technique extracts a constraint representing the vulnerability with the help of sanitizers. The extracted constraint serves as a proof obligation that our synthesized patch should satisfy. The proof obligation is met by propagating the extracted constraint to locations that are deemed to be “suitable” fix locations. An implementation of our approach (ExtractFix) on top of the KLEE symbolic execution engine shows its efficacy in fixing a wide range of vulnerabilities taken from the ManyBugs benchmark, real-world CVEs and Google’s OSS-Fuzz framework. We believe that our work presents a way forward for the overfitting problem in program repair by generalizing observable hazards/vulnerabilities (as constraint) from a single failing test or exploit.},
+journal = {ACM Trans. Softw. Eng. Methodol.},
+month = {feb},
+articleno = {14},
+numpages = {27},
+keywords = {overfitting, constraint extraction and propagation, Automated program repair}
+}
