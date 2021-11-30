@@ -1,0 +1,21 @@
+Found 2 issues
+
+infer.c:11: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5.
+  9.   node *new_node1(int a){
+  10.       node *n=(node*)malloc(sizeof(node));
+  11. >     n->v=a;
+  12.       return n;
+  13.   }
+
+infer.c:17: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5.
+  15.   node *new_node2(int a){
+  16.       node *n=(node*)malloc(sizeof(node));
+  17. >     n->v=a*a;
+  18.       return n;
+  19.   }
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 2

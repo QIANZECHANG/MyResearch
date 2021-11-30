@@ -62,6 +62,8 @@ def get_fuzzer_result(filename):
             leak.append("DF")
         if  ("use-after-free" in inf):
             leak.append("UAF")
+        if  ("attempting free on address" in inf) or ("SEGV" in inf):
+            leak.append("NM")
     if not leak:
         return []
         # raise Exception('No Leak or have other error')
@@ -72,6 +74,9 @@ def get_fuzzer_result(filename):
             continue
         if l=="UAF":
             path.append("UAF")
+            continue
+        if l=="NM":
+            path.append("NM")
             continue
         data={}
         for i in range(1,len(l)):
@@ -127,6 +132,9 @@ def get_error_feature(err_path):
             continue
         if err=="UAF":
             res.append("UAF")
+            continue
+        if err=="NM":
+            res.append("NM")
             continue
         feature=[]
         while err["next"]:
@@ -192,6 +200,16 @@ def add_dynamic_value(syn_inf,filename,error_feature,err_index):
                         continue
                     var["value"].append(inst[key][-1])
         return      
+    if err_index:
+        for i in err_index:
+            syn_inf[i]["error"]+=[1]
+            for func,v in syn_inf[i]["var"].items():
+                for var in v:
+                    key=(var["name"],var["coord"].split(":")[1])
+                    if key not in inst:
+                        continue
+                    var["value"].append(inst[key][-1])   
+        return
     tmp = error_feature.copy()
     for e in err:   
         if e not in error_feature:

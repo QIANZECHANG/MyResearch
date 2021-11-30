@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>new_node2.aebb341ea35d097d43ee08a5e4607daa</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE15">new_node2</a></h1></center>
+<a href="./nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:5 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;n); [line 15, column 1];
+</span></span></a> <a href="./nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
+</span></span></a> <a href="./nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+n$0=*&amp;n:N* [line 18, column 12];
+*&amp;return:N*=n$0 [line 18, column 5];
+REMOVE_TEMPS(n$0); [line 18, column 5];
+NULLIFY(&amp;n); [line 18, column 5];
+APPLY_ABSTRACTION; [line 18, column 5];
+</span></span></a> <a href="./nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+n$1=*&amp;n:N* [line 17, column 5];
+n$2=*&amp;a:int [line 17, column 10];
+n$3=*&amp;a:int [line 17, column 12];
+*n$1.v:int=(n$2 * n$3) [line 17, column 5];
+REMOVE_TEMPS(n$1,n$2,n$3); [line 17, column 5];
+NULLIFY(&amp;a); [line 17, column 5];
+</span></span></a> <a href="./nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node5.html"><span class='visited'>I_5<span class='expansion'>node5 preds:1 succs:4 exn: Instructions
+n$4=_fun_malloc(sizeof(t=N;nbytes=4):N) [line 16, column 20];
+*&amp;n:N*=n$4 [line 16, column 5];
+REMOVE_TEMPS(n$4); [line 16, column 5];
+</span></span></a><span class='color_black'>
+N* new_node2(int a)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:39
+<br />
+<hr width="100%">
+ERRORS DURING FOOTPRINT
+<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5 <a href="./nodes/node4.html#session25">node4#session25</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE17">17</a>)<hr width="100%">
+ERRORS DURING RE-EXECUTION
+<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5 <a href="./nodes/node4.html#session30">node4#session30</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE17">17</a>)<hr width="100%">
+WARNINGS DURING FOOTPRINT
+<hr width="100%">
+WARNINGS DURING RE-EXECUTION
+<hr width="100%">
+INFOS DURING FOOTPRINT
+<hr width="100%">
+INFOS DURING RE-EXECUTION
+<hr width="100%">
+<LISTING>
+Biabduction: phase= RE_EXECUTION
+
+Siof: ({ }, { })
+RacerD: 
+Threads: NoThread, Locks: { } 
+Accesses { Access: Write to n.v at  at line 17, column 5 Thread: NoThread Lock: false Pre: False } 
+Ownership: Unowned 
+Return Attributes: { } 
+Wobbly Paths: { return, n.v, n, a, n$4 }
+
+Uninitialised: 
+ Pre: { } 
+Post: { } 
+
+
+</LISTING>
+</body>
+</html>

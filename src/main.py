@@ -152,17 +152,21 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
             new_instrument(cand_filelist.copy(),dep,"check_and_instrument.c")
             #write_file("patched_"+filename,cand_filelist)
             os.system(f"clang-12 -g -fsanitize=address,fuzzer check_and_instrument.c")
-            err_num=0
+            max_err=[]
             f=0
             for _ in range(20):
                 t=time.time()
                 os.system(r"./a.out -max_total_time=5 -max_len=2 2>cur_fuzzer_result")
                 if time.time()-t>=5:
                     break
-                err_path=get_fuzzer_result("cur_fuzzer_result")
-                if len(err_path)>err_num:
+                #err_path=get_fuzzer_result("cur_fuzzer_result")
+                cur_err=get_error_feature(get_fuzzer_result("cur_fuzzer_result"))
+                if "NM" in cur_err:
+                    print("wrong patch/location")
+                    return None,1
+                if len(cur_err)>len(max_err):
+                    max_err=cur_err.copy()  
                     f=1
-                    err_num=len(err_path)
                     os.system("cat cur_fuzzer_result > tmp")
             if f:
                 os.system("cat tmp > cur_fuzzer_result")

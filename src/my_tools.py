@@ -62,6 +62,8 @@ def get_fuzzer_result(filename):
             leak.append("DF")
         if  ("use-after-free" in inf):
             leak.append("UAF")
+        if  ("attempting free on address" in inf) or ("SEGV" in inf):
+            leak.append("NM")
     if not leak:
         return []
         # raise Exception('No Leak or have other error')
@@ -72,6 +74,9 @@ def get_fuzzer_result(filename):
             continue
         if l=="UAF":
             path.append("UAF")
+            continue
+        if l=="NM":
+            path.append("NM")
             continue
         data={}
         for i in range(1,len(l)):
@@ -127,6 +132,9 @@ def get_error_feature(err_path):
             continue
         if err=="UAF":
             res.append("UAF")
+            continue
+        if err=="NM":
+            res.append("NM")
             continue
         feature=[]
         while err["next"]:

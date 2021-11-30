@@ -18,15 +18,16 @@ node *new_node2(int a){
     return n;
 }
 
-int func(int a){node* tmp_o1;int tmp_a = a;node* tmp_o0;
+int func(int a){node* tmp_o0;node* tmp_o2;int tmp_a = a;node* tmp_o1;
     node* (*p[])()={new_node1,new_node2};
     node *x;
-    x=(*p[0])(a);tmp_o1 = x;
+    node *y=malloc(sizeof(node));tmp_o2 = y;
+    x=(*p[0])(a);tmp_o0 = x;
     if(a<5){
-        x=(*p[1])(a);tmp_o0 = x;
+        x=(*p[1])(a);tmp_o1 = x;
     }
     x->v=10;
-    if(tmp_a<=4)free(tmp_o0);free(tmp_o1);return 0;
+    if(tmp_a<=4)free(tmp_o1);free(tmp_o2);free(tmp_o0);return 0;
 }
 
 

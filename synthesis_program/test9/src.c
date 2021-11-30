@@ -21,6 +21,7 @@ node *new_node2(int a){
 int func(int a){
     node* (*p[])()={new_node1,new_node2};
     node *x;
+    node *y=malloc(sizeof(node));
     x=(*p[0])(a); 
     if(a<5){
         x=(*p[1])(a);

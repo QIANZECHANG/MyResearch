@@ -1,0 +1,30 @@
+[
+    {
+        "func": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:5:14"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:7:5"
+                }
+            ],
+            "object": [
+                "p",
+                "int*",
+                6,
+                5
+            ]
+        },
+        "error_object": [
+            "p",
+            "int*",
+            6
+        ]
+    }
+]
