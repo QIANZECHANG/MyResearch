@@ -1,46 +1,22 @@
-Found 5 issues
+Found 2 issues
 
-infer.c:16: error: DEAD_STORE
-  The value written to &n (type int*) is never used.
-  14.       int* n;
-  15.       if(a<5){
-  16. >         n=x.p1;
-  17.       }else{
-  18.           n=malloc(4);
+infer.c:14: error: Bad_footprint (biabduction/Rearrange.ml:306:38-45:)
+  .
+  12.       x.p1=(int*)malloc(4);
+  13.       x.p2=(int*)malloc(4);
+  14. >     free(*(&x.p1+1));
+  15.       //free(x.p1);
+  16.       //free(x.p2);
 
-infer.c:18: error: DEAD_STORE
-  The value written to &n (type int*) is never used.
-  16.           n=x.p1;
-  17.       }else{
-  18. >         n=malloc(4);
-  19.       }
-  20.       //free(*(&x.p1+1));
-
-infer.c:16: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
-  memory dynamically allocated by call to `malloc()` at line 12, column 16 is not reachable after line 16, column 9.
-  14.       int* n;
-  15.       if(a<5){
-  16. >         n=x.p1;
-  17.       }else{
-  18.           n=malloc(4);
-
-infer.c:16: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
-  memory dynamically allocated by call to `malloc()` at line 13, column 16 is not reachable after line 16, column 9.
-  14.       int* n;
-  15.       if(a<5){
-  16. >         n=x.p1;
-  17.       }else{
-  18.           n=malloc(4);
-
-infer.c:18: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
-  memory dynamically allocated by call to `malloc()` at line 18, column 11 is not reachable after line 18, column 9.
-  16.           n=x.p1;
-  17.       }else{
-  18. >         n=malloc(4);
-  19.       }
-  20.       //free(*(&x.p1+1));
+infer.c:14: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated by call to `malloc()` at line 13, column 16 is not reachable after line 14, column 5.
+  12.       x.p1=(int*)malloc(4);
+  13.       x.p2=(int*)malloc(4);
+  14. >     free(*(&x.p1+1));
+  15.       //free(x.p1);
+  16.       //free(x.p2);
 
 Summary of the reports
 
-  MEMORY_LEAK: 3
-   DEAD_STORE: 2
+  Bad_footprint: 1
+    MEMORY_LEAK: 1

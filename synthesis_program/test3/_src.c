@@ -13,8 +13,8 @@ int func(int a){
     x.p2=(int*)malloc(4);
     free(*(&x.p1+1));
     free(x.p1);
-    //free(x.p2);
-    return 1;    
+
+    return 1;
 }
 
 

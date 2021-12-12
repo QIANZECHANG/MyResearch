@@ -57,72 +57,77 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
 <tr><td class="num" id="LINE6">6</td><td class="line">    int v; </td></tr>
 <tr><td class="num" id="LINE7">7</td><td class="line">}node; </td></tr>
 <tr><td class="num" id="LINE8">8</td><td class="line"> </td></tr>
-<tr><td class="num" id="LINE9">9</td><td class="line">node *new_node1(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node1.html"><span class='visitedproof'>S_1<span class='expansion'>node1 preds: succs:5 exn: Start
+<tr><td class="num" id="LINE9">9</td><td class="line">node *new_node1(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:5 exn: Start
 DECLARE_LOCALS(&amp;return,&amp;n); [line 9, column 1];
 </span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/new_node1.a60591cbdd2e29d4b2bce05b70bee79d.html">new_node1: 0 specs</a></td></tr>
-<tr><td class="num" id="LINE10">10</td><td class="line">    node *n=(node*)malloc(sizeof(node)); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node5.html"><span class='visitedproof'>I_5<span class='expansion'>node5 preds:1 succs:4 exn: Instructions
+<tr><td class="num" id="LINE10">10</td><td class="line">    node *n=(node*)malloc(sizeof(node)); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node5.html"><span class='visited'>I_5<span class='expansion'>node5 preds:1 succs:4 exn: Instructions
 n$3=_fun_malloc(sizeof(t=N;nbytes=4):N) [line 10, column 20];
 *&amp;n:N*=n$3 [line 10, column 5];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE11">11</td><td class="line">    n-&gt;v=a; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node4.html"><span class='visitedproof'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+<tr><td class="num" id="LINE11">11</td><td class="line">    n-&gt;v=a; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
 n$1=*&amp;n:N* [line 11, column 5];
 n$2=*&amp;a:int [line 11, column 10];
 *n$1.v:int=n$2 [line 11, column 5];
 </span></span></a>
 <div class="msg" style="margin-left:9ex">NULL_DEREFERENCE [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5</div></td></tr>
-<tr><td class="num" id="LINE12">12</td><td class="line">    return n; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node3.html"><span class='visitedproof'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+<tr><td class="num" id="LINE12">12</td><td class="line">    return n; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
 n$0=*&amp;n:N* [line 12, column 12];
 *&amp;return:N*=n$0 [line 12, column 5];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE13">13</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node2.html"><span class='visitedproof'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
+<tr><td class="num" id="LINE13">13</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
 </span></span></a></td></tr>
 <tr><td class="num" id="LINE14">14</td><td class="line"> </td></tr>
-<tr><td class="num" id="LINE15">15</td><td class="line">node *new_node2(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node1.html"><span class='visitedproof'>S_1<span class='expansion'>node1 preds: succs:5 exn: Start
+<tr><td class="num" id="LINE15">15</td><td class="line">node *new_node2(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:5 exn: Start
 DECLARE_LOCALS(&amp;return,&amp;n); [line 15, column 1];
 </span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/new_node2.aebb341ea35d097d43ee08a5e4607daa.html">new_node2: 0 specs</a></td></tr>
-<tr><td class="num" id="LINE16">16</td><td class="line">    node *n=(node*)malloc(sizeof(node)); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node5.html"><span class='visitedproof'>I_5<span class='expansion'>node5 preds:1 succs:4 exn: Instructions
+<tr><td class="num" id="LINE16">16</td><td class="line">    node *n=(node*)malloc(sizeof(node)); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node5.html"><span class='visited'>I_5<span class='expansion'>node5 preds:1 succs:4 exn: Instructions
 n$4=_fun_malloc(sizeof(t=N;nbytes=4):N) [line 16, column 20];
 *&amp;n:N*=n$4 [line 16, column 5];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE17">17</td><td class="line">    n-&gt;v=a*a; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node4.html"><span class='visitedproof'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+<tr><td class="num" id="LINE17">17</td><td class="line">    n-&gt;v=a*a; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
 n$1=*&amp;n:N* [line 17, column 5];
 n$2=*&amp;a:int [line 17, column 10];
 n$3=*&amp;a:int [line 17, column 12];
 *n$1.v:int=(n$2 * n$3) [line 17, column 5];
 </span></span></a>
 <div class="msg" style="margin-left:9ex">NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5</div></td></tr>
-<tr><td class="num" id="LINE18">18</td><td class="line">    return n; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node3.html"><span class='visitedproof'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+<tr><td class="num" id="LINE18">18</td><td class="line">    return n; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
 n$0=*&amp;n:N* [line 18, column 12];
 *&amp;return:N*=n$0 [line 18, column 5];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE19">19</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node2.html"><span class='visitedproof'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
+<tr><td class="num" id="LINE19">19</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/new_node2.aebb341ea35d097d43ee08a5e4607daa_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
 </span></span></a></td></tr>
 <tr><td class="num" id="LINE20">20</td><td class="line"> </td></tr>
-<tr><td class="num" id="LINE21">21</td><td class="line">int func(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='visitedproof'>S_1<span class='expansion'>node1 preds: succs:11 exn: Start
-DECLARE_LOCALS(&amp;return,&amp;x,&amp;p); [line 21, column 1];
-</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/func.7df4935f4a5a2865191ef74f64df8754.html">func: 2 specs</a></td></tr>
-<tr><td class="num" id="LINE22">22</td><td class="line">    node* (*p[])()={new_node1,new_node2}; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node11.html"><span class='visitedproof'>I_11<span class='expansion'>node11 preds:1 succs:10 exn: Instructions
+<tr><td class="num" id="LINE21">21</td><td class="line">int func(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:12 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;y,&amp;x,&amp;p); [line 21, column 1];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/func.7df4935f4a5a2865191ef74f64df8754.html">func: 0 specs</a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">    node* (*p[])()={new_node1,new_node2}; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node12.html"><span class='visited'>I_12<span class='expansion'>node12 preds:1 succs:11 exn: Instructions
 *&amp;p[0]:_fn_(*)=_fun_new_node1 [line 22, column 20];
 *&amp;p[1]:_fn_(*)=_fun_new_node2 [line 22, column 20];
 </span></span></a></td></tr>
 <tr><td class="num" id="LINE23">23</td><td class="line">    node *x; </td></tr>
-<tr><td class="num" id="LINE24">24</td><td class="line">    //node *y=malloc(sizeof(node)); </td></tr>
-<tr><td class="num" id="LINE25">25</td><td class="line">    x=(*p[0])(a);  <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node10.html"><span class='visitedproof'>I_10<span class='expansion'>node10 preds:11 succs:6 exn: Instructions
+<tr><td class="num" id="LINE24">24</td><td class="line">    node *y=malloc(sizeof(node)); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node11.html"><span class='visited'>I_11<span class='expansion'>node11 preds:12 succs:10 exn: Instructions
+n$10=_fun_malloc(sizeof(t=N;nbytes=4):N) [line 24, column 13];
+*&amp;y:N*=n$10 [line 24, column 5];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">DEAD_STORE The value written to &y (type N*) is never used</div>
+<div class="msg" style="margin-left:9ex">MEMORY_LEAK  memory dynamically allocated to `y` by call to `malloc()` at line 24, column 13 is not reachable after line 24, column 5</div></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    x=(*p[0])(a);  <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node10.html"><span class='visited'>I_10<span class='expansion'>node10 preds:11 succs:6 exn: Instructions
 n$7=*&amp;p[0]:_fn_(*) [line 25, column 9];
 n$8=*&amp;a:int [line 25, column 15];
 n$9=n$7(n$8:int) [line 25, column 7];
 *&amp;x:N*=n$9 [line 25, column 5];
 </span></span></a>
 <div class="msg" style="margin-left:9ex">SKIP_FUNCTION new_node1</div></td></tr>
-<tr><td class="num" id="LINE26">26</td><td class="line">    if(a&lt;5){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html"><span class='visitedproof'>J_5<span class='expansion'>node5 preds:8 9 succs:4 exn: Join
-</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node6.html"><span class='visitedproof'>I_6<span class='expansion'>node6 preds:10 succs:7 8 exn: Instructions
+<tr><td class="num" id="LINE26">26</td><td class="line">    if(a&lt;5){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html"><span class='visited'>J_5<span class='expansion'>node5 preds:8 9 succs:4 exn: Join
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node6.html"><span class='visited'>I_6<span class='expansion'>node6 preds:10 succs:7 8 exn: Instructions
 n$1=*&amp;a:int [line 26, column 8];
-</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html"><span class='visitedproof'>C_7<span class='expansion'>node7 preds:6 succs:9 exn: Conditional true Branch
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html"><span class='visited'>C_7<span class='expansion'>node7 preds:6 succs:9 exn: Conditional true Branch
 PRUNE((n$1  &lt;  5), true); [line 26, column 8];
-</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node8.html"><span class='visitedproof'>C_8<span class='expansion'>node8 preds:6 succs:5 exn: Conditional false Branch
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node8.html"><span class='visited'>C_8<span class='expansion'>node8 preds:6 succs:5 exn: Conditional false Branch
 PRUNE(!(n$1  &lt;  5), false); [line 26, column 8];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE27">27</td><td class="line">        x=(*p[1])(a); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html"><span class='visitedproof'>I_9<span class='expansion'>node9 preds:7 succs:5 exn: Instructions
+<tr><td class="num" id="LINE27">27</td><td class="line">        x=(*p[1])(a); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html"><span class='visited'>I_9<span class='expansion'>node9 preds:7 succs:5 exn: Instructions
 n$2=*&amp;p[1]:_fn_(*) [line 27, column 13];
 n$3=*&amp;a:int [line 27, column 19];
 n$4=n$2(n$3:int) [line 27, column 11];
@@ -130,27 +135,27 @@ n$4=n$2(n$3:int) [line 27, column 11];
 </span></span></a>
 <div class="msg" style="margin-left:9ex">SKIP_FUNCTION new_node2</div></td></tr>
 <tr><td class="num" id="LINE28">28</td><td class="line">    } </td></tr>
-<tr><td class="num" id="LINE29">29</td><td class="line">    x-&gt;v=10; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node4.html"><span class='visitedproof'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+<tr><td class="num" id="LINE29">29</td><td class="line">    x-&gt;v=10; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
 n$0=*&amp;x:N* [line 29, column 5];
 *n$0.v:int=10 [line 29, column 5];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE30">30</td><td class="line">    return 0;     <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node3.html"><span class='visitedproof'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+<tr><td class="num" id="LINE30">30</td><td class="line">    return 0;     <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
 *&amp;return:int=0 [line 30, column 5];
 </span></span></a></td></tr>
-<tr><td class="num" id="LINE31">31</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node2.html"><span class='visitedproof'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
+<tr><td class="num" id="LINE31">31</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
 </span></span></a></td></tr>
 </table>
 <hr width="100%">
 ERRORS DURING FOOTPRINT
-<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session25">node4#session25</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE17">17</a>)<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session25">node4#session25</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<hr width="100%">
+<br>MEMORY_LEAK  memory dynamically allocated to `y` by call to `malloc()` at line 24, column 13 is not reachable after line 24, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node11.html#session63">node11#session63</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE24">24</a>)<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session25">node4#session25</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE17">17</a>)<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session25">node4#session25</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<br>DEAD_STORE The value written to &y (type N*) is never used <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node0.html#session0">node0#session0</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE24">24</a>)<hr width="100%">
 ERRORS DURING RE-EXECUTION
-<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session30">node4#session30</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session30">node4#session30</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE17">17</a>)<hr width="100%">
+<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session30">node4#session30</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<br>NULL_DEREFERENCE [B1] pointer `n` last assigned on line 16 could be null and is dereferenced at line 17, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session30">node4#session30</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE17">17</a>)<br>MEMORY_LEAK  memory dynamically allocated to `y` by call to `malloc()` at line 24, column 13 is not reachable after line 24, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node11.html#session75">node11#session75</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE24">24</a>)<hr width="100%">
 WARNINGS DURING FOOTPRINT
 <hr width="100%">
 WARNINGS DURING RE-EXECUTION
 <hr width="100%">
 INFOS DURING FOOTPRINT
-<br>SKIP_FUNCTION new_node2 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node9.html#session59">node9#session59</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE27">27</a>)<br>SKIP_FUNCTION new_node1 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node10.html#session55">node10#session55</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE25">25</a>)<hr width="100%">
+<br>SKIP_FUNCTION new_node2 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node9.html#session68">node9#session68</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE27">27</a>)<br>SKIP_FUNCTION new_node1 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node10.html#session64">node10#session64</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE25">25</a>)<hr width="100%">
 INFOS DURING RE-EXECUTION
-<br>SKIP_FUNCTION new_node1 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node10.html#session66">node10#session66</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE25">25</a>)<br>SKIP_FUNCTION new_node2 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node9.html#session70">node9#session70</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE27">27</a>)</body>
+</body>
 </html>

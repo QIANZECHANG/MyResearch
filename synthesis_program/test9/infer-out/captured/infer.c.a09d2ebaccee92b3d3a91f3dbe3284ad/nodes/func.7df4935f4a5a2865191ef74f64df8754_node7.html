@@ -56,7 +56,7 @@ NOT VISITED</span></span></a><br>EXN:
 <br>
 <span class='color_green'><LISTING>PRUNE((n$1  &lt;  5), true); [line 26, column 8];
 </LISTING></span><hr width="100%">
-<a name="session5" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session5">node7#session5</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) uninit (7: 0)<LISTING><span class='color_black'>PRE: 
+<a name="session7" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session7">node7#session7</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) uninit (7: 0)<LISTING><span class='color_black'>PRE: 
  uninit_vars: { } 
  aliased_vars: { } 
  prepost: ({ }, { })
@@ -67,41 +67,56 @@ POST:
  prepost: ({ }, { })
 
 </LISTING></span><hr width="100%">
-<a name="session15" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session15">node7#session15</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) siof<LISTING><span class='color_black'>PRE: ({ }, { })
+<a name="session18" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session18">node7#session18</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) siof<LISTING><span class='color_black'>PRE: ({ }, { })
 INSTRS: PRUNE((n$1  &lt;  5), true); [line 26, column 8];
 POST: ({ }, { })
 
 </LISTING></span><hr width="100%">
-<a name="session26" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session26">node7#session26</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) address taken<LISTING><span class='color_black'>PRE: { }
+<a name="session30" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session30">node7#session30</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) address taken<LISTING><span class='color_black'>PRE: { }
 INSTRS: PRUNE((n$1  &lt;  5), true); [line 26, column 8];
 POST: { }
 
 </LISTING></span><hr width="100%">
-<a name="session37" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session37">node7#session37</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
+<a name="session43" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session43">node7#session43</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
 Accesses { } 
- Ownership: { a -> OwnedIf{ 0 }, x -> Unowned, p -> Owned, p.[_] -> Owned } 
+ Ownership: { y -> Unowned,
+              a -> OwnedIf{ 0 },
+              x -> Unowned,
+              p -> Owned,
+              p.[_] -> Owned } 
 Attributes: { p.[_] -> { Functional } } 
-Non-stable Paths: { p.[_], x, n$9 }
+Non-stable Paths: { p.[_], x, y, n$10, n$9 }
 
 INSTR: assume a < 5 [line 26, column 8]
 POST: Threads: NoThread, Locks: { } 
 Accesses { } 
- Ownership: { a -> OwnedIf{ 0 }, x -> Unowned, p -> Owned, p.[_] -> Owned } 
+ Ownership: { y -> Unowned,
+              a -> OwnedIf{ 0 },
+              x -> Unowned,
+              p -> Owned,
+              p.[_] -> Owned } 
 Attributes: { p.[_] -> { Functional } } 
-Non-stable Paths: { p.[_], x, n$9 }
+Non-stable Paths: { p.[_], x, y, n$10, n$9 }
 
 
 </LISTING></span><hr width="100%">
-<a name="session47" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session47">node7#session47</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) ownership<LISTING><span class='color_black'>PRE: { x -> Owned }
+<a name="session55" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session55">node7#session55</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) ownership<LISTING><span class='color_black'>PRE: { y -> Owned, x -> Owned }
 INSTR: assume a < 5 [line 26, column 8]
-POST: { x -> Owned }
+POST: { y -> Owned, x -> Owned }
 
 </LISTING></span><hr width="100%">
-<a name="session58" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session58">node7#session58</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) interproc<LISTING><span class='color_black'>**** [FP:Pending] func Node: 7, Procedure: func, Session: 58, Todo: 1 ****
-  PROP 1 of 1:
+<a name="session67" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session67">node7#session67</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) interproc<LISTING><span class='color_black'>**** [FP:Pending] func Node: 7, Procedure: func, Session: 67, Todo: 2 ****
+  PROP 1 of 2:
+  <span class='color_blue'><span class='color_red'>n$1 = old_a</span> ;
+  <span class='color_red'>MEMma &lt; malloc:24 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25(x)</span> ;
+  <span class='color_red'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_red'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+  [footprint
+     <span class='color_red'>@f$2 = x</span> *
+     <span class='color_red'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>$RET_new_node1|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+  PROP 2 of 2:
   <span class='color_blue'><span class='color_red'>n$1 = old_a</span> ;
   <span class='color_red'>UND &lt; new_node1 &gt; :25(x)</span> ;
-  <span class='color_red'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+  <span class='color_red'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_red'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
   [footprint
      <span class='color_red'>@f$2 = x</span> *
      <span class='color_red'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>$RET_new_node1|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
@@ -111,13 +126,58 @@ POST: { x -> Owned }
   NULLIFY(&amp;x); [line 26, column 8];
   </span>
   
-  Processing prop 1/1
+  Processing prop 1/2
+    Instruction <span class='color_green'>PRUNE((n$1  &lt;  5), true); [line 26, column 8]</span>
+    in vpath_find exp:n$47
+    vpath_find: cannot find n$47
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$1 = old_a</span> ;
+    <span class='color_red'>(@f$1  &lt;=  4)</span>; <span class='color_blue'>MEMma &lt; malloc:24 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25(x)</span> ;
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    [footprint
+       <span class='color_blue'>@f$2 = x</span>; <span class='color_red'>(@f$1  &lt;=  4)</span> *
+       <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$1); [line 26, column 8]</span>
+    in vpath_find exp:_t$1
+    vpath_find: cannot find _t$1
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(@f$1  &lt;=  4)</span>; <span class='color_blue'>MEMma &lt; malloc:24 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25(x)</span> ;
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    [footprint
+       <span class='color_blue'>@f$2 = x</span>; <span class='color_blue'>(@f$1  &lt;=  4)</span> *
+       <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+    
+    Instruction <span class='color_green'>NULLIFY(&amp;x); [line 26, column 8]</span>
+    in vpath_find exp:_t$1
+    vpath_find: cannot find _t$1
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>(@f$0  &lt;=  4)</span>; <span class='color_blue'>MEMma &lt; malloc:24 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25(@f$1)</span> ;
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    [footprint
+       <span class='color_blue'>@f$2 = <span class='color_red'>@f$1</span></span>; <span class='color_red'>(@f$0  &lt;=  4)</span> *
+       <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = <span class='color_red'>@f$1 <span class='color_orange'>none</span></span>:N*( sub )</span>  ]</span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>(@f$0  &lt;=  4)</span>; <span class='color_blue'>MEMma &lt; malloc:24 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25(@f$1)</span> ;
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    [footprint
+       <span class='color_blue'>@f$2 = <span class='color_red'>@f$1</span></span>; <span class='color_red'>(@f$0  &lt;=  4)</span> *
+       <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = <span class='color_red'>@f$1 <span class='color_orange'>none</span></span>:N*( sub )</span>  ]</span>
+    
+    
+    
+  Processing prop 2/2
     Instruction <span class='color_green'>PRUNE((n$1  &lt;  5), true); [line 26, column 8]</span>
     Instruction Returns
     PROP 1 of 1:
     <span class='color_blue'><span class='color_blue'>n$1 = old_a</span> ;
     <span class='color_red'>(@f$1  &lt;=  4)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25(x)</span> ;
-    <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>@f$2 = x</span>; <span class='color_red'>(@f$1  &lt;=  4)</span> *
        <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
@@ -126,7 +186,7 @@ POST: { x -> Owned }
     Instruction Returns
     PROP 1 of 1:
     <span class='color_blue'><span class='color_blue'>(@f$1  &lt;=  4)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25(x)</span> ;
-    <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>@f$2 = x</span>; <span class='color_blue'>(@f$1  &lt;=  4)</span> *
        <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
@@ -135,7 +195,7 @@ POST: { x -> Owned }
     Instruction Returns
     PROP 1 of 1:
     <span class='color_blue'><span class='color_red'>(@f$0  &lt;=  4)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25(@f$1)</span> ;
-    <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>@f$2 = <span class='color_red'>@f$1</span></span>; <span class='color_red'>(@f$0  &lt;=  4)</span> *
        <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = <span class='color_red'>@f$1 <span class='color_orange'>none</span></span>:N*( sub )</span>  ]</span>
@@ -143,75 +203,10 @@ POST: { x -> Owned }
     .... After Symbolic Execution ....
     PROP 1 of 1:
     <span class='color_blue'><span class='color_red'>(@f$0  &lt;=  4)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25(@f$1)</span> ;
-    <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>@f$2 = <span class='color_red'>@f$1</span></span>; <span class='color_red'>(@f$0  &lt;=  4)</span> *
        <span class='color_blue'>a = <span class='color_red'>@f$0 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = <span class='color_red'>@f$1 <span class='color_orange'>none</span></span>:N*( sub )</span>  ]</span>
-    
-    
-    
-  </LISTING></span><hr width="100%">
-<a name="session69" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session69">node7#session69</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 7, Procedure: func, Session: 69, Todo: 1 ****
-  PROP 1 of 1:
-  <span class='color_blue'><span class='color_red'>val$4 = old_a</span> ;
-  <span class='color_red'>(n$1  &lt;=  4)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25($RET_new_node1|abducedRetvar)</span> ;
-  <span class='color_red'>a = n$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = n$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = val$3 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_red'>$RET_new_node1|abducedRetvar = val$3 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>; <span class='color_red'>$RET_new_node2|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
-  <span class='color_red'>$RET_new_node2|abducedRetvar|->{v:val$2 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
-  .... Instructions: .... 
-  <span class='color_green'>PRUNE((n$1  &lt;  5), true); [line 26, column 8];
-  REMOVE_TEMPS(n$1); [line 26, column 8];
-  NULLIFY(&amp;x); [line 26, column 8];
-  </span>
-  
-  Processing prop 1/1
-    Instruction <span class='color_green'>PRUNE((n$1  &lt;  5), true); [line 26, column 8]</span>
-    Instruction Returns
-    PROP 1 of 1:
-    <span class='color_blue'><span class='color_blue'>val$4 = old_a</span> ;
-    <span class='color_blue'>(n$1  &lt;=  4)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25($RET_new_node1|abducedRetvar)</span> ;
-    <span class='color_blue'>a = n$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = n$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = val$3 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = val$3 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>; <span class='color_blue'>$RET_new_node2|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
-    <span class='color_blue'>$RET_new_node2|abducedRetvar|->{v:val$2 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
-    
-    Instruction <span class='color_green'>REMOVE_TEMPS(n$1); [line 26, column 8]</span>
-    Instruction Returns
-    PROP 1 of 1:
-    <span class='color_blue'><span class='color_red'>(val$4  &lt;=  4)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25($RET_new_node1|abducedRetvar)</span> ;
-    <span class='color_blue'>a = <span class='color_red'>val$4 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>val$4 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = val$3 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = val$3 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>; <span class='color_blue'>$RET_new_node2|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
-    <span class='color_blue'>$RET_new_node2|abducedRetvar|->{v:val$2 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
-    
-    Instruction <span class='color_green'>NULLIFY(&amp;x); [line 26, column 8]</span>
-    Instruction Returns
-    PROP 1 of 1:
-    <span class='color_blue'><span class='color_blue'>(val$4  &lt;=  4)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25($RET_new_node1|abducedRetvar)</span> ;
-    <span class='color_blue'>a = val$4 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$4 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = val$3 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>; <span class='color_blue'>$RET_new_node2|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
-    <span class='color_blue'>$RET_new_node2|abducedRetvar|->{v:val$2 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
-    
-    .... After Symbolic Execution ....
-    PROP 1 of 1:
-    <span class='color_blue'><span class='color_red'>(val$4  &lt;=  4)</span>; <span class='color_blue'>UND &lt; new_node1 &gt; :25($RET_new_node1|abducedRetvar)</span> ;
-    <span class='color_blue'>a = <span class='color_red'>val$4 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>val$4 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>0 <span class='color_orange'>nullify</span></span>:N*</span>; <span class='color_blue'>$RET_new_node1|abducedRetvar = val$3 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>; <span class='color_blue'>$RET_new_node2|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
-    <span class='color_blue'>$RET_new_node2|abducedRetvar|->{v:val$2 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
-    
-    
-    
-  </LISTING></span><hr width="100%">
-<a name="session80" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html#session80">node7#session80</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 7, Procedure: func, Session: 80, Todo: 1 ****
-  PROP 1 of 1:
-  <span class='color_blue'><span class='color_red'>val$3 = old_a</span> ;
-  <span class='color_red'>(4  &lt;  n$1)</span>; <span class='color_red'>UND &lt; new_node1 &gt; :25($RET_new_node1|abducedRetvar)</span> ;
-  <span class='color_red'>a = n$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = n$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = val$1 <span class='color_orange'>update:25</span>:N*</span>; <span class='color_red'>$RET_new_node1|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span> ;
-  <span class='color_red'>$RET_new_node1|abducedRetvar|->{v:val$2 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
-  .... Instructions: .... 
-  <span class='color_green'>PRUNE((n$1  &lt;  5), true); [line 26, column 8];
-  REMOVE_TEMPS(n$1); [line 26, column 8];
-  NULLIFY(&amp;x); [line 26, column 8];
-  </span>
-  
-  Processing prop 1/1
-    Instruction <span class='color_green'>PRUNE((n$1  &lt;  5), true); [line 26, column 8]</span>
-    Instruction Returns
-    
-    .... After Symbolic Execution ....
     
     
     

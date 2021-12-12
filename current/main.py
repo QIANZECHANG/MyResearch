@@ -24,6 +24,9 @@ def main(filename):
         if len(err_path)>err_num:
             err_num=len(err_path)
             os.system("cat fuzzer_result > tmp")
+    if err_num==0:
+        print("no error")
+        return
     os.system("cat tmp > fuzzer_result")
     os.system("rm -f tmp")
     print("fuzzing done")

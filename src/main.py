@@ -24,6 +24,9 @@ def main(filename):
         if len(err_path)>err_num:
             err_num=len(err_path)
             os.system("cat fuzzer_result > tmp")
+    if err_num==0:
+        print("no error")
+        return
     os.system("cat tmp > fuzzer_result")
     os.system("rm -f tmp")
     print("fuzzing done")
@@ -84,7 +87,7 @@ def main(filename):
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
-                    add_dynamic_value(syn_inf,"inst_result",_error_feature,[i])
+                    add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
             t=time.time()-t1
         # if this error is fixed
         if not_fixed==0:

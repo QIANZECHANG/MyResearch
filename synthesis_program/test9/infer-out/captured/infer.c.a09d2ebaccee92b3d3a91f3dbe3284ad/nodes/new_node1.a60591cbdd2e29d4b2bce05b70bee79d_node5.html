@@ -55,9 +55,14 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
 <span class='color_green'><LISTING>n$3=_fun_malloc(sizeof(t=N;nbytes=4):N) [line 10, column 20];
 *&amp;n:N*=n$3 [line 10, column 5];
 </LISTING></span><hr width="100%">
-<a name="session1" href="./../nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node5.html#session1">node5#session1</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE10">10</a>) uninit (5: 0)<LISTING><span class='color_black'>**** [FP:Pending] func Node: 10, Procedure: func, Session: 55, Todo: 1 ****
-  PROP 1 of 1:
-  <span class='color_blue'><span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+<a name="session1" href="./../nodes/new_node1.a60591cbdd2e29d4b2bce05b70bee79d_node5.html#session1">node5#session1</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE10">10</a>) uninit (5: 0)<LISTING><span class='color_black'>**** [FP:Pending] func Node: 10, Procedure: func, Session: 64, Todo: 2 ****
+  PROP 1 of 2:
+  <span class='color_blue'><span class='color_red'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+  [footprint
+     <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+  PROP 2 of 2:
+  <span class='color_blue'><span class='color_red'>MEMma &lt; malloc:24 &gt;  <span class='color_orange'>{vpath: }</span>(_t$2)</span> ;
+  <span class='color_red'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
   [footprint
      <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
   .... Instructions: .... 
@@ -68,25 +73,25 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
   REMOVE_TEMPS(n$7,n$8,n$9); [line 25, column 5];
   </span>
   
-  Processing prop 1/1
+  Processing prop 1/2
     Instruction <span class='color_green'>n$7=*&amp;p[0]:_fn_(*) [line 25, column 9]</span>
     .... Rearrangement Start ....
     Exp: &amp;p[0]
     Prop: 
-    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$10 <span class='color_orange'>initial</span>:N*; return = n$11 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$20 <span class='color_orange'>initial</span>:N*; return = n$21 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
     [footprint
        a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
     
     in prop_iter_extend_ptsto lexp: &amp;p[0]
     prop before:
-    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$10 <span class='color_orange'>initial</span>:N*; return = n$11 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$20 <span class='color_orange'>initial</span>:N*; return = n$21 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
     [footprint
        a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
     
     
     prop list after:
     PROP 1 of 1:
-    <span class='color_blue'><span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = n$10 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = n$11 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'><span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = n$20 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = n$21 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
     
@@ -95,7 +100,7 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
     Instruction Returns
     PROP 1 of 1:
     <span class='color_blue'><span class='color_red'>n$7 = _fun_new_node1</span> ;
-    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
     
@@ -104,14 +109,14 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
     Exp: &amp;a
     Prop: 
     <span class='color_blue'>n$7 = _fun_new_node1 ;
-    a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$12 <span class='color_orange'>initial</span>:N*; return = n$13 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
+    y = 0 <span class='color_orange'>nullify</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$22 <span class='color_orange'>initial</span>:N*; return = n$23 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
     [footprint
        a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
     
     in prop_iter_extend_ptsto lexp: &amp;a
     prop before:
     <span class='color_blue'>n$7 = _fun_new_node1 ;
-    a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$12 <span class='color_orange'>initial</span>:N*; return = n$13 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
+    y = 0 <span class='color_orange'>nullify</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$22 <span class='color_orange'>initial</span>:N*; return = n$23 <span class='color_orange'>initial</span>:int; p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]
     [footprint
        a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
     
@@ -119,7 +124,7 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
     prop list after:
     PROP 1 of 1:
     <span class='color_blue'><span class='color_blue'>n$7 = _fun_new_node1</span> ;
-    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = n$12 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = n$13 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = n$22 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = n$23 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
     
@@ -128,7 +133,7 @@ td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2e
     Instruction Returns
     PROP 1 of 1:
     <span class='color_blue'><span class='color_blue'>n$7 = _fun_new_node1</span>; <span class='color_red'>n$8 = old_a</span> ;
-    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
+    <span class='color_blue'>y = 0 <span class='color_orange'>nullify</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>p = [2|0:_fun_new_node1 <span class='color_orange'>update:22</span>, 1:_fun_new_node2 <span class='color_orange'>update:22</span>] <span class='color_orange'>initial</span>:_fn_(*)[2*_]</span>
     [footprint
        <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
     

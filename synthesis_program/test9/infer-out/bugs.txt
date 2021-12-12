@@ -1,4 +1,4 @@
-Found 2 issues
+Found 4 issues
 
 infer.c:11: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
   [B1] pointer `n` last assigned on line 10 could be null and is dereferenced at line 11, column 5.
@@ -16,6 +16,24 @@ infer.c:17: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
   18.       return n;
   19.   }
 
+infer.c:24: error: DEAD_STORE
+  The value written to &y (type N*) is never used.
+  22.       node* (*p[])()={new_node1,new_node2};
+  23.       node *x;
+  24. >     node *y=malloc(sizeof(node));
+  25.       x=(*p[0])(a); 
+  26.       if(a<5){
+
+infer.c:24: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated to `y` by call to `malloc()` at line 24, column 13 is not reachable after line 24, column 5.
+  22.       node* (*p[])()={new_node1,new_node2};
+  23.       node *x;
+  24. >     node *y=malloc(sizeof(node));
+  25.       x=(*p[0])(a); 
+  26.       if(a<5){
+
 Summary of the reports
 
   NULL_DEREFERENCE: 2
+       MEMORY_LEAK: 1
+        DEAD_STORE: 1
