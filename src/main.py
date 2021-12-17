@@ -43,7 +43,7 @@ def main(filename):
     filelist = read_file("_"+filename)
     # source instrumentation 
     inst_filename = instrument(dep)
-    
+
     # initialization of instrumentation result
     syn_inf = get_synthesis_inf(dep)
     os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
@@ -69,7 +69,7 @@ def main(filename):
         t=0
         not_fixed=1 # flag
         p=None
-        while t<60 and not_fixed: # one error 1 min
+        while t<120 and not_fixed: # one error 1 min
             err_inf = syn_inf[i]
             # for each error, generate the patch of each function in the error patch 
             patch_cand = synthesis().synthesis(err_inf)
@@ -89,6 +89,8 @@ def main(filename):
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
                     add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
             t=time.time()-t1
+        if(t>=120):
+            print("time out")
         # if this error is fixed
         if not_fixed==0:
             print(f"fixed error {i}, error feature: {err_fea}")

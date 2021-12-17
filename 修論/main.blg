@@ -1,0 +1,49 @@
+This is pBibTeX, Version 0.99d-j0.33 (utf8.euc) (TeX Live 2019/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: mybib.bib
+Warning--empty booktitle in Memfix
+You've used 3 entries,
+            2118 wiz_defined-function locations,
+            520 strings with 4657 characters,
+and the built_in function-call counts, 1553 in all, are:
+= -- 162
+> -- 64
+< -- 2
++ -- 25
+- -- 22
+* -- 80
+:= -- 215
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 87
+empty$ -- 113
+format.name$ -- 22
+if$ -- 367
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 88
+stack$ -- 0
+substring$ -- 79
+swap$ -- 50
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 9
+width$ -- 4
+write$ -- 37
+is.kanji.str$ -- 0
+(There was 1 warning)

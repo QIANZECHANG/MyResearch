@@ -6,6 +6,13 @@ Seongjoon Hong, Junhee Lee, Jeongsoo Lee, and Hakjoo Oh.
 \newblock In {\em 2020 IEEE/ACM 42nd International Conference on Software
   Engineering (ICSE)}, pages 271--283, 2020.
 
+\bibitem{oracle}
+Susmit Jha, Sumit Gulwani, Sanjit~A. Seshia, and Ashish Tiwari.
+\newblock Oracle-guided component-based program synthesis.
+\newblock In {\em Proceedings of the 32nd ACM/IEEE International Conference on
+  Software Engineering - Volume 1}, ICSE '10, page 215^^e2^^80^^93224, New
+  York, NY, USA, 2010. Association for Computing Machinery.
+
 \bibitem{Memfix}
 Junhee Lee, Seongjoon Hong, and Hakjoo Oh.
 \newblock Memfix: Static analysis-based repair of memory deallocation errors
