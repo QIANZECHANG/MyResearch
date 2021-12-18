@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  18 DEC 2021 02:03
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  19 DEC 2021 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,6 +942,12 @@ LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbullet' on input line 171.
 
+
+Overfull \hbox (9.24731pt too wide) in paragraph at lines 171--171
+[][][]\T1/pplx/m/n/8 https://github.com/QIANZECHANG/MyResearch(\JY1/mc/m/n/8 仮
+\T1/pplx/m/n/8 )| 
+ []
+
 [1
 
 
@@ -992,85 +998,90 @@ LaTeX Font Warning: Font shape `OMS/pplx/bx/n' undefined
 ) (./saver.c) (./saver_result.c)
 
 LaTeX Font Warning: Font shape `JT1/mc/m/sl' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 275.
+(Font)              using `JT1/mc/m/n' instead on input line 276.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/sl' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 275.
+(Font)              using `JY1/mc/m/n' instead on input line 276.
 
 LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 275.
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 276.
 
-Overfull \hbox (235.00233pt too wide) in paragraph at lines 271--278
+Overfull \hbox (235.00233pt too wide) in paragraph at lines 272--279
 [][]$[]$[] 
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 281--287
+Underfull \hbox (badness 1533) in paragraph at lines 282--288
 [][]\T1/pplx/m/n/10 Because static an-a-lyz-ers like In-fer have
  []
 
 
-Underfull \hbox (badness 1043) in paragraph at lines 281--287
+Underfull \hbox (badness 1043) in paragraph at lines 282--288
 \T1/pplx/m/n/10 a dif-fi-cult time re-solv-ing is-sues like in-di-
  []
 
 
-Underfull \hbox (badness 1297) in paragraph at lines 281--287
+Underfull \hbox (badness 1297) in paragraph at lines 282--288
 \T1/pplx/m/n/10 leak of \T1/pplx/m/it/10 o2\T1/pplx/m/n/10 . Af-ter we re-ceive
 d the In-fer
  []
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 281--287
+Underfull \hbox (badness 3769) in paragraph at lines 282--288
 \T1/pplx/m/n/10 re-sults, the er-ror func-tion was de-tected
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 281--287
+Underfull \hbox (badness 2150) in paragraph at lines 282--288
 \T1/pplx/m/n/10 again by Lib-Fuzzer, and all er-rors were
  []
 
 
-Overfull \hbox (225.00232pt too wide) in paragraph at lines 281--287
+Overfull \hbox (225.00232pt too wide) in paragraph at lines 282--288
 []$[]$[] 
  []
 
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-16.
+17.
 (c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 3229) in paragraph at lines 311--320
+Underfull \hbox (badness 3229) in paragraph at lines 312--321
 \T1/pplx/m/n/10 de-pen-dent vari-ables and run the source
  []
 
 
-Underfull \hbox (badness 4872) in paragraph at lines 311--320
+Underfull \hbox (badness 4872) in paragraph at lines 312--321
 \T1/pplx/m/n/10 in-stru-mented code through Lib-fuzzer to
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 311--320
+Underfull \hbox (badness 1173) in paragraph at lines 312--321
 \T1/pplx/m/n/10 vari-able. Ta-ble []1[] dis-plays the re-sults of
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 311--320
+Underfull \hbox (badness 1442) in paragraph at lines 312--321
 \T1/pplx/m/n/10 whether or not an er-ror oc-curred at the
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 311--320
+Underfull \hbox (badness 2837) in paragraph at lines 312--321
 \T1/pplx/m/n/10 based pro-gram synthesis[[]], which is: []
  []
 
 
-Overfull \hbox (225.00232pt too wide) in paragraph at lines 311--320
+Overfull \hbox (225.00232pt too wide) in paragraph at lines 312--321
 []$[]$[] 
  []
 
-[2] (./main.bbl
+[2]
+Underfull \hbox (badness 3148) in paragraph at lines 339--343
+[]\T1/pplx/m/n/10 We briefly dis-cussed how HAMER uses
+ []
+
+(./main.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 (Font)              using `JT1/gt/m/n' instead on input line 6.
@@ -1079,27 +1090,33 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-) [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4]) [5
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 374.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 379.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8EF82A641EF1B41DE3F3AF23753D4D81;408.
+(rerunfilecheck)             Checksum: F26CB803D1D12EE2219F163966E3D66B;764.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 379.
  ) 
 Here is how much of TeX's memory you used:
- 23212 strings out of 492763
- 418499 string characters out of 6143311
- 949263 words of memory out of 5000000
- 27242 multiletter control sequences out of 15000+600000
+ 23214 strings out of 492763
+ 418515 string characters out of 6143311
+ 950345 words of memory out of 5000000
+ 27244 multiletter control sequences out of 15000+600000
  55640 words of font info for 107 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  60i,10n,58p,1242b,1542s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (4 pages, 85964 bytes).
+Output written on main.dvi (5 pages, 88916 bytes).

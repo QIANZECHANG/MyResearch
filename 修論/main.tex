@@ -166,7 +166,7 @@ In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error r
 \textbf{Contributions.} This paper makes the following contributions:
 \begin{itemize}
   \item We present a new technique for repairing memory errors based on hybrid analysis.
-  \item We present HAMER~\footnote{https://github.com/QIANZECHANG/MyResearch}, a memory error repair tool that implements the proposed approach.
+  \item We present HAMER~\footnote{https://github.com/QIANZECHANG/MyResearch(仮)}, a memory error repair tool that implements the proposed approach.
 \end{itemize}
 }
 
@@ -259,6 +259,7 @@ In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error r
     \caption{SAVER-generated patch}
   \end{subfigure}
   \caption{Motivating Example 2: Infer false-positive alarm}
+  \label{me2}
 \end{figure*}
 
 \textcolor{red}{
@@ -270,7 +271,7 @@ This buggy code has three memory leaks, denoted by {\it o0}, {\it o1}, and {\it 
 
 \begin{minipage}{\textwidth}
 \vspace{0.2cm}
-\hspace{-0.4cm}
+\hspace{-0.45cm}
 \raggedright
 \textsl{Object allocated at line 20 is unreachable at line 20.}
 \vspace{0.2cm}
@@ -319,28 +320,32 @@ Following that, we instrument all of the dependent variables and run the source 
 \end{minipage}
 
 \textcolor{red}{
-Finally, we use LibFuzzer to detect the patched code, and if it fixes the current bug, we keep the patch and fix other bugs until all bugs are fixed or time out. if the current patch does not fix the bug or causes a new bug, we try to insert the patch into another location or collect new tests to synthesize a new patch.
-For example, by using the results of table1 we also can synthesize patches like a=4. With Libfuzzer we can get that when a is 4, o1 still occurs memory leak. First we will try other fix locations, but since there is only one return in the func, we can only collect new tests to synthesize a new patch. We append a=4 to test suite and then generate a new patch via the synthesizer. It is obvious that the new test suite let us get the correct patch.
+Finally, we use LibFuzzer to detect the patched code, and if it fixes the current bug, we keep the patch and fix other bugs until all bugs are fixed or time out. If the current patch does not fix the bug or causes a new bug, we try to insert the patch into another location or collect new tests to synthesize a new patch. For example, we can also synthesize patches like {\it if(a<=3)free(x);} using the Table~\ref{instres} results. With Libfuzzer, we can see that when {\it a=4}, {\it o1} still occurs memory leak. We will start by trying alternative fix locations, however, because the function {\it func} only has one return place, we can only collect new tests to synthesize a new patch. We add {\it (a:4, error:1)} to the test suite and then use the synthesizer to generate a new patch. It's self-evident that the improved test suite enabled us to obtain the correct patch. We will utilize temporary variables to save the heap object and variables in the conditional when we apply the patch. This step is necessary to prevent these variables from changing between the allocation location and patch insertion location.
 }
 
 \textcolor{red}{
 Although it is possible to fix the  {\it o1} memory leak by inserting a patch into function  {\it new\_node2}, the use-after-free problem will occur if the memory is freed too early due to the use of  {\it x->v} at line 25 of the function  {\it func}.
 }
 
-\subsection{Motivating Example 2}
-%-------------code--------------------------------
+
+%---------------------------------------------
 %[+] { Insert: if (true) free(*(func:x.p2)) at 3 (line 12, column 3) }
 % memory dynamically allocated to `y` by call to `malloc()` at line 20, column 11 is not reachable after line 20, column 3.
 
 %------------------------------------------------------
-
-
+\subsection{Motivating Example 2}
+\textcolor{red}{
+We briefly discussed how HAMER uses fuzzing (LibFuzzer) to detect and fix errors that are not noticed by the static analyzer (Infer) in Motivating Example 1. Similarly, HAMER can avoid attempting to resolve false alarms. In Motivating Example 2, line 10 frees {\it o1} in some other method, but Infer misses it, so it assumes {\it o1} occurs memory leak. SAVER~\cite{SAVER} also ignores the fact that this is a false alarm and generates the incorrect patch, resulting in {\it double-free}. HAMER utilizes LibFuzzer to dynamically detect code, and LibFuzzer does not report issues for Motivating Example 2, therefore HAMER saves time trying to generate a fix for the wrong alarm.
+}
 %---------------------------------------------------------------------------------------
 %	Approach
 %----------------------------------------------------------------------------------------
 \section{Approach}
-
-
+\subsection{Error Detection}
+\subsection{Dependency Collection}
+\subsection{Source Instrumentation}
+\subsection{Component-based Program Synthesis}
+\subsection{Repair Algorithm}
 
 
 
