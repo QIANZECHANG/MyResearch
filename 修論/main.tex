@@ -335,17 +335,36 @@ Although it is possible to fix the  {\it o1} memory leak by inserting a patch in
 %------------------------------------------------------
 \subsection{Motivating Example 2}
 \textcolor{red}{
-We briefly discussed how HAMER uses fuzzing (LibFuzzer) to detect and fix errors that are not noticed by the static analyzer (Infer) in Motivating Example 1. Similarly, HAMER can avoid attempting to resolve false alarms. In Motivating Example 2, line 10 frees {\it o1} in some other method, but Infer misses it, so it assumes {\it o1} occurs memory leak. SAVER~\cite{SAVER} also ignores the fact that this is a false alarm and generates the incorrect patch, resulting in {\it double-free}. HAMER utilizes LibFuzzer to dynamically detect code, and LibFuzzer does not report issues for Motivating Example 2, therefore HAMER saves time trying to generate a fix for the wrong alarm.
+We briefly discussed how HAMER uses fuzzing (LibFuzzer) to detect and fix errors that are not noticed by the static analyzer (Infer) in Motivating Example 1. Similarly, HAMER can avoid attempting to resolve false alarms. In Motivating Example 2, line 10 frees {\it o1} in some other way, but Infer misses it, so it assumes {\it o1} occurs memory leak. SAVER~\cite{SAVER} also ignores the fact that this is a false alarm and generates the incorrect patch, resulting in {\it double-free}. HAMER utilizes LibFuzzer to dynamically detect code, and LibFuzzer does not report issues for Motivating Example 2, therefore HAMER saves time trying to generate a fix for the wrong alarm.
 }
 %---------------------------------------------------------------------------------------
 %	Approach
 %----------------------------------------------------------------------------------------
 \section{Approach}
+\textcolor{red}{
+In this section, we describe our approach in detail, explaining what technical issues arise and how we address them. There are three major issues to consider:
+\begin{itemize}
+\item It is difficult for LibFuzzer to directly collect enough test suites to synthesize the correct patches. How can HAMER generate the correct patches?
+\item How does HAMER choose the correct fix location(s) when a function has multiple return places?
+\item How does HAMER deal with several memory errors in a single function?
+\end{itemize}
+}
+
+\textcolor{red}{
+HAMER will solve these issues by using LibFuzzer to constantly check the patched code. In subsection~\ref{repair}, we will go over our repair algorithm in detail. Until then, we will describe how HAMER gathers the data required to resolve the errors.
+}
 \subsection{Error Detection}
+\textcolor{red}{
+HAMER uses a static analyzer to find functions that may have memory errors and then uses fuzzer to detect the real errors in those functions. The purpose of applying the static analyzer is to improve HAMER's scalability, as the fuzzer always takes a long time to detect errors. Using the static analyzer to pick out candidate functions prevents fuzzer from wasting time in locations where it is not necessary. But obviously, HAMER will not be able to fix errors in functions that are not provided by the static analyzer. So for short code, we can just simply use fuzzer to detect errors.
+}
+
+
+
 \subsection{Dependency Collection}
 \subsection{Source Instrumentation}
 \subsection{Component-based Program Synthesis}
 \subsection{Repair Algorithm}
+\label{repair}
 
 
 

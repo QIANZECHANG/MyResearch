@@ -200,6 +200,16 @@ def add_dynamic_value(syn_inf,filename,error_feature,err_index):
                         continue
                     var["value"].append(inst[key][-1])
         return      
+    if err_index:
+        for i in err_index:
+            syn_inf[i]["error"]+=[1]
+            for func,v in syn_inf[i]["var"].items():
+                for var in v:
+                    key=(var["name"],var["coord"].split(":")[1])
+                    if key not in inst:
+                        continue
+                    var["value"].append(inst[key][-1])   
+        return
     tmp = error_feature.copy()
     for e in err:   
         if e not in error_feature:

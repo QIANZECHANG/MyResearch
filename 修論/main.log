@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  19 DEC 2021 01:37
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  20 DEC 2021 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,7 +1081,12 @@ Underfull \hbox (badness 3148) in paragraph at lines 339--343
 []\T1/pplx/m/n/10 We briefly dis-cussed how HAMER uses
  []
 
-(./main.bbl
+
+Underfull \hbox (badness 1142) in paragraph at lines 351--351
+[]\T1/pplx/m/n/10 How does HAMER deal with sev-eral
+ []
+
+[3] [4] (./main.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 (Font)              using `JT1/gt/m/n' instead on input line 6.
@@ -1090,33 +1095,27 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-[4]) [5
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 379.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 379.
+) [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 398.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 398.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 379.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 379.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 398.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 398.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: F26CB803D1D12EE2219F163966E3D66B;764.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 379.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 398.
  ) 
 Here is how much of TeX's memory you used:
- 23214 strings out of 492763
- 418515 string characters out of 6143311
- 950345 words of memory out of 5000000
- 27244 multiletter control sequences out of 15000+600000
+ 23215 strings out of 492763
+ 418523 string characters out of 6143311
+ 950389 words of memory out of 5000000
+ 27245 multiletter control sequences out of 15000+600000
  55640 words of font info for 107 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  60i,10n,58p,1242b,1542s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (5 pages, 88916 bytes).
+Output written on main.dvi (5 pages, 91192 bytes).
