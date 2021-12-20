@@ -65,6 +65,8 @@
 \usepackage{caption,subcaption}
 \usepackage{amsmath}
 \usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{algorithm,algorithmic}
 
 %--------------------------------------------
 % code style
@@ -358,13 +360,122 @@ HAMER will solve these issues by using LibFuzzer to constantly check the patched
 HAMER uses a static analyzer to find functions that may have memory errors and then uses fuzzer to detect the real errors in those functions. The purpose of applying the static analyzer is to improve HAMER's scalability, as the fuzzer always takes a long time to detect errors. Using the static analyzer to pick out candidate functions prevents fuzzer from wasting time in locations where it is not necessary. But obviously, HAMER will not be able to fix errors in functions that are not provided by the static analyzer. So for short code, we can just simply use fuzzer to detect errors.
 }
 
-
-
 \subsection{Dependency Collection}
+\begin{equation}
+EP=\{(get\_path(e),\,get\_ob(e))|\, e \epsilon E\}
+\end{equation}
+
+\begin{multline}
+Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
+\end{multline}
+
 \subsection{Source Instrumentation}
-\subsection{Component-based Program Synthesis}
+
+
+ \begin{algorithm}
+ \caption{Source Instrumentation Result Collection}
+ \label{srcinst}
+ \begin{algorithmic}[1]
+ \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+ \renewcommand{\algorithmicensure}{\textbf{Output:}}
+ \REQUIRE src, Dep
+ \ENSURE  SynInf
+  \STATE $dep\_var \gets \emptyset$
+  \STATE $SynInf \gets \emptyset$
+  \STATE $errID \gets 0$
+  \FOR {$(Var, Ret, ob) \in Dep$}
+   \STATE $dep\_var \gets dep\_var \cup Var$
+   \STATE $SynInf[errID].add((Ret,ob))$
+   \STATE $errID \gets errID + 1$
+  \ENDFOR
+  \STATE $inst\_code \gets \textbf{Instrument}(src, dep\_var)$
+  \STATE $i \gets 0$
+  \WHILE {$i < 10$}
+   \STATE $res \gets \textbf{Fuzz}(inst\_code)$
+    \FOR {$errID = 0$ to $|Dep|-1$}
+     \FOR {$var \in dep\_var$}
+     \IF {$memory$ $leak$ $happen$}
+      \STATE $SynInf[errID][var].add((res[var],1))$
+     \ELSE
+      \STATE $SynInf[errID][var].add((res[var],0))$
+     \ENDIF
+     \ENDFOR
+    \ENDFOR
+   \STATE $i\gets i + 1$
+  \ENDWHILE
+ \end{algorithmic} 
+ \end{algorithm}
+
+\subsection{Patch Generation}
 \subsection{Repair Algorithm}
-\label{repair}
+
+ \begin{algorithm}
+ \caption{Repair Algorithm}
+ \label{rep}
+ \begin{algorithmic}[1]
+ \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+ \renewcommand{\algorithmicensure}{\textbf{Output:}}
+ \REQUIRE src, SynInf
+ \ENSURE  fixed\_code
+  \STATE $fixed\_code \gets src$
+  \STATE $queue \gets \{0,1,...,|SynInf|-1\}$
+  \STATE $flag = 0$
+  \WHILE {$|queue| \ne 0 $ and $flag \ne |queue| $}
+   \STATE $errID \gets queue.pop$
+   \STATE $err\_inf \gets SynInf[errID]$
+   \REPEAT
+    \STATE $cur\_patches \gets \textbf{Synthesizer}(err\_inf)$
+    \IF {$cur\_patches$ $same$ $as$ $last$ $time$}
+     \STATE $\textbf{break}$
+    \ENDIF
+    \STATE $cur\_code \gets \textbf{Fix}(cur\_patches,fixed\_code)$
+    \IF {$not$ $fixed$}
+     \STATE $err\_inf \gets \textbf{Update}(err\_inf)$
+    \ENDIF
+   \UNTIL {$timeout$ or $error$ $fixed$}
+   \IF {$current$ $error$ $fixed$}
+    \STATE $fixed\_code \gets cur\_code$
+    \STATE $flag \gets 0$
+    \IF {$queue$ $is$ $not$ $empty$}
+     \STATE $SynInf \gets \textbf{Clean}(SynInf)$
+     \STATE $SynInf \gets \textbf{Update}(SynInf)$
+    \ENDIF
+   \ELSE
+    \STATE $queue.add(errID)$
+    \STATE $flag \gets flag + 1$
+   \ENDIF
+  \ENDWHILE  
+ \end{algorithmic} 
+ \end{algorithm}
+
+ \begin{algorithm}
+ \caption{Function Fix}
+ \label{rep}
+ \begin{algorithmic}[1]
+ \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+ \renewcommand{\algorithmicensure}{\textbf{Output:}}
+ \REQUIRE cur\_patches, code
+ \ENSURE  fixed\_code
+  \STATE $test\_code \gets code$
+  \FOR {$(cur\_patch,Ret) \in cur\_patches$}
+   \FOR {$retloc \in Ret$}
+    \STATE $test\_code \gets \textbf{InsertPatch}((cur\_patch,retloc))$
+    \STATE $\textbf{Fuzz}(test\_code)$
+    \IF {$new$ $error$ $occurs$}
+     \STATE $test\_code \gets code$
+     \STATE $\textbf{continue}$
+    \ELSIF {$same$ $error$ $occurs$}
+     \STATE $\textbf{continue}$
+    \ELSE 
+     \STATE $\textbf{return}$ $test\_code$
+    \ENDIF
+   \ENDFOR
+  \ENDFOR
+  \STATE $\textbf{return}$ $\emptyset$
+
+
+ \end{algorithmic} 
+ \end{algorithm}
 
 
 
