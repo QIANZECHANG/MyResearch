@@ -19,8 +19,8 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[twoside,twocolumn,a4j,dvipdfmx]{article}
-
+%\documentclass[twoside,twocolumn,a4j,dvipdfmx]{article}
+\documentclass[a4j,dvipdfmx]{article}
 %\usepackage{blindtext} % Package to generate dummy text throughout this template 
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
@@ -132,14 +132,12 @@
 \date{} % Leave empty to omit a date
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
-\textcolor{red}{
-Automated program repair is a technology which aims to fix program errors and vulnerabilities automatically. In the field of memory error repair, with the development of bug detection tools, we can easily detect memory errors in programs. However, fixing those errors is time-consuming and error-prone. Because the program’s heap-related behavior plays a critical role in memory error repair, the existing techniques are mainly based on static analysis, where the static bug-finder is used to detect program memory errors and then repair tools collect the essential information via static analysis. But since static bug-finder may give wrong alarms which will affect the performance of the repair tools, and static analysis often requires high overhead. }
+Automated program repair is a technology which aims to fix program errors and vulnerabilities automatically. In the field of memory error repair, with the development of bug detection tools, we can easily detect memory errors in programs. However, fixing those errors is time-consuming and error-prone. Because the program’s heap-related behavior plays a critical role in memory error repair, the existing techniques are mainly based on static analysis, where the static analyzer is used to detect program memory errors and then repair tools collect the essential information via static analysis. But since static analyzer may give wrong alarms which will affect the performance of the repair tools, and static analysis often requires high overhead. 
 
-\textcolor{red}{
-We present \textbf{HAMER}, a hybrid automatic memory error repair tool that aims to address those 
+We present \textbf{HAMER}, a hybrid automated memory error repair tool that aims to address those 
 shortcomings by using hybrid analysis. HAMER first uses fuzzer to check the alarms given by the static 
-bug-finder and extracts the real errors from those alarms. Then it tries to fix those errors by using 
-hybrid analysis.}
+analyzer and extracts the real errors from those alarms. Then it tries to fix those errors by using 
+hybrid analysis. \textcolor{blue}{HAMER is the first automated memory error repair technique based on fuzzing results. HAMER does not waste time resolving alarms that are incorrect because the errors reported by fuzzer are real errors, and HAMER also utilizes fuzzer to test the generated patches to ensure they are correct. For the necessary information for synthesizing patches, HAMER uses lightweight static analysis techniques to collect it.} \textcolor{red}{evaluation and conclusion}
 \end{abstract}
 }
 
@@ -155,28 +153,43 @@ hybrid analysis.}
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
-\textcolor{red}{
-Memory errors, such as memory leaks, can have catastrophic effects,  thus detecting and fixing them has always been a critical task for developers. Memory error detection performance is improving with the development of memory error detection technologies, however resolving these problems takes a lot of time and work for developers, and erroneous patches might lead to more significant effects.}
+Memory errors, such as memory leaks, can have catastrophic effects,  thus detecting and fixing them has always been a critical task for developers. Memory error detection performance is improving with the development of memory error detection technologies, however resolving these problems takes a lot of time and work for developers, and erroneous patches might lead to more significant effects.
 
-\textcolor{red}{
-Existing memory error repair techniques\cite{SAVER,Memfix} are mainly based on static analysis. This is because resolving issues like memory leaks necessitates an understanding of heap-related behavior, such as error source and sink. On the other hand, static analysis techniques might have a high time and space overhead, and they aren't always particularly good at dealing with problems such as indirect calls and alias. While dynamic analysis can help with these issues, it does not provide enough information to generate patches.}
+Existing memory error repair techniques~\cite{SAVER,Memfix} are mainly based on static analysis. This is because resolving issues like memory leaks necessitates an understanding of heap-related behavior, such as error source and sink. \textcolor{blue}{Collecting heap-related behavior information has a high time and space overhead. Because wrong patches or fixing locations might lead to more significant errors, and different heap objects can interact with each other, all of this must be fully considered when generating patches. The state-of-the-art automated memory error repair technology SAVER~\cite{SAVER} saves these heap-related behaviors by constructing object flow graph, which has high time and space complexity. However, because static analysis techniques are not good at dealing with problems such as indirect calls and alias, the repair tools which based on static analysis might generate the wrong patches.} While dynamic analysis can help with these issues, it does not provide enough information to generate patches.
 
-\textcolor{red}{
-In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error repair \mbox{technique}. We use a static bug-finder to detect the program first, then use a fuzzer to detect the alarms and extract the real bugs. After that, we collect program variables that can be utilized to synthesize patches by variable dependency analysis. We also gather the test cases generated by the fuzzer which trigger or do not trigger the errors and then use the component-based program synthesis technique to try to generate patches from these variables and test cases. Finally, We utilize a fuzzer to detect the current fixed program, and if the repair is erroneous, we collect the test case that triggers the errors and repeat our repair method until the error is resolved or timeout. This strategy ensures that the patches generated by HAMER can repair current errors while without introducing new ones.}
+In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error repair \mbox{technique}. We use a static analyzer to detect the program first, then use a fuzzer to detect the alarms and extract the real errors. \textcolor{blue}{Fuzzer triggers runtime errors, thus it will not give false-positive alarms, allowing HAMER to avoid fixing wrong alarms.} After that, we collect program variables that can be utilized to synthesize patches by variable dependency analysis. \textcolor{blue}{During this procedure, we also collect the return locations of each function as the candidate fix locations. With this lightweight static analysis, HAMER is able to obtain enough information to fix the buggy program.} We then gather the test cases generated by the fuzzer which trigger or do not trigger the errors and use the component-based program synthesis~\cite{oracle} to try to generate patches from these variables and test cases. Finally, We utilize the fuzzer to detect the current fixed program, and if the repair is erroneous, we collect the test case that triggers the errors and repeat our repair method until the error is resolved or timeout. This strategy ensures that the patches generated by HAMER can repair current errors while without introducing new ones. \textcolor{red}{evaluation and conclusion}
 
-\textcolor{red}{
 \textbf{Contributions.} This paper makes the following contributions:
 \begin{itemize}
   \item We present a new technique for repairing memory errors based on hybrid analysis.
   \item We present HAMER~\footnote{https://github.com/QIANZECHANG/MyResearch(仮)}, a memory error repair tool that implements the proposed approach.
 \end{itemize}
-}
+
+%------------------------------------------------
+%Backgroud
+%----------------------------------------------------------------------------------------
+\section{Background}
+\subsection{Infer}
+\subsection{LibFuzzer}
+\subsection{Component-based Program Synthesis}
+
 
 %------------------------------------------------
 %	Overview
 %----------------------------------------------------------------------------------------
-
 \section{Overview}
+
+We illustrate key features of HAMER and how it works. Figure~\ref{pipeline} depicts a high-level overview of the HAMER pipeline.
+
+\begin{itemize}
+\item[\textbf{(1)}] Error Detection
+\item[\textbf{(2)}] Dependency Collection
+\item[\textbf{(3)}] Source Instrumentation
+\item[\textbf{(4)}] Patch Generation
+\end{itemize}
+
+First, we check the program with the static analyzer \mbox{Infer}~\footnote{https://fbinfer.com/}, and then we manually collect the functions that contain Infer alerts. Following that, these functions are fuzzed by LibFuzzer~\footnote{https://llvm.org/docs/LibFuzzer.html} to detect true errors.  For those functions on the error path, we collect the variables that are dependent on the function arguments and stub them, and then we collect the tests that do or do not trigger the error by LibFuzzer. Finally, we use component-based program synthesis to generate patches. Because the quality of the test suite affects the quality of the patch, we use LibFuzzer to check the current fixed code again, and if it hasn't been fixed or if a new error occurs, we collect the tests that cause the error or insert the patch in a different location. This strategy ensures that the patches generated by HAMER are correct and do not introduce new errors. In the following paragraphs of this section, we will use two motivating examples to demonstrate the workflow and characteristics of HAMER.
+
 %----------------pipeline-----------------------------------
 \tikzstyle{tool} = [diamond, draw, fill=green!20, text centered, text width=4.5em, aspect=2]
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=7em, rounded corners, minimum height=3em]
@@ -264,12 +277,9 @@ In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error r
   \label{me2}
 \end{figure*}
 
-\textcolor{red}{
-We illustrate key features of HAMER and how it works. Figure~\ref{pipeline} depicts a high-level overview of the HAMER pipeline. First, we check the program with the static analyzer \mbox{Infer}~\footnote{https://fbinfer.com/}, and then we manually collect the functions that contain Infer alerts. Following that, these functions are fuzzed by LibFuzzer~\footnote{https://llvm.org/docs/LibFuzzer.html} to detect true errors.  For those functions on the error path, we collect the variables that are dependent on the function arguments and stub them, and then we collect the tests that do or do not trigger the error by LibFuzzer. Finally, we use component-based program synthesis to generate patches. Because the quality of the test suite affects the quality of the patch, we use LibFuzzer to check the current fixed code again, and if it hasn't been fixed or if a new error occurs, we collect the tests that cause the error or insert the patch in a different location. This strategy ensures that the patches generated by HAMER are correct and do not introduce new errors. In the following paragraphs of this section, we will use two motivating examples to demonstrate the workflow and characteristics of HAMER.}
-
 \subsection{Motivating Example 1}
 \textcolor{red}{
-This buggy code has three memory leaks, denoted by {\it o0}, {\it o1}, and {\it o2}, as shown in Figure~\ref{me1a}. First, we use infer to detect this code, obtaining the following result:}
+This buggy code has three memory leaks, denoted by {\it o0}, {\it o1}, and {\it o2}, as shown in Figure~\ref{me1a}. First, we use Infer to detect this code, obtaining the following result:}
 
 \begin{minipage}{\textwidth}
 \vspace{0.2cm}
@@ -282,9 +292,10 @@ This buggy code has three memory leaks, denoted by {\it o0}, {\it o1}, and {\it 
 \textcolor{red}{
 Because static analyzers like Infer have a difficult time resolving issues like indirect calls, they can only detect the memory leak of {\it o2}. After we received the Infer results, the error function was detected again by LibFuzzer, and all errors were successfully detected. For example, for {\it o1}, we can get the fuzzing result shown below:
 }
+
 \begin{minipage}{\textwidth}
     \vspace{0.2cm}
-    \textsl{\hspace{0.3cm}in malloc (../a.out+0x52204d)\\\hspace{0.3cm}in new\_node2 ../src.c:12:18\\\hspace{0.3cm}in func ../src.c:23:7}
+    \textsl{\hspace{0.3cm}in malloc ../a.out\\\hspace{0.3cm}in new\_node2 ../src.c:12:18\\\hspace{0.3cm}in func ../src.c:23:7}
     \vspace{0.2cm}
 \end{minipage}
 
@@ -365,9 +376,9 @@ HAMER uses a static analyzer to find functions that may have memory errors and t
 EP=\{(get\_path(e),\,get\_ob(e))|\, e \epsilon E\}
 \end{equation}
 
-\begin{multline}
-Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
-\end{multline}
+\begin{equation}
+Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)|\, (path,ob) \epsilon EP\}
+\end{equation}
 
 \subsection{Source Instrumentation}
 
@@ -382,22 +393,22 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
  \ENSURE  SynInf
   \STATE $dep\_var \gets \emptyset$
   \STATE $SynInf \gets \emptyset$
-  \STATE $errID \gets 0$
+  \STATE $err\_id \gets 0$
   \FOR {$(Var, Ret, ob) \in Dep$}
    \STATE $dep\_var \gets dep\_var \cup Var$
-   \STATE $SynInf[errID].add((Ret,ob))$
+   \STATE $SynInf[err\_id].add((Ret,ob))$
    \STATE $errID \gets errID + 1$
   \ENDFOR
   \STATE $inst\_code \gets \textbf{Instrument}(src, dep\_var)$
   \STATE $i \gets 0$
   \WHILE {$i < 10$}
    \STATE $res \gets \textbf{Fuzz}(inst\_code)$
-    \FOR {$errID = 0$ to $|Dep|-1$}
+    \FOR {$err\_id = 0$ to $|Dep|-1$}
      \FOR {$var \in dep\_var$}
      \IF {$memory$ $leak$ $happen$}
-      \STATE $SynInf[errID][var].add((res[var],1))$
+      \STATE $SynInf[err\_id][var].add((res[var],1))$
      \ELSE
-      \STATE $SynInf[errID][var].add((res[var],0))$
+      \STATE $SynInf[err\_id][var].add((res[var],0))$
      \ENDIF
      \ENDFOR
     \ENDFOR
@@ -408,10 +419,11 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
 
 \subsection{Patch Generation}
 \subsection{Repair Algorithm}
+\label{repair}
 
  \begin{algorithm}
  \caption{Repair Algorithm}
- \label{rep}
+ \label{repalgo}
  \begin{algorithmic}[1]
  \renewcommand{\algorithmicrequire}{\textbf{Input:}}
  \renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -421,8 +433,8 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
   \STATE $queue \gets \{0,1,...,|SynInf|-1\}$
   \STATE $flag = 0$
   \WHILE {$|queue| \ne 0 $ and $flag \ne |queue| $}
-   \STATE $errID \gets queue.pop$
-   \STATE $err\_inf \gets SynInf[errID]$
+   \STATE $err\_id \gets queue.pop$
+   \STATE $err\_inf \gets SynInf[err\_id]$
    \REPEAT
     \STATE $cur\_patches \gets \textbf{Synthesizer}(err\_inf)$
     \IF {$cur\_patches$ $same$ $as$ $last$ $time$}
@@ -441,7 +453,7 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
      \STATE $SynInf \gets \textbf{Update}(SynInf)$
     \ENDIF
    \ELSE
-    \STATE $queue.add(errID)$
+    \STATE $queue.add(err\_id)$
     \STATE $flag \gets flag + 1$
    \ENDIF
   \ENDWHILE  
@@ -450,7 +462,7 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
 
  \begin{algorithm}
  \caption{Function Fix}
- \label{rep}
+ \label{fix}
  \begin{algorithmic}[1]
  \renewcommand{\algorithmicrequire}{\textbf{Input:}}
  \renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -488,6 +500,7 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)\\|\, (path,ob) \epsilon EP\}
 %      Related work
 %----------------------------------------------------------------------------------------
 \section{Related Work}
+CPR~\cite{CPR}, Angelix~\cite{Angelix}, Extractfix~\cite{Extractfix}, Getafix~\cite{Getafix}, SAVER~\cite{SAVER}, Memfix~\cite{Memfix}
 
 
 %---------------------------------------------------------------------------------------

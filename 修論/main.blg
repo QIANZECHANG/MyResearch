@@ -4,46 +4,46 @@ The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: mybib.bib
 Warning--empty booktitle in Memfix
-You've used 3 entries,
+You've used 7 entries,
             2118 wiz_defined-function locations,
-            520 strings with 4657 characters,
-and the built_in function-call counts, 1553 in all, are:
-= -- 162
-> -- 64
-< -- 2
-+ -- 25
-- -- 22
-* -- 80
-:= -- 215
-add.period$ -- 10
-call.type$ -- 3
-change.case$ -- 20
+            548 strings with 5527 characters,
+and the built_in function-call counts, 3431 in all, are:
+= -- 351
+> -- 161
+< -- 4
++ -- 63
+- -- 56
+* -- 196
+:= -- 488
+add.period$ -- 22
+call.type$ -- 7
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 87
-empty$ -- 113
-format.name$ -- 22
-if$ -- 367
+cite$ -- 8
+duplicate$ -- 181
+empty$ -- 237
+format.name$ -- 56
+if$ -- 792
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 3
-newline$ -- 18
-num.names$ -- 6
-pop$ -- 27
+int.to.str$ -- 7
+missing$ -- 7
+newline$ -- 38
+num.names$ -- 14
+pop$ -- 57
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 42
 quote$ -- 0
-skip$ -- 88
+skip$ -- 186
 stack$ -- 0
-substring$ -- 79
-swap$ -- 50
-text.length$ -- 2
+substring$ -- 163
+swap$ -- 102
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 28
 warning$ -- 1
-while$ -- 9
-width$ -- 4
-write$ -- 37
+while$ -- 20
+width$ -- 8
+write$ -- 82
 is.kanji.str$ -- 0
 (There was 1 warning)
