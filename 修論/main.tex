@@ -161,7 +161,7 @@ In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error r
 
 \textbf{Contributions.} This paper makes the following contributions:
 \begin{itemize}
-  \item We present a new technique for repairing memory errors based on hybrid analysis.
+  \item We present a new technique for repairing memory errors based on hybrid analysis. \textcolor{blue}{Our approach collect the relevant information using a lightweight static analysis, then repeatedly synthesize the patch and test it with fuzzer.}
   \item We present HAMER~\footnote{https://github.com/QIANZECHANG/MyResearch(仮)}, a memory error repair tool that implements the proposed approach.
 \end{itemize}
 
@@ -170,20 +170,76 @@ In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error r
 %----------------------------------------------------------------------------------------
 \section{Background}
 \textcolor{red}{
-HAMER detects bugs using existing bug detection tools. In this section, we will introduce the static analyzer (Infer) and fuzzer (LibFuzzer) that HAMER uses, as well as the patch generation technique (component-based program synthesis).
+HAMER detects bugs using existing bug detection tools. In this section, we will introduce the static analyzer (Infer~\footnote{https://fbinfer.com/}) and fuzzer (LibFuzzer~\footnote{https://llvm.org/docs/LibFuzzer.html}) that HAMER uses, as well as the patch generation technique (component-based program synthesis~\cite{oracle} （CBPS）).
 }
 \subsection{Infer}
 \textcolor{red}{
 Infer is a static program analyzer for Java, C, and Objective-C, written in OCaml, developed by Facebook. At present Infer is tracking problems caused by null pointer dereferences and resource and memory leaks, which cause some of the more important problems. Infer is a high-performance static analyzer with high scalability and efficiency, and it is widely used by programmers and researchers. However, like other static analyzers, Infer is hard to handle some issues, such as indirect call and alias, which causes Infer to provide false-negative and false-positive alarms. As a result of this shortcoming, automated repair tools may waste time on the wrong alarms (false-positive) and have no way to fix the errors that are not discovered (false-negative).
 }
 
-\textcolor{red}{
-
-}	
 \subsection{LibFuzzer}
+\textcolor{red}{
+LibFuzzer is an in-process, coverage-guided, evolutionary fuzzing engine. LibFuzzer is linked with the library under test, and feeds fuzzed inputs to the library via a specific fuzzing entry point (target function); the fuzzer then tracks which areas of the code are reached, and generates mutations on the corpus of input data in order to maximize the code coverage. The code coverage information for libFuzzer is provided by LLVM’s SanitizerCoverage~\footnote{https://clang.llvm.org/docs/SanitizerCoverage.html} instrumentation.
+}	
+
+\textcolor{red}{
+LibFuzzer uses the information provided by the AddressSanitizer~\footnote{https://clang.llvm.org/docs/AddressSanitizer.html} to determine if an error has happened within the detected code coverage when detecting memory errors. When the program allocates memory, the allocated space is marked, and the behavior is verified for legality each time the space is accessed. These memory spaces are checked at the end of the program to see if they have been freed.
+}
+
+\textcolor{red}{
+Because LibFuzzer can only fuzz test one function argument at a time, we must test each argument independently for functions with multiple arguments. LibFuzzer may fail to mutate the inputs that go into all paths for some functions with complex input. Furthermore, LibFuzzer will stop and report errors anytime it triggers the error, thus if a function has several errors, LibFuzzer cannot ensure that all of them will be detected at the same time. The code below, for example, has two memory leaks. 
+}
+
+\begin{minipage}{\textwidth}
+    \vspace{0.2cm}
+    \textsl{\hspace{0.3cm}p1 = malloc(1);\\\hspace{0.3cm}if (a == 5) p2 = malloc(1);\\}
+\end{minipage}
+\textcolor{red}{
+The ideal situation would be for LibFuzzer to input {\it a=5} and trigger both errors. But in most cases,  LibFuzzer inputs other values only triggers the memory leak of {\it p1} and then exits. To improve, we run LibFuzzer several times to detect as many errors as possible.
+}
 \subsection{Component-based Program Synthesis}
+\textcolor{red}{
+Since we only need to synthesize the conditional of deallocation, we use a simplified version of component-based program synthesis (simp-CBPS). In simp-CBPS, a component is a variable, a constant, or an operator. simp-CBPS uses these user-given components to generate code that satisfies the test suite. }
 
+\textcolor{red}{
+For example, we use the following components to synthesize code that satisfies the test suite in table1.
+}
 
+\begin{minipage}{\textwidth}
+    \vspace{0.2cm}
+    \textsl{\hspace{0.3cm}variable: x\\\hspace{0.3cm}constant: c\\\hspace{0.3cm}operator: $*_1<*_2$\\}
+\end{minipage}
+\textcolor{red}{
+Since $<$ is a binary operator, we can construct the expression $x<c$ and $c<x$ using the variable $x$ and the constant $c$. Then we assign the value from Table~\ref{test} to get the logical formula below:
+}
+
+\begin{minipage}{\textwidth}
+    \vspace{0.2cm}
+    \textsl{\hspace{0.3cm}$x<c: (4<c)\wedge(5<c)\wedge\neg(6<c)\wedge\neg(7<c)$\\\hspace{0.3cm}$c<x: (c<4)\wedge(c<5)\wedge\neg(c<6)\wedge\neg(c<7)$\\}
+\end{minipage}
+\textcolor{red}{
+We have turned the program synthesis problem into {\it Satisfiability Modulo Theories} (SMT) by doing the above action. We solve the logical formula via SMT solver. If a logical formula is unsatisfiable, it means that the present synthesized expression does not pass the test suite, indicating that it is not the expected expression. For example, the second logical formula is unsatisfiable, hence $c<x$ is not the correct expression. The first logical formula is satisfiable and the result is $c=6$, so we can get the expected expression $x<6$.
+}
+
+\begin{table}[h]
+  \caption{test suite}
+  \label{test}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+     x & output \\
+    \hline
+     4 & True \\
+     5 & True \\
+     6 & False \\
+     7 & False \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\textcolor{red}{
+The quality of the test suite is the most critical part of using CBPS to synthesize expressions. CBPS will synthesize incorrect expressions if the test suite provided by the user is of poor quality. If Table~\ref{test} does not have $(x=6, output=False)$, for example, we might obtain $x<7$.
+}
 %------------------------------------------------
 %	Overview
 %----------------------------------------------------------------------------------------
@@ -191,24 +247,18 @@ Infer is a static program analyzer for Java, C, and Objective-C, written in OCam
 
 We illustrate key features of HAMER and how it works. Figure~\ref{pipeline} depicts a high-level overview of the HAMER pipeline.
 
-\begin{itemize}
-\item[\textbf{(1)}] Error Detection
-\item[\textbf{(2)}] Dependency Collection
-\item[\textbf{(3)}] Source Instrumentation
-\item[\textbf{(4)}] Patch Generation
-\end{itemize}
-
-First, we check the program with the static analyzer \mbox{Infer}~\footnote{https://fbinfer.com/}, and then we manually collect the functions that contain Infer alerts. Following that, these functions are fuzzed by LibFuzzer~\footnote{https://llvm.org/docs/LibFuzzer.html} to detect true errors.  For those functions on the error path, we collect the variables that are dependent on the function arguments and stub them, and then we collect the tests that do or do not trigger the error by LibFuzzer. Finally, we use component-based program synthesis to generate patches. Because the quality of the test suite affects the quality of the patch, we use LibFuzzer to check the current fixed code again, and if it hasn't been fixed or if a new error occurs, we collect the tests that cause the error or insert the patch in a different location. This strategy ensures that the patches generated by HAMER are correct and do not introduce new errors. In the following paragraphs of this section, we will use two motivating examples to demonstrate the workflow and characteristics of HAMER.
+First, we check the program with the static analyzer \mbox{Infer}, and then we manually collect the functions that contain Infer alarms. Following that, these functions are fuzzed by LibFuzzer to detect true errors.  For those functions on the error path, we collect the variables that are dependent on the function arguments and stub them, and then we collect the tests that do or do not trigger the error by LibFuzzer. Finally, we use \textcolor{blue}{a simplified component-based program synthesis (simp-CBPS)} to generate patches. Because the quality of the test suite affects the quality of the patch, we use LibFuzzer to check the current fixed code again, and if it has not been fixed or if a new error occurs, we collect the tests that cause the error or insert the patch in a different location. This strategy ensures that the patches generated by HAMER are correct and do not introduce new errors. In the following paragraphs of this section, we will use two motivating examples to demonstrate the workflow and characteristics of HAMER.
 
 %----------------pipeline-----------------------------------
 \tikzstyle{tool} = [diamond, draw, fill=green!20, text centered, text width=4.5em, aspect=2]
 \tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=7em, rounded corners, minimum height=3em]
-\tikzstyle{bigblock} = [rectangle, draw, fill=blue!20, text width=9em, rounded corners, minimum height=3em]
+\tikzstyle{block2} = [rectangle, draw, fill=blue!20, text centered, text width=7em, rounded corners, minimum height=3em]
 \tikzstyle{line} = [thick,->,>=stealth]
 \tikzstyle{outdata} = [rectangle, draw, fill=brown!20, text width=5em, minimum height=3em]
 \tikzstyle{code} = [draw, ellipse,fill=red!20, text width=2em, minimum height=3em]
 \tikzstyle{bigcode} = [draw, ellipse,fill=red!20, text width=5.5em, minimum height=3em]
 \begin{figure*}[ht]
+\hspace{-0.5cm}
 \begin{tikzpicture}[node distance = 3.5cm, on grid]
   %node
   \node[tool] (infer){Infer};
@@ -222,7 +272,7 @@ First, we check the program with the static analyzer \mbox{Infer}~\footnote{http
   \node[bigcode, right of=fuzzer1,yshift=1cm] (instcode){Instrumented\\code};
   \node[tool, right of=instcode] (fuzzer2){LibFuzzer};
   \node[outdata, right of=inst] (test){test suite};
-  \node[bigblock, right of=depvar] (syn){Component-based\\Program Synthesis};
+  \node[block2, right of=depvar] (syn){simp-CBPS};
   \node[bigcode, right of=syn] (fix){current\\fixed code};
   \node[code, above of=fuzzer2,yshift=-1.5cm] (output){out.c};
   \node[right of=output,yshift=-1cm,xshift=-2.5cm] (no){no error}; 
@@ -293,22 +343,16 @@ This buggy code has three memory leaks, denoted by {\it o0}, {\it o1}, and {\it 
 
 \begin{minipage}{\textwidth}
 \vspace{0.2cm}
-\hspace{-0.45cm}
-\raggedright
-\textsl{Object allocated at line 20 is unreachable at line 20.}
-\vspace{0.2cm}
+\textsl{\hspace{0.3cm}Object allocated at line 20 is unreachable at line 20.\\}
 \end{minipage}
-
 \textcolor{red}{
 Because static analyzers like Infer have a difficult time resolving issues like indirect calls, they can only detect the memory leak of {\it o2}. After we received the Infer results, the error function was detected again by LibFuzzer, and all errors were successfully detected. For example, for {\it o1}, we can get the fuzzing result shown below:
 }
 
 \begin{minipage}{\textwidth}
     \vspace{0.2cm}
-    \textsl{\hspace{0.3cm}in malloc ../a.out\\\hspace{0.3cm}in new\_node2 ../src.c:12:18\\\hspace{0.3cm}in func ../src.c:23:7}
-    \vspace{0.2cm}
+    \textsl{\hspace{0.3cm}in malloc ../a.out\\\hspace{0.3cm}in new\_node2 ../src.c:12:18\\\hspace{0.3cm}in func ../src.c:23:7\\}
 \end{minipage}
-
 \textcolor{red}{
 We can get all of the functions on the error path using LibFuzzer. Obviously, the correct fix location could be in any of the functions, so we collect the variables that are dependent on the function argument, and we also collect both the heap object information and the return location of each function during this static analysis. }
 
@@ -428,7 +472,6 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)|\, (path,ob) \epsilon EP\}
  \end{algorithm}
 
 \subsection{Patch Generation}
-\subsection{Repair Algorithm}
 \label{repair}
 
  \begin{algorithm}
