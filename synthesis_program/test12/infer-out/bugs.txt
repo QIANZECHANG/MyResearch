@@ -1,0 +1,13 @@
+Found 1 issue
+
+infer.c:8: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `x` last assigned on line 7 could be null and is dereferenced at line 8, column 5.
+  6.       int **x;
+  7.       x = (int**)malloc(sizeof(int*)*2);
+  8. >     x[0] = (int*)malloc(sizeof(int));
+  9.       x[1] = (int*)malloc(sizeof(int));
+  10.       free(*x);
+
+Summary of the reports
+
+  NULL_DEREFERENCE: 1

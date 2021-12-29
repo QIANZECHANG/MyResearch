@@ -1,0 +1,51 @@
+/* @generated */
+digraph cfg {
+"func.7df4935f4a5a2865191ef74f64df8754_1" [label="1: Start func\nFormals:  a:int\nLocals:  p:int* \n   DECLARE_LOCALS(&return,&p); [line 5, column 1]\n " color=yellow style=filled]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_1" -> "func.7df4935f4a5a2865191ef74f64df8754_12" ;
+"func.7df4935f4a5a2865191ef74f64df8754_2" [label="2: Exit func \n  " color=yellow style=filled]
+	
+
+"func.7df4935f4a5a2865191ef74f64df8754_3" [label="3: + \n  " ]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_3" -> "func.7df4935f4a5a2865191ef74f64df8754_4" ;
+"func.7df4935f4a5a2865191ef74f64df8754_4" [label="4:  between_join_and_exit \n  " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_4" -> "func.7df4935f4a5a2865191ef74f64df8754_2" ;
+"func.7df4935f4a5a2865191ef74f64df8754_5" [label="5:  BinaryOperatorStmt: GT \n   n$0=*&a:int [line 7, column 8]\n " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_5" -> "func.7df4935f4a5a2865191ef74f64df8754_6" ;
+	 "func.7df4935f4a5a2865191ef74f64df8754_5" -> "func.7df4935f4a5a2865191ef74f64df8754_7" ;
+"func.7df4935f4a5a2865191ef74f64df8754_6" [label="6: Prune (true branch, if) \n   PRUNE((n$0 > 5), true); [line 7, column 8]\n " shape="invhouse"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_6" -> "func.7df4935f4a5a2865191ef74f64df8754_10" ;
+"func.7df4935f4a5a2865191ef74f64df8754_7" [label="7: Prune (false branch, if) \n   PRUNE(!(n$0 > 5), false); [line 7, column 8]\n " shape="invhouse"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_7" -> "func.7df4935f4a5a2865191ef74f64df8754_11" ;
+"func.7df4935f4a5a2865191ef74f64df8754_8" [label="8:  Return Stmt \n   *&return:int=0 [line 10, column 7]\n " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_8" -> "func.7df4935f4a5a2865191ef74f64df8754_2" ;
+"func.7df4935f4a5a2865191ef74f64df8754_9" [label="9:  Call _fun_free \n   n$1=*&p:int* [line 9, column 12]\n  n$2=_fun_free(n$1:void*) [line 9, column 7]\n " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_9" -> "func.7df4935f4a5a2865191ef74f64df8754_8" ;
+"func.7df4935f4a5a2865191ef74f64df8754_10" [label="10:  BinaryOperatorStmt: Assign \n   n$3=*&p:int* [line 8, column 8]\n  n$4=*&a:int [line 8, column 10]\n  *n$3:int=n$4 [line 8, column 7]\n " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_10" -> "func.7df4935f4a5a2865191ef74f64df8754_9" ;
+"func.7df4935f4a5a2865191ef74f64df8754_11" [label="11:  Return Stmt \n   *&return:int=1 [line 13, column 7]\n " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_11" -> "func.7df4935f4a5a2865191ef74f64df8754_2" ;
+"func.7df4935f4a5a2865191ef74f64df8754_12" [label="12:  DeclStmt \n   n$6=_fun_malloc(4:unsigned long) [line 6, column 12]\n  *&p:int*=n$6 [line 6, column 5]\n " shape="box"]
+	
+
+	 "func.7df4935f4a5a2865191ef74f64df8754_12" -> "func.7df4935f4a5a2865191ef74f64df8754_5" ;
+}

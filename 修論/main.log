@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  29 DEC 2021 03:50
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  30 DEC 2021 03:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,22 +1025,27 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 216--223
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <9> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 225.
 [3]
-Overfull \hbox (1.81992pt too wide) in paragraph at lines 271--271
+Overfull \hbox (15.0pt too wide) in paragraph at lines 249--256
+[][]$[]$[]
+ []
+
+
+Overfull \hbox (1.81992pt too wide) in paragraph at lines 291--291
 []\T1/pplx/m/n/10 Instrumentation  
  []
 
 
-Overfull \hbox (5.26993pt too wide) in paragraph at lines 272--272
+Overfull \hbox (5.26993pt too wide) in paragraph at lines 292--292
 [][]\T1/pplx/m/n/10 Instrumented  
  []
 
 
-Overfull \hbox (1.68997pt too wide) in paragraph at lines 277--277
+Overfull \hbox (1.68997pt too wide) in paragraph at lines 297--297
 [][]\T1/pplx/m/n/10 out.c  
  []
 
 
-Overfull \hbox (40.18811pt too wide) in paragraph at lines 261--300
+Overfull \hbox (40.18811pt too wide) in paragraph at lines 281--320
 []  [] 
  []
 
@@ -1051,14 +1056,14 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 314.
+nput line 334.
  (./src.c)
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 315.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 335.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 315.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 335.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <8> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 315.
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 335.
 
 (./result_src.c
 
@@ -1067,22 +1072,28 @@ LaTeX Font Warning: Font shape `OMS/pplx/bx/n' undefined
 (Font)              for symbol `textasteriskcentered' on input line 18.
 
 ) (./saver.c) (./saver_result.c)
-Overfull \hbox (15.0pt too wide) in paragraph at lines 344--351
-[][]$[]$[]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 363--367
+[][]$[]$[] 
  []
 
-[4] [5]
-Overfull \hbox (15.0pt too wide) in paragraph at lines 352--358
-[][]$[]$[]
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 371--375
+[][]$[]$[] 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-84.
-(c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
+[4]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
+02.
+ (c:/texlive/2019/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [6]
+)
+Overfull \hbox (15.0pt too wide) in paragraph at lines 398--406
+[][]$[]$[] 
+ []
+
+[5] [6] [7]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 441.
+put line 451.
  (./main.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
@@ -1092,27 +1103,27 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-[7] [8] [9]) [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 575.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 575.
+[8] [9]) [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 585.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 585.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 575.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 575.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 585.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 585.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 748146F2764FBA39AAF5A9C3C1070C80;924.
+(rerunfilecheck)             Checksum: D23BF8C96382531221B081D068CB202A;988.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 575.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 585.
  ) 
 Here is how much of TeX's memory you used:
- 24057 strings out of 492763
- 431879 string characters out of 6143311
- 960405 words of memory out of 5000000
- 28061 multiletter control sequences out of 15000+600000
+ 24058 strings out of 492763
+ 431889 string characters out of 6143311
+ 964765 words of memory out of 5000000
+ 28062 multiletter control sequences out of 15000+600000
  59504 words of font info for 113 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  60i,10n,58p,1350b,1564s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.dvi (10 pages, 116760 bytes).
+Output written on main.dvi (10 pages, 118568 bytes).

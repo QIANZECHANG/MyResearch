@@ -1,0 +1,9 @@
+digraph G {
+  func;
+  free;
+  malloc;
+  
+  
+  func -> malloc [label="infer.c:6", ];
+  
+  }

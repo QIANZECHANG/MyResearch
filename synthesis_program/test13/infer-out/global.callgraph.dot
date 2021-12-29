@@ -1,0 +1,10 @@
+digraph G {
+  func;
+  free;
+  malloc;
+  
+  
+  func -> free [label="infer.c:9", ];
+  func -> malloc [label="infer.c:6", ];
+  
+  }
