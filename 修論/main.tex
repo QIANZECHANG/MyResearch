@@ -429,19 +429,44 @@ In this section, we describe our approach in detail, explaining what technical i
 \item How does HAMER deal with several memory errors in a single function?
 \end{itemize}
 
-HAMER will solve these issues by using LibFuzzer to constantly check the patched code. In subsection~\ref{repair}, we will go over our repair algorithm in detail. Until then, we will describe how HAMER gathers the data required to resolve the errors.
+HAMER will solve these issues by using LibFuzzer to constantly check the patched code. In subsection~\ref{patchgeneration}, we will go over our repair algorithm in detail. Until then, we will describe how HAMER gathers the data required to resolve the errors.
 
 \subsection{Error Detection}
 HAMER uses a static analyzer to find functions that may have memory errors and then uses fuzzer to detect the real errors in those functions. The purpose of applying the static analyzer is to improve HAMER's scalability, as the fuzzer always takes a long time to detect errors. Using the static analyzer to pick out candidate functions prevents fuzzer from wasting time in locations where it is not necessary. But obviously, HAMER will not be able to fix errors in functions that are not provided by the static analyzer. So for shortcode, we can just simply use fuzzer to detect errors. \textcolor{red}{After error detection, we can obtain a set $E$ that contains the details of each error reported by fuzzer, similar to the report shown in Motivating Example 1.}
 
 
 \subsection{Dependency Collection}
-\begin{equation}
-EP=\{(get\_path(e),\,get\_ob(e))|\, e \epsilon E\}
-\end{equation}
+
+\textcolor{red}{
+We collect the error paths and error heap objects for each element in the set $E$ separately after obtaining the error report $E$. We can organize the information of each error from the error report to produce the set $EP$ using the error paths and coordinates provided by LibFuzzer. 
+}
 
 \begin{equation}
-Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)|\, (path,ob) \epsilon EP\}
+EP=\{get\_path(e)|\, e \epsilon E\}
+\end{equation}
+\textcolor{red}{
+In Motivating Example 1, LibFuzzer gives the error report of $o1$, and we can obtain the error path of $o1$:
+}
+
+\begin{minipage}{\textwidth}
+\vspace{0.2cm}
+\textsl{\hspace{0.3cm}\{funcname: func, coord: src.c:23:7, next:\\\hspace{0.6cm}\{funcname: new\_node2, coord: src.c:12:18, next:\\\hspace{0.9cm}\{funcname: malloc\}\}\}}
+\vspace{0.2cm}
+\end{minipage}
+\textcolor{red}{
+It is worthy to note that the $coord$ of each function is the error location inside the function, not the function's coordinate. All error paths, obviously, will end with an allocation function, and the coordinates of the allocation function will be kept in the previous node's $coord$, which we will use to localize the error heap object.
+}
+
+\textcolor{red}{
+After organizing the error report, we collect the dependent variables in each function on the error path, which are utilized to synthesize the conditional. Fuzzer tries to trigger the function's error by inputting different data, so all the variables in the function that are dependent on the argument could be utilized to synthesize the patch's conditional. These dependent variables are collected using {\it def-use} chain, and their names, types, and coordinates are saved. During this static analysis, we also gather the return location of each function, as well as the name and type of the error heap object.
+}
+
+\textcolor{red}{
+As we present in the Background, fixing the temporal memory error requires inserting the deallocation at the correct location. A memory leak will occur if allocated memory space is not freed at the end of the program, hence it is critical to free allocated memory before it is unreachable. Most of the existing memory error repair techniques~\cite{SAVER,Memfix} are based on static analysis that collects heap-related behavior, so they can insert the patch at the right location. However, the tradeoff is that it requires a high overhead, and static analysis is tough to deal with some problems such as indirect call, which may make repair tools fail to generate a patch or generate a wrong patch. HAMER aims to collect the essential information for fixing errors via lightweight static analysis. There are three major reasons why allocated memory cannot be accessed: (1) it is freed, (2) no pointer points to it, and (3) the current function exits. Memory leaks will not occur if it is properly freed. For the second reason, we will use a temporary variable to save the pointer to the error memory when it is allocated, as we will explain in detail in subsection~\ref{patchgeneration}. Hence,  we simply need to think about the third reason. A function may exit in two ways: by {\it return} or by exiting automatically at the end of the function. As a result, we just need to collect all of each function's {\it return} locations, as well as the location of the function tail, and use them as the candidate fixing location.
+}
+
+\begin{equation}
+Dep=\{(get\_dep(path),\,get\_ret(path),\,get\_ob(path))|\, path \epsilon EP\}
 \end{equation}
 
 \subsection{Source Instrumentation}
@@ -482,7 +507,7 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)|\, (path,ob) \epsilon EP\}
  \end{algorithm}
 
 \subsection{Patch Generation}
-\label{repair}
+\label{patchgeneration}
 
  \begin{algorithm}
  \caption{Repair Algorithm}
@@ -564,6 +589,11 @@ Dep=\{(get\_dep(path),\,get\_ret(path),\,ob)|\, (path,ob) \epsilon EP\}
 %----------------------------------------------------------------------------------------
 \section{Related Work}
 CPR~\cite{CPR}, Angelix~\cite{Angelix}, Extractfix~\cite{Extractfix}, Getafix~\cite{Getafix}, SAVER~\cite{SAVER}, Memfix~\cite{Memfix}
+
+%---------------------------------------------------------------------------------------
+%      Limitation
+%----------------------------------------------------------------------------------------
+\section{Limitation}
 
 
 %---------------------------------------------------------------------------------------
