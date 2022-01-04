@@ -2,8 +2,8 @@
 \BOOKMARK [1][-]{section.2}{Background}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Infer}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{LibFuzzer}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Component-based Program Synthesis}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Patch Template}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Patch Template}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Component-based Program Synthesis}{section.2}% 6
 \BOOKMARK [1][-]{section.3}{Overview}{}% 7
 \BOOKMARK [2][-]{subsection.3.1}{Motivating Example 1}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.2}{Motivating Example 2}{section.3}% 9

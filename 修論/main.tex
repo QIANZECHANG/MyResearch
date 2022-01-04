@@ -197,6 +197,27 @@ Because LibFuzzer can only fuzz test one function argument at a time, we must te
 \textcolor{red}{
 The ideal situation would be for LibFuzzer to input {\it a=5} and trigger both errors. But in most cases,  LibFuzzer inputs other values only triggers the memory leak of {\it p1} and then exits. To improve, we run LibFuzzer several times to detect as many errors as possible.
 }
+
+\subsection{Patch Template}
+\textcolor{red}{
+The purpose of this research is to fix temporal memory errors such as memory leak, not spatial memory errors such as buffer overflow. The most common solution for temporal memory errors is to free the memory at the correct location. As a result, the following patch template can fix the most of temporal memory errors.
+}
+
+\begin{minipage}{\textwidth}
+    \vspace{0.2cm}
+    \textsl{\hspace{0.3cm}$if ( cond ) free ( ob );$\\}
+\end{minipage}
+\textcolor{red}{
+We can free the specified heap object under the specific condition by inserting a conditional deallocator. Hence, in order to generate the correct patch, we should know the following three details:}
+\begin{itemize}
+  \item[(1)] conditional $cond$
+  \item[(2)] error heap object $ob$
+  \item[(3)] fix location
+\end{itemize}
+\textcolor{red}{
+We will present in detail how we generated the correct patch in section~\ref{approach}.
+ }
+
 \subsection{Component-based Program Synthesis}
 \textcolor{red}{
 Since we only need to synthesize the conditional of deallocation, we use a simplified version of component-based program synthesis (simp-CBPS). In simp-CBPS, a component is a variable, a constant, or an operator. simp-CBPS uses these user-given components to generate code that satisfies the test suite. }
@@ -241,25 +262,7 @@ We have turned the program synthesis problem into {\it Satisfiability Modulo The
 The quality of the test suite is the most critical part of using CBPS to synthesize expressions. CBPS will synthesize incorrect expressions if the test suite provided by the user is of poor quality. If Table~\ref{test} does not have $(x=6, output=False)$, for example, we might obtain $x<7$.
 }
 
-\subsection{Patch Template}
-\textcolor{red}{
-The purpose of this research is to fix temporal memory errors such as memory leak, not spatial memory errors such as buffer overflow. The most common solution for temporal memory errors is to free the memory at the correct location. As a result, the following patch template can fix the most of temporal memory errors.
-}
 
-\begin{minipage}{\textwidth}
-    \vspace{0.2cm}
-    \textsl{\hspace{0.3cm}$if ( cond ) free ( ob );$\\}
-\end{minipage}
-\textcolor{red}{
-We can free the specified heap object under the specific condition by inserting a conditional deallocator. Hence, in order to generate the correct patch, we should know the following three details:}
-\begin{itemize}
-  \item[(1)] conditional $cond$
-  \item[(2)] error heap object $ob$
-  \item[(3)] fix location
-\end{itemize}
-\textcolor{red}{
-We will present in detail how we generated the correct patch in section~\ref{approach}.
- }
 %------------------------------------------------
 %	Overview
 %----------------------------------------------------------------------------------------
@@ -445,7 +448,7 @@ We collect the error paths and error heap objects for each element in the set $E
 EP=\{get\_path(e)|\, e \epsilon E\}
 \end{equation}
 \textcolor{red}{
-In Motivating Example 1, LibFuzzer gives the error report of $o1$, and we can obtain the error path of $o1$:
+In Motivating Example 1 (Figure~\ref{me1}), LibFuzzer gives the error report of $o1$, and we can obtain the error path of $o1$:
 }
 
 \begin{minipage}{\textwidth}
