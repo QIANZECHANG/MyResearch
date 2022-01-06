@@ -55,6 +55,9 @@
 % This package allows if-then-else control structures.
 \usepackage{ifthen}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
 
 \newboolean{PrintVersion}
 \setboolean{PrintVersion}{false} 
@@ -155,17 +158,17 @@
 \bibliographystyle{plain}
 % This specifies the location of the file containing the bibliographic information.  
 % It assumes you're using BibTeX (if not, why not?).
-\ifthenelse{\boolean{PrintVersion}}{
-\cleardoublepage % This is needed if the book class is used, to place the anchor in the correct page,
+%\ifthenelse{\boolean{PrintVersion}}{
+%\cleardoublepage % This is needed if the book class is used, to place the anchor in the correct page,
                  % because the bibliography will start on its own page.
-}{
-\clearpage       % Use \clearpage instead if the document class uses the "oneside" argument
-}
-\phantomsection  % With hyperref package, enables hyperlinking from the table of contents to bibliography             
+%}{
+%\clearpage       % Use \clearpage instead if the document class uses the "oneside" argument
+%}
+%\phantomsection  % With hyperref package, enables hyperlinking from the table of contents to bibliography             
 % The following statement causes the title "References" to be used for the bibliography section:
 
 
-\bibliography{bibliography/keylatex}
+\bibliography{bibliography/hebib}
 % Tip 5: You can create multiple .bib files to organize your references. 
 % Just list them all in the \bibliogaphy command, separated by commas (no spaces).
 %----------------------------------------------------------------------
