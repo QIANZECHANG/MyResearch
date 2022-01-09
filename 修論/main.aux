@@ -23,55 +23,60 @@
 \HyPL@Entry{0<</S/D>>}
 \babel@aux{english}{}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
-\citation{oracle}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Background}{2}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {i}Infer}{2}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {ii}LibFuzzer}{2}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {iii}Patch Template}{3}{subsection.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {iv}Component-based Program Synthesis}{3}{subsection.2.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces test suite\relax }}{4}{table.caption.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Overview}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {i}Motivating Example 1}{3}{subsection.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces HAMER pipeline\relax }}{4}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{test}{{1}{4}{test suite\relax }{table.caption.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Overview}{4}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {i}Motivating Example 1}{4}{subsection.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces HAMER pipeline\relax }}{5}{figure.caption.2}\protected@file@percent }
-\newlabel{pipeline}{{1}{5}{HAMER pipeline\relax }{figure.caption.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Instrumentation result of o1\relax }}{5}{table.caption.5}\protected@file@percent }
-\newlabel{instres}{{2}{5}{Instrumentation result of o1\relax }{table.caption.5}{}}
-\newlabel{patch1}{{i}{5}{Motivating Example 1}{table.caption.5}{}}
-\@writefile{lol}{\contentsline {lstlisting}{src.c}{6}{lstlisting.-1}\protected@file@percent }
-\newlabel{me1a}{{2a}{6}{o0, o1, o2 occur memory leak\relax }{figure.caption.3}{}}
-\newlabel{sub@me1a}{{a}{6}{o0, o1, o2 occur memory leak\relax }{figure.caption.3}{}}
-\@writefile{lol}{\contentsline {lstlisting}{result\textunderscore src.c}{6}{lstlisting.-2}\protected@file@percent }
-\newlabel{me1b}{{2b}{6}{HAMER-generated patch\relax }{figure.caption.3}{}}
-\newlabel{sub@me1b}{{b}{6}{HAMER-generated patch\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Motivating Example 1: Infer false-negative alarm\relax }}{6}{figure.caption.3}\protected@file@percent }
-\newlabel{me1}{{2}{6}{Motivating Example 1: Infer false-negative alarm\relax }{figure.caption.3}{}}
-\@writefile{lol}{\contentsline {lstlisting}{saver.c}{6}{lstlisting.-3}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{saver\textunderscore result.c}{6}{lstlisting.-4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Motivating Example 2: Infer false-positive alarm\relax }}{6}{figure.caption.4}\protected@file@percent }
-\newlabel{me2}{{3}{6}{Motivating Example 2: Infer false-positive alarm\relax }{figure.caption.4}{}}
+\newlabel{pipeline}{{1}{4}{HAMER pipeline\relax }{figure.caption.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Instrumentation result of o1\relax }}{4}{table.caption.4}\protected@file@percent }
+\newlabel{instres}{{1}{4}{Instrumentation result of o1\relax }{table.caption.4}{}}
+\newlabel{patch1}{{i}{4}{Motivating Example 1}{table.caption.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{src.c}{5}{lstlisting.-1}\protected@file@percent }
+\newlabel{me1a}{{2a}{5}{o0, o1, o2 occur memory leak\relax }{figure.caption.2}{}}
+\newlabel{sub@me1a}{{a}{5}{o0, o1, o2 occur memory leak\relax }{figure.caption.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{result\textunderscore src.c}{5}{lstlisting.-2}\protected@file@percent }
+\newlabel{me1b}{{2b}{5}{HAMER-generated patch\relax }{figure.caption.2}{}}
+\newlabel{sub@me1b}{{b}{5}{HAMER-generated patch\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Motivating Example 1: Infer false-negative alarm\relax }}{5}{figure.caption.2}\protected@file@percent }
+\newlabel{me1}{{2}{5}{Motivating Example 1: Infer false-negative alarm\relax }{figure.caption.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{saver.c}{5}{lstlisting.-3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{saver\textunderscore result.c}{5}{lstlisting.-4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Motivating Example 2: Infer false-positive alarm\relax }}{5}{figure.caption.3}\protected@file@percent }
+\newlabel{me2}{{3}{5}{Motivating Example 2: Infer false-positive alarm\relax }{figure.caption.3}{}}
 \citation{SAVER}
-\@writefile{toc}{\contentsline {subsection}{\numberline {ii}Motivating Example 2}{7}{subsection.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Approach}{7}{section.4}\protected@file@percent }
-\newlabel{approach}{{IV}{7}{Approach}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {i}Error Detection}{7}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {ii}Motivating Example 2}{6}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Approach}{6}{section.4}\protected@file@percent }
+\newlabel{approach}{{IV}{6}{Approach}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {i}Patch Template}{6}{subsection.4.1}\protected@file@percent }
 \citation{SAVER}
 \citation{Memfix}
+\@writefile{toc}{\contentsline {subsection}{\numberline {ii}Error Detection}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {iii}Dependency Collection}{7}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {iv}Source Instrumentation}{8}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {v}Patch Generation}{8}{subsection.4.5}\protected@file@percent }
+\newlabel{patchgeneration}{{v}{8}{Patch Generation}{subsection.4.5}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Source Instrumentation Result Collection\relax }}{9}{algorithm.1}\protected@file@percent }
+\newlabel{algo1}{{1}{9}{Source Instrumentation Result Collection\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {v.1}Component-based Program Synthesis}{9}{subsubsection.4.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces test suite\relax }}{10}{table.caption.5}\protected@file@percent }
+\newlabel{test}{{2}{10}{test suite\relax }{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {v.2}Repair Algorithm}{10}{subsubsection.4.5.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Repair Algorithm\relax }}{11}{algorithm.2}\protected@file@percent }
+\newlabel{repalgo}{{2}{11}{Repair Algorithm\relax }{algorithm.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {v.3}Function Fix}{11}{subsubsection.4.5.3}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Function Fix\relax }}{12}{algorithm.3}\protected@file@percent }
+\newlabel{funcfix}{{3}{12}{Function Fix\relax }{algorithm.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {v.4}Temporary Variable}{12}{subsubsection.4.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Evaluation}{12}{section.5}\protected@file@percent }
 \citation{CPR}
 \citation{Angelix}
 \citation{Extractfix}
 \citation{Getafix}
 \citation{SAVER}
 \citation{Memfix}
-\@writefile{toc}{\contentsline {subsection}{\numberline {ii}Dependency Collection}{8}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {iii}Source Instrumentation}{8}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {iv}Patch Generation}{8}{subsection.4.4}\protected@file@percent }
-\newlabel{patchgeneration}{{iv}{8}{Patch Generation}{subsection.4.4}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Source Instrumentation Result Collection\relax }}{9}{algorithm.1}\protected@file@percent }
-\newlabel{srcinst}{{1}{9}{Source Instrumentation Result Collection\relax }{algorithm.1}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Repair Algorithm\relax }}{10}{algorithm.2}\protected@file@percent }
-\newlabel{repalgo}{{2}{10}{Repair Algorithm\relax }{algorithm.2}{}}
 \bibstyle{plain}
 \bibdata{mybib}
 \bibcite{Getafix}{1}
@@ -79,11 +84,11 @@
 \bibcite{SAVER}{3}
 \bibcite{oracle}{4}
 \bibcite{Memfix}{5}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Function Fix\relax }}{11}{algorithm.3}\protected@file@percent }
-\newlabel{fix}{{3}{11}{Function Fix\relax }{algorithm.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Evaluation}{11}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Related Work}{11}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Limitation}{11}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{11}{section.8}\protected@file@percent }
 \bibcite{Angelix}{6}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Evaluation result of HAMER and SAVER. ML denotes the number of memory leaks. True, F.P. and F.N. denote the number of true, false-positive, and false-negative alarms detected by Infer. Fuzz denotes the number of memory leaks detected by LibFuzzer. $\text  {$\mathsurround \z@ \mathchar "558$}$ and $\times $ report the correct and wrong patches generated by HAMER and SAVER. S.A. and sec report the static analysis time and the overall fix time \relax }}{13}{table.caption.6}\protected@file@percent }
+\newlabel{evaluationresult}{{3}{13}{Evaluation result of HAMER and SAVER. ML denotes the number of memory leaks. True, F.P. and F.N. denote the number of true, false-positive, and false-negative alarms detected by Infer. Fuzz denotes the number of memory leaks detected by LibFuzzer. $\checkmark $ and $\times $ report the correct and wrong patches generated by HAMER and SAVER. S.A. and sec report the static analysis time and the overall fix time \relax }{table.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Limitation}{13}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Future Work}{13}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Related Work}{13}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Conclusion}{13}{section.9}\protected@file@percent }
 \bibcite{CPR}{7}
