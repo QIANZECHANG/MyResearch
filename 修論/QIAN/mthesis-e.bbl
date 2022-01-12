@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{Getafix}
+Johannes Bader, Andrew Scott, Michael Pradel, and Satish Chandra.
+\newblock Getafix: Learning to fix bugs automatically.
+\newblock {\em Proc. ACM Program. Lang.}, 3(OOPSLA), oct 2019.
+
+\bibitem{Extractfix}
+Xiang Gao, Bo~Wang, Gregory~J. Duck, Ruyi Ji, Yingfei Xiong, and Abhik
+  Roychoudhury.
+\newblock Beyond tests: Program vulnerability repair via crash constraint
+  extraction.
+\newblock {\em ACM Trans. Softw. Eng. Methodol.}, 30(2), feb 2021.
+
+\bibitem{SAVER}
+Seongjoon Hong, Junhee Lee, Jeongsoo Lee, and Hakjoo Oh.
+\newblock Saver: Scalable, precise, and safe memory-error repair.
+\newblock In {\em 2020 IEEE/ACM 42nd International Conference on Software
+  Engineering (ICSE)}, pages 271--283, 2020.
+
+\bibitem{oracle}
+Susmit Jha, Sumit Gulwani, Sanjit~A. Seshia, and Ashish Tiwari.
+\newblock Oracle-guided component-based program synthesis.
+\newblock In {\em Proceedings of the 32nd ACM/IEEE International Conference on
+  Software Engineering - Volume 1}, ICSE '10, page 215^^e2^^80^^93224, New
+  York, NY, USA, 2010. Association for Computing Machinery.
+
+\bibitem{Memfix}
+Junhee Lee, Seongjoon Hong, and Hakjoo Oh.
+\newblock Memfix: Static analysis-based repair of memory deallocation errors
+  for c.
+\newblock ESEC/FSE 2018, 2018.
+
+\bibitem{Angelix}
+Sergey Mechtaev, Jooyong Yi, and Abhik Roychoudhury.
+\newblock Angelix: Scalable multiline program patch synthesis via symbolic
+  analysis.
+\newblock In {\em 2016 IEEE/ACM 38th International Conference on Software
+  Engineering (ICSE)}, pages 691--701, 2016.
+
+\bibitem{CPR}
+Ridwan Shariffdeen, Yannic Noller, Lars Grunske, and Abhik Roychoudhury.
+\newblock Concolic program repair.
+\newblock In {\em Proceedings of the 42nd ACM SIGPLAN International Conference
+  on Programming Language Design and Implementation}, PLDI 2021, page
+  390^^e2^^80^^93405, 2021.
+
+\end{thebibliography}

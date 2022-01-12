@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  7 JAN 2022 04:45
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  13 JAN 2022 03:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -72,6 +72,23 @@ Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
 \c@subfigure=\count94
 \c@subtable=\count95
 )
+(c:/texlive/2019/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen128
+\ar@mcellbox=\box43
+\extrarowheight=\dimen129
+\NC@list=\toks16
+\extratabsurround=\skip43
+\backup@length=\skip44
+\ar@cellbox=\box44
+)
+(c:/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip45
+\multirow@cntb=\count96
+\multirow@dima=\skip46
+\bigstrutjot=\dimen130
+)
 (./thesis-preamble.tex
 (c:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
@@ -86,22 +103,22 @@ Package ifvtex Info: VTeX not detected.
 (c:/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count96
-\Gm@cntv=\count97
-\c@Gm@tempcnt=\count98
-\Gm@bindingoffset=\dimen128
-\Gm@wd@mp=\dimen129
-\Gm@odd@mp=\dimen130
-\Gm@even@mp=\dimen131
-\Gm@layoutwidth=\dimen132
-\Gm@layoutheight=\dimen133
-\Gm@layouthoffset=\dimen134
-\Gm@layoutvoffset=\dimen135
-\Gm@dimlist=\toks16
+\Gm@cnth=\count97
+\Gm@cntv=\count98
+\c@Gm@tempcnt=\count99
+\Gm@bindingoffset=\dimen131
+\Gm@wd@mp=\dimen132
+\Gm@odd@mp=\dimen133
+\Gm@even@mp=\dimen134
+\Gm@layoutwidth=\dimen135
+\Gm@layoutheight=\dimen136
+\Gm@layouthoffset=\dimen137
+\Gm@layoutvoffset=\dimen138
+\Gm@dimlist=\toks17
 )
 (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2019/04/01 v2.17c AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip47
 
 For additional information on amsmath, use the `?' option.
 (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -109,51 +126,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen136
+\@emptytoks=\toks18
+\ex@=\dimen139
 ))
 (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen137
+\pmbraise@=\dimen140
 )
 (c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count99
+\inf@bad=\count100
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count100
-\leftroot@=\count101
+\uproot@=\count101
+\leftroot@=\count102
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count102
-\DOTSCASE@=\count103
+\classnum@=\count103
+\DOTSCASE@=\count104
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box43
-\strutbox@=\box44
-\big@size=\dimen138
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen141
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count104
-\c@MaxMatrixCols=\count105
+\macc@depth=\count105
+\c@MaxMatrixCols=\count106
 \dotsspace@=\muskip10
-\c@parentequation=\count106
-\dspbrk@lvl=\count107
-\tag@help=\toks18
-\row@=\count108
-\column@=\count109
-\maxfields@=\count110
-\andhelp@=\toks19
-\eqnshift@=\dimen139
-\alignsep@=\dimen140
-\tagshift@=\dimen141
-\tagwidth@=\dimen142
-\totwidth@=\dimen143
-\lineht@=\dimen144
-\@envbody=\toks20
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks21
+\c@parentequation=\count107
+\dspbrk@lvl=\count108
+\tag@help=\toks19
+\row@=\count109
+\column@=\count110
+\maxfields@=\count111
+\andhelp@=\toks20
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks21
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2855.
 LaTeX Info: Redefining \] on input line 2856.
 )
@@ -173,21 +190,21 @@ Package: nomentbl 2006/04/14 v0.4 Nomenclature in a longtable environment
 
 (c:/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
-\LTleft=\skip46
-\LTright=\skip47
-\LTpre=\skip48
-\LTpost=\skip49
-\LTchunksize=\count111
-\LTcapwidth=\dimen145
-\LT@head=\box45
-\LT@firsthead=\box46
-\LT@foot=\box47
-\LT@lastfoot=\box48
-\LT@cols=\count112
-\LT@rows=\count113
-\c@LT@tables=\count114
-\c@LT@chunks=\count115
-\LT@p@ftn=\toks22
+\LTleft=\skip50
+\LTright=\skip51
+\LTpre=\skip52
+\LTpost=\skip53
+\LTchunksize=\count112
+\LTcapwidth=\dimen148
+\LT@head=\box47
+\LT@firsthead=\box48
+\LT@foot=\box49
+\LT@lastfoot=\box50
+\LT@cols=\count113
+\LT@rows=\count114
+\c@LT@tables=\count115
+\c@LT@chunks=\count116
+\LT@p@ftn=\toks23
 )
 (c:/texlive/2019/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2019/05/05 v5.2 Nomenclature package
@@ -197,10 +214,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (c:/texlive/2019/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2019/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks23
-\XKV@tempa@toks=\toks24
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
 )
-\XKV@depth=\count116
+\XKV@depth=\count117
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (c:/texlive/2019/texmf-dist/tex/latex/koma-script/tocbasic.sty
@@ -213,37 +230,27 @@ basics and keyval usage)
 (c:/texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2019/10/12 v3.27 KOMA-Script package (loading files)
 ))
-\scr@dte@tocline@numberwidth=\skip50
-\scr@dte@tocline@numbox=\box49
+\scr@dte@tocline@numberwidth=\skip54
+\scr@dte@tocline@numbox=\box51
 )
 Package tocbasic Info: setting babel extension for `nlo' on input line 155.
 Package tocbasic Info: setting babel extension for `nls' on input line 156.
-\nomlabelwidth=\dimen146
-\nom@tempdim=\dimen147
-\nomitemsep=\skip51
+\nomlabelwidth=\dimen149
+\nom@tempdim=\dimen150
+\nomitemsep=\skip55
 )
 (c:/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count117
-\calc@Bcount=\count118
-\calc@Adimen=\dimen148
-\calc@Bdimen=\dimen149
-\calc@Askip=\skip52
-\calc@Bskip=\skip53
+\calc@Acount=\count118
+\calc@Bcount=\count119
+\calc@Adimen=\dimen151
+\calc@Bdimen=\dimen152
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count119
-\calc@Cskip=\skip54
-)
-(c:/texlive/2019/texmf-dist/tex/latex/tools/array.sty
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen150
-\ar@mcellbox=\box50
-\extrarowheight=\dimen151
-\NC@list=\toks25
-\extratabsurround=\skip55
-\backup@length=\skip56
-\ar@cellbox=\box51
+\calc@Ccount=\count120
+\calc@Cskip=\skip58
 ))
 \@nomenclaturefile=\write3
 \openout3 = `he.nlo'.
@@ -299,16 +306,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (c:/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen152
-\Hy@linkcounter=\count120
-\Hy@pagecounter=\count121
+\@linkdim=\dimen153
+\Hy@linkcounter=\count121
+\Hy@pagecounter=\count122
 
 (c:/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count122
+\Hy@SavedSpaceFactor=\count123
 
 (c:/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -326,16 +333,16 @@ Package hyperref Info: Backreferencing OFF on input line 4560.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4793.
 LaTeX Info: Redefining \href on input line 5063.
-\c@Hy@tempcnt=\count123
+\c@Hy@tempcnt=\count124
 (c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5152.
-\XeTeXLinkMargin=\dimen153
-\Fld@menulength=\count124
-\Field@Width=\dimen154
-\Fld@charsize=\dimen155
+\XeTeXLinkMargin=\dimen154
+\Fld@menulength=\count125
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
 Package hyperref Info: Hyper figures OFF on input line 6423.
 Package hyperref Info: Link nesting OFF on input line 6428.
 Package hyperref Info: Hyper index ON on input line 6431.
@@ -345,28 +352,42 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6448.
 Package hyperref Info: PDF/A mode OFF on input line 6453.
 LaTeX Info: Redefining \ref on input line 6493.
 LaTeX Info: Redefining \pageref on input line 6497.
-\Hy@abspage=\count125
-\c@Item=\count126
-\c@Hfootnote=\count127
+\Hy@abspage=\count126
+\c@Item=\count127
+\c@Hfootnote=\count128
 )
 Package hyperref Info: Driver: hdvipdfm.
 
 (c:/texlive/2019/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 File: hdvipdfm.def 2019/09/28 v7.00a Hyperref driver for dvipdfm
 \pdfm@box=\box52
-\c@Hy@AnnotLevel=\count128
-\HyField@AnnotCount=\count129
-\Fld@listcount=\count130
-\c@bookmark@seq@number=\count131
+\c@Hy@AnnotLevel=\count129
+\HyField@AnnotCount=\count130
+\Fld@listcount=\count131
+\c@bookmark@seq@number=\count132
 
 (c:/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip57
+\Hy@SectionHShift=\skip59
 ))
 (./private/thesis-margins-and-spaces.tex)
+(c:/texlive/2019/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+)
 
 LaTeX Warning: Unused global option(s):
     [a4j].
@@ -376,24 +397,24 @@ LaTeX Warning: Unused global option(s):
 (./Chapters/Chapter_05.aux))
 \openout1 = `he.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -437,18 +458,18 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring OFF on input line 78.
+Package hyperref Info: Link coloring OFF on input line 80.
 (c:/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
 (c:/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count132
+\c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
  (./he.out) (./he.out)
 \@outlinefile=\write4
 \openout4 = `he.out'.
@@ -518,39 +539,38 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
-File: Figure/Figure1.png Graphic file (type bmp)
-<Figure/Figure1.png>
+
+LaTeX Warning: Reference `fig1' on page 1 undefined on input line 8.
+
+
+LaTeX Warning: Reference `fig2a' on page 1 undefined on input line 23.
+
 [1
 
 
 
 
 
-] [2]
-File: Figure/Figure3.png Graphic file (type bmp)
-<Figure/Figure3.png>
-File: Figure/Figure4.png Graphic file (type bmp)
-<Figure/Figure4.png>
- [3] [4] [5]
-File: Figure/Figure2a.png Graphic file (type bmp)
-<Figure/Figure2a.png>
-File: Figure/Figure2b.png Graphic file (type bmp)
-<Figure/Figure2b.png>
-File: Figure/Figure2c.png Graphic file (type bmp)
-<Figure/Figure2c.png>
+]
+
+LaTeX Warning: Reference `fig2b' on page 2 undefined on input line 25.
 
 
-LaTeX Warning: Float too large for page by 18.90013pt on input line 80.
+LaTeX Warning: Reference `fig2c' on page 2 undefined on input line 46.
+
+[2]
+
+LaTeX Warning: Reference `fig3' on page 3 undefined on input line 50.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig4' on page 3 undefined on input line 50.
 
-) [6] [7]
+[3] [4]) [5]
 \openout2 = `Chapters/Chapter_02.aux'.
 
  (./Chapters/Chapter_02.tex
 Chapter 2.
-) [8
+) [6
 
 
 
@@ -560,155 +580,235 @@ Chapter 2.
 
  (./Chapters/Chapter_03.tex
 Chapter 3.
+
+LaTeX Warning: Reference `table1' on page 7 undefined on input line 11.
+
+
+LaTeX Warning: Reference `table3' on page 7 undefined on input line 217.
+
+
+LaTeX Warning: Reference `fig5' on page 7 undefined on input line 238.
+
+[7
+
+
+
+
+]
+
+LaTeX Warning: Reference `table4' on page 8 undefined on input line 240.
+
+) [8]
+\openout2 = `Chapters/Chapter_04.aux'.
+
+ (./Chapters/Chapter_04.tex
+Chapter 4.
+
+LaTeX Warning: Reference `fig6' on page 9 undefined on input line 19.
+
 [9
 
 
 
 
 ]
-File: Figure/Figure5a.jpg Graphic file (type bmp)
-<Figure/Figure5a.jpg>
-File: Figure/Figure5b.jpg Graphic file (type bmp)
-<Figure/Figure5b.jpg>
 
-Underfull \hbox (badness 3826) in paragraph at lines 33--33
-[]\OT1/cmr/m/n/10.95 (b) |Dense area of wooden
- []
+LaTeX Warning: Reference `table5' on page 10 undefined on input line 39.
 
-File: Figure/Figure5c.jpg Graphic file (type bmp)
-<Figure/Figure5c.jpg>
-File: Figure/Figure5d.jpg Graphic file (type bmp)
-<Figure/Figure5d.jpg>
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]\OT1/cmr/m/n/10.95 (d) |Tokyo-Wooden
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-\OT1/cmr/m/n/10.95 houses(Dense area); Seis-
- []
-
-File: Figure/Figure5e.jpg Graphic file (type bmp)
-<Figure/Figure5e.jpg>
-File: Figure/Figure5f.jpg Graphic file (type bmp)
-<Figure/Figure5f.jpg>
-File: Figure/Figure5g.jpg Graphic file (type bmp)
-<Figure/Figure5g.jpg>
-) [10] [11
-
-]
-\openout2 = `Chapters/Chapter_04.aux'.
-
- (./Chapters/Chapter_04.tex
-Chapter 4.
-File: Figure/Figure6.jpg Graphic file (type bmp)
-<Figure/Figure6.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12
-
-
-
-
-] [13]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 38.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 38.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-3.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 93.
+[10]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9
+8.
  (c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
-File: Figure/Figure7.png Graphic file (type bmp)
-<Figure/Figure7.png>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig7' on page 11 undefined on input line 102.
 
 
-Overfull \hbox (3.95172pt too wide) in paragraph at lines 57--58
+Overfull \hbox (3.95172pt too wide) in paragraph at lines 115--116
 \OT1/cmr/m/n/12 etc, Per-sonal char-ac-ter-is-tics, like haz-ard ex-pe-ri-ence,
  knowl-edge, abil-i-ties/impairments,
  []
 
-File: Figure/Figure8.png Graphic file (type bmp)
-<Figure/Figure8.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig8' on page 11 undefined on input line 118.
 
-File: Figure/Figure9.png Graphic file (type bmp)
-<Figure/Figure9.png>
-[14]
+[11]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig10' on page 12 undefined on input line 208.
 
-[15] [16]
-File: Figure/Figure10.png Graphic file (type bmp)
-<Figure/Figure10.png>
- [17]
-File: Figure/Figure11.png Graphic file (type bmp)
-<Figure/Figure11.png>
-File: Figure/Figure12.png Graphic file (type bmp)
-<Figure/Figure12.png>
+[12]
+
+LaTeX Warning: Reference `fig11' on page 13 undefined on input line 222.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig12' on page 13 undefined on input line 236.
 
-[18]) [19]
+) [13]
 \openout2 = `Chapters/Chapter_05.aux'.
 
  (./Chapters/Chapter_05.tex
 Chapter 5.
-) [20
+
+LaTeX Warning: Reference `fig13' on page 14 undefined on input line 11.
 
 
+LaTeX Warning: Reference `fig14' on page 14 undefined on input line 11.
 
 
-] (./he.bbl
-
-LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
-(Font)              using `JT1/gt/m/n' instead on input line 15.
+LaTeX Warning: Reference `fig15' on page 14 undefined on input line 11.
 
 
-LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
-(Font)              using `JY1/gt/m/n' instead on input line 15.
+LaTeX Warning: Reference `fig16' on page 14 undefined on input line 11.
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
- [21
+
+LaTeX Warning: Reference `fig17' on page 14 undefined on input line 11.
+
+
+LaTeX Warning: Reference `fig18' on page 14 undefined on input line 11.
+
+[14
+
 
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
+
+LaTeX Warning: Reference `fig19' on page 15 undefined on input line 89.
+
+
+LaTeX Warning: Reference `fig20' on page 15 undefined on input line 89.
+
+
+LaTeX Warning: Reference `fig21' on page 15 undefined on input line 89.
+
+
+LaTeX Warning: Reference `fig22' on page 15 undefined on input line 89.
+
+[15]
+
+LaTeX Warning: Reference `table6' on page 16 undefined on input line 97.
+
+
+LaTeX Warning: Reference `table7' on page 16 undefined on input line 163.
+
+[16]
+
+LaTeX Warning: Reference `fig23' on page 17 undefined on input line 194.
+
+
+LaTeX Warning: Reference `fig24' on page 17 undefined on input line 198.
+
+
+LaTeX Warning: Reference `table8' on page 17 undefined on input line 198.
+
+
+LaTeX Warning: Reference `table9' on page 17 undefined on input line 237.
+
+
+LaTeX Warning: Reference `table10' on page 17 undefined on input line 237.
+
+
+LaTeX Warning: Reference `table9' on page 17 undefined on input line 237.
+
+
+LaTeX Warning: Reference `table10' on page 17 undefined on input line 237.
+
+
+LaTeX Warning: Reference `fig25' on page 17 undefined on input line 237.
+
+
+LaTeX Warning: Reference `fig25' on page 17 undefined on input line 237.
+
+[17]
+
+LaTeX Warning: Reference `table11' on page 18 undefined on input line 332.
+
+
+LaTeX Warning: Reference `table12' on page 18 undefined on input line 332.
+
+
+LaTeX Warning: Reference `table13' on page 18 undefined on input line 332.
+
+
+LaTeX Warning: Reference `table14' on page 18 undefined on input line 332.
+
+
+LaTeX Warning: Reference `fig29' on page 18 undefined on input line 431.
+
+
+LaTeX Warning: Reference `table21' on page 18 undefined on input line 431.
+
+
+LaTeX Warning: Reference `table22' on page 18 undefined on input line 431.
+
+[18] [19]
+
+LaTeX Warning: Reference `table17' on page 20 undefined on input line 553.
+
+
+LaTeX Warning: Reference `table20' on page 20 undefined on input line 553.
+
+[20]
+
+LaTeX Warning: Reference `fig26' on page 21 undefined on input line 672.
+
+
+LaTeX Warning: Reference `fig27' on page 21 undefined on input line 672.
+
+
+LaTeX Warning: Reference `fig28' on page 21 undefined on input line 672.
+
+[21]) [22] (./he.bbl
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 5.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 5.
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+ [23
+
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
  (./he.aux (./Chapters/Chapter_01.aux) (./Chapters/Chapter_02.aux)
 (./Chapters/Chapter_03.aux) (./Chapters/Chapter_04.aux)
 (./Chapters/Chapter_05.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 175.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `he.out' has not changed.
-(rerunfilecheck)             Checksum: 7613BCDE1E5B4BC465AE9803097441A4;1565.
+(rerunfilecheck)             Checksum: 714884999C006D4E31AB3F9B69CF10F1;2401.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
  ) 
 Here is how much of TeX's memory you used:
- 8945 strings out of 492763
- 134976 string characters out of 6143311
- 281141 words of memory out of 5000000
- 13204 multiletter control sequences out of 15000+600000
- 20330 words of font info for 82 fonts, out of 8000000 for 9000
+ 10505 strings out of 492763
+ 170776 string characters out of 6143311
+ 345478 words of memory out of 5000000
+ 14781 multiletter control sequences out of 15000+600000
+ 19567 words of font info for 79 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 49i,8n,82p,2083b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,14n,82p,2765b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on he.dvi (27 pages, 74612 bytes).
+Output written on he.dvi (29 pages, 109520 bytes).

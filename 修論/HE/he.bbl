@@ -1,4 +1,19 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{ref6}
+PM. Bentler.
+\newblock {\em Comparative fit indexes in structural models.}
+\newblock Psychological bulletin, 1990.
+
+\bibitem{ref4}
+G.~Browne, M.W.and~Mels.
+\newblock {\em RAMONA user's guide.}
+\newblock Unpublished report, Columbus, Ohio State University., 1990.
+
+\bibitem{ref3}
+R.~Browne, M.W.and~Cudeck.
+\newblock {\em Alternative ways of assessing model fit.}
+\newblock Newbury Park, 1993.
 
 \bibitem{Cahyanto2016StatedPO}
 Ignatius Cahyanto, Lori Pennington-Gray, Sivaramakrishnan Srinivasan, Corene~J.
@@ -15,11 +30,40 @@ Ignatius Cahyanto, Lori Pennington-Gray, Brijesh Thapa, Sivaramakrishnan
 \newblock {\em Journal of Destination Marketing and Management}, 2:253--265,
   2014.
 
+\bibitem{ref1}
+P.~George, D.and~Mallery.
+\newblock {\em PSS for Windows step by step: A simple guide and reference 11.0
+  update (4th ed.).}
+\newblock 2003.
+
+\bibitem{ref2}
+R.~P. McDonald and M.-H.~R. Ho.
+\newblock {\em Principles and practice in reporting structural equation
+  analyses.}
+\newblock Psychological Methods, 2002.
+
+\bibitem{ref5}
+J.H. Steiger.
+\newblock {\em EzPATH: A supplementary module for SYSTAT and SYGRAPH.}
+\newblock Evan- ston, IL: SYSTAT., 1989.
+
+\bibitem{Streiner2006BuildingAB}
+David~L. Streiner.
+\newblock Building a better model: An introduction to structural equation
+  modelling.
+\newblock {\em The Canadian Journal of Psychiatry}, 51:317 -- 324, 2006.
+
 \bibitem{Wang2021IncorporatingHF}
 Yi~Wang, Miltos Kyriakidis, and Vinh~N. Dang.
 \newblock Incorporating human factors in emergency evacuation ^^e2^^80^^93 an
   overview of behavioral factors and models.
 \newblock {\em International journal of disaster risk reduction}, 60:102254,
   2021.
+
+\bibitem{SEMres}
+崇宏 星野, 謙介 岡田, and 忠彦 前田.
+\newblock 構造方程式モデリングにおける適合度指標とモデル改善について :
+  展望とシミュレーション研究による新たな知見.
+\newblock {\em 行動計量学}, 32(2):209--235, 2005.
 
 \end{thebibliography}

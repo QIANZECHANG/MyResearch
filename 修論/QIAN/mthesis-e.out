@@ -1,0 +1,22 @@
+\BOOKMARK [0][]{chapter*.1}{Abstract}{}% 1
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 2
+\BOOKMARK [0][]{chapter.2}{2 Background}{}% 3
+\BOOKMARK [1][]{section.2.1}{2.1 Infer}{chapter.2}% 4
+\BOOKMARK [1][]{section.2.2}{2.2 LibFuzzer}{chapter.2}% 5
+\BOOKMARK [0][]{chapter.3}{3 Overview}{}% 6
+\BOOKMARK [1][]{section.3.1}{3.1 Motivating Example 1}{chapter.3}% 7
+\BOOKMARK [1][]{section.3.2}{3.2 Motivating Example 2}{chapter.3}% 8
+\BOOKMARK [0][]{chapter.4}{4 Approach}{}% 9
+\BOOKMARK [1][]{section.4.1}{4.1 Patch Template}{chapter.4}% 10
+\BOOKMARK [1][]{section.4.2}{4.2 Error Detection}{chapter.4}% 11
+\BOOKMARK [1][]{section.4.3}{4.3 Dependency Collection}{chapter.4}% 12
+\BOOKMARK [1][]{section.4.4}{4.4 Source Instrumentation}{chapter.4}% 13
+\BOOKMARK [1][]{section.4.5}{4.5 Patch Generation}{chapter.4}% 14
+\BOOKMARK [2][]{subsection.4.5.1}{4.5.1 Component-based Program Synthesis}{section.4.5}% 15
+\BOOKMARK [2][]{subsection.4.5.2}{4.5.2 Repair Algorithm}{section.4.5}% 16
+\BOOKMARK [2][]{subsection.4.5.3}{4.5.3 Function Fix}{section.4.5}% 17
+\BOOKMARK [2][]{subsection.4.5.4}{4.5.4 Temporary Variable}{section.4.5}% 18
+\BOOKMARK [0][]{chapter.5}{5 Evaluation}{}% 19
+\BOOKMARK [0][]{chapter.6}{6 Limitation}{}% 20
+\BOOKMARK [0][]{chapter.7}{7 Future Work}{}% 21
+\BOOKMARK [0][]{chapter.8}{8 Related Work}{}% 22
