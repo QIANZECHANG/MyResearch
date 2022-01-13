@@ -8,7 +8,7 @@ typedef struct N{
 }node;
 
 typedef struct M{
-    struct M *next;    
+    struct M *next;
     int k;
 }field;
 
@@ -19,15 +19,15 @@ node *new_node(int a){
     return n;
 }
 
-int func(int a){
-    node *x=new_node(a);node* tmp_o0 = x;field* tmp_o1 = x->m;
+int func(int a){node* tmp_o0;field* tmp_o1;
+    node *x=new_node(a);tmp_o0 = x;tmp_o1 = x->m;
     x->v=a;
     x->m->k=a+1;
     if(a<5){
-        free(x);
-        free(tmp_o1);return 1;
+        free(tmp_o1);free(tmp_o0);return 1;
     }
-    free(tmp_o1);free(tmp_o0);return 0;    
+    free(x);
+    free(tmp_o1);return 0;
 }
 
 

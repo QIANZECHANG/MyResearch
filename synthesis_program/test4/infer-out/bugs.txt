@@ -1,0 +1,22 @@
+Found 2 issues
+
+infer.c:14: error: Bad_footprint (biabduction/Rearrange.ml:306:38-45:)
+  .
+  12.       x.p1=(int*)malloc(4);
+  13.       x.p2=(int*)malloc(4);
+  14. >     free(*(&x.p1+1));
+  15.       //free(x.p1);
+  16.       //[+] { Insert: if (true) free(*(func:x.p2)) at 3 (line 16, column 5) }
+
+infer.c:14: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated by call to `malloc()` at line 13, column 16 is not reachable after line 14, column 5.
+  12.       x.p1=(int*)malloc(4);
+  13.       x.p2=(int*)malloc(4);
+  14. >     free(*(&x.p1+1));
+  15.       //free(x.p1);
+  16.       //[+] { Insert: if (true) free(*(func:x.p2)) at 3 (line 16, column 5) }
+
+Summary of the reports
+
+  Bad_footprint: 1
+    MEMORY_LEAK: 1

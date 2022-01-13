@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">6</a></h1></center>PROC: <a href="./../LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7.html">LLVMFuzzerTestOneInput</a> LINE: <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>
+<br>PREDS:
+<a href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node22.html"><span class='visited'>N_22<span class='expansion'>node22 preds:1 succs:6 exn: </span></span></a><br>SUCCS: 
+<a href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node5.html"><span class='dangling'>N_5<span class='expansion'>node5 preds:7 6 succs:8 exn: 
+NOT VISITED</span></span></a><br>EXN: 
+<br>
+<span class='color_green'><LISTING>*&amp;i:int=0 [line 22, column 9];
+</LISTING></span><hr width="100%">
+<a name="session2" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session2">node6#session2</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) uninit (6: 0)<LISTING><span class='color_black'>PRE: 
+ uninit_vars: { 0$?%__sil_tmpSIL_temp_conditional___n$15, i } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+INSTR: i := 0 [line 22, column 9]
+POST: 
+ uninit_vars: { 0$?%__sil_tmpSIL_temp_conditional___n$15 } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session28" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session28">node6#session28</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) siof<LISTING><span class='color_black'>PRE: (_|_, { })
+INSTRS: *&amp;i:int=0 [line 22, column 9];
+POST: (_|_, { })
+
+</LISTING></span><hr width="100%">
+<a name="session51" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session51">node6#session51</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) address taken<LISTING><span class='color_black'>PRE: { }
+INSTRS: *&amp;i:int=0 [line 22, column 9];
+POST: { }
+
+</LISTING></span><hr width="100%">
+<a name="session67" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session67">node6#session67</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { 0$?%__sil_tmpSIL_temp_conditional___n$15 -> Owned,
+              data -> OwnedIf{ 0 },
+              n -> Owned,
+              size -> OwnedIf{ 1 },
+              i -> Owned } 
+Attributes: { n -> { Functional } } 
+Non-stable Paths: { n }
+
+INSTR: i := 0 [line 22, column 9]
+POST: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { 0$?%__sil_tmpSIL_temp_conditional___n$15 -> Owned,
+              data -> OwnedIf{ 0 },
+              n -> Owned,
+              size -> OwnedIf{ 1 },
+              i -> Owned } 
+Attributes: { n -> { Functional }, i -> { Functional } } 
+Non-stable Paths: { i, n }
+
+
+</LISTING></span><hr width="100%">
+<a name="session92" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session92">node6#session92</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) ownership<LISTING><span class='color_black'>PRE: { n -> Owned }
+INSTR: i := 0 [line 22, column 9]
+POST: { n -> Owned, i -> Owned }
+
+</LISTING></span><hr width="100%">
+<a name="session107" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session107">node6#session107</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) interproc<LISTING><span class='color_black'>**** [FP:Pending] LLVMFuzzerTestOneInput Node: 6, Procedure: LLVMFuzzerTestOneInput, Session: 107, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$2 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>old_data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_red'>return = _t$1 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>i = _t$0 <span class='color_orange'>initial</span>:int</span>
+  [footprint
+     <span class='color_red'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>size = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+  .... Instructions: .... 
+  <span class='color_green'>*&amp;i:int=0 [line 22, column 9];
+  APPLY_ABSTRACTION; [line 22, column 9];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>*&amp;i:int=0 [line 22, column 9]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;i
+    Prop: 
+    <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = n$4 <span class='color_orange'>initial</span>:int; data = @f$1 <span class='color_orange'>formal</span>:char*; old_data = @f$1 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = n$5 <span class='color_orange'>initial</span>:int; size = @f$0 <span class='color_orange'>formal</span>:int; old_size = @f$0 <span class='color_orange'>formal</span>:int; i = n$6 <span class='color_orange'>initial</span>:int
+    [footprint
+       data = @f$1 <span class='color_orange'>formal</span>:char*; size = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    in prop_iter_extend_ptsto lexp: &amp;i
+    prop before:
+    <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = n$4 <span class='color_orange'>initial</span>:int; data = @f$1 <span class='color_orange'>formal</span>:char*; old_data = @f$1 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = n$5 <span class='color_orange'>initial</span>:int; size = @f$0 <span class='color_orange'>formal</span>:int; old_size = @f$0 <span class='color_orange'>formal</span>:int; i = n$6 <span class='color_orange'>initial</span>:int
+    [footprint
+       data = @f$1 <span class='color_orange'>formal</span>:char*; size = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    
+    prop list after:
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = n$4 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = n$5 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = n$6 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = <span class='color_red'>_t$0 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = <span class='color_red'>0 <span class='color_orange'>update:22</span></span>:int</span>
+    [footprint
+       <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    Instruction <span class='color_green'>APPLY_ABSTRACTION; [line 22, column 9]</span>
+    <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$1 <span class='color_orange'>initial</span>:int; data = @f$1 <span class='color_orange'>formal</span>:char*; old_data = @f$1 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = _t$0 <span class='color_orange'>initial</span>:int; size = @f$0 <span class='color_orange'>formal</span>:int; old_size = @f$0 <span class='color_orange'>formal</span>:int; i = 0 <span class='color_orange'>update:22</span>:int
+    [footprint
+       data = @f$1 <span class='color_orange'>formal</span>:char*; size = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$1 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = 0 <span class='color_orange'>update:22</span>:int</span>
+    [footprint
+       <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = <span class='color_red'>_t$0 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = <span class='color_red'>0 <span class='color_orange'>update:22</span></span>:int</span>
+    [footprint
+       <span class='color_blue'>data = @f$1 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>size = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    
+    
+  </LISTING></span><hr width="100%">
+<a name="session224" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session224">node6#session224</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] LLVMFuzzerTestOneInput Node: 6, Procedure: LLVMFuzzerTestOneInput, Session: 224, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>$RET___ctype_b_loc|abducedRetvar = val$5 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_red'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$2 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>$RET_func|abducedRetvar = val$4 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_red'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_red'>return = _t$1 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>i = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+  <span class='color_red'>val$6|->[val$7|] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_red'>$RET___ctype_b_loc|abducedRetvar|->val$6 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_red'>old_data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+  .... Instructions: .... 
+  <span class='color_green'>*&amp;i:int=0 [line 22, column 9];
+  APPLY_ABSTRACTION; [line 22, column 9];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>*&amp;i:int=0 [line 22, column 9]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;i
+    Prop: 
+    <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$5 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub ); 0$?%__sil_tmpSIL_temp_conditional___n$15 = n$4 <span class='color_orange'>initial</span>:int; $RET_func|abducedRetvar = val$4 <span class='color_orange'>formal</span>:int( sub ); data = val$2 <span class='color_orange'>formal</span>:char*; old_data = val$2 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = n$5 <span class='color_orange'>initial</span>:int; size = val$1 <span class='color_orange'>formal</span>:int; old_size = val$1 <span class='color_orange'>formal</span>:int; i = n$6 <span class='color_orange'>initial</span>:int ;
+    val$6|->[val$7|] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]; $RET___ctype_b_loc|abducedRetvar|->val$6 <span class='color_orange'>formal(z)</span>:unsigned short const * const ; old_data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$5 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>$RET_func|abducedRetvar = val$4 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = <span class='color_red'>_t$0 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = <span class='color_red'>0 <span class='color_orange'>update:22</span></span>:int</span> ;
+    <span class='color_blue'>val$6|->[val$7|] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar|->val$6 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_blue'>old_data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+    
+    Instruction <span class='color_green'>APPLY_ABSTRACTION; [line 22, column 9]</span>
+    <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$5 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub ); 0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$1 <span class='color_orange'>initial</span>:int; $RET_func|abducedRetvar = val$4 <span class='color_orange'>formal</span>:int( sub ); data = val$2 <span class='color_orange'>formal</span>:char*; old_data = val$2 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = _t$0 <span class='color_orange'>initial</span>:int; size = val$1 <span class='color_orange'>formal</span>:int; old_size = val$1 <span class='color_orange'>formal</span>:int; i = 0 <span class='color_orange'>update:22</span>:int ;
+    val$6|->[val$7|] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]; $RET___ctype_b_loc|abducedRetvar|->val$6 <span class='color_orange'>formal(z)</span>:unsigned short const * const ; old_data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$5 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$1 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_func|abducedRetvar = val$4 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = 0 <span class='color_orange'>update:22</span>:int</span> ;
+    <span class='color_blue'>val$6|->[val$7|] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar|->val$6 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_blue'>old_data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$5 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>$RET_func|abducedRetvar = val$4 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = <span class='color_red'>_t$0 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = <span class='color_red'>0 <span class='color_orange'>update:22</span></span>:int</span> ;
+    <span class='color_blue'>val$6|->[val$7|] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar|->val$6 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_blue'>old_data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+    
+    
+    
+  </LISTING></span><hr width="100%">
+<a name="session283" href="./../nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html#session283">node6#session283</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE22">22</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] LLVMFuzzerTestOneInput Node: 6, Procedure: LLVMFuzzerTestOneInput, Session: 283, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>(-1  &lt;  val$1)</span>; <span class='color_red'>((val$4 - val$1)  &lt;=  -1)</span>; <span class='color_red'>((val$1 - val$4)  &lt;=  1)</span> ;
+  <span class='color_red'>$RET___ctype_b_loc|abducedRetvar = val$7 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_red'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$2 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>$RET_func|abducedRetvar = val$6 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_red'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_red'>return = _t$1 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>i = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+  <span class='color_red'>val$8|->[val$9|val$5:val$10 <span class='color_orange'>formal</span>] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_red'>$RET___ctype_b_loc|abducedRetvar|->val$8 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_red'>old_data|->[val$3|val$4:val$5 <span class='color_orange'>formal</span>] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+  .... Instructions: .... 
+  <span class='color_green'>*&amp;i:int=0 [line 22, column 9];
+  APPLY_ABSTRACTION; [line 22, column 9];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>*&amp;i:int=0 [line 22, column 9]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;i
+    Prop: 
+    <span class='color_blue'>(-1  &lt;  val$1); ((val$4 - val$1)  &lt;=  -1); ((val$1 - val$4)  &lt;=  1) ;
+    $RET___ctype_b_loc|abducedRetvar = val$7 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub ); 0$?%__sil_tmpSIL_temp_conditional___n$15 = n$526 <span class='color_orange'>initial</span>:int; $RET_func|abducedRetvar = val$6 <span class='color_orange'>formal</span>:int( sub ); data = val$2 <span class='color_orange'>formal</span>:char*; old_data = val$2 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = n$527 <span class='color_orange'>initial</span>:int; size = val$1 <span class='color_orange'>formal</span>:int; old_size = val$1 <span class='color_orange'>formal</span>:int; i = n$528 <span class='color_orange'>initial</span>:int ;
+    val$8|->[val$9|val$5:val$10 <span class='color_orange'>formal</span>] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]; $RET___ctype_b_loc|abducedRetvar|->val$8 <span class='color_orange'>formal(z)</span>:unsigned short const * const ; old_data|->[val$3|val$4:val$5 <span class='color_orange'>formal</span>] <span class='color_orange'>formal</span>:char[_*_]</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(-1  &lt;  val$1)</span>; <span class='color_blue'>((val$4 - val$1)  &lt;=  -1)</span>; <span class='color_blue'>((val$1 - val$4)  &lt;=  1)</span> ;
+    <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$7 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>$RET_func|abducedRetvar = val$6 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = <span class='color_red'>_t$0 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = <span class='color_red'>0 <span class='color_orange'>update:22</span></span>:int</span> ;
+    <span class='color_blue'>val$8|->[val$9|val$5:val$10 <span class='color_orange'>formal</span>] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar|->val$8 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_blue'>old_data|->[val$3|val$4:val$5 <span class='color_orange'>formal</span>] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+    
+    Instruction <span class='color_green'>APPLY_ABSTRACTION; [line 22, column 9]</span>
+    <span class='color_blue'>(-1  &lt;  val$1); ((val$4 - val$1)  &lt;=  -1); ((val$1 - val$4)  &lt;=  1) ;
+    $RET___ctype_b_loc|abducedRetvar = val$7 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub ); 0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$1 <span class='color_orange'>initial</span>:int; $RET_func|abducedRetvar = val$6 <span class='color_orange'>formal</span>:int( sub ); data = val$2 <span class='color_orange'>formal</span>:char*; old_data = val$2 <span class='color_orange'>formal</span>:char*; n = 0 <span class='color_orange'>update:21</span>:int; return = _t$0 <span class='color_orange'>initial</span>:int; size = val$1 <span class='color_orange'>formal</span>:int; old_size = val$1 <span class='color_orange'>formal</span>:int; i = 0 <span class='color_orange'>update:22</span>:int ;
+    val$8|->[val$9|val$5:val$10 <span class='color_orange'>formal</span>] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]; $RET___ctype_b_loc|abducedRetvar|->val$8 <span class='color_orange'>formal(z)</span>:unsigned short const * const ; old_data|->[val$3|val$4:val$5 <span class='color_orange'>formal</span>] <span class='color_orange'>formal</span>:char[_*_]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(-1  &lt;  val$1)</span>; <span class='color_blue'>((val$4 - val$1)  &lt;=  -1)</span>; <span class='color_blue'>((val$1 - val$4)  &lt;=  1)</span> ;
+    <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$7 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = _t$1 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_func|abducedRetvar = val$6 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = 0 <span class='color_orange'>update:22</span>:int</span> ;
+    <span class='color_blue'>val$8|->[val$9|val$5:val$10 <span class='color_orange'>formal</span>] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar|->val$8 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_blue'>old_data|->[val$3|val$4:val$5 <span class='color_orange'>formal</span>] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(-1  &lt;  val$1)</span>; <span class='color_blue'>((val$4 - val$1)  &lt;=  -1)</span>; <span class='color_blue'>((val$1 - val$4)  &lt;=  1)</span> ;
+    <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar = val$7 <span class='color_orange'>formal</span>:unsigned short const * const * const ( sub )</span>; <span class='color_blue'>0$?%__sil_tmpSIL_temp_conditional___n$15 = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>$RET_func|abducedRetvar = val$6 <span class='color_orange'>formal</span>:int( sub )</span>; <span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>old_data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_blue'>n = 0 <span class='color_orange'>update:21</span>:int</span>; <span class='color_blue'>return = <span class='color_red'>_t$0 <span class='color_orange'>initial</span></span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_size = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>i = <span class='color_red'>0 <span class='color_orange'>update:22</span></span>:int</span> ;
+    <span class='color_blue'>val$8|->[val$9|val$5:val$10 <span class='color_orange'>formal</span>] <span class='color_orange'>formal(z)</span>:unsigned short[_*_]</span>; <span class='color_blue'>$RET___ctype_b_loc|abducedRetvar|->val$8 <span class='color_orange'>formal(z)</span>:unsigned short const * const </span>; <span class='color_blue'>old_data|->[val$3|val$4:val$5 <span class='color_orange'>formal</span>] <span class='color_orange'>formal</span>:char[_*_]</span></span>
+    
+    
+    
+  </LISTING></span>

@@ -1,0 +1,41 @@
+NAME: struct objc_object
+TYPE: struct objc_object 
+      	fields: {
+      	}
+      	supers: {
+      	}
+      	methods: {
+      	}
+      	annots: {<>
+      	}NAME: struct N
+TYPE: struct N 
+      	fields: {
+      		M* m <> 
+      		int v <>
+      	}
+      	supers: {
+      	}
+      	methods: {
+      	}
+      	annots: {<>
+      	}NAME: struct objc_class
+TYPE: struct objc_class 
+      	fields: {
+      	}
+      	supers: {
+      	}
+      	methods: {
+      	}
+      	annots: {<>
+      	}NAME: struct M
+TYPE: struct M 
+      	fields: {
+      		M* next <> 
+      		int k <>
+      	}
+      	supers: {
+      	}
+      	methods: {
+      	}
+      	annots: {<>
+      	}

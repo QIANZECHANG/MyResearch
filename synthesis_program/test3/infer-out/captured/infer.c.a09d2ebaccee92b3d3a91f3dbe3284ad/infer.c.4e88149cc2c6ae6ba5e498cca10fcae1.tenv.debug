@@ -10,8 +10,8 @@ TYPE: struct objc_object
       	}NAME: struct N
 TYPE: struct N 
       	fields: {
-      		int* p1 <> 
-      		int* p2 <>
+      		M* m <> 
+      		int v <>
       	}
       	supers: {
       	}
@@ -19,3 +19,22 @@ TYPE: struct N
       	}
       	annots: {<>
       	}NAME: struct objc_class
+TYPE: struct objc_class 
+      	fields: {
+      	}
+      	supers: {
+      	}
+      	methods: {
+      	}
+      	annots: {<>
+      	}NAME: struct M
+TYPE: struct M 
+      	fields: {
+      		M* next <>
+      	}
+      	supers: {
+      	}
+      	methods: {
+      	}
+      	annots: {<>
+      	}

@@ -23,7 +23,8 @@
             "object": [
                 "x",
                 "node*",
-                20
+                20,
+                19
             ]
         },
         "new_node": {
@@ -43,7 +44,8 @@
             "object": [
                 "n",
                 "node*",
-                12
+                12,
+                11
             ]
         },
         "error_object": [
@@ -76,7 +78,8 @@
             "object": [
                 "x->next",
                 null,
-                21
+                21,
+                19
             ]
         },
         "new_node": {
@@ -96,7 +99,8 @@
             "object": [
                 "n",
                 "node*",
-                12
+                12,
+                11
             ]
         },
         "error_object": [

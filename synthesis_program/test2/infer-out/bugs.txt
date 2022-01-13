@@ -1,0 +1,39 @@
+Found 4 issues
+
+infer.c:7: error: DEAD_STORE
+  The value written to &b (type int*) is never used.
+  5.   int func(int a){
+  6.       int *p=malloc(4);
+  7. >     int *b=&a;
+  8.       if(a<5){
+  9.           return 0;
+
+infer.c:11: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 11, column 5.
+  9.           return 0;
+  10.       }
+  11. >     *p=1;
+  12.       return 1;    
+  13.   }
+
+infer.c:9: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated to `return` by call to `malloc()` at line 6, column 12 is not reachable after line 9, column 9.
+  7.       int *b=&a;
+  8.       if(a<5){
+  9. >         return 0;
+  10.       }
+  11.       *p=1;
+
+infer.c:11: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `p` last assigned on line 6 could be null and is dereferenced at line 11, column 5.
+  9.           return 0;
+  10.       }
+  11. >     *p=1;
+  12.       return 1;    
+  13.   }
+
+Summary of the reports
+
+       MEMORY_LEAK: 2
+  NULL_DEREFERENCE: 1
+        DEAD_STORE: 1

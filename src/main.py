@@ -12,14 +12,17 @@ import time
 # input the name of buggy program
 def main(filename):
     t0=time.time()
+    fuzztime=0
     # delete comment
     os.system(f"gcc -fpreprocessed -dD -E {filename} | sed \"1d\" > _{filename}")
     # fuzzing
     print("fuzzing")
     os.system(f"clang-12 -g -fsanitize=address,fuzzer _{filename}")
     err_num=0
-    for _ in range(20):
+    for _ in range(10):
+        t_fuzz=time.time()
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>fuzzer_result")
+        fuzztime+=time.time()-t_fuzz
         err_path=get_fuzzer_result("fuzzer_result")
         if len(err_path)>err_num:
             err_num=len(err_path)
@@ -32,9 +35,12 @@ def main(filename):
     print("fuzzing done")
     # delete include (pycparser can't analyze)
     os.system(f"cat _{filename} | sed \"/#/c\ \" > dep_{filename} ")
-    
+
+    t_depstart=time.time()
     # get dependency variable and the error
     dep,error_feature = get_dependency("fuzzer_result")
+    print(f"static analysis: {time.time()-t_depstart}\n")
+
     _error_feature=error_feature.copy()
     with open('dependency.json', 'w') as f:
         json.dump(dep, f, indent=4)
@@ -49,10 +55,13 @@ def main(filename):
     os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
     # run 10 times to get more dynamic value
     for i in range(10):
+        t_fuzz=time.time()
         os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
+        fuzztime+=time.time()-t_fuzz
         add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
         
-    print("collect dynamic value done")  
+    print("collect dynamic value done")
+    print(f"fuzzing time: {fuzztime}")  
     print(f"current time: {time.time()-t0}")    
     print(f"have {len(error_feature)} error(s)")
     
@@ -79,14 +88,17 @@ def main(filename):
                 break
             p=patch
             # try to fix this error
-            cur_filelist,not_fixed=fix(patch,err_dep,err_fea,error_feature,i,dep)
+            cur_filelist,not_fixed,ft=fix(patch,err_dep,err_fea,error_feature,i,dep)
+            fuzztime+=ft
             # if failed, instrument again and get new dynamic variable
             if not_fixed==1:
                 print("collect error test cases")
                 add_dynamic_value(syn_inf,"cur_fuzzer_result",_error_feature,[i])
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
+                    t_fuzz=time.time()
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
+                    fuzztime+=time.time()-t_fuzz
                     add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
             t=time.time()-t1
         if(t>=120):
@@ -106,7 +118,9 @@ def main(filename):
                 print("collect new test cases")
                 os.system(f"clang-12 -g -fsanitize=address,fuzzer {inst_filename}")
                 for _ in range(10):
+                    t_fuzz=time.time()
                     os.system(r"./a.out -max_total_time=5 -max_len=2 2>inst_result")
+                    fuzztime+=time.time()-t_fuzz
                     add_dynamic_value(syn_inf,"inst_result",_error_feature,[])
         else:
             # if time out, print error number
@@ -124,7 +138,8 @@ def main(filename):
     os.system(f"rm -f check_and_instrument.c")
     write_file("result_"+filename,filelist)
     with open('syn_inf.json', 'w') as f:
-        json.dump(syn_inf, f, indent=4) 
+        json.dump(syn_inf, f, indent=4)
+    print(f"fuzzing time: {fuzztime}") 
     print(f"total time: {time.time()-t0}")
     
 def fix(patch,err_dep,err_fea,error_feature,i,dep):
@@ -132,6 +147,7 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
     k: funcname
     v: filelist, patch, return location
     """
+    fuzztime=0
     # try the patch in each function
     for k,v in patch.items():
         if not v:
@@ -159,16 +175,17 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
             os.system(f"clang-12 -g -fsanitize=address,fuzzer check_and_instrument.c")
             max_err=[]
             f=0
-            for _ in range(20):
+            for _ in range(10):
                 t=time.time()
                 os.system(r"./a.out -max_total_time=5 -max_len=2 2>cur_fuzzer_result")
+                fuzztime+=time.time()-t
                 if time.time()-t>=5:
                     break
                 #err_path=get_fuzzer_result("cur_fuzzer_result")
                 cur_err=get_error_feature(get_fuzzer_result("cur_fuzzer_result"))
                 if "NM" in cur_err:
                     print("wrong patch/location")
-                    return None,1
+                    return None,1,fuzztime
                 if len(cur_err)>len(max_err):
                     max_err=cur_err.copy()  
                     f=1
@@ -204,8 +221,8 @@ def fix(patch,err_dep,err_fea,error_feature,i,dep):
             # not in current error
             if err_fea not in cur_err:
                 print("correct patch")
-                return cand_filelist,0
-    return None,1
+                return cand_filelist,0,fuzztime
+    return None,1,fuzztime
 
 if __name__=="__main__":
     parser = argparse.ArgumentParser(description='file name')

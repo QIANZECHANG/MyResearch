@@ -1,84 +1,6 @@
 [
     {
         "error": [
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            1,
-            0
-        ],
-        "var": {
-            "func": [
-                {
-                    "state": "input",
-                    "type": "int",
-                    "name": "a",
-                    "coord": "dep_src.c:22:14",
-                    "value": [
-                        2,
-                        2,
-                        2,
-                        2,
-                        11,
-                        1,
-                        2,
-                        1,
-                        5,
-                        1
-                    ],
-                    "ret": [
-                        {
-                            "coord": "dep_src.c:29:5"
-                        }
-                    ]
-                },
-                {
-                    "state": "var",
-                    "type": "node*",
-                    "name": "x",
-                    "coord": "dep_src.c:23:13",
-                    "value": [],
-                    "ret": [
-                        {
-                            "coord": "dep_src.c:29:5"
-                        }
-                    ]
-                }
-            ],
-            "new_node": [
-                {
-                    "state": "input",
-                    "type": "int",
-                    "name": "a",
-                    "coord": "dep_src.c:15:20",
-                    "value": [
-                        2,
-                        2,
-                        2,
-                        2,
-                        11,
-                        1,
-                        2,
-                        1,
-                        5,
-                        1
-                    ],
-                    "ret": [
-                        {
-                            "coord": "dep_src.c:19:5"
-                        }
-                    ]
-                }
-            ]
-        }
-    },
-    {
-        "error": [
             1,
             1,
             1,
@@ -96,59 +18,25 @@
                     "state": "input",
                     "type": "int",
                     "name": "a",
-                    "coord": "dep_src.c:22:14",
+                    "coord": "dep_src.c:5:14",
                     "value": [
-                        2,
-                        2,
-                        2,
-                        2,
-                        11,
+                        3,
                         1,
+                        22,
                         2,
                         1,
-                        5,
-                        1
+                        0,
+                        0,
+                        8,
+                        2,
+                        0
                     ],
                     "ret": [
                         {
-                            "coord": "dep_src.c:29:5"
-                        }
-                    ]
-                },
-                {
-                    "state": "var",
-                    "type": "node*",
-                    "name": "x",
-                    "coord": "dep_src.c:23:13",
-                    "value": [],
-                    "ret": [
+                            "coord": "dep_src.c:9:7"
+                        },
                         {
-                            "coord": "dep_src.c:29:5"
-                        }
-                    ]
-                }
-            ],
-            "new_node": [
-                {
-                    "state": "input",
-                    "type": "int",
-                    "name": "a",
-                    "coord": "dep_src.c:15:20",
-                    "value": [
-                        2,
-                        2,
-                        2,
-                        2,
-                        11,
-                        1,
-                        2,
-                        1,
-                        5,
-                        1
-                    ],
-                    "ret": [
-                        {
-                            "coord": "dep_src.c:19:5"
+                            "coord": "dep_src.c:11:7"
                         }
                     ]
                 }

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>func.7df4935f4a5a2865191ef74f64df8754</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE5">func</a></h1></center>
+<a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:11 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;b,&amp;p); [line 5, column 1];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:9 3 succs: exn: Exit
+NULLIFY(&amp;a); [line 13, column 1];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+*&amp;return:int=1 [line 12, column 5];
+APPLY_ABSTRACTION; [line 12, column 5];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+n$0=*&amp;p:int* [line 11, column 6];
+*n$0:int=1 [line 11, column 5];
+REMOVE_TEMPS(n$0); [line 11, column 5];
+NULLIFY(&amp;p); [line 11, column 5];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html"><span class='visited'>J_5<span class='expansion'>node5 preds:8 succs:4 exn: Join
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node6.html"><span class='visited'>I_6<span class='expansion'>node6 preds:10 succs:7 8 exn: Instructions
+n$1=*&amp;a:int [line 8, column 8];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html"><span class='visited'>C_7<span class='expansion'>node7 preds:6 succs:9 exn: Conditional true Branch
+PRUNE((n$1  &lt;  5), true); [line 8, column 8];
+REMOVE_TEMPS(n$1); [line 8, column 8];
+NULLIFY(&amp;p); [line 8, column 8];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node8.html"><span class='visited'>C_8<span class='expansion'>node8 preds:6 succs:5 exn: Conditional false Branch
+PRUNE(!(n$1  &lt;  5), false); [line 8, column 8];
+REMOVE_TEMPS(n$1); [line 8, column 8];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html"><span class='visited'>I_9<span class='expansion'>node9 preds:7 succs:2 exn: Instructions
+*&amp;return:int=0 [line 9, column 9];
+APPLY_ABSTRACTION; [line 9, column 9];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node10.html"><span class='visited'>I_10<span class='expansion'>node10 preds:11 succs:6 exn: Instructions
+*&amp;b:int*=&amp;a [line 7, column 5];
+NULLIFY(&amp;b); [line 7, column 5];
+</span></span></a> <a href="./nodes/func.7df4935f4a5a2865191ef74f64df8754_node11.html"><span class='visited'>I_11<span class='expansion'>node11 preds:1 succs:10 exn: Instructions
+n$4=_fun_malloc(4:unsigned long) [line 6, column 12];
+*&amp;p:int*=n$4 [line 6, column 5];
+REMOVE_TEMPS(n$4); [line 6, column 5];
+</span></span></a><span class='color_black'>
+int func(int a)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:90
+<br />
+<hr width="100%">
+ERRORS DURING FOOTPRINT
+<br>MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 11, column 5 <a href="./nodes/node4.html#session55">node4#session55</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<br>MEMORY_LEAK  memory dynamically allocated to `return` by call to `malloc()` at line 6, column 12 is not reachable after line 9, column 9 <a href="./nodes/node9.html#session53">node9#session53</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE9">9</a>)<br>DEAD_STORE The value written to &b (type int*) is never used <a href="./nodes/node0.html#session0">node0#session0</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE7">7</a>)<br>NULL_DEREFERENCE [B1] pointer `p` last assigned on line 6 could be null and is dereferenced at line 11, column 5 <a href="./nodes/node4.html#session55">node4#session55</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<hr width="100%">
+ERRORS DURING RE-EXECUTION
+<br>MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 11, column 5 <a href="./nodes/node4.html#session65">node4#session65</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE11">11</a>)<br>MEMORY_LEAK  memory dynamically allocated to `return` by call to `malloc()` at line 6, column 12 is not reachable after line 9, column 9 <a href="./nodes/node9.html#session72">node9#session72</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE9">9</a>)<hr width="100%">
+WARNINGS DURING FOOTPRINT
+<hr width="100%">
+WARNINGS DURING RE-EXECUTION
+<hr width="100%">
+INFOS DURING FOOTPRINT
+<hr width="100%">
+INFOS DURING RE-EXECUTION
+<hr width="100%">
+<LISTING>
+Biabduction: phase= RE_EXECUTION
+
+Siof: ({ }, { })
+RacerD: 
+Threads: NoThread, Locks: { } 
+Accesses { } 
+Ownership: Owned 
+Return Attributes: { Functional } 
+Wobbly Paths: { b, return, p, a, n$4 }
+
+Uninitialised: 
+ Pre: { } 
+Post: { } 
+
+
+</LISTING>
+</body>
+</html>

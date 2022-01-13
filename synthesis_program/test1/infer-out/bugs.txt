@@ -1,0 +1,22 @@
+Found 2 issues
+
+infer.c:13: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 13, column 5.
+  11.           q=malloc(4);
+  12.       }
+  13. >     *p=1;
+  14.       free(q);
+  15.       return 1;    
+
+infer.c:13: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `p` last assigned on line 6 could be null and is dereferenced at line 13, column 5.
+  11.           q=malloc(4);
+  12.       }
+  13. >     *p=1;
+  14.       free(q);
+  15.       return 1;    
+
+Summary of the reports
+
+       MEMORY_LEAK: 1
+  NULL_DEREFERENCE: 1

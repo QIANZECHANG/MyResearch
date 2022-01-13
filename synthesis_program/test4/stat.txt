@@ -1,0 +1,11 @@
+HAMER
+
+sa: 0.01
+fuzz: (ave:7.06 )
+total: (ave:7.90)
+
+infer: 0.15
+saver: 0.03
+
+ML:1
+fea: FP,FN

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>File infer.c </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">#include &lt;stdlib.h&gt; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line">#include &lt;ctype.h&gt; </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">#include &lt;stdio.h&gt; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">typedef struct N{ </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">    int* p1; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">    int* p2; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">}node; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">int func(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:6 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;x); [line 10, column 1];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/func.7df4935f4a5a2865191ef74f64df8754.html">func: 0 specs</a></td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    node x; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">    x.p1=(int*)malloc(4); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node6.html"><span class='visited'>I_6<span class='expansion'>node6 preds:1 succs:5 exn: Instructions
+n$3=_fun_malloc(4:unsigned long) [line 12, column 16];
+*&amp;x.p1:int*=n$3 [line 12, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    x.p2=(int*)malloc(4); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html"><span class='visited'>I_5<span class='expansion'>node5 preds:6 succs:4 exn: Instructions
+n$2=_fun_malloc(4:unsigned long) [line 13, column 16];
+*&amp;x.p2:int*=n$2 [line 13, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    free(*(&amp;x.p1+1)); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+n$0=*(&amp;x.p1 + 1):int* [line 14, column 10];
+n$1=_fun_free(n$0:void*) [line 14, column 5];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">Bad_footprint </div>
+<div class="msg" style="margin-left:9ex">MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 13, column 16 is not reachable after line 14, column 5</div>
+<div class="msg" style="margin-left:9ex">Symexec_memory_error </div></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    //free(x.p1); </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    //[+] { Insert: if (true) free(*(func:x.p2)) at 3 (line 16, column 5) } </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    return 1;     <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+*&amp;return:int=1 [line 17, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
+</span></span></a></td></tr>
+</table>
+<hr width="100%">
+ERRORS DURING FOOTPRINT
+<br>MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 13, column 16 is not reachable after line 14, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session37">node4#session37</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE14">14</a>)<br>Bad_footprint  <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session37">node4#session37</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE14">14</a>)<hr width="100%">
+ERRORS DURING RE-EXECUTION
+<br>Symexec_memory_error  <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session43">node4#session43</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE14">14</a>)<hr width="100%">
+WARNINGS DURING FOOTPRINT
+<hr width="100%">
+WARNINGS DURING RE-EXECUTION
+<hr width="100%">
+INFOS DURING FOOTPRINT
+<hr width="100%">
+INFOS DURING RE-EXECUTION
+</body>
+</html>

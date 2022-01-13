@@ -1,0 +1,12 @@
+digraph G {
+  new_node2;
+  new_node1;
+  func;
+  malloc;
+  
+  
+  new_node2 -> malloc [label="infer.c:16", ];
+  new_node1 -> malloc [label="infer.c:10", ];
+  func -> malloc [label="infer.c:24", ];
+  
+  }

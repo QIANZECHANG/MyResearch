@@ -1,22 +1,21 @@
 Found 2 issues
 
-infer.c:14: error: Bad_footprint (biabduction/Rearrange.ml:306:38-45:)
-  .
-  12.       x.p1=(int*)malloc(4);
-  13.       x.p2=(int*)malloc(4);
-  14. >     free(*(&x.p1+1));
-  15.       //free(x.p1);
-  16.       //free(x.p2);
+infer.c:17: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `n->m` last assigned on line 16 could be null and is dereferenced at line 17, column 5.
+  15.       node *n=(node*)malloc(sizeof(node));
+  16.       n->m=(field*)malloc(sizeof(field));
+  17. >     n->m->next=NULL;
+  18.       n->v=a;
+  19.       return n;
 
-infer.c:14: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
-  memory dynamically allocated by call to `malloc()` at line 13, column 16 is not reachable after line 14, column 5.
-  12.       x.p1=(int*)malloc(4);
-  13.       x.p2=(int*)malloc(4);
-  14. >     free(*(&x.p1+1));
-  15.       //free(x.p1);
-  16.       //free(x.p2);
+infer.c:16: error: NULL_DEREFERENCE (biabduction/Rearrange.ml:1643:57-64:)
+  [B1] pointer `n` last assigned on line 15 could be null and is dereferenced at line 16, column 5.
+  14.   node *new_node(int a){
+  15.       node *n=(node*)malloc(sizeof(node));
+  16. >     n->m=(field*)malloc(sizeof(field));
+  17.       n->m->next=NULL;
+  18.       n->v=a;
 
 Summary of the reports
 
-  Bad_footprint: 1
-    MEMORY_LEAK: 1
+  NULL_DEREFERENCE: 2

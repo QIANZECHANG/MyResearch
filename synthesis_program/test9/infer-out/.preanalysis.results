@@ -1,0 +1,13 @@
+REG: { _n$0_new_node1 -> ({ _infer.c:10:5:N }, { }),
+       _n$0_new_node2 -> ({ _infer.c:16:5:N }, { }),
+       _n$1_new_node1 -> ({ _infer.c:10:5:N }, { }),
+       _n$1_new_node2 -> ({ _infer.c:16:5:N }, { }),
+       _n$3_new_node1 -> ({ _infer.c:10:5:N }, { }),
+       _n$4_new_node2 -> ({ _infer.c:16:5:N }, { }),
+       _n$10_func -> ({ _infer.c:24:5:N }, { }) }
+ MEM: { _n_new_node1:N* -> ({ _infer.c:10:5:N }, { }),
+        _y_func:N* -> ({ _infer.c:24:5:N }, { }),
+        _n_new_node2:N* -> ({ _infer.c:16:5:N }, { }),
+        _return_new_node1:void* -> ({ _infer.c:10:5:N }, { }),
+        _return_new_node2:void* -> ({ _infer.c:16:5:N }, { }) }
+

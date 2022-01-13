@@ -1,0 +1,6 @@
+REG: { _n$1_func -> ({ _infer.c:12:5:int }, { }),
+       _n$2_func -> ({ _infer.c:17:9:int }, { }),
+       _n$4_func -> ({ _infer.c:12:5:int }, { }) }
+ MEM: { _n_func:int* -> ({ _infer.c:12:5:int, _infer.c:17:9:int }, { }),
+        _x_func:N.p1:int* -> ({ _infer.c:12:5:int }, { }) }
+

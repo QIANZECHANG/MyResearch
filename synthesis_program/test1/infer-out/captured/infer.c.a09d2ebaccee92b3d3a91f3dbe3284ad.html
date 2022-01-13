@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>File infer.c </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">#include &lt;stdlib.h&gt; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line">#include &lt;ctype.h&gt; </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">#include &lt;stdio.h&gt; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">int func(int a){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='visitedproof'>S_1<span class='expansion'>node1 preds: succs:12 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;q,&amp;p); [line 5, column 1];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/func.7df4935f4a5a2865191ef74f64df8754.html">func: 0 specs</a></td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">    int *p=malloc(4); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node12.html"><span class='visitedproof'>I_12<span class='expansion'>node12 preds:1 succs:7 exn: Instructions
+n$7=_fun_malloc(4:unsigned long) [line 6, column 12];
+*&amp;p:int*=n$7 [line 6, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">    int *q; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">    if(a&lt;5){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node6.html"><span class='visitedproof'>J_6<span class='expansion'>node6 preds:11 10 succs:5 exn: Join
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node7.html"><span class='visitedproof'>I_7<span class='expansion'>node7 preds:12 succs:8 9 exn: Instructions
+n$3=*&amp;a:int [line 8, column 8];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node8.html"><span class='visitedproof'>C_8<span class='expansion'>node8 preds:7 succs:10 exn: Conditional true Branch
+PRUNE((n$3  &lt;  5), true); [line 8, column 8];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html"><span class='visitedproof'>C_9<span class='expansion'>node9 preds:7 succs:11 exn: Conditional false Branch
+PRUNE(!(n$3  &lt;  5), false); [line 8, column 8];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">        q=p; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node10.html"><span class='visitedproof'>I_10<span class='expansion'>node10 preds:8 succs:6 exn: Instructions
+n$4=*&amp;p:int* [line 9, column 11];
+*&amp;q:int*=n$4 [line 9, column 9];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">    }else{ </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">        q=malloc(4); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node11.html"><span class='visitedproof'>I_11<span class='expansion'>node11 preds:9 succs:6 exn: Instructions
+n$5=_fun_malloc(4:unsigned long) [line 11, column 11];
+*&amp;q:int*=n$5 [line 11, column 9];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    *p=1; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html"><span class='visitedproof'>I_5<span class='expansion'>node5 preds:6 succs:4 exn: Instructions
+n$2=*&amp;p:int* [line 13, column 6];
+*n$2:int=1 [line 13, column 5];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 13, column 5</div>
+<div class="msg" style="margin-left:9ex">NULL_DEREFERENCE [B1] pointer `p` last assigned on line 6 could be null and is dereferenced at line 13, column 5</div></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    free(q); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node4.html"><span class='visitedproof'>I_4<span class='expansion'>node4 preds:5 succs:3 exn: Instructions
+n$0=*&amp;q:int* [line 14, column 10];
+n$1=_fun_free(n$0:void*) [line 14, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    return 1;     <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node3.html"><span class='visitedproof'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+*&amp;return:int=1 [line 15, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/func.7df4935f4a5a2865191ef74f64df8754_node2.html"><span class='visitedproof'>E_2<span class='expansion'>node2 preds:3 succs: exn: Exit
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">int LLVMFuzzerTestOneInput(char *data, int size) { <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node1.html"><span class='visitedproof'>S_1<span class='expansion'>node1 preds: succs:22 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;i,&amp;0$?%__sil_tmpSIL_temp_conditional___n$15,&amp;n); [line 20, column 1];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7.html">LLVMFuzzerTestOneInput: 1 specs</a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    int n=0; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node22.html"><span class='visitedproof'>I_22<span class='expansion'>node22 preds:1 succs:6 exn: Instructions
+*&amp;n:int=0 [line 21, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">    for(int i=0;i&lt;size;i++){ <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node5.html"><span class='visitedproof'>J_5<span class='expansion'>node5 preds:7 6 succs:8 exn: Join
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html"><span class='visitedproof'>I_6<span class='expansion'>node6 preds:22 succs:5 exn: Instructions
+*&amp;i:int=0 [line 22, column 9];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node7.html"><span class='visitedproof'>I_7<span class='expansion'>node7 preds:11 succs:5 exn: Instructions
+n$2=*&amp;i:int [line 22, column 24];
+*&amp;i:int=(n$2 + 1) [line 22, column 24];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node8.html"><span class='visitedproof'>I_8<span class='expansion'>node8 preds:5 succs:9 10 exn: Instructions
+n$3=*&amp;i:int [line 22, column 17];
+n$4=*&amp;size:int [line 22, column 19];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node9.html"><span class='visitedproof'>C_9<span class='expansion'>node9 preds:8 succs:18 exn: Conditional true Branch
+PRUNE((n$3  &lt;  n$4), true); [line 22, column 17];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node10.html"><span class='visitedproof'>C_10<span class='expansion'>node10 preds:8 succs:4 exn: Conditional false Branch
+PRUNE(!(n$3  &lt;  n$4), false); [line 22, column 17];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">        if(! isdigit(*(data+i)))return 0; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node12.html"><span class='visitedproof'>J_12<span class='expansion'>node12 preds:20 succs:11 exn: Join
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node18.html"><span class='visitedproof'>I_18<span class='expansion'>node18 preds:9 succs:19 20 exn: Instructions
+n$9=_fun___ctype_b_loc() [line 23, column 14];
+n$10=*n$9:unsigned short const * [line 23, column 14];
+n$11=*&amp;data:char* [line 23, column 14];
+n$12=*&amp;i:int [line 23, column 14];
+n$13=*(n$11 + n$12):char [line 23, column 14];
+n$14=*n$10[n$13]:unsigned short [line 23, column 14];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node19.html"><span class='visitedproof'>C_19<span class='expansion'>node19 preds:18 succs:21 exn: Conditional true Branch
+PRUNE(!(n$14 & n$16), true); [line 23, column 14];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node20.html"><span class='visitedproof'>C_20<span class='expansion'>node20 preds:18 succs:12 exn: Conditional false Branch
+PRUNE((n$14 & n$16), false); [line 23, column 14];
+</span></span></a> <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node21.html"><span class='visitedproof'>I_21<span class='expansion'>node21 preds:19 succs:2 exn: Instructions
+*&amp;return:int=0 [line 23, column 33];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">SKIP_FUNCTION __ctype_b_loc</div></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">        n=n*10+ *(data+i)-'0'; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node11.html"><span class='visitedproof'>I_11<span class='expansion'>node11 preds:12 succs:7 exn: Instructions
+n$5=*&amp;n:int [line 24, column 11];
+n$6=*&amp;data:char* [line 24, column 19];
+n$7=*&amp;i:int [line 24, column 24];
+n$8=*(n$6 + n$7):char [line 24, column 17];
+*&amp;n:int=(((n$5 * 10) + n$8) - 48) [line 24, column 9];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    func(n); <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node4.html"><span class='visitedproof'>I_4<span class='expansion'>node4 preds:10 succs:3 exn: Instructions
+n$0=*&amp;n:int [line 26, column 10];
+n$1=_fun_func(n$0:int) [line 26, column 5];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">SKIP_FUNCTION func</div></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    return 0; <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node3.html"><span class='visitedproof'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+*&amp;return:int=0 [line 27, column 5];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">} <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node2.html"><span class='visitedproof'>E_2<span class='expansion'>node2 preds:21 3 succs: exn: Exit
+</span></span></a></td></tr>
+</table>
+<hr width="100%">
+ERRORS DURING FOOTPRINT
+<br>NULL_DEREFERENCE [B1] pointer `p` last assigned on line 6 could be null and is dereferenced at line 13, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node5.html#session63">node5#session63</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE13">13</a>)<br>MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 13, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node5.html#session63">node5#session63</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE13">13</a>)<hr width="100%">
+ERRORS DURING RE-EXECUTION
+<br>NULL_DEREFERENCE [B1] pointer `p` last assigned on line 6 could be null and is dereferenced at line 13, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node5.html#session82">node5#session82</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE13">13</a>)<br>MEMORY_LEAK  memory dynamically allocated by call to `malloc()` at line 6, column 12 is not reachable after line 13, column 5 <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node5.html#session74">node5#session74</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE13">13</a>)<hr width="100%">
+WARNINGS DURING FOOTPRINT
+<hr width="100%">
+WARNINGS DURING RE-EXECUTION
+<hr width="100%">
+INFOS DURING FOOTPRINT
+<br>SKIP_FUNCTION func <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session219">node4#session219</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>)<br>SKIP_FUNCTION __ctype_b_loc <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node18.html#session112">node18#session112</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>)<hr width="100%">
+INFOS DURING RE-EXECUTION
+<br>SKIP_FUNCTION __ctype_b_loc <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node18.html#session229">node18#session229</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>)<br>SKIP_FUNCTION func <a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/nodes/node4.html#session278">node4#session278</a>(<a href="./infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad/../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>)</body>
+</html>

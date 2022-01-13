@@ -7,17 +7,27 @@
                     "state": "input",
                     "type": "int",
                     "coord": "dep_src.c:5:14"
+                },
+                {
+                    "name": "b",
+                    "state": "var",
+                    "type": "int*",
+                    "coord": "dep_src.c:7:13"
                 }
             ],
             "ret": [
                 {
-                    "coord": "dep_src.c:15:5"
+                    "coord": "dep_src.c:9:9"
+                },
+                {
+                    "coord": "dep_src.c:12:5"
                 }
             ],
             "object": [
                 "p",
                 "int*",
-                6
+                6,
+                5
             ]
         },
         "error_object": [

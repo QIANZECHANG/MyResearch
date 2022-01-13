@@ -6,25 +6,53 @@
                     "name": "a",
                     "state": "input",
                     "type": "int",
-                    "coord": "dep_src.c:5:14"
+                    "coord": "dep_src.c:10:14"
                 }
             ],
             "ret": [
                 {
-                    "coord": "dep_src.c:7:5"
+                    "coord": "dep_src.c:19:5"
                 }
             ],
             "object": [
-                "p",
+                "x.p1",
                 "int*",
-                6,
-                5
+                12,
+                10
             ]
         },
         "error_object": [
-            "p",
+            "x.p1",
             "int*",
-            6
+            12
+        ]
+    },
+    {
+        "func": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:10:14"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:19:5"
+                }
+            ],
+            "object": [
+                "n",
+                "int*",
+                17,
+                10
+            ]
+        },
+        "error_object": [
+            "n",
+            "int*",
+            17
         ]
     }
 ]

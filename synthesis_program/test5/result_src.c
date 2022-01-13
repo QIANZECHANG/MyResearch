@@ -16,10 +16,10 @@ node *new_node(int a){
 }
 
 
-int func(int a){
-    node *x=new_node(a);node* tmp_o0 = x;
-    x->next=new_node(a+1);node* tmp_o1 = x->next;
-    free(tmp_o1);free(tmp_o0);return 0;    
+int func(int a){node* tmp_o0;node* tmp_o1;
+    node *x=new_node(a);tmp_o0 = x;
+    x->next=new_node(a+1);tmp_o1 = x->next;
+    free(tmp_o1);free(tmp_o0);return 0;
 }
 
 

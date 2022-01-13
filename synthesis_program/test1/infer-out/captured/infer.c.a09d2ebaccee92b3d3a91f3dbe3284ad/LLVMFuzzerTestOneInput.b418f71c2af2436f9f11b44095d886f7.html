@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE20">LLVMFuzzerTestOneInput</a></h1></center>
+<a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node1.html"><span class='visited'>S_1<span class='expansion'>node1 preds: succs:22 exn: Start
+DECLARE_LOCALS(&amp;return,&amp;i,&amp;0$?%__sil_tmpSIL_temp_conditional___n$15,&amp;n); [line 20, column 1];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node2.html"><span class='visited'>E_2<span class='expansion'>node2 preds:21 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node3.html"><span class='visited'>I_3<span class='expansion'>node3 preds:4 succs:2 exn: Instructions
+*&amp;return:int=0 [line 27, column 5];
+APPLY_ABSTRACTION; [line 27, column 5];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node4.html"><span class='visited'>I_4<span class='expansion'>node4 preds:10 succs:3 exn: Instructions
+n$0=*&amp;n:int [line 26, column 10];
+n$1=_fun_func(n$0:int) [line 26, column 5];
+REMOVE_TEMPS(n$0,n$1); [line 26, column 5];
+NULLIFY(&amp;n); [line 26, column 5];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node5.html"><span class='visited'>J_5<span class='expansion'>node5 preds:7 6 succs:8 exn: Join
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node6.html"><span class='visited'>I_6<span class='expansion'>node6 preds:22 succs:5 exn: Instructions
+*&amp;i:int=0 [line 22, column 9];
+APPLY_ABSTRACTION; [line 22, column 9];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node7.html"><span class='visited'>I_7<span class='expansion'>node7 preds:11 succs:5 exn: Instructions
+n$2=*&amp;i:int [line 22, column 24];
+*&amp;i:int=(n$2 + 1) [line 22, column 24];
+REMOVE_TEMPS(n$2); [line 22, column 24];
+APPLY_ABSTRACTION; [line 22, column 24];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node8.html"><span class='visited'>I_8<span class='expansion'>node8 preds:5 succs:9 10 exn: Instructions
+n$3=*&amp;i:int [line 22, column 17];
+n$4=*&amp;size:int [line 22, column 19];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node9.html"><span class='visited'>C_9<span class='expansion'>node9 preds:8 succs:18 exn: Conditional true Branch
+PRUNE((n$3  &lt;  n$4), true); [line 22, column 17];
+REMOVE_TEMPS(n$3,n$4); [line 22, column 17];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node10.html"><span class='visited'>C_10<span class='expansion'>node10 preds:8 succs:4 exn: Conditional false Branch
+PRUNE(!(n$3  &lt;  n$4), false); [line 22, column 17];
+REMOVE_TEMPS(n$3,n$4); [line 22, column 17];
+NULLIFY(&amp;i); [line 22, column 17];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node11.html"><span class='visited'>I_11<span class='expansion'>node11 preds:12 succs:7 exn: Instructions
+n$5=*&amp;n:int [line 24, column 11];
+n$6=*&amp;data:char* [line 24, column 19];
+n$7=*&amp;i:int [line 24, column 24];
+n$8=*(n$6 + n$7):char [line 24, column 17];
+*&amp;n:int=(((n$5 * 10) + n$8) - 48) [line 24, column 9];
+REMOVE_TEMPS(n$5,n$6,n$7,n$8); [line 24, column 9];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node12.html"><span class='visited'>J_12<span class='expansion'>node12 preds:20 succs:11 exn: Join
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node13.html"><span class='dangling'>J_13<span class='expansion'>node13 preds:17 16 succs: exn: Join
+
+NOT VISITED</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node14.html"><span class='dangling'>C_14<span class='expansion'>node14 preds: succs:16 exn: Conditional true Branch
+PRUNE((3  &lt;  8), true); [line 51, column 14];
+
+NOT VISITED</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node15.html"><span class='dangling'>C_15<span class='expansion'>node15 preds: succs:17 exn: Conditional false Branch
+PRUNE(!(3  &lt;  8), false); [line 51, column 14];
+
+NOT VISITED</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node16.html"><span class='dangling'>I_16<span class='expansion'>node16 preds:14 succs:13 exn: Instructions
+*&amp;0$?%__sil_tmpSIL_temp_conditional___n$15:int=((1  &lt;&lt;  3)  &lt;&lt;  8) [line 51, column 14];
+APPLY_ABSTRACTION; [line 51, column 14];
+
+NOT VISITED</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node17.html"><span class='dangling'>I_17<span class='expansion'>node17 preds:15 succs:13 exn: Instructions
+*&amp;0$?%__sil_tmpSIL_temp_conditional___n$15:int=((1  &lt;&lt;  3)  &gt;&gt;  8) [line 51, column 14];
+APPLY_ABSTRACTION; [line 51, column 14];
+
+NOT VISITED</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node18.html"><span class='visited'>I_18<span class='expansion'>node18 preds:9 succs:19 20 exn: Instructions
+n$9=_fun___ctype_b_loc() [line 23, column 14];
+n$10=*n$9:unsigned short const * [line 23, column 14];
+n$11=*&amp;data:char* [line 23, column 14];
+n$12=*&amp;i:int [line 23, column 14];
+n$13=*(n$11 + n$12):char [line 23, column 14];
+n$14=*n$10[n$13]:unsigned short [line 23, column 14];
+REMOVE_TEMPS(n$9,n$10,n$11,n$12,n$13); [line 23, column 14];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node19.html"><span class='visited'>C_19<span class='expansion'>node19 preds:18 succs:21 exn: Conditional true Branch
+PRUNE(!(n$14 & n$16), true); [line 23, column 14];
+REMOVE_TEMPS(n$14,n$16); [line 23, column 14];
+NULLIFY(&amp;n); [line 23, column 14];
+NULLIFY(&amp;i); [line 23, column 14];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node20.html"><span class='visited'>C_20<span class='expansion'>node20 preds:18 succs:12 exn: Conditional false Branch
+PRUNE((n$14 & n$16), false); [line 23, column 14];
+REMOVE_TEMPS(n$14); [line 23, column 14];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node21.html"><span class='visited'>I_21<span class='expansion'>node21 preds:19 succs:2 exn: Instructions
+*&amp;return:int=0 [line 23, column 33];
+APPLY_ABSTRACTION; [line 23, column 33];
+</span></span></a> <a href="./nodes/LLVMFuzzerTestOneInput.b418f71c2af2436f9f11b44095d886f7_node22.html"><span class='visited'>I_22<span class='expansion'>node22 preds:1 succs:6 exn: Instructions
+*&amp;n:int=0 [line 21, column 5];
+</span></span></a><span class='color_black'>
+int LLVMFuzzerTestOneInput(char* data, int size)
+Analyzed
+</span><br />FAILURE:SYMOPS TIMEOUT (1101) SYMOPS:1620
+<br />
+<hr width="100%">
+ERRORS DURING FOOTPRINT
+<hr width="100%">
+ERRORS DURING RE-EXECUTION
+<hr width="100%">
+WARNINGS DURING FOOTPRINT
+<hr width="100%">
+WARNINGS DURING RE-EXECUTION
+<hr width="100%">
+INFOS DURING FOOTPRINT
+<br>SKIP_FUNCTION func <a href="./nodes/node4.html#session219">node4#session219</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>)<br>SKIP_FUNCTION __ctype_b_loc <a href="./nodes/node18.html#session112">node18#session112</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>)<hr width="100%">
+INFOS DURING RE-EXECUTION
+<br>SKIP_FUNCTION func <a href="./nodes/node4.html#session278">node4#session278</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE26">26</a>)<br>SKIP_FUNCTION __ctype_b_loc <a href="./nodes/node18.html#session229">node18#session229</a>(<a href="./../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>)<hr width="100%">
+<LISTING>
+Biabduction: phase= RE_EXECUTION
+--------------------------- 1 of 1 [nvisited:20 21 22 23 24 26 27 28] ---------------------------
+PRE:
+<span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*; size = val$1 <span class='color_orange'>formal</span>:int ;
+data|->[val$3|] <span class='color_orange'>rearrange:23</span>:char[_*_]</span>
+POST 1 of 3:
+<span class='color_red'>val$1 = 1</span> ;
+<span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>return = 0 <span class='color_orange'>update:27</span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span> ;
+<span class='color_blue'>data|->[val$3|<span class='color_red'>0:val$4 <span class='color_orange'>rearrange:23</span></span>] <span class='color_orange'>formal</span>:char[_*_]</span>
+POST 2 of 3:
+<span class='color_red'>(-1  &lt;  val$1)</span>; <span class='color_red'>((val$5 - val$1)  &lt;=  -1)</span> ;
+<span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>return = 0 <span class='color_orange'>update:23</span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span> ;
+<span class='color_blue'>data|->[val$3|<span class='color_red'>val$5:val$4 <span class='color_orange'>rearrange:23</span></span>] <span class='color_orange'>formal</span>:char[_*_]</span>
+POST 3 of 3:
+<span class='color_blue'>data = val$2 <span class='color_orange'>formal</span>:char*</span>; <span class='color_red'>return = 0 <span class='color_orange'>update:27</span>:int</span>; <span class='color_blue'>size = val$1 <span class='color_orange'>formal</span>:int</span> ;
+<span class='color_blue'>data|->[val$3|] <span class='color_orange'>formal</span>:char[_*_]</span>
+----------------------------------------------------------------<br>
+
+Siof: ({ }, { })
+RacerD: 
+Threads: NoThread, Locks: { } 
+Accesses { } 
+Ownership: Owned 
+Return Attributes: { Functional } 
+Wobbly Paths: { i,
+                return,
+                return,
+                p,
+                n,
+                q,
+                data,
+                n$13,
+                n$9,
+                n$8,
+                n$7,
+                n$5,
+                n$1 }
+
+Uninitialised: 
+ Pre: { } 
+Post: { } 
+
+
+</LISTING>
+</body>
+</html>

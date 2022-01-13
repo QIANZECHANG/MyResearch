@@ -1,0 +1,14 @@
+fuzzing
+fuzzing done
+static analysis: 0.013535499572753906
+
+dependency done
+collect dynamic value done
+current time: 1.162816047668457
+have 1 error(s)
+current patch is if(tmp_a>=5)free(tmp_o0); in function func
+insert at {'coord': 'dep_src.c:15:5'}
+correct patch
+fixed error 0, error feature: [('6', 'func')]
+fuzzing time: 0.6683592796325684
+total time: 7.924266815185547

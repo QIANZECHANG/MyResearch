@@ -1,0 +1,6 @@
+{
+  "err_type": "MEMORY_LEAK",
+  "source": { "node": { "filename": "infer.c", "procedure": "func", "line": 6 }, "exp": null },
+      "sink": { "node": { "filename": "infer.c", "procedure": "func", "line": 11 }, "exp": null }
+}
+

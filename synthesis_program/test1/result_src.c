@@ -2,14 +2,17 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int func(int a){
-    int *p=malloc(4);int* tmp_o0 = p;
-    int *b=&a;
+int func(int a){int tmp_a = a;int* tmp_o0;
+    int *p=malloc(4);tmp_o0 = p;
+    int *q;
     if(a<5){
-        //free(p);
-        free(tmp_o0);return 0;
+        q=p;
+    }else{
+        q=malloc(4);
     }
-    free(tmp_o0);return 1;    
+    *p=1;
+    free(q);
+    if(tmp_a>=5)free(tmp_o0);return 1;
 }
 
 

@@ -2,34 +2,15 @@
 #include <ctype.h>
 #include <stdio.h>
 
-typedef struct N{
-    struct M *m;
-    int v;
-}node;
-
-typedef struct M{
-    struct M *next;
-    int k;
-}field;
-
-node *new_node(int a){
-    node *n=(node*)malloc(sizeof(node));
-    n->m=(field*)malloc(sizeof(field));
-    n->m->next=NULL;
-    return n;
-}
-
-int func(int a){int tmp_a = a;
-    node *x=new_node(a);field* tmp_o1 = x->m;node* tmp_o0 = x;
-    x->v=a;
-    x->m->k=a+1;
-    if(a<5){
-        free(x);
+int func(int a){int* tmp_o0;
+    int *p=malloc(4);tmp_o0 = p;
+    if(a>5){
+      *p=a;
+      free(tmp_o0);return 0;
+    }else{
+      free(tmp_o0);return 1;
     }
-    if(tmp_a>=5)free(tmp_o0);free(tmp_o1);return 0;
 }
-
-
 
 
 

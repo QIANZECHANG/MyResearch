@@ -1,0 +1,38 @@
+Found 4 issues
+
+infer.c:15: error: DEAD_STORE
+  The value written to &n (type int*) is never used.
+  13.       int* n;
+  14.       if(a<5){
+  15. >         n=x.p1;
+  16.       }else{
+  17.           n=malloc(4);
+
+infer.c:17: error: DEAD_STORE
+  The value written to &n (type int*) is never used.
+  15.           n=x.p1;
+  16.       }else{
+  17. >         n=malloc(4);
+  18.       }
+  19.       return 1;    
+
+infer.c:15: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated by call to `malloc()` at line 12, column 16 is not reachable after line 15, column 9.
+  13.       int* n;
+  14.       if(a<5){
+  15. >         n=x.p1;
+  16.       }else{
+  17.           n=malloc(4);
+
+infer.c:17: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated by call to `malloc()` at line 17, column 11 is not reachable after line 17, column 9.
+  15.           n=x.p1;
+  16.       }else{
+  17. >         n=malloc(4);
+  18.       }
+  19.       return 1;    
+
+Summary of the reports
+
+  MEMORY_LEAK: 2
+   DEAD_STORE: 2

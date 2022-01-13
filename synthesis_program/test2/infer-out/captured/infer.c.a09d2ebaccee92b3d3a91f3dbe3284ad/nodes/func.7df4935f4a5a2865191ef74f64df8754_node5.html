@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>func.7df4935f4a5a2865191ef74f64df8754_node5</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE8">5</a></h1></center>PROC: <a href="./../func.7df4935f4a5a2865191ef74f64df8754.html">func</a> LINE: <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE8">8</a>
+<br>PREDS:
+<a href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node8.html"><span class='visited'>N_8<span class='expansion'>node8 preds:6 succs:5 exn: </span></span></a><br>SUCCS: 
+<a href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node4.html"><span class='visited'>N_4<span class='expansion'>node4 preds:5 succs:3 exn: </span></span></a><br>EXN: 
+<br>
+<span class='color_green'><LISTING></LISTING></span><hr width="100%">
+<a name="session15" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html#session15">node5#session15</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE8">8</a>) siof<LISTING><span class='color_black'>PRE: ({ }, { })
+INSTRS: REMOVE_TEMPS(); [line -1];
+POST: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session26" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html#session26">node5#session26</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE8">8</a>) address taken<LISTING><span class='color_black'>PRE: { &a }
+INSTRS: REMOVE_TEMPS(); [line -1];
+POST: { &a }
+
+</LISTING></span><hr width="100%">
+<a name="session54" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html#session54">node5#session54</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE8">8</a>) interproc<LISTING><span class='color_black'>**** [FP:Pending] func Node: 5, Procedure: func, Session: 54, Todo: 2 ****
+  PROP 1 of 2:
+  <span class='color_blue'><span class='color_red'>(4  &lt;  @f$0)</span>; <span class='color_red'>MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+  <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = _t$1 <span class='color_orange'>update:6</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>b = 0 <span class='color_orange'>nullify</span>:int*</span> ;
+  <span class='color_red'>p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  [footprint
+     <span class='color_red'>(4  &lt;  @f$0)</span> *
+     <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+  PROP 2 of 2:
+  <span class='color_blue'><span class='color_red'>(4  &lt;  @f$0)</span> ;
+  <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = 0 <span class='color_orange'>update:6</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  [footprint
+     <span class='color_red'>(4  &lt;  @f$0)</span> *
+     <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+  .... Instructions: .... 
+  <span class='color_green'></span>
+  
+  .... JOIN ....
+  JOIN SYM HEAP1: 
+  <span class='color_blue'>(4  &lt;  @f$0) ;
+  a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*
+  [footprint
+     (4  &lt;  @f$0) *
+     a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+  JOIN SYM HEAP2: 
+  <span class='color_blue'>(4  &lt;  @f$0); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]
+  [footprint
+     (4  &lt;  @f$0) *
+     a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+  
+  sigma_partial_join succeeded
+  pi_partial_join succeeded
+  failure reason 64
+  <span class='color_red'>.... JOIN FAILED ....</span>
+  
+  .... JOIN ....
+  JOIN SYM HEAP1: 
+  <span class='color_blue'>(4  &lt;  @f$0); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]
+  [footprint
+     (4  &lt;  @f$0) *
+     a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+  JOIN SYM HEAP2: 
+  <span class='color_blue'>(4  &lt;  @f$0) ;
+  a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*
+  [footprint
+     (4  &lt;  @f$0) *
+     a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+  
+  sigma_partial_join succeeded
+  pi_partial_join succeeded
+  failure reason 64
+  <span class='color_red'>.... JOIN FAILED ....</span>
+  
+  </LISTING></span><hr width="100%">
+<a name="session64" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html#session64">node5#session64</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE8">8</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 5, Procedure: func, Session: 64, Todo: 2 ****
+  PROP 1 of 2:
+  <span class='color_blue'><span class='color_red'>(4  &lt;  val$1)</span>; <span class='color_red'>MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+  <span class='color_red'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = _t$1 <span class='color_orange'>update:6</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>b = 0 <span class='color_orange'>nullify</span>:int*</span> ;
+  <span class='color_red'>p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span></span>
+  PROP 2 of 2:
+  <span class='color_blue'><span class='color_red'>(4  &lt;  val$1)</span> ;
+  <span class='color_red'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = 0 <span class='color_orange'>update:6</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>b = 0 <span class='color_orange'>nullify</span>:int*</span></span>
+  .... Instructions: .... 
+  <span class='color_green'></span>
+  
+  .... JOIN ....
+  JOIN SYM HEAP1: 
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  JOIN SYM HEAP2: 
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  
+  pre_check_pure_implication
+  pi1:
+    (4  &lt;  val$1)
+  pi2:
+    (4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)
+  returns
+  sub1: 
+    
+  sub2: 
+    
+  Current Implication
+  SUB:
+    
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  |-
+  <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  
+    do_imply val$1 val$1
+      Current Implication
+      SUB:
+        
+      <span class='color_blue'>(4  &lt;  val$1) ;
+      old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+      |-
+      <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+      p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+      
+        do_imply val$1 val$1
+          Current Implication
+          SUB:
+            
+          <span class='color_blue'>(4  &lt;  val$1) ;
+          p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+          |-
+          <span class='color_blue'>p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+          p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+          
+            do_imply 0 _t$1
+              Current Implication
+              SUB:
+                
+              <span class='color_blue'>(4  &lt;  val$1) ;
+              return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+              [SUB: 
+                _t$1 = 0]
+              |-
+              <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+              0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+              
+                do_imply _t$0 _t$0
+                  Current Implication
+                  SUB:
+                    _t$0 = n$28
+                  <span class='color_blue'>(4  &lt;  val$1) ;
+                  b = 0 <span class='color_orange'>nullify</span>:int*</span>
+                  [SUB: 
+                    _t$0 = n$28; _t$1 = 0]
+                  |-
+                  <span class='color_blue'>b = 0 <span class='color_orange'>nullify</span>:int* ;
+                  0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+                  
+                    do_imply 0 0
+                      Current Implication
+                      SUB:
+                        _t$0 = n$28
+                      <span class='color_blue'>(4  &lt;  val$1) ;
+                      </span>
+                      [SUB: 
+                        _t$0 = n$28; _t$1 = 0]
+                      |-
+                      <span class='color_blue'>0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+                      
+                        
+  $$$$$$$ Implication
+  SUB:
+    _t$0 = n$28
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = n$28 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  [SUB: 
+    _t$0 = n$28; _t$1 = 0]
+  |-
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(0) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = n$28 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  $$$$$$ error: lhs is empty returning FALSE
+  
+  pre_check_pure_implication
+  pi1:
+    (4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)
+  pi2:
+    (4  &lt;  val$1)
+  returns
+  sub1: 
+    
+  sub2: 
+    
+  Current Implication
+  SUB:
+    
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  |-
+  <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  
+    do_imply val$1 val$1
+      Current Implication
+      SUB:
+        
+      <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+      old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+      p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+      |-
+      <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+      
+        do_imply val$1 val$1
+          Current Implication
+          SUB:
+            
+          <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+          p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+          p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+          |-
+          <span class='color_blue'>p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+          
+            do_imply _t$1 0
+            
+  $$$$$$$ Implication
+  SUB:
+    
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  |-
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  $$$$$$ error: expressions not equal on _t$1,0 returning FALSE
+  
+  failure reason 64
+  <span class='color_red'>.... JOIN FAILED ....</span>
+  
+  .... JOIN ....
+  JOIN SYM HEAP1: 
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  JOIN SYM HEAP2: 
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  
+  pre_check_pure_implication
+  pi1:
+    (4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)
+  pi2:
+    (4  &lt;  val$1)
+  returns
+  sub1: 
+    
+  sub2: 
+    
+  Current Implication
+  SUB:
+    
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  |-
+  <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  
+    do_imply val$1 val$1
+      Current Implication
+      SUB:
+        
+      <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+      old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+      p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+      |-
+      <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+      
+        do_imply val$1 val$1
+          Current Implication
+          SUB:
+            
+          <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+          p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+          p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+          |-
+          <span class='color_blue'>p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+          
+            do_imply _t$1 0
+            
+  $$$$$$$ Implication
+  SUB:
+    
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(p) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  |-
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  $$$$$$ error: expressions not equal on _t$1,0 returning FALSE
+  
+  pre_check_pure_implication
+  pi1:
+    (4  &lt;  val$1)
+  pi2:
+    (4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(_t$1)
+  returns
+  sub1: 
+    
+  sub2: 
+    
+  Current Implication
+  SUB:
+    
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  |-
+  <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  
+    do_imply val$1 val$1
+      Current Implication
+      SUB:
+        
+      <span class='color_blue'>(4  &lt;  val$1) ;
+      old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+      |-
+      <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int; p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+      p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+      
+        do_imply val$1 val$1
+          Current Implication
+          SUB:
+            
+          <span class='color_blue'>(4  &lt;  val$1) ;
+          p = 0 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+          |-
+          <span class='color_blue'>p = _t$1 <span class='color_orange'>update:6</span>:int*; return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+          p|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+          
+            do_imply 0 _t$1
+              Current Implication
+              SUB:
+                
+              <span class='color_blue'>(4  &lt;  val$1) ;
+              return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+              [SUB: 
+                _t$1 = 0]
+              |-
+              <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+              0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+              
+                do_imply _t$0 _t$0
+                  Current Implication
+                  SUB:
+                    _t$0 = n$29
+                  <span class='color_blue'>(4  &lt;  val$1) ;
+                  b = 0 <span class='color_orange'>nullify</span>:int*</span>
+                  [SUB: 
+                    _t$0 = n$29; _t$1 = 0]
+                  |-
+                  <span class='color_blue'>b = 0 <span class='color_orange'>nullify</span>:int* ;
+                  0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+                  
+                    do_imply 0 0
+                      Current Implication
+                      SUB:
+                        _t$0 = n$29
+                      <span class='color_blue'>(4  &lt;  val$1) ;
+                      </span>
+                      [SUB: 
+                        _t$0 = n$29; _t$1 = 0]
+                      |-
+                      <span class='color_blue'>0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+                      
+                        
+  $$$$$$$ Implication
+  SUB:
+    _t$0 = n$29
+  <span class='color_blue'>(4  &lt;  val$1) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = n$29 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int*</span>
+  [SUB: 
+    _t$0 = n$29; _t$1 = 0]
+  |-
+  <span class='color_blue'>(4  &lt;  val$1); MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(0) ;
+  a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = 0 <span class='color_orange'>update:6</span>:int*; return = n$29 <span class='color_orange'>initial</span>:int; b = 0 <span class='color_orange'>nullify</span>:int* ;
+  0|->[4|] <span class='color_orange'>alloc</span>:char[_*1][4]</span>
+  $$$$$$ error: lhs is empty returning FALSE
+  
+  failure reason 64
+  <span class='color_red'>.... JOIN FAILED ....</span>
+  
+  </LISTING></span>

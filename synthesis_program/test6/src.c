@@ -24,9 +24,9 @@ int func(int a){
     x->v=a;
     x->m->k=a+1;
     if(a<5){
-        free(x);
         return 1;
     }
+    free(x);
     return 0;    
 }
 

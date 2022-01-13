@@ -3,26 +3,18 @@
 #include <stdio.h>
 
 typedef struct N{
-    struct M *m;
-    int v;
+    int* p1;
+    int* p2;
 }node;
 
-typedef struct M{
-    struct M *next;    
-}field;
-
-node *new_node(int a){
-    node *n=(node*)malloc(sizeof(node));
-    n->m=(field*)malloc(sizeof(field));
-    n->m->next=NULL;
-    n->v=a;
-    return n;
-}
+int func(int a){int* tmp_o0;
+    node x;
+    x.p1=(int*)malloc(4);tmp_o0 = x.p1;
+    x.p2=(int*)malloc(4);
+    free(*(&x.p1+1));
 
 
-int func(int a){
-    node *x=new_node(a);node* tmp_o0 = x;field* tmp_o1 = x->m;
-    free(tmp_o1);free(tmp_o0);return 0;    
+    free(tmp_o0);return 1;
 }
 
 

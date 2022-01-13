@@ -17,6 +17,8 @@
 \contentsline {subsection}{\numberline {4.5.3}Function Fix}{14}{subsection.4.5.3}% 
 \contentsline {subsection}{\numberline {4.5.4}Temporary Variable}{15}{subsection.4.5.4}% 
 \contentsline {chapter}{\numberline {5}Evaluation}{16}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Limitation}{17}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Future Work}{18}{chapter.7}% 
-\contentsline {chapter}{\numberline {8}Related Work}{19}{chapter.8}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{18}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Limitations}{18}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Future Work}{18}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Conclusion}{18}{section.6.3}% 
+\contentsline {chapter}{\numberline {7}Related Work}{19}{chapter.7}% 

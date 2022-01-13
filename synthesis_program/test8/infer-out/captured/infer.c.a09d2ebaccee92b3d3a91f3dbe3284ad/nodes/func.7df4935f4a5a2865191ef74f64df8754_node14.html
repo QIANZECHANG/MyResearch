@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>func.7df4935f4a5a2865191ef74f64df8754_node14</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">14</a></h1></center>PROC: <a href="./../func.7df4935f4a5a2865191ef74f64df8754.html">func</a> LINE: <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>
+<br>PREDS:
+<a href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='dangling'>N_1<span class='expansion'>node1 preds: succs:14 exn: 
+NOT VISITED</span></span></a><br>SUCCS: 
+<a href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node13.html"><span class='dangling'>N_13<span class='expansion'>node13 preds:14 succs:12 exn: 
+NOT VISITED</span></span></a><br>EXN: 
+<br>
+<span class='color_green'><LISTING>n$17=*&amp;a:int [line 23, column 22];
+n$18=_fun_new_node(n$17:int) [line 23, column 13];
+*&amp;x:N*=n$18 [line 23, column 5];
+</LISTING></span><hr width="100%">
+<a name="session1" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session1">node14#session1</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) uninit (14: 1)<LISTING><span class='color_black'>PRE: 
+ uninit_vars: { *(y), *(x) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+INSTR: n$18 := new_node({ a }) [line 23, column 13]
+POST: 
+ uninit_vars: { *(y), *(x) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session2" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session2">node14#session2</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) uninit (14: 2)<LISTING><span class='color_black'>PRE: 
+ uninit_vars: { *(y), *(x) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+INSTR: x := n$18 [line 23, column 5]
+POST: 
+ uninit_vars: { *(y) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session14" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session14">node14#session14</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) siof<LISTING><span class='color_black'>PRE: (_|_, { })
+INSTRS: n$17=*&amp;a:int [line 23, column 22];
+n$18=_fun_new_node(n$17:int) [line 23, column 13];
+*&amp;x:N*=n$18 [line 23, column 5];
+POST: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session28" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session28">node14#session28</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) address taken<LISTING><span class='color_black'>PRE: { }
+INSTRS: n$17=*&amp;a:int [line 23, column 22];
+n$18=_fun_new_node(n$17:int) [line 23, column 13];
+*&amp;x:N*=n$18 [line 23, column 5];
+POST: { }
+
+</LISTING></span><hr width="100%">
+<a name="session41" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session41">node14#session41</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { y -> Owned, a -> OwnedIf{ 0 }, x -> Owned } 
+Attributes: { } 
+Non-stable Paths: { }
+
+INSTR: n$18 := new_node({ a }) [line 23, column 13]
+POST: Threads: NoThread, Locks: { } 
+Accesses { Access: Read of n.m at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False,
+           Access: Write to n.m at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False,
+           Access: Write to n.m.next at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False } 
+ Ownership: { n$18 -> Unowned, y -> Owned, a -> OwnedIf{ 0 }, x -> Owned } 
+Attributes: { } 
+Non-stable Paths: { return, n.m.next, n$18, n$5, n$4 }
+
+
+</LISTING></span><hr width="100%">
+<a name="session42" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session42">node14#session42</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
+Accesses { Access: Read of n.m at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False,
+           Access: Write to n.m at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False,
+           Access: Write to n.m.next at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False } 
+ Ownership: { n$18 -> Unowned, y -> Owned, a -> OwnedIf{ 0 }, x -> Owned } 
+Attributes: { } 
+Non-stable Paths: { return, n.m.next, n$18, n$5, n$4 }
+
+INSTR: x := n$18 [line 23, column 5]
+POST: Threads: NoThread, Locks: { } 
+Accesses { Access: Read of n.m at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False,
+           Access: Write to n.m at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False,
+           Access: Write to n.m.next at new_node at line 23, column 13 Thread: NoThread Lock: false Pre: False } 
+ Ownership: { n$18 -> Unowned, y -> Owned, a -> OwnedIf{ 0 }, x -> Unowned } 
+Attributes: { } 
+Non-stable Paths: { return, n.m.next, x, n$18, n$5, n$4 }
+
+
+</LISTING></span><hr width="100%">
+<a name="session53" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session53">node14#session53</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) ownership<LISTING><span class='color_black'>PRE: { }
+INSTR: n$18 := new_node({ a }) [line 23, column 13]
+POST: { }
+
+</LISTING></span><hr width="100%">
+<a name="session54" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session54">node14#session54</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) ownership<LISTING><span class='color_black'>PRE: { }
+INSTR: x := n$18 [line 23, column 5]
+POST: { x -> Owned }
+
+</LISTING></span><hr width="100%">
+<a name="session66" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session66">node14#session66</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) interproc<LISTING><span class='color_black'>**** [FP:Pending] func Node: 14, Procedure: func, Session: 66, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+  [footprint
+     <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+  .... Instructions: .... 
+  <span class='color_green'>n$17=*&amp;a:int [line 23, column 22];
+  n$18=_fun_new_node(n$17:int) [line 23, column 13];
+  *&amp;x:N*=n$18 [line 23, column 5];
+  REMOVE_TEMPS(n$17,n$18); [line 23, column 5];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>n$17=*&amp;a:int [line 23, column 22]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;a
+    Prop: 
+    <span class='color_blue'>y = n$19 <span class='color_orange'>initial</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$20 <span class='color_orange'>initial</span>:N*; return = n$21 <span class='color_orange'>initial</span>:int
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    in prop_iter_extend_ptsto lexp: &amp;a
+    prop before:
+    <span class='color_blue'>y = n$19 <span class='color_orange'>initial</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$20 <span class='color_orange'>initial</span>:N*; return = n$21 <span class='color_orange'>initial</span>:int
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    
+    prop list after:
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>y = n$19 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = n$20 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = n$21 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>n$17 = old_a</span> ;
+    <span class='color_blue'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    Instruction <span class='color_green'>n$18=_fun_new_node(n$17:int) [line 23, column 13]</span>
+    <span class='color_blue'>INFO: SKIP_FUNCTION new_node</span>
+    Skipping function 'new_node': empty list of specs
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$17 = old_a</span>; <span class='color_red'>n$18 = @f$1</span> ;
+    <span class='color_red'>UND &lt; new_node &gt; :23(@f$1)</span> ;
+    <span class='color_blue'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_red'>n$18 = @f$1</span> *
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>$RET_new_node|abducedRetvar = @f$1 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+    
+    Instruction <span class='color_green'>*&amp;x:N*=n$18 [line 23, column 5]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;x
+    Prop: 
+    <span class='color_blue'>n$17 = old_a; n$18 = @f$1 ;
+    UND &lt; new_node &gt; :23(@f$1) ;
+    y = n$25 <span class='color_orange'>initial</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$26 <span class='color_orange'>initial</span>:N*; return = n$27 <span class='color_orange'>initial</span>:int
+    [footprint
+       n$18 = @f$1 *
+       a = @f$0 <span class='color_orange'>formal</span>:int; $RET_new_node|abducedRetvar = @f$1 <span class='color_orange'>none</span>:N*( sub )  ]</span>
+    
+    in prop_iter_extend_ptsto lexp: &amp;x
+    prop before:
+    <span class='color_blue'>n$17 = old_a; n$18 = @f$1 ;
+    UND &lt; new_node &gt; :23(@f$1) ;
+    y = n$25 <span class='color_orange'>initial</span>:N*; a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; x = n$26 <span class='color_orange'>initial</span>:N*; return = n$27 <span class='color_orange'>initial</span>:int
+    [footprint
+       n$18 = @f$1 *
+       a = @f$0 <span class='color_orange'>formal</span>:int; $RET_new_node|abducedRetvar = @f$1 <span class='color_orange'>none</span>:N*( sub )  ]</span>
+    
+    
+    prop list after:
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$17 = old_a</span>; <span class='color_blue'>n$18 = @f$1</span> ;
+    <span class='color_blue'>UND &lt; new_node &gt; :23(@f$1)</span> ;
+    <span class='color_blue'>y = n$25 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = n$26 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = n$27 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>n$18 = @f$1</span> *
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = @f$1 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+    
+    
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$17 = <span class='color_red'>old_a</span></span>; <span class='color_blue'>n$18 = <span class='color_red'>x</span></span> ;
+    <span class='color_red'>UND &lt; new_node &gt; :23(x)</span> ;
+    <span class='color_blue'>y = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>@f$1 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$1 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>@f$0 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>n$18 = <span class='color_red'>x</span></span> *
+       <span class='color_blue'>a = <span class='color_red'>@f$1 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = <span class='color_red'>@f$0 <span class='color_orange'>none</span></span>:N*( sub )</span>  ]</span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$17,n$18); [line 23, column 5]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>UND &lt; new_node &gt; :23(x)</span> ;
+    <span class='color_blue'>y = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = @f$0 <span class='color_orange'>update:23</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_red'>@f$2 = x</span> *
+       <span class='color_blue'>a = @f$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>UND &lt; new_node &gt; :23(x)</span> ;
+    <span class='color_blue'>y = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>@f$1 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>@f$1 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>@f$0 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_red'>@f$2 = x</span> *
+       <span class='color_blue'>a = <span class='color_red'>@f$1 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_red'>$RET_new_node|abducedRetvar = @f$0 <span class='color_orange'>none</span>:N*( sub )</span>  ]</span>
+    
+    
+    
+  </LISTING></span><hr width="100%">
+<a name="session80" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session80">node14#session80</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 14, Procedure: func, Session: 80, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>(4  &lt;  val$9)</span> ;
+  <span class='color_red'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>$RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_red'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+  <span class='color_red'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_red'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+  .... Instructions: .... 
+  <span class='color_green'>n$17=*&amp;a:int [line 23, column 22];
+  n$18=_fun_new_node(n$17:int) [line 23, column 13];
+  *&amp;x:N*=n$18 [line 23, column 5];
+  REMOVE_TEMPS(n$17,n$18); [line 23, column 5];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>n$17=*&amp;a:int [line 23, column 22]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;a
+    Prop: 
+    <span class='color_blue'>(4  &lt;  val$9) ;
+    y = n$19 <span class='color_orange'>initial</span>:N*; a = val$9 <span class='color_orange'>formal</span>:int; old_a = val$9 <span class='color_orange'>formal</span>:int; x = n$20 <span class='color_orange'>initial</span>:N*; return = n$21 <span class='color_orange'>initial</span>:int; $RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub ); $RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub ) ;
+    val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; $RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N; val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; $RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>val$9 = old_a</span> ;
+    <span class='color_red'>(4  &lt;  n$17)</span> ;
+    <span class='color_blue'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>n$17 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>n$17 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    Instruction <span class='color_green'>n$18=_fun_new_node(n$17:int) [line 23, column 13]</span>
+    <span class='color_blue'>INFO: SKIP_FUNCTION new_node</span>
+    Skipping function 'new_node': empty list of specs
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>val$5 = $RET_new_node|abducedRetvar</span>; <span class='color_blue'>val$9 = old_a</span> ;
+    <span class='color_blue'>(4  &lt;  n$17)</span>; <span class='color_red'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = <span class='color_red'>n$18 <span class='color_orange'>formal</span></span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    Instruction <span class='color_green'>*&amp;x:N*=n$18 [line 23, column 5]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;x
+    Prop: 
+    <span class='color_blue'>val$5 = $RET_new_node|abducedRetvar; val$9 = old_a ;
+    (4  &lt;  n$17); UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar) ;
+    y = n$25 <span class='color_orange'>initial</span>:N*; a = n$17 <span class='color_orange'>formal</span>:int; old_a = n$17 <span class='color_orange'>formal</span>:int; x = n$26 <span class='color_orange'>initial</span>:N*; return = n$27 <span class='color_orange'>initial</span>:int; $RET_new_node|abducedRetvar = n$18 <span class='color_orange'>formal</span>:N*( sub ); $RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub ) ;
+    val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; $RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N; $RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>val$5 = $RET_new_node|abducedRetvar</span>; <span class='color_blue'>val$9 = old_a</span> ;
+    <span class='color_blue'>(4  &lt;  n$17)</span>; <span class='color_blue'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:N*</span>; <span class='color_blue'>a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = <span class='color_red'>n$18 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = n$18 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$17,n$18); [line 23, column 5]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>(4  &lt;  val$9)</span>; <span class='color_blue'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>val$9 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>val$9 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>val$5 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = <span class='color_red'>val$5 <span class='color_orange'>formal</span></span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(4  &lt;  val$9)</span>; <span class='color_red'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:N*</span>; <span class='color_blue'>a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = <span class='color_red'>val$5 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    
+    
+  </LISTING></span><hr width="100%">
+<a name="session93" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node14.html#session93">node14#session93</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE23">23</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 14, Procedure: func, Session: 93, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>(val$9  &lt;=  4)</span>; <span class='color_red'>$RET_new_node|abducedRetvar != 0</span> ;
+  <span class='color_red'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_red'>$RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_red'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+  <span class='color_red'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_red'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+  .... Instructions: .... 
+  <span class='color_green'>n$17=*&amp;a:int [line 23, column 22];
+  n$18=_fun_new_node(n$17:int) [line 23, column 13];
+  *&amp;x:N*=n$18 [line 23, column 5];
+  REMOVE_TEMPS(n$17,n$18); [line 23, column 5];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>n$17=*&amp;a:int [line 23, column 22]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;a
+    Prop: 
+    <span class='color_blue'>(val$9  &lt;=  4); $RET_new_node|abducedRetvar != 0 ;
+    y = n$52 <span class='color_orange'>initial</span>:N*; a = val$9 <span class='color_orange'>formal</span>:int; old_a = val$9 <span class='color_orange'>formal</span>:int; x = n$53 <span class='color_orange'>initial</span>:N*; return = n$54 <span class='color_orange'>initial</span>:int; $RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub ); $RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub ) ;
+    val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; $RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N; val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; $RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>val$9 = old_a</span> ;
+    <span class='color_red'>(n$17  &lt;=  4)</span>; <span class='color_blue'>$RET_new_node|abducedRetvar != 0</span> ;
+    <span class='color_blue'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>n$17 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>n$17 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    Instruction <span class='color_green'>n$18=_fun_new_node(n$17:int) [line 23, column 13]</span>
+    Skipping function 'new_node': empty list of specs
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>val$5 = $RET_new_node|abducedRetvar</span>; <span class='color_blue'>val$9 = old_a</span> ;
+    <span class='color_blue'>(n$17  &lt;=  4)</span>; <span class='color_red'>$RET_new_node|abducedRetvar != 0</span>; <span class='color_red'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = _t$2 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = <span class='color_red'>n$18 <span class='color_orange'>formal</span></span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    Instruction <span class='color_green'>*&amp;x:N*=n$18 [line 23, column 5]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;x
+    Prop: 
+    <span class='color_blue'>val$5 = $RET_new_node|abducedRetvar; val$9 = old_a ;
+    (n$17  &lt;=  4); $RET_new_node|abducedRetvar != 0; UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar) ;
+    y = n$58 <span class='color_orange'>initial</span>:N*; a = n$17 <span class='color_orange'>formal</span>:int; old_a = n$17 <span class='color_orange'>formal</span>:int; x = n$59 <span class='color_orange'>initial</span>:N*; return = n$60 <span class='color_orange'>initial</span>:int; $RET_new_node|abducedRetvar = n$18 <span class='color_orange'>formal</span>:N*( sub ); $RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub ) ;
+    val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M; $RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N; $RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>val$5 = $RET_new_node|abducedRetvar</span>; <span class='color_blue'>val$9 = old_a</span> ;
+    <span class='color_blue'>(n$17  &lt;=  4)</span>; <span class='color_blue'>$RET_new_node|abducedRetvar != 0</span>; <span class='color_blue'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:N*</span>; <span class='color_blue'>a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = n$17 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = <span class='color_red'>n$18 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = n$18 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$17,n$18); [line 23, column 5]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>(val$9  &lt;=  4)</span>; <span class='color_blue'>$RET_new_node|abducedRetvar != 0</span>; <span class='color_blue'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = _t$1 <span class='color_orange'>initial</span>:N*</span>; <span class='color_blue'>a = <span class='color_red'>val$9 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>old_a = <span class='color_red'>val$9 <span class='color_orange'>formal</span></span>:int</span>; <span class='color_blue'>x = <span class='color_red'>val$5 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = <span class='color_red'>val$5 <span class='color_orange'>formal</span></span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_red'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(val$9  &lt;=  4)</span>; <span class='color_blue'>$RET_new_node|abducedRetvar != 0</span>; <span class='color_blue'>UND &lt; new_node &gt; :23($RET_new_node|abducedRetvar)</span> ;
+    <span class='color_blue'>y = <span class='color_red'>_t$1 <span class='color_orange'>initial</span></span>:N*</span>; <span class='color_blue'>a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$9 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>x = <span class='color_red'>val$5 <span class='color_orange'>update:23</span></span>:N*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$5 <span class='color_orange'>formal</span>:N*( sub )</span>; <span class='color_blue'>$RET_new_node|abducedRetvar = val$1 <span class='color_orange'>formal</span>:N*( sub )</span> ;
+    <span class='color_blue'>val$6|->{k:val$8 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$6 <span class='color_orange'>formal</span>, v:val$7 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span>; <span class='color_blue'>val$2|->{k:val$4 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:M</span>; <span class='color_blue'>$RET_new_node|abducedRetvar|->{m:val$2 <span class='color_orange'>formal</span>, v:val$3 <span class='color_orange'>formal(z)</span>} <span class='color_orange'>formal(z)</span>:N</span></span>
+    
+    
+    
+  </LISTING></span>

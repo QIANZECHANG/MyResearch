@@ -1,1 +1,166 @@
-[]
+[
+    {
+        "foo": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:28:13"
+                },
+                {
+                    "name": "x",
+                    "state": "var",
+                    "type": "node*",
+                    "coord": "dep_src.c:29:13"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:31:5"
+                }
+            ],
+            "object": [
+                "x",
+                "node*",
+                29,
+                28
+            ]
+        },
+        "bar": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:23:15"
+                },
+                {
+                    "name": "x",
+                    "state": "var",
+                    "type": "node*",
+                    "coord": "dep_src.c:24:13"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:25:5"
+                }
+            ],
+            "object": [
+                "x",
+                "node*",
+                24,
+                23
+            ]
+        },
+        "new_node": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:14:20"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:19:5"
+                }
+            ],
+            "object": [
+                "n",
+                "node*",
+                15,
+                14
+            ]
+        },
+        "error_object": [
+            "n",
+            "node*",
+            15
+        ]
+    },
+    {
+        "foo": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:28:13"
+                },
+                {
+                    "name": "x",
+                    "state": "var",
+                    "type": "node*",
+                    "coord": "dep_src.c:29:13"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:31:5"
+                }
+            ],
+            "object": [
+                "x",
+                "node*",
+                29,
+                28
+            ]
+        },
+        "bar": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:23:15"
+                },
+                {
+                    "name": "x",
+                    "state": "var",
+                    "type": "node*",
+                    "coord": "dep_src.c:24:13"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:25:5"
+                }
+            ],
+            "object": [
+                "x",
+                "node*",
+                24,
+                23
+            ]
+        },
+        "new_node": {
+            "dep": [
+                {
+                    "name": "a",
+                    "state": "input",
+                    "type": "int",
+                    "coord": "dep_src.c:14:20"
+                }
+            ],
+            "ret": [
+                {
+                    "coord": "dep_src.c:19:5"
+                }
+            ],
+            "object": [
+                "n->m",
+                "field*",
+                16,
+                14
+            ]
+        },
+        "error_object": [
+            "n->m",
+            "field*",
+            16
+        ]
+    }
+]
