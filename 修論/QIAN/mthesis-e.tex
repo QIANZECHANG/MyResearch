@@ -127,16 +127,16 @@ HAMER detects bugs using existing bug detection tools. In this section, we will 
 }
 \section{Infer}
 \textcolor{red}{
-Infer is a static program analyzer for Java, C, and Objective-C, written in OCaml, developed by Facebook. At present Infer is tracking problems caused by null pointer dereferences and resource and memory leaks, which cause some of the more important problems. Infer is a high-performance static analyzer with high scalability and efficiency, and it is widely used by programmers and researchers. However, like other static analyzers, Infer is hard to handle some issues, such as indirect call and alias, which causes Infer to provide false-negative and false-positive alarms. As a result of this shortcoming, automated repair tools may waste time on the wrong alarms (false-positive) and have no way to fix the errors that are not discovered (false-negative).
+Infer~\cite{infer} is a static program analyzer for Java, C, and Objective-C, written in OCaml, developed by Facebook. At present Infer is tracking problems caused by null pointer dereferences and resource and memory leaks, which cause some of the more important problems. Infer is a high-performance static analyzer with high scalability and efficiency, and it is widely used by programmers and researchers. However, like other static analyzers, Infer is hard to handle some issues, such as indirect call and alias, which causes Infer to provide false-negative and false-positive alarms. As a result of this shortcoming, automated repair tools may waste time on the wrong alarms (false-positive) and have no way to fix the errors that are not discovered (false-negative).
 }
 
 \section{LibFuzzer}
 \textcolor{red}{
-LibFuzzer is an in-process, coverage-guided, evolutionary fuzzing engine. LibFuzzer is linked with the library under test, and feeds fuzzed inputs to the library via a specific fuzzing entry point (target function); the fuzzer then tracks which areas of the code are reached, and generates mutations on the corpus of input data in order to maximize the code coverage. The code coverage information for libFuzzer is provided by LLVM’s SanitizerCoverage~\footnote{https://clang.llvm.org/docs/SanitizerCoverage.html} instrumentation.
+LibFuzzer is an in-process, coverage-guided, evolutionary fuzzing engine. LibFuzzer is linked with the library under test, and feeds fuzzed inputs to the library via a specific fuzzing entry point (target function); the fuzzer then tracks which areas of the code are reached, and generates mutations on the corpus of input data in order to maximize the code coverage. The code coverage information for libFuzzer is provided by LLVM's SanitizerCoverage~\footnote{https://clang.llvm.org/docs/SanitizerCoverage.html} instrumentation.
 }	
 
 \textcolor{red}{
-LibFuzzer uses the information provided by the AddressSanitizer~\footnote{https://clang.llvm.org/docs/AddressSanitizer.html} to determine if an error has happened within the detected code coverage when detecting memory errors. When the program allocates memory, the allocated space is marked, and the behavior is verified for legality each time the space is accessed. These memory spaces are checked at the end of the program to see if they have been freed.
+LibFuzzer uses the information provided by the AddressSanitizer~\cite{asan}~\footnote{https://clang.llvm.org/docs/AddressSanitizer.html} to determine if an error has happened within the detected code coverage when detecting memory errors. When the program allocates memory, the allocated space is marked, and the behavior is verified for legality each time the space is accessed. These memory spaces are checked at the end of the program to see if they have been freed.
 }
 
 \textcolor{red}{
@@ -151,6 +151,7 @@ Because LibFuzzer can only fuzz test one function argument at a time, we must te
 The ideal situation would be for LibFuzzer to input {\it a=5} and trigger both errors. But in most cases,  LibFuzzer inputs other values only triggers the memory leak of {\it p1} and then exits. As a result, LibFuzzer may not be able to detect all of the errors in a function at the same time (although it has the ability to do).
 }
 
+\section{SAVER}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Overview}
@@ -167,6 +168,7 @@ First, we check the program with the static analyzer \mbox{Infer}, and then we m
 \tikzstyle{outdata} = [rectangle, draw, fill=brown!20, text width=5em, minimum height=3em]
 \tikzstyle{code} = [draw, ellipse,fill=red!20, text width=2em, minimum height=3em]
 \tikzstyle{bigcode} = [draw, ellipse,fill=red!20, text width=5.5em, minimum height=3em]
+\tikzstyle{midcode} = [draw, ellipse,fill=red!20, text width=4.5em, minimum height=3em]
 \begin{figure*}[ht]
 \hspace{-0.5cm}
 \begin{tikzpicture}[node distance = 3.5cm, on grid]
@@ -183,7 +185,7 @@ First, we check the program with the static analyzer \mbox{Infer}, and then we m
   \node[tool, right of=instcode] (fuzzer2){LibFuzzer};
   \node[outdata, right of=inst] (test){test suite};
   \node[block2, right of=depvar] (syn){simp-CBPS};
-  \node[bigcode, right of=syn] (fix){current\\fixed code};
+  \node[midcode, right of=syn] (fix){current\\fixed code};
   \node[code, above of=fuzzer2,yshift=-1.5cm] (output){out.c};
   \node[right of=output,yshift=-1cm,xshift=-2.5cm] (no){no error}; 
   \node[below of=no,yshift=1.5cm,xshift=-0.3cm] (yes){error}; 
@@ -221,12 +223,12 @@ First, we check the program with the static analyzer \mbox{Infer}, and then we m
 
 \begin{figure*}
   \begin{subfigure}{0.47\textwidth}
-    \lstinputlisting{src.c}
+    \lstinputlisting{me1a.c}
     \caption{o0, o1, o2 occur memory leak}
     \label{me1a}
   \end{subfigure}\hfill
   \begin{subfigure}{0.45\textwidth}
-    \lstinputlisting[firstline=17,firstnumber=17]{result_src.c}
+    \lstinputlisting[firstline=17,firstnumber=17]{me1b.c}
     \caption{HAMER-generated patch}
     \label{me1b}
   \end{subfigure}
@@ -236,11 +238,11 @@ First, we check the program with the static analyzer \mbox{Infer}, and then we m
 
 \begin{figure*}
   \begin{subfigure}{0.47\textwidth}
-    \lstinputlisting{saver.c}
+    \lstinputlisting{me2a.c}
     \caption{No memory leak}
   \end{subfigure}\hfill
   \begin{subfigure}{0.45\textwidth}
-    \lstinputlisting{saver_result.c}
+    \lstinputlisting{me2b.c}
     \caption{SAVER-generated patch}
   \end{subfigure}
   \caption{Motivating Example 2: Infer false-positive alarm}
@@ -488,7 +490,7 @@ We have turned the program synthesis problem into {\it Satisfiability Modulo The
 }
 
 \begin{table}[h]
-  \caption{test suite}
+  \caption{Test suite}
   \label{test}
   \centering
   \begin{tabular}{|c|c|}
@@ -621,64 +623,100 @@ We use temporary variables to store the variables used in the patch conditional 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Evaluation}
+We evaluate the effectiveness and efficiency of HAMER and answer the following research questions.
+
 \begin{itemize}
-\item[\textbf{RQ1.}] Compared with state-of-the-art automated memory error repair tool \textbf{SAVER}, what is the overall effectiveness of HAMER?
-\item[\textbf{RQ2.}] Can HAMER address the three major issues we mentioned before? 
-\item[\textbf{RQ3.}] How efficient is HAMER in using lightweight static analysis?
+\item[\textbf{RQ1}] Compared with state-of-the-art automated memory error repair tool SAVER, what is the overall effectiveness of HAMER?
+\item[\textbf{RQ2}] Can HAMER address the three major issues we mentioned before? 
+\item[\textbf{RQ3}] How efficient is HAMER in using lightweight static analysis?
 \end{itemize}
 
-\begin{table}[h]
-  \caption[Evaluation result]{Evaluation result of HAMER and SAVER. ML denotes the number of memory leaks. True, F.P. and F.N. denote the number of true, false-positive, and false-negative alarms detected by Infer. Fuzz denotes the number of memory leaks detected by LibFuzzer. $\checkmark$ and $\times$ report the correct and wrong patches generated by HAMER and SAVER. S.A. and sec report the static analysis time and the overall fix time }
-  \label{evaluationresult}
-  \centering
-  \begin{tabular}{ccc|ccc|ccc|cccc}
-                 &        &        &  \multicolumn{3}{|c|}{Infer}&  \multicolumn{3}{|c|}{SAVER}  & \multicolumn{4}{|c}{HAMER}  \\
-   Syn & LoC & ML& T & FP/FN & sec & $\checkmark$ & $\times$ & sec & Fuzzer & $\checkmark$ & $\times$ & SA/Fuzz/Total  \\
-    \hline
-    test1     & 12    & 1  & 1  & 0/0     & 0.68  & 0  & 0  & 0.05      & 1   & 1    & 0  & 0.01/7.01/7.94 \\
-    test2     & 9    & 2  & 2  & 0/0     & 0.13  & 1  & 0  & 0.07      & 2   & 2    & 0  & 0.01/7.27/8.42 \\
-    test3     & 23    & 2  & 0  & 0/2     & 0.36  & -  & -  & -      & 2   & 2    & 0  & 0.04/7.71/9.14 \\
-    test4     & 11    & 1  & 0  & 1/1     & 0.15  & 0  & 1  & 0.03      & 1   & 1    & 0  & 0.01/7.06/7.90 \\
-    test5     & 15    & 2  & 0  & 0/2     & 0.14  & -  & -  & -      & 2   & 2    & 0  & 0.03/7.71/9.10 \\
-    test6     & 24    & 3  & 0  & 0/2     & 0.28  & -  & -  & -      & 3   & 3    & 0  & 0.03/8.03/9.60 \\
-    test7     & 9    & 2  & 1  & 0/1     & 0.14  & 0  & 1  & 0.05      & 2   & 2    & 0  & 0.01/7.43/8.61 \\
-    test8     & 26    & 4  & 0  & 0/4     & 0.49  & -  & -  &  -      &  \begin{tabular}{c}3-4\\4\end{tabular}  & \begin{tabular}{c}0-3\\4 \end{tabular}   & \begin{tabular}{c}0-1\\0\end{tabular}  & \begin{tabular}{c}0.05/4.17/7.17\\0.05/9.94/13.17\end{tabular} \\
-    test9     & 24    & 3  & 1  & 0/2     & 0.42  & 1  & 0  & 0.05      & 3   & 3    & 0  & 0.04/8.91/11.29 \\
-    test10     & 15    & 2  & 2  & 0/0     & 0.42  & 1  & 1  &  0.07      &  2  & 2  & 0 & 0.02/7.67/9.04 \\
-    \hline
-  \end{tabular}
-\end{table}
+\section{Implementation}
+We have implemented our approach in a tool named ExtractFix, whose pipeline is shown in Figure~\ref{pipeline}. HAMER detects the memory leak in the program using existing vulnerability detection tools. To detect the real errors, HAMER first uses a static analyzer to detect the program, then uses a fuzzer to detect static analyzer alarms. The main role of the static analyzer is to filter out the problematic functions in the program so that the fuzzer does not waste time on other parts. We directly use a fuzzer to verify the code in our experiments because we utilize short code examples to test the efficiency of HAMER. We use LibFuzzer to perform the fuzz testing. Since LibFuzzer may not detect all of the errors, we fuzz code 10 times each time. If LibFuzzer does not detect an error within 5 seconds for one execution, the code is judged no error (or fixed). The input data format is set to an integer of two digits or less. HAMER is written in 1000 lines of python3 code. For syntactic analysis of $c$, we use the pycparser module~\footnote{https://github.com/eliben/pycparser}. In our implementation of simp-CBPS, we use the Z3~\cite{z3} python module~\footnote{https://github.com/Z3Prover/z3} as the SMT solver and implemented six operators ($!=, ==, <, <=, >, >=$) as components. 
+
+\section{Benchmark}
+To analyze HAMER, we synthesized 10 codes. Because HAMER's scalability is currently limited, and memory leaks in real-world projects can not properly reflect HAMER's properties, we gave up utilizing real-world projects to evaluate HAMER. These codes were synthesized from six different directions, as shown in Table~\ref{syncode}. To fuzz the code, LibFuzzer requires an entry point, which we manually added to the code as shown below. 
+
+\begin{minipage}{\textwidth}
+    \vspace{0.2cm}
+    \textsl{\hspace{0.3cm}int LLVMFuzzerTestOneInput(char *data, int size) \{\\\hspace{0.6cm}ConvertChartoInt(data);\\\hspace{0.6cm}EntryPoint(data);\\\hspace{0.6cm}return 0;\\\hspace{0.3cm}\}}
+    \vspace{0.2cm}
+\end{minipage}
+HAMER's static analysis and fuzzing time were also observed during the experiment. Since the repair process of HAMER was not absolutely the same every time (depending on the test generated by LibFuzzer), we run HAMER ten times for each code and then calculate the average repair time. We installed SAVER directly from their github~\footnote{https://github.com/kupl/SAVER\_public} (Infer version: v0.15.0-821a8db). Because SAVER relies on Infer's static analysis results, we must consider Infer's execution time when calculating SAVER's execution time. Table~\ref{evaluationresult} shows the final experimental results.
+
+
 
 \begin{table}[h]
-  \caption[Characteristics of synthesize code]{Characteristics of synthesize code }
+  \caption[Characteristics of synthesizing code]{Characteristics of synthesizing code. FN and FP denote that the code contains Infer's false-negative and false-positive alarms. EP denotes that the code contains the error with a long error path. ME denotes that the code contains multiple errors (memory leaks). MR denotes that the code has multiple returns. CF denotes that the code has a complicated control flow.}
   \label{syncode}
   \centering
-  \begin{tabular}{cc}
-   Syn &  Feature \\
+  \begin{tabular}{ccc}
+   Syn & LoC  &  Feature \\
     \hline
-    test1     &  CF \\
-    test2     &  MR \\
-    test3     &  FN,EP \\
-    test4     &  FP, FN \\
-    test5     &  EP, ME, FN \\
-    test6     &  EP, ME, MR, FN \\
-    test7     &  MR, CF, FN \\
-    test8     &  EP, ME, FN \\
-    test9     &  EP, ME, FN \\
-    test10   &  ME, CF \\
+    test1     & 12  &  CF \\
+    test2     & 9   &  MR \\
+    test3     & 23  &  FN,EP \\
+    test4      & 11 &  FP, FN \\
+    test5      & 15 &  EP, ME, FN \\
+    test6      & 24 &  EP, ME, MR, FN \\
+    test7      & 9   &  MR, CF, FN \\
+    test8      & 26 &  EP, ME, FN \\
+    test9     & 24  &  EP, ME, FN \\
+    test10   & 15  &  ME, CF \\
     \hline
   \end{tabular}
 \end{table}
 
-\textbf{synthesize code:}\\
-multiple memory leaks: 5 \\
-multiple returns: 5 \\
-long error path: 5 \\
-difficult control flow: 5 \\
-large size program: 5 \\
-Infer false-positive alarms and false-negative alarms: 5 \\
 
 
+\begin{table}[h]
+  \caption[Evaluation result]{Evaluation result of HAMER and SAVER. ML denotes the number of memory leaks. T, FP, and FN denote the number of true, false-positive, and false-negative alarms detected by Infer. Fuzzer denotes the number of memory leaks detected by LibFuzzer. $\checkmark$ and $\times$ report the correct and wrong patches generated by HAMER and SAVER. SA, Fuzz, and Total report the static analysis time, fuzzing time, and the total fix time. }
+  \label{evaluationresult}
+  \centering
+  \makebox[1 \textwidth][c]{  
+  \resizebox{1.1\textwidth}{!}{ 
+  \begin{tabular}{cc|ccc|ccc|cccc}
+                 &        &  \multicolumn{3}{|c|}{Infer}&  \multicolumn{3}{|c|}{SAVER}  & \multicolumn{4}{|c}{HAMER}  \\
+   Syn & ML& T & FP/FN & sec & $\checkmark$ & $\times$ & sec & Fuzzer & $\checkmark$ & $\times$ & SA/Fuzz/Total  \\
+    \hline
+    test1         & 1  & 1  & 0/0     & 0.68  & 0  & 0  & 0.05      & 1   & 1    & 0  & 0.01/7.01/7.94 \\
+    test2         & 2  & 2  & 0/0     & 0.13  & 1  & 0  & 0.07      & 2   & 2    & 0  & 0.01/7.27/8.42 \\
+    test3         & 2  & 0  & 0/2     & 0.36  & -  & -  & -      & 2   & 2    & 0  & 0.04/7.71/9.14 \\
+    test4         & 1  & 0  & 1/1     & 0.15  & 0  & 1  & 0.03      & 1   & 1    & 0  & 0.01/7.06/7.90 \\
+    test5         & 2  & 0  & 0/2     & 0.14  & -  & -  & -      & 2   & 2    & 0  & 0.03/7.71/9.10 \\
+    test6        & 3  & 0  & 0/2     & 0.28  & -  & -  & -      & 3   & 3    & 0  & 0.03/8.03/9.60 \\
+    test7        & 2  & 1  & 0/1     & 0.14  & 0  & 1  & 0.05      & 2   & 2    & 0  & 0.01/7.43/8.61 \\
+    test8        & 4  & 0  & 0/4     & 0.49  & -  & -  &  -      &  \begin{tabular}{c}3-4\\4\end{tabular}  & \begin{tabular}{c}0-3\\4 \end{tabular}   & \begin{tabular}{c}0-1\\0\end{tabular}  & \begin{tabular}{c}0.05/4.17/7.17\\0.05/9.94/13.17\end{tabular} \\
+    test9         & 3  & 1  & 0/2     & 0.42  & 1  & 0  & 0.05      & 3   & 3    & 0  & 0.04/8.91/11.29 \\
+    test10       & 2  & 2  & 0/0     & 0.42  & 1  & 1  &  0.07      &  2  & 2  & 0 & 0.02/7.67/9.04 \\
+    \hline
+  \end{tabular}
+}}
+\end{table}
+
+\iffalse
+\begin{figure*}
+  \begin{subfigure}{0.47\textwidth}
+    \lstinputlisting{src.c}
+    \caption{o0, o1, o2 occur memory leak}
+    \label{me1a}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.45\textwidth}
+    \lstinputlisting[firstline=17,firstnumber=17]{result_src.c}
+    \caption{HAMER-generated patch}
+    \label{me1b}
+  \end{subfigure}
+  \caption{Motivating Example 1: Infer false-negative alarm} 
+  \label{me1}
+\end{figure*}
+\fi
+
+\section{Experimental Results}
+
+
+\subsection[Research Question 1]{Compared with state-of-the-art automated memory error repair tool SAVER, what is the overall effectiveness of HAMER?}
+\subsection[Research Question 2]{Can HAMER address the three major issues we mentioned before? }
+\subsection[Research Question 3]{How efficient is HAMER in using lightweight static analysis?}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  14 JAN 2022 04:05
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  15 JAN 2022 03:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -849,6 +849,9 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 128.
 
+LaTeX Warning: Citation `infer' on page 3 undefined on input line 131.
+
+
 LaTeX Font Warning: Font shape `JT1/mc/m/sl' undefined
 (Font)              using `JT1/mc/m/n' instead on input line 148.
 
@@ -874,22 +877,22 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 146--153
 ] [4]
 Chapter 3.
 
-Overfull \hbox (0.6995pt too wide) in paragraph at lines 181--181
+Overfull \hbox (0.6995pt too wide) in paragraph at lines 183--183
 []\OT1/cmr/m/n/10.95 Instrumentation  
  []
 
 
-Overfull \hbox (3.74118pt too wide) in paragraph at lines 182--182
+Overfull \hbox (3.74118pt too wide) in paragraph at lines 184--184
 [][]\OT1/cmr/m/n/10.95 Instrumented  
  []
 
 
-Overfull \hbox (1.82498pt too wide) in paragraph at lines 187--187
+Overfull \hbox (1.82498pt too wide) in paragraph at lines 189--189
 [][]\OT1/cmr/m/n/10.95 out.c  
  []
 
 
-Overfull \hbox (51.00887pt too wide) in paragraph at lines 171--210
+Overfull \hbox (43.26602pt too wide) in paragraph at lines 173--212
 []  [] 
  []
 
@@ -900,8 +903,8 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 224.
- (./src.c
+nput line 226.
+ (./me1a.c
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 7
@@ -912,7 +915,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 7.
-) (./result_src.c
+) (./me1b.c
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
@@ -921,28 +924,28 @@ LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <9> not available
 (Font)              Font shape `OML/cmm/b/it' tried instead on input line 33.
-)
-(./saver.c) (./saver_result.c) [5
+) (./me2a.c)
+(./me2b.c) [5
 
 ] [6]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 253--257
+Overfull \hbox (17.0pt too wide) in paragraph at lines 255--259
 [][]$[]$[] 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 261--265
+Overfull \hbox (17.0pt too wide) in paragraph at lines 263--267
 [][]$[]$[] 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 288--296
+Overfull \hbox (17.0pt too wide) in paragraph at lines 290--298
 [][]$[]$[] 
  []
 
 [7] [8]
 Chapter 4.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 329--335
+Overfull \hbox (17.0pt too wide) in paragraph at lines 331--337
 [][]$[]$[]
  []
 
@@ -950,40 +953,40 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 329--335
 
 ]
 LaTeX Font Info:    Font shape `OMS/cmr/m/sl' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 363.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 365.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 361--369
+Overfull \hbox (17.0pt too wide) in paragraph at lines 363--371
 [][]$[]$[]
  []
 
 [10]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 382--390
+Overfull \hbox (17.0pt too wide) in paragraph at lines 384--392
 [][]$[]$[]
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 391--399
+Overfull \hbox (17.0pt too wide) in paragraph at lines 393--401
 [][]$[]$[]
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 412--420
+Overfull \hbox (17.0pt too wide) in paragraph at lines 414--422
 [][]$[]$[]
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 426.
+put line 428.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 466.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 468.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 466.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 468.
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 474--481
+Overfull \hbox (17.0pt too wide) in paragraph at lines 476--483
 [][]$[]$[]
  []
 
 [11]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 482--489
+Overfull \hbox (17.0pt too wide) in paragraph at lines 484--491
 [][]$[]$[]
  []
 
@@ -991,34 +994,35 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 482--489
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 519--526
+Overfull \hbox (17.0pt too wide) in paragraph at lines 521--528
 [][]$[]$[]
  []
 
 [13]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 580--587
+Overfull \hbox (17.0pt too wide) in paragraph at lines 582--589
 [][]$[]$[]
  []
 
 [14] [15]
 Chapter 5.
 
-Overfull \hbox (66.12135pt too wide) in paragraph at lines 634--650
- [][][][] 
+Overfull \hbox (17.0pt too wide) in paragraph at lines 640--646
+[][]$[]$[]
  []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [16
 
-] [17]
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18]
 Chapter 6.
-[18
+[19
 
 ]
 Chapter 7.
-(./mthesis-e.bbl [19
+(./mthesis-e.bbl [20
 
 ]
 
@@ -1029,38 +1033,32 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 6.
 
-) [20
+) [21
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 745.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 745.
  (./mthesis-e.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 707.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 745.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 745.
+Package rerunfilecheck Info: File `mthesis-e.out' has not changed.
+(rerunfilecheck)             Checksum: 2181D8CE255299870B6837B124941AF6;1935.
 
-
-Package rerunfilecheck Warning: File `mthesis-e.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mthesis-e.out':
-(rerunfilecheck)             Before: 72518C25BDAF3A7917B151AFF8988E4C;1393
-(rerunfilecheck)             After:  07584355F796051AC87E4C4A0F5AAAF1;1453.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 707.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 745.
  ) 
 Here is how much of TeX's memory you used:
- 21858 strings out of 492763
- 399685 string characters out of 6143311
- 897825 words of memory out of 5000000
- 25902 multiletter control sequences out of 15000+600000
+ 21866 strings out of 492763
+ 399727 string characters out of 6143311
+ 899059 words of memory out of 5000000
+ 25910 multiletter control sequences out of 15000+600000
  27502 words of font info for 109 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 60i,15n,58p,1541b,1712s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,17n,58p,1541b,1712s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on mthesis-e.dvi (25 pages, 158960 bytes).
+Output written on mthesis-e.dvi (26 pages, 171108 bytes).

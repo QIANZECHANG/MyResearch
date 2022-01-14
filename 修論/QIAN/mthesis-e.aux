@@ -26,27 +26,30 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\citation{infer}
+\citation{asan}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Infer}{3}{section.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}LibFuzzer}{3}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}SAVER}{4}{section.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Overview}{5}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces HAMER pipeline\relax }}{5}{figure.caption.5}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{pipeline}{{3.1}{5}{HAMER pipeline\relax }{figure.caption.5}{}}
-\@writefile{lol}{\contentsline {lstlisting}{src.c}{6}{lstlisting.3.-1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{me1a.c}{6}{lstlisting.3.-1}\protected@file@percent }
 \newlabel{me1a}{{3.2a}{6}{o0, o1, o2 occur memory leak\relax }{figure.caption.6}{}}
 \newlabel{sub@me1a}{{a}{6}{o0, o1, o2 occur memory leak\relax }{figure.caption.6}{}}
-\@writefile{lol}{\contentsline {lstlisting}{result\textunderscore src.c}{6}{lstlisting.3.-2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{me1b.c}{6}{lstlisting.3.-2}\protected@file@percent }
 \newlabel{me1b}{{3.2b}{6}{HAMER-generated patch\relax }{figure.caption.6}{}}
 \newlabel{sub@me1b}{{b}{6}{HAMER-generated patch\relax }{figure.caption.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Motivating Example 1: Infer false-negative alarm\relax }}{6}{figure.caption.6}\protected@file@percent }
 \newlabel{me1}{{3.2}{6}{Motivating Example 1: Infer false-negative alarm\relax }{figure.caption.6}{}}
-\@writefile{lol}{\contentsline {lstlisting}{saver.c}{6}{lstlisting.3.-3}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{saver\textunderscore result.c}{6}{lstlisting.3.-4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{me2a.c}{6}{lstlisting.3.-3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{me2b.c}{6}{lstlisting.3.-4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Motivating Example 2: Infer false-positive alarm\relax }}{6}{figure.caption.7}\protected@file@percent }
 \newlabel{me2}{{3.3}{6}{Motivating Example 2: Infer false-positive alarm\relax }{figure.caption.7}{}}
 \citation{SAVER}
@@ -69,8 +72,8 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Component-based Program Synthesis}{11}{subsection.4.5.1}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Source Instrumentation Result Collection\relax }}{12}{algorithm.1}\protected@file@percent }
 \newlabel{algo1}{{1}{12}{Source Instrumentation Result Collection\relax }{algorithm.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces test suite\relax }}{13}{table.caption.9}\protected@file@percent }
-\newlabel{test}{{4.1}{13}{test suite\relax }{table.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Test suite\relax }}{13}{table.caption.9}\protected@file@percent }
+\newlabel{test}{{4.1}{13}{Test suite\relax }{table.caption.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Repair Algorithm}{13}{subsection.4.5.2}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Repair Algorithm\relax }}{14}{algorithm.2}\protected@file@percent }
 \newlabel{repalgo}{{2}{14}{Repair Algorithm\relax }{algorithm.2}{}}
@@ -78,19 +81,26 @@
 \@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Function Fix\relax }}{15}{algorithm.3}\protected@file@percent }
 \newlabel{funcfix}{{3}{15}{Function Fix\relax }{algorithm.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Temporary Variable}{15}{subsection.4.5.4}\protected@file@percent }
+\citation{z3}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluation}{16}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Evaluation result}}{16}{table.caption.10}\protected@file@percent }
-\newlabel{evaluationresult}{{5.1}{16}{Evaluation result}{table.caption.10}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Characteristics of synthesize code}}{17}{table.caption.11}\protected@file@percent }
-\newlabel{syncode}{{5.2}{17}{Characteristics of synthesize code}{table.caption.11}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{18}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Implementation}{16}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Benchmark}{16}{section.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Characteristics of synthesizing code}}{17}{table.caption.10}\protected@file@percent }
+\newlabel{syncode}{{5.1}{17}{Characteristics of synthesizing code}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Experimental Results}{17}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Research Question 1}{17}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Research Question 2}{17}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Research Question 3}{17}{subsection.5.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Evaluation result}}{18}{table.caption.11}\protected@file@percent }
+\newlabel{evaluationresult}{{5.2}{18}{Evaluation result}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{19}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Limitations}{18}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Future Work}{18}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Conclusion}{18}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Limitations}{19}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Future Work}{19}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Conclusion}{19}{section.6.3}\protected@file@percent }
 \citation{CPR}
 \citation{Angelix}
 \citation{Extractfix}
@@ -99,13 +109,15 @@
 \citation{Memfix}
 \bibstyle{plain}
 \bibdata{mybib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Related Work}{19}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Related Work}{20}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{Getafix}{1}
-\bibcite{Extractfix}{2}
-\bibcite{SAVER}{3}
-\bibcite{oracle}{4}
-\bibcite{Memfix}{5}
-\bibcite{Angelix}{6}
-\bibcite{CPR}{7}
+\bibcite{z3}{2}
+\bibcite{Extractfix}{3}
+\bibcite{SAVER}{4}
+\bibcite{oracle}{5}
+\bibcite{Memfix}{6}
+\bibcite{Angelix}{7}
+\bibcite{asan}{8}
+\bibcite{CPR}{9}

@@ -5,6 +5,16 @@ Johannes Bader, Andrew Scott, Michael Pradel, and Satish Chandra.
 \newblock Getafix: Learning to fix bugs automatically.
 \newblock {\em Proc. ACM Program. Lang.}, 3(OOPSLA), oct 2019.
 
+\bibitem{z3}
+Leonardo~Mendon{\c{c}}a de~Moura and Nikolaj Bj{\o}rner.
+\newblock {Z3:} an efficient {SMT} solver.
+\newblock In C.~R. Ramakrishnan and Jakob Rehof, editors, {\em Tools and
+  Algorithms for the Construction and Analysis of Systems, 14th International
+  Conference, {TACAS} 2008, Held as Part of the Joint European Conferences on
+  Theory and Practice of Software, {ETAPS} 2008, Budapest, Hungary, March
+  29-April 6, 2008. Proceedings}, volume 4963 of {\em Lecture Notes in Computer
+  Science}, pages 337--340. Springer, 2008.
+
 \bibitem{Extractfix}
 Xiang Gao, Bo~Wang, Gregory~J. Duck, Ruyi Ji, Yingfei Xiong, and Abhik
   Roychoudhury.
@@ -37,6 +47,12 @@ Sergey Mechtaev, Jooyong Yi, and Abhik Roychoudhury.
   analysis.
 \newblock In {\em 2016 IEEE/ACM 38th International Conference on Software
   Engineering (ICSE)}, pages 691--701, 2016.
+
+\bibitem{asan}
+Konstantin Serebryany, Derek Bruening, Alexander Potapenko, and Dmitriy Vyukov.
+\newblock {AddressSanitizer}: A fast address sanity checker.
+\newblock In {\em 2012 USENIX Annual Technical Conference (USENIX ATC 12)},
+  pages 309--318, Boston, MA, June 2012. USENIX Association.
 
 \bibitem{CPR}
 Ridwan Shariffdeen, Yannic Noller, Lars Grunske, and Abhik Roychoudhury.
