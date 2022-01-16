@@ -1,9 +1,16 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Getafix}
 Johannes Bader, Andrew Scott, Michael Pradel, and Satish Chandra.
 \newblock Getafix: Learning to fix bugs automatically.
 \newblock {\em Proc. ACM Program. Lang.}, 3(OOPSLA), oct 2019.
+
+\bibitem{infer}
+Cristiano Calcagno and Dino Distefano.
+\newblock Infer: An automatic program verifier for memory safety of c programs.
+\newblock In Mihaela Bobaru, Klaus Havelund, Gerard~J. Holzmann, and Rajeev
+  Joshi, editors, {\em NASA Formal Methods}, pages 459--465, Berlin,
+  Heidelberg, 2011. Springer Berlin Heidelberg.
 
 \bibitem{z3}
 Leonardo~Mendon{\c{c}}a de~Moura and Nikolaj Bj{\o}rner.
@@ -41,12 +48,24 @@ Junhee Lee, Seongjoon Hong, and Hakjoo Oh.
   for c.
 \newblock ESEC/FSE 2018, 2018.
 
+\bibitem{directfix}
+Sergey Mechtaev, Jooyong Yi, and Abhik Roychoudhury.
+\newblock Directfix: Looking for simple program repairs.
+\newblock In {\em 2015 IEEE/ACM 37th IEEE International Conference on Software
+  Engineering}, volume~1, pages 448--458, 2015.
+
 \bibitem{Angelix}
 Sergey Mechtaev, Jooyong Yi, and Abhik Roychoudhury.
 \newblock Angelix: Scalable multiline program patch synthesis via symbolic
   analysis.
 \newblock In {\em 2016 IEEE/ACM 38th International Conference on Software
   Engineering (ICSE)}, pages 691--701, 2016.
+
+\bibitem{semfix}
+Hoang Duong~Thien Nguyen, Dawei Qi, Abhik Roychoudhury, and Satish Chandra.
+\newblock Semfix: Program repair via semantic analysis.
+\newblock In {\em 2013 35th International Conference on Software Engineering
+  (ICSE)}, pages 772--781, 2013.
 
 \bibitem{asan}
 Konstantin Serebryany, Derek Bruening, Alexander Potapenko, and Dmitriy Vyukov.
