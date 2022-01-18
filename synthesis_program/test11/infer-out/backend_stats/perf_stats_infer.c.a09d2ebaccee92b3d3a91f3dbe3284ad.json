@@ -1,0 +1,21 @@
+{
+  "time": {
+    "rtime": 0.10673250000000001,
+    "utime": 0.014501,
+    "stime": 0.010351,
+    "cutime": 0.0,
+    "cstime": 0.0
+  },
+  "mem": {
+    "minor_gb": 0.07500944286584854,
+    "promoted_gb": 0.0026227757334709167,
+    "major_gb": 0.0031806156039237976,
+    "allocated_gb": 0.07556728273630142,
+    "minor_collections": 14,
+    "major_collections": 1,
+    "compactions": 0,
+    "top_heap_gb": 0.003662109375,
+    "stack_kb": 0.71875,
+    "minor_heap_kb": 8192.0
+  }
+}

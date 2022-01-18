@@ -5,12 +5,26 @@ Johannes Bader, Andrew Scott, Michael Pradel, and Satish Chandra.
 \newblock Getafix: Learning to fix bugs automatically.
 \newblock {\em Proc. ACM Program. Lang.}, 3(OOPSLA), oct 2019.
 
+\bibitem{melt}
+Michael~D. Bond and Kathryn~S. McKinley.
+\newblock Tolerating memory leaks.
+\newblock In {\em Proceedings of the 23rd ACM SIGPLAN Conference on
+  Object-Oriented Programming Systems Languages and Applications}, OOPSLA '08,
+  page 109^^e2^^80^^93126, New York, NY, USA, 2008. Association for Computing
+  Machinery.
+
 \bibitem{infer}
 Cristiano Calcagno and Dino Distefano.
 \newblock Infer: An automatic program verifier for memory safety of c programs.
 \newblock In Mihaela Bobaru, Klaus Havelund, Gerard~J. Holzmann, and Rajeev
   Joshi, editors, {\em NASA Formal Methods}, pages 459--465, Berlin,
   Heidelberg, 2011. Springer Berlin Heidelberg.
+
+\bibitem{leakpoint}
+James Clause and Alessandro Orso.
+\newblock Leakpoint: pinpointing the causes of memory leaks.
+\newblock In {\em 2010 ACM/IEEE 32nd International Conference on Software
+  Engineering}, volume~1, pages 515--524, 2010.
 
 \bibitem{z3}
 Leonardo~Mendon{\c{c}}a de~Moura and Nikolaj Bj{\o}rner.
@@ -22,12 +36,24 @@ Leonardo~Mendon{\c{c}}a de~Moura and Nikolaj Bj{\o}rner.
   29-April 6, 2008. Proceedings}, volume 4963 of {\em Lecture Notes in Computer
   Science}, pages 337--340. Springer, 2008.
 
+\bibitem{leakfix}
+Qing Gao, Yingfei Xiong, Yaqing Mi, Lu~Zhang, Weikun Yang, Zhaoping Zhou, Bing
+  Xie, and Hong Mei.
+\newblock Safe memory-leak fixing for c programs.
+\newblock In {\em 2015 IEEE/ACM 37th IEEE International Conference on Software
+  Engineering}, volume~1, pages 459--470, 2015.
+
 \bibitem{Extractfix}
 Xiang Gao, Bo~Wang, Gregory~J. Duck, Ruyi Ji, Yingfei Xiong, and Abhik
   Roychoudhury.
 \newblock Beyond tests: Program vulnerability repair via crash constraint
   extraction.
 \newblock {\em ACM Trans. Softw. Eng. Methodol.}, 30(2), feb 2021.
+
+\bibitem{survey}
+Luca Gazzola, Daniela Micucci, and Leonardo Mariani.
+\newblock Automatic software repair: A survey.
+\newblock {\em IEEE Transactions on Software Engineering}, 45(1):34--67, 2019.
 
 \bibitem{SAVER}
 Seongjoon Hong, Junhee Lee, Jeongsoo Lee, and Hakjoo Oh.
@@ -42,11 +68,45 @@ Susmit Jha, Sumit Gulwani, Sanjit~A. Seshia, and Ashish Tiwari.
   Software Engineering - Volume 1}, ICSE '10, page 215^^e2^^80^^93224, New
   York, NY, USA, 2010. Association for Computing Machinery.
 
+\bibitem{par}
+Dongsun Kim, Jaechang Nam, Jaewoo Song, and Sunghun Kim.
+\newblock Automatic patch generation learned from human-written patches.
+\newblock In {\em Proceedings of the 2013 International Conference on Software
+  Engineering}, ICSE '13, page 802^^e2^^80^^93811. IEEE Press, 2013.
+
+\bibitem{jfix}
+Xuan-Bach~D. Le, Duc-Hiep Chu, David Lo, Claire Le~Goues, and Willem Visser.
+\newblock Jfix: Semantics-based repair of java programs via symbolic
+  pathfinder.
+\newblock In {\em Proceedings of the 26th ACM SIGSOFT International Symposium
+  on Software Testing and Analysis}, ISSTA 2017, page 376^^e2^^80^^93379, New
+  York, NY, USA, 2017. Association for Computing Machinery.
+
+\bibitem{s3}
+Xuan-Bach~D. Le, Duc-Hiep Chu, David Lo, Claire Le~Goues, and Willem Visser.
+\newblock S3: Syntax- and semantic-guided repair synthesis via programming by
+  examples.
+\newblock In {\em Proceedings of the 2017 11th Joint Meeting on Foundations of
+  Software Engineering}, ESEC/FSE 2017, page 593^^e2^^80^^93604, New York, NY,
+  USA, 2017. Association for Computing Machinery.
+
 \bibitem{Memfix}
 Junhee Lee, Seongjoon Hong, and Hakjoo Oh.
 \newblock Memfix: Static analysis-based repair of memory deallocation errors
   for c.
 \newblock ESEC/FSE 2018, 2018.
+
+\bibitem{spr}
+Fan Long and Martin Rinard.
+\newblock Staged program repair with condition synthesis.
+\newblock In {\em Proceedings of the 2015 10th Joint Meeting on Foundations of
+  Software Engineering}, ESEC/FSE 2015, page 166^^e2^^80^^93178, New York, NY,
+  USA, 2015. Association for Computing Machinery.
+
+\bibitem{prophet}
+Fan Long and Martin Rinard.
+\newblock Automatic patch generation by learning correct code.
+\newblock {\em SIGPLAN Not.}, 51(1):298^^e2^^80^^93312, jan 2016.
 
 \bibitem{directfix}
 Sergey Mechtaev, Jooyong Yi, and Abhik Roychoudhury.
@@ -67,6 +127,15 @@ Hoang Duong~Thien Nguyen, Dawei Qi, Abhik Roychoudhury, and Satish Chandra.
 \newblock In {\em 2013 35th International Conference on Software Engineering
   (ICSE)}, pages 772--781, 2013.
 
+\bibitem{ownership}
+Derek Rayside and Lucy Mendel.
+\newblock Object ownership profiling: A technique for finding and fixing memory
+  leaks.
+\newblock In {\em Proceedings of the Twenty-Second IEEE/ACM International
+  Conference on Automated Software Engineering}, ASE '07, page
+  194^^e2^^80^^93203, New York, NY, USA, 2007. Association for Computing
+  Machinery.
+
 \bibitem{asan}
 Konstantin Serebryany, Derek Bruening, Alexander Potapenko, and Dmitriy Vyukov.
 \newblock {AddressSanitizer}: A fast address sanity checker.
@@ -79,5 +148,54 @@ Ridwan Shariffdeen, Yannic Noller, Lars Grunske, and Abhik Roychoudhury.
 \newblock In {\em Proceedings of the 42nd ACM SIGPLAN International Conference
   on Programming Language Design and Implementation}, PLDI 2021, page
   390^^e2^^80^^93405, 2021.
+
+\bibitem{cp}
+Stelios Sidiroglou-Douskos, Eric Lahtinen, Fan Long, and Martin Rinard.
+\newblock Automatic error elimination by horizontal code transfer across
+  multiple applications.
+\newblock In {\em Proceedings of the 36th ACM SIGPLAN Conference on Programming
+  Language Design and Implementation}, PLDI '15, page 43^^e2^^80^^9354, New
+  York, NY, USA, 2015. Association for Computing Machinery.
+
+\bibitem{transfor}
+Tatsuya Sonobe, Kohei Suenaga, and Atsushi Igarashi.
+\newblock Automatic memory management based on program transformation using
+  ownership.
+\newblock In {\em APLAS}, 2014.
+
+\bibitem{typebase}
+Kohei Suenaga, Ryota Fukuda, and Atsushi Igarashi.
+\newblock Type-based safe resource deallocation for shared-memory concurrency.
+\newblock {\em SIGPLAN Not.}, 47(10):1^^e2^^80^^9320, oct 2012.
+
+\bibitem{fractional}
+Kohei Suenaga and Naoki Kobayashi.
+\newblock Fractional ownerships for safe memory deallocation.
+\newblock In Zhenjiang Hu, editor, {\em Programming Languages and Systems},
+  pages 128--143, Berlin, Heidelberg, 2009. Springer Berlin Heidelberg.
+
+\bibitem{footpatch}
+Rijnard van Tonder and Claire~Le Goues.
+\newblock Static automated program repair for heap properties.
+\newblock In {\em Proceedings of the 40th International Conference on Software
+  Engineering}, ICSE '18, page 151^^e2^^80^^93162, New York, NY, USA, 2018.
+  Association for Computing Machinery.
+
+\bibitem{condsyn}
+Yingfei Xiong, Jie Wang, Runfa Yan, Jiachen Zhang, Shi Han, Gang Huang, and
+  Lu~Zhang.
+\newblock Precise condition synthesis for program repair.
+\newblock In {\em 2017 IEEE/ACM 39th International Conference on Software
+  Engineering (ICSE)}, pages 416--426, 2017.
+
+\bibitem{leakchaser}
+Guoqing Xu, Michael~D. Bond, Feng Qin, and Atanas Rountev.
+\newblock Leakchaser: Helping programmers narrow down causes of memory leaks.
+\newblock {\em SIGPLAN Not.}, 46(6):270^^e2^^80^^93282, jun 2011.
+
+\bibitem{defleak}
+Bin Yu, Cong Tian, Nan Zhang, Zhenhua Duan, and Hongwei Du.
+\newblock A dynamic approach to detecting, eliminating and fixing memory leaks.
+\newblock {\em Journal of Combinatorial Optimization}, pages 1--18, 2021.
 
 \end{thebibliography}

@@ -157,3 +157,304 @@ isbn="978-3-642-20398-5"
   number={},
   pages={448-458},
   doi={10.1109/ICSE.2015.63}}
+
+@article{10.1145/1449955.1449774,
+author = {Bond, Michael D. and McKinley, Kathryn S.},
+title = {Tolerating Memory Leaks},
+year = {2008},
+issue_date = {September 2008},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {43},
+number = {10},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/1449955.1449774},
+doi = {10.1145/1449955.1449774},
+abstract = {Type safety and garbage collection in managed languages eliminate memory errors such as dangling pointers, double frees, and leaks of unreachable objects. Unfortunately, a program still leaks memory if it maintains references to objects it will never use again. Leaked objects decrease program locality and increase garbage collection frequency and workload. A growing leak will eventually exhaust memory and crash the program.This paper introduces a leak tolerance approach called Melt that safely eliminates performance degradations and crashes due to leaks of dead but reachable objects in managed languages, given sufficient disk space to hold leaking objects. Melt (1) identifies stale objects that the program is not accessing; (2) segregates in-use and stale objects by storing stale objects to disk; and (3) preserves safety by activating stale objects if the program subsequently accesses them. We design and build a prototype implementation of Melt in a Java VM and show it adds overhead low enough for production systems. Whereas existing VMs grind to a halt and then crash on programs with leaks, Melt keeps many of these programs running much longer without significantly degrading performance. Melt provides users the illusion of a fixed leak and gives developers more time to fix leaky programs.},
+journal = {SIGPLAN Not.},
+month = {oct},
+pages = {109–126},
+numpages = {18},
+keywords = {managed languages, memory leaks, bug tolerance}
+}
+
+
+@inproceedings{melt,
+author = {Bond, Michael D. and McKinley, Kathryn S.},
+title = {Tolerating Memory Leaks},
+year = {2008},
+isbn = {9781605582153},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1449764.1449774},
+doi = {10.1145/1449764.1449774},
+booktitle = {Proceedings of the 23rd ACM SIGPLAN Conference on Object-Oriented Programming Systems Languages and Applications},
+pages = {109–126},
+numpages = {18},
+keywords = {bug tolerance, managed languages, memory leaks},
+location = {Nashville, TN, USA},
+series = {OOPSLA '08}
+}
+
+@INPROCEEDINGS{leakpoint,
+  author={Clause, James and Orso, Alessandro},
+  booktitle={2010 ACM/IEEE 32nd International Conference on Software Engineering}, 
+  title={LEAKPOINT: pinpointing the causes of memory leaks}, 
+  year={2010},
+  volume={1},
+  number={},
+  pages={515-524},
+  doi={10.1145/1806799.1806874}}
+
+@INPROCEEDINGS{leakfix,
+  author={Gao, Qing and Xiong, Yingfei and Mi, Yaqing and Zhang, Lu and Yang, Weikun and Zhou, Zhaoping and Xie, Bing and Mei, Hong},
+  booktitle={2015 IEEE/ACM 37th IEEE International Conference on Software Engineering}, 
+  title={Safe Memory-Leak Fixing for C Programs}, 
+  year={2015},
+  volume={1},
+  number={},
+  pages={459-470},
+  doi={10.1109/ICSE.2015.64}}
+
+@ARTICLE{survey,
+  author={Gazzola, Luca and Micucci, Daniela and Mariani, Leonardo},
+  journal={IEEE Transactions on Software Engineering}, 
+  title={Automatic Software Repair: A Survey}, 
+  year={2019},
+  volume={45},
+  number={1},
+  pages={34-67},
+  doi={10.1109/TSE.2017.2755013}}
+
+@inproceedings{ownership,
+author = {Rayside, Derek and Mendel, Lucy},
+title = {Object Ownership Profiling: A Technique for Finding and Fixing Memory Leaks},
+year = {2007},
+isbn = {9781595938824},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1321631.1321661},
+doi = {10.1145/1321631.1321661},
+booktitle = {Proceedings of the Twenty-Second IEEE/ACM International Conference on Automated Software Engineering},
+pages = {194–203},
+numpages = {10},
+keywords = {java, memory leaks, object ownership},
+location = {Atlanta, Georgia, USA},
+series = {ASE '07}
+}
+
+@inproceedings{transfor,
+  title={Automatic Memory Management Based on Program Transformation Using Ownership},
+  author={Tatsuya Sonobe and Kohei Suenaga and Atsushi Igarashi},
+  booktitle={APLAS},
+  year={2014}
+}
+
+@inproceedings{10.1145/2384616.2384618,
+author = {Suenaga, Kohei and Fukuda, Ryota and Igarashi, Atsushi},
+title = {Type-Based Safe Resource Deallocation for Shared-Memory Concurrency},
+year = {2012},
+isbn = {9781450315616},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2384616.2384618},
+doi = {10.1145/2384616.2384618},
+abstract = {We propose a type system to guarantee safe resource deallocation for shared-memory concurrent programs by extending the previous type system based on fractional ownerships. Here, safe resource deallocation means that memory cells, locks, or threads are not left allocated when a program terminates. Our framework supports (1) fork/join parallelism, (2) synchronization with locks, and (3) dynamically allocated memory cells and locks. The type system is proved to be sound. We also provide a type inference algorithm for the type system and a prototype implementation of the algorithm.},
+booktitle = {Proceedings of the ACM International Conference on Object Oriented Programming Systems Languages and Applications},
+pages = {1–20},
+numpages = {20},
+keywords = {type inference, race freedom, type systems, safe resource deallocation, fractional ownerships, shared-memory concurrency, memory leak, SMT solver, fork/join parallelism},
+location = {Tucson, Arizona, USA},
+series = {OOPSLA '12}
+}
+
+
+@article{typebase,
+author = {Suenaga, Kohei and Fukuda, Ryota and Igarashi, Atsushi},
+title = {Type-Based Safe Resource Deallocation for Shared-Memory Concurrency},
+year = {2012},
+issue_date = {October 2012},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {47},
+number = {10},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/2398857.2384618},
+doi = {10.1145/2398857.2384618},
+journal = {SIGPLAN Not.},
+month = {oct},
+pages = {1–20},
+numpages = {20},
+keywords = {safe resource deallocation, shared-memory concurrency, SMT solver, type inference, fork/join parallelism, type systems, fractional ownerships, memory leak, race freedom}
+}
+
+@InProceedings{fractional,
+author="Suenaga, Kohei
+and Kobayashi, Naoki",
+editor="Hu, Zhenjiang",
+title="Fractional Ownerships for Safe Memory Deallocation",
+booktitle="Programming Languages and Systems",
+year="2009",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="128--143",
+abstract="We propose a type system for a programming language with memory allocation/deallocation primitives, which prevents memory- related errors such as double-frees and memory leaks. The main idea is to augment pointer types with fractional ownerships, which express both capabilities and obligations to access or deallocate memory cells. By assigning an ownership to each pointer type constructor (rather than to a variable), our type system can properly reason about list/tree-manipulating programs. Furthermore, thanks to the use of fractions as ownerships, the type system admits a polynomial-time type inference algorithm, which serves as an algorithm for automatic verification of lack of memory-related errors. A prototype verifier has been implemented and tested for C programs.",
+isbn="978-3-642-10672-9"
+}
+
+@inproceedings{footpatch,
+author = {van Tonder, Rijnard and Goues, Claire Le},
+title = {Static Automated Program Repair for Heap Properties},
+year = {2018},
+isbn = {9781450356381},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3180155.3180250},
+doi = {10.1145/3180155.3180250},
+booktitle = {Proceedings of the 40th International Conference on Software Engineering},
+pages = {151–162},
+numpages = {12},
+keywords = {separation logic, automated program repair},
+location = {Gothenburg, Sweden},
+series = {ICSE '18}
+}
+
+@article{leakchaser,
+author = {Xu, Guoqing and Bond, Michael D. and Qin, Feng and Rountev, Atanas},
+title = {LeakChaser: Helping Programmers Narrow down Causes of Memory Leaks},
+year = {2011},
+issue_date = {June 2011},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {46},
+number = {6},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/1993316.1993530},
+doi = {10.1145/1993316.1993530},
+journal = {SIGPLAN Not.},
+month = {jun},
+pages = {270–282},
+numpages = {13},
+keywords = {object lifetime assertions, memory leak detection, leakchaser}
+}
+
+@article{defleak,
+  title={A dynamic approach to detecting, eliminating and fixing memory leaks},
+  author={Bin Yu and Cong Tian and Nan Zhang and Zhenhua Duan and Hongwei Du},
+  journal={Journal of Combinatorial Optimization},
+  year={2021},
+  pages={1-18}
+}
+
+@inproceedings{par,
+author = {Kim, Dongsun and Nam, Jaechang and Song, Jaewoo and Kim, Sunghun},
+title = {Automatic Patch Generation Learned from Human-Written Patches},
+year = {2013},
+isbn = {9781467330763},
+publisher = {IEEE Press},
+booktitle = {Proceedings of the 2013 International Conference on Software Engineering},
+pages = {802–811},
+numpages = {10},
+location = {San Francisco, CA, USA},
+series = {ICSE '13}
+}
+
+@inproceedings{jfix,
+author = {Le, Xuan-Bach D. and Chu, Duc-Hiep and Lo, David and Le Goues, Claire and Visser, Willem},
+title = {JFIX: Semantics-Based Repair of Java Programs via Symbolic PathFinder},
+year = {2017},
+isbn = {9781450350761},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3092703.3098225},
+doi = {10.1145/3092703.3098225},
+booktitle = {Proceedings of the 26th ACM SIGSOFT International Symposium on Software Testing and Analysis},
+pages = {376–379},
+numpages = {4},
+keywords = {Symbolic Execution, Automatic Program Repair, Program Synthesis},
+location = {Santa Barbara, CA, USA},
+series = {ISSTA 2017}
+}
+
+@inproceedings{s3,
+author = {Le, Xuan-Bach D. and Chu, Duc-Hiep and Lo, David and Le Goues, Claire and Visser, Willem},
+title = {S3: Syntax- and Semantic-Guided Repair Synthesis via Programming by Examples},
+year = {2017},
+isbn = {9781450351058},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3106237.3106309},
+doi = {10.1145/3106237.3106309},
+booktitle = {Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering},
+pages = {593–604},
+numpages = {12},
+keywords = {Programming by Examples, Program Repair, Symbolic Execution, Inductive Synthesis},
+location = {Paderborn, Germany},
+series = {ESEC/FSE 2017}
+}
+
+@inproceedings{spr,
+author = {Long, Fan and Rinard, Martin},
+title = {Staged Program Repair with Condition Synthesis},
+year = {2015},
+isbn = {9781450336758},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2786805.2786811},
+doi = {10.1145/2786805.2786811},
+booktitle = {Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering},
+pages = {166–178},
+numpages = {13},
+keywords = {Staged repair, Program repair, Condition synthesis},
+location = {Bergamo, Italy},
+series = {ESEC/FSE 2015}
+}
+
+
+@article{prophet,
+author = {Long, Fan and Rinard, Martin},
+title = {Automatic Patch Generation by Learning Correct Code},
+year = {2016},
+issue_date = {January 2016},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {1},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/2914770.2837617},
+doi = {10.1145/2914770.2837617},
+journal = {SIGPLAN Not.},
+month = {jan},
+pages = {298–312},
+numpages = {15},
+keywords = {Program repair, Learning correct code, Code correctness model}
+}
+
+@inproceedings{cp,
+author = {Sidiroglou-Douskos, Stelios and Lahtinen, Eric and Long, Fan and Rinard, Martin},
+title = {Automatic Error Elimination by Horizontal Code Transfer across Multiple Applications},
+year = {2015},
+isbn = {9781450334686},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2737924.2737988},
+doi = {10.1145/2737924.2737988},
+abstract = { We present Code Phage (CP), a system for automatically transferring correct code from donor applications into recipient applications that process the same inputs to successfully eliminate errors in the recipient. Experimental results using seven donor applications to eliminate ten errors in seven recipient applications highlight the ability of CP to transfer code across applications to eliminate out of bounds access, integer overflow, and divide by zero errors. Because CP works with binary donors with no need for source code or symbolic information, it supports a wide range of use cases. To the best of our knowledge, CP is the first system to automatically transfer code across multiple applications. },
+booktitle = {Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+pages = {43–54},
+numpages = {12},
+keywords = {data structure translation, program repair, automatic code transfer},
+location = {Portland, OR, USA},
+series = {PLDI '15}
+}
+
+@INPROCEEDINGS{condsyn,
+  author={Xiong, Yingfei and Wang, Jie and Yan, Runfa and Zhang, Jiachen and Han, Shi and Huang, Gang and Zhang, Lu},
+  booktitle={2017 IEEE/ACM 39th International Conference on Software Engineering (ICSE)}, 
+  title={Precise Condition Synthesis for Program Repair}, 
+  year={2017},
+  volume={},
+  number={},
+  pages={416-426},
+  doi={10.1109/ICSE.2017.45}}
+

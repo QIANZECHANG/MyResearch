@@ -1,0 +1,11 @@
+REG: { _n$0_f -> ({ (func,9)_infer.c:6:3:int }, { }),
+       _n$0_g -> ({ (func,9)_infer.c:6:3:int }, { }),
+       _n$1_f -> ({ (func,9)_infer.c:6:3:int }, { }),
+       _n$1_func -> ({ (func,9)_infer.c:6:3:int }, { }),
+       _n$2_g -> ({ (func,9)_infer.c:6:3:int }, { }),
+       _n$5_func -> ({ (func,9)_infer.c:6:3:int }, { }) }
+ MEM: { _p_func:int* -> ({ (func,9)_infer.c:6:3:int }, { }),
+        _a_f:int* -> ({ (func,9)_infer.c:6:3:int }, { }),
+        _return_f:void* -> ({ (func,9)_infer.c:6:3:int }, { }),
+        _p_g:int* -> ({ (func,9)_infer.c:6:3:int }, { }) }
+

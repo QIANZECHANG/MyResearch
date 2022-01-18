@@ -1,0 +1,22 @@
+Found 2 issues
+
+infer.c:17: error: MEMORY_LEAK (biabduction/Abs.ml:1082:18-25:)
+  memory dynamically allocated to `p` by call to `f()` at line 16, column 10 is not reachable after line 17, column 6.
+  15.   int func(int a){
+  16.     int *p=f();
+  17. >   if(a>5){
+  18.       g(p);
+  19.     }	
+
+infer.c:18: error: NULL_DEREFERENCE (biabduction/Tabulation.ml:1343:63-70:)
+  [B1] pointer `p` last assigned on line 16 could be null and is dereferenced by call to `g()` at line 18, column 5.
+  16.     int *p=f();
+  17.     if(a>5){
+  18. >     g(p);
+  19.     }	
+  20.     return 0;
+
+Summary of the reports
+
+       MEMORY_LEAK: 1
+  NULL_DEREFERENCE: 1

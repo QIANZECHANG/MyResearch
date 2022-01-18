@@ -4,46 +4,46 @@ The top-level auxiliary file: mthesis-e.aux
 The style file: plain.bst
 Database file #1: mybib.bib
 Warning--empty booktitle in Memfix
-You've used 12 entries,
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            586 strings with 6820 characters,
-and the built_in function-call counts, 6004 in all, are:
-= -- 611
-> -- 273
-< -- 11
-+ -- 104
-- -- 92
-* -- 369
-:= -- 862
-add.period$ -- 40
-call.type$ -- 12
-change.case$ -- 79
+            689 strings with 10218 characters,
+and the built_in function-call counts, 16211 in all, are:
+= -- 1740
+> -- 656
+< -- 26
++ -- 254
+- -- 223
+* -- 917
+:= -- 2199
+add.period$ -- 103
+call.type$ -- 30
+change.case$ -- 198
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 297
-empty$ -- 441
-format.name$ -- 92
-if$ -- 1383
+cite$ -- 31
+duplicate$ -- 867
+empty$ -- 1155
+format.name$ -- 223
+if$ -- 3836
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 12
-newline$ -- 63
-num.names$ -- 28
-pop$ -- 97
+int.to.str$ -- 30
+missing$ -- 30
+newline$ -- 153
+num.names$ -- 66
+pop$ -- 229
 preamble$ -- 1
-purify$ -- 67
+purify$ -- 168
 quote$ -- 0
-skip$ -- 284
+skip$ -- 894
 stack$ -- 0
-substring$ -- 340
-swap$ -- 158
-text.length$ -- 11
+substring$ -- 1014
+swap$ -- 516
+text.length$ -- 26
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 120
 warning$ -- 1
-while$ -- 45
-width$ -- 14
-write$ -- 144
+while$ -- 105
+width$ -- 32
+write$ -- 368
 is.kanji.str$ -- 0
 (There was 1 warning)

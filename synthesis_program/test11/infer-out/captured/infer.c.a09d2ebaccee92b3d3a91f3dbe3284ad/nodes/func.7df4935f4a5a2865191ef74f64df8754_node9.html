@@ -1,0 +1,644 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>func.7df4935f4a5a2865191ef74f64df8754_node9</title>
+<style type="text/css">
+body { color:#000000; background-color:#ffffff }
+body { font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; }
+.code { font-family: "Andale Mono", monospace; font-size:10pt }
+.code { line-height: 1.2em }
+.comment { color: green; font-style: oblique }
+.keyword { color: blue }
+.string_literal { color: red }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_red { color: red }
+.color_orange { color: orange }
+.directive { color: darkmagenta }
+.expansion { display: none; }
+.visited:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visited { color: darkmagenta; background-color:LemonChiffon; position: relative }
+.visitedproof:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.visitedproof { color: darkmagenta; background-color:lightgreen; position: relative }
+.dangling:hover .expansion { display: block; border: 2px solid #FF0000; padding: 2px; background-color:#FFF0F0; font-weight: normal; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; position: absolute; top: -1em; left:10em; z-index: 1 }
+.dangling { color: gray; background-color:white; position: relative }
+.num { width:2.5em; padding-right:2ex; background-color:#eeeeee }
+.num { text-align:right; font-size: smaller }
+.num { color:#444444 }
+.line { padding-left: 1ex; border-left: 3px solid #ccc }
+.line { white-space: pre }
+.msg { background-color:#fff8b4; color:#000000 }
+.msg { -webkit-box-shadow:1px 1px 7px #000 }
+.msg { -webkit-border-radius:5px }
+.msg { font-family:Helvetica, sans-serif; font-size: smaller }
+.msg { font-weight: bold }
+.msg { float:left }
+.msg { padding:0.5em 1ex 0.5em 1ex }
+.msg { margin-top:10px; margin-bottom:10px }
+.msg { max-width:60em; word-wrap: break-word; white-space: pre-wrap;}
+.mrange { background-color:#dfddf3 }
+.mrange { border-bottom:1px solid #6F9DBE }
+.PathIndex { font-weight: bold }
+table.simpletable { padding: 5px; font-size:12pt; margin:20px; border-collapse: collapse; border-spacing: 0px; }
+td.rowname { text-align:right; font-weight:bold; color:#444444; padding-right:2ex; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">9</a></h1></center>PROC: <a href="./../func.7df4935f4a5a2865191ef74f64df8754.html">func</a> LINE: <a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>
+<br>PREDS:
+<a href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node1.html"><span class='visited'>N_1<span class='expansion'>node1 preds: succs:9 exn: </span></span></a><br>SUCCS: 
+<a href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node5.html"><span class='dangling'>N_5<span class='expansion'>node5 preds:9 succs:6 7 exn: 
+NOT VISITED</span></span></a><br>EXN: 
+<br>
+<span class='color_green'><LISTING>n$5=_fun_f() [line 16, column 10];
+*&amp;p:int*=n$5 [line 16, column 3];
+</LISTING></span><hr width="100%">
+<a name="session1" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session1">node9#session1</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) uninit (9: 0)<LISTING><span class='color_black'>PRE: 
+ uninit_vars: { *(p) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+INSTR: n$5 := f({ }) [line 16, column 10]
+POST: 
+ uninit_vars: { *(p) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session2" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session2">node9#session2</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) uninit (9: 1)<LISTING><span class='color_black'>PRE: 
+ uninit_vars: { *(p) } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+INSTR: p := n$5 [line 16, column 3]
+POST: 
+ uninit_vars: { } 
+ aliased_vars: { } 
+ prepost: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session8" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session8">node9#session8</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) siof<LISTING><span class='color_black'>PRE: (_|_, { })
+INSTRS: n$5=_fun_f() [line 16, column 10];
+*&amp;p:int*=n$5 [line 16, column 3];
+POST: ({ }, { })
+
+</LISTING></span><hr width="100%">
+<a name="session17" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session17">node9#session17</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) address taken<LISTING><span class='color_black'>PRE: { }
+INSTRS: n$5=_fun_f() [line 16, column 10];
+*&amp;p:int*=n$5 [line 16, column 3];
+POST: { }
+
+</LISTING></span><hr width="100%">
+<a name="session25" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session25">node9#session25</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { a -> OwnedIf{ 0 }, p -> Owned } 
+Attributes: { } 
+Non-stable Paths: { }
+
+INSTR: n$5 := f({ }) [line 16, column 10]
+POST: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { n$5 -> Unowned, a -> OwnedIf{ 0 }, p -> Owned } 
+Attributes: { } 
+Non-stable Paths: { return, a, n$5, n$1 }
+
+
+</LISTING></span><hr width="100%">
+<a name="session26" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session26">node9#session26</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) racerd<LISTING><span class='color_black'>PRE: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { n$5 -> Unowned, a -> OwnedIf{ 0 }, p -> Owned } 
+Attributes: { } 
+Non-stable Paths: { return, a, n$5, n$1 }
+
+INSTR: p := n$5 [line 16, column 3]
+POST: Threads: NoThread, Locks: { } 
+Accesses { } 
+ Ownership: { n$5 -> Unowned, a -> OwnedIf{ 0 }, p -> Unowned } 
+Attributes: { } 
+Non-stable Paths: { return, a, p, n$5, n$1 }
+
+
+</LISTING></span><hr width="100%">
+<a name="session31" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session31">node9#session31</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) ownership<LISTING><span class='color_black'>PRE: { }
+INSTR: n$5 := f({ }) [line 16, column 10]
+POST: { }
+
+</LISTING></span><hr width="100%">
+<a name="session32" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session32">node9#session32</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) ownership<LISTING><span class='color_black'>PRE: { }
+INSTR: p := n$5 [line 16, column 3]
+POST: { p -> Owned }
+
+</LISTING></span><hr width="100%">
+<a name="session38" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session38">node9#session38</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) interproc<LISTING><span class='color_black'>**** [FP:Pending] func Node: 9, Procedure: func, Session: 38, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+  [footprint
+     <span class='color_red'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+  .... Instructions: .... 
+  <span class='color_green'>n$5=_fun_f() [line 16, column 10];
+  *&amp;p:int*=n$5 [line 16, column 3];
+  REMOVE_TEMPS(n$5); [line 16, column 3];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>n$5=_fun_f() [line 16, column 10]</span>
+    Found 1 specs for function f
+    START EXECUTING SPECS FOR f from state
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    EXECUTING SPEC 1/1
+    ACTUAL PRECONDITION =
+      <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int
+      [footprint
+         a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    SPEC =
+      --------------------------- ---------- ---------------------------
+      PRE:
+      <span class='color_blue'><span class='color_blue'></span></span>
+      POST 1 of 2:
+      <span class='color_blue'><span class='color_red'>return|callee = 0 <span class='color_orange'>update:7</span>:int*</span></span>
+      POST 2 of 2:
+      <span class='color_blue'><span class='color_red'>MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(return|callee)</span> ;
+      <span class='color_red'>return|callee = _t$3 <span class='color_orange'>update:7</span>:int*</span> ;
+      <span class='color_red'>return|callee|->_t$4 <span class='color_orange'>alloc</span>:int4</span></span>
+      ----------------------------------------------------------------
+    pre_check_pure_implication
+    pi1:
+      
+    pi2:
+      
+    returns
+    sub1: 
+      
+    sub2: 
+      
+    Final Implication
+    SUB:
+      
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    |-
+    <span class='color_blue'></span>
+    Result of Abduction
+      SUB:
+        
+      <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int
+      [footprint
+         a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+      |-
+      <span class='color_blue'></span>
+    returning TRUE
+    in vpath_find exp:_t$3
+    vpath_find: cannot find _t$3
+      New footprint:
+      
+      Frame fld:
+      
+      Missing fld:
+      
+      Instantiated frame:
+      &amp;a|->@f$0 <span class='color_orange'>formal</span>:int; &amp;old_a|->@f$0 <span class='color_orange'>formal</span>:int; &amp;p|->n$6 <span class='color_orange'>initial</span>:int*; &amp;return|->n$7 <span class='color_orange'>initial</span>:int
+      Instantiated post:
+      PROP 1 of 2:
+      <span class='color_blue'><span class='color_red'>return|callee = 0 <span class='color_orange'>update:16</span>:int*</span></span>
+      PROP 2 of 2:
+      <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(return|callee)</span> ;
+      <span class='color_red'>return|callee = _t$3 <span class='color_orange'>update:16</span>:int*</span> ;
+      <span class='color_red'>return|callee|->_t$4 <span class='color_orange'>alloc</span>:int4</span></span>
+      
+    ***** RESULTS FUNCTION CALL *******
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$6 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$7 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>n$5|->_t$0 <span class='color_orange'>alloc</span>:int4</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_red'>n$5 = 0</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$6 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$7 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    ***** END RESULTS FUNCTION CALL *******
+    Instruction Returns
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_red'>n$5 = 0</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>n$5|->_t$2 <span class='color_orange'>alloc</span>:int4</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    Instruction <span class='color_green'>*&amp;p:int*=n$5 [line 16, column 3]</span>
+    in vpath_find exp:n$5
+    vpath_find: cannot find n$5
+    .... Rearrangement Start ....
+    Exp: &amp;p
+    Prop: 
+    <span class='color_blue'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5) ;
+    a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$9 <span class='color_orange'>initial</span>:int*; return = n$10 <span class='color_orange'>initial</span>:int ;
+    n$5|->n$8 <span class='color_orange'>alloc</span>:int4
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    in prop_iter_extend_ptsto lexp: &amp;p
+    prop before:
+    <span class='color_blue'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5) ;
+    a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$9 <span class='color_orange'>initial</span>:int*; return = n$10 <span class='color_orange'>initial</span>:int ;
+    n$5|->n$8 <span class='color_orange'>alloc</span>:int4
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    
+    prop list after:
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$9 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$10 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_blue'>n$5|->n$8 <span class='color_orange'>alloc</span>:int4</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>n$5 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_blue'>p|-><span class='color_red'>_t$1 <span class='color_orange'>alloc</span></span>:int4</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    Instruction <span class='color_green'>*&amp;p:int*=n$5 [line 16, column 3]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;p
+    Prop: 
+    <span class='color_blue'>n$5 = 0 ;
+    a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$11 <span class='color_orange'>initial</span>:int*; return = n$12 <span class='color_orange'>initial</span>:int
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    in prop_iter_extend_ptsto lexp: &amp;p
+    prop before:
+    <span class='color_blue'>n$5 = 0 ;
+    a = @f$0 <span class='color_orange'>formal</span>:int; old_a = @f$0 <span class='color_orange'>formal</span>:int; p = n$11 <span class='color_orange'>initial</span>:int*; return = n$12 <span class='color_orange'>initial</span>:int
+    [footprint
+       a = @f$0 <span class='color_orange'>formal</span>:int  ]</span>
+    
+    
+    prop list after:
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$5 = 0</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$11 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$12 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$5 = 0</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>0 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$5); [line 16, column 3]</span>
+    in vpath_find exp:n$5
+    vpath_find: found p : int*
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>_t$1 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>p|->_t$2 <span class='color_orange'>alloc</span>:int4</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$5); [line 16, column 3]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = 0 <span class='color_orange'>update:16</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>update:16</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>p|->_t$2 <span class='color_orange'>alloc</span>:int4</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = @f$0 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>0 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span>
+    [footprint
+       <span class='color_blue'>a = @f$0 <span class='color_orange'>formal</span>:int</span>  ]</span>
+    
+    
+    
+  </LISTING></span><hr width="100%">
+<a name="session47" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session47">node9#session47</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 9, Procedure: func, Session: 47, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>(5  &lt;  val$1)</span> ;
+  <span class='color_red'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+  .... Instructions: .... 
+  <span class='color_green'>n$5=_fun_f() [line 16, column 10];
+  *&amp;p:int*=n$5 [line 16, column 3];
+  REMOVE_TEMPS(n$5); [line 16, column 3];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>n$5=_fun_f() [line 16, column 10]</span>
+    Found 1 specs for function f
+    START EXECUTING SPECS FOR f from state
+    <span class='color_blue'>(5  &lt;  val$1) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int</span>
+    EXECUTING SPEC 1/1
+    ACTUAL PRECONDITION =
+      <span class='color_blue'>(5  &lt;  val$1) ;
+      a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int</span>
+    SPEC =
+      --------------------------- ---------- ---------------------------
+      PRE:
+      <span class='color_blue'><span class='color_blue'></span></span>
+      POST 1 of 2:
+      <span class='color_blue'><span class='color_red'>return|callee = 0 <span class='color_orange'>update:7</span>:int*</span></span>
+      POST 2 of 2:
+      <span class='color_blue'><span class='color_red'>MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(return|callee)</span> ;
+      <span class='color_red'>return|callee = _t$3 <span class='color_orange'>update:7</span>:int*</span> ;
+      <span class='color_red'>return|callee|->_t$4 <span class='color_orange'>alloc</span>:int4</span></span>
+      ----------------------------------------------------------------
+    pre_check_pure_implication
+    pi1:
+      (5  &lt;  val$1)
+    pi2:
+      
+    returns
+    sub1: 
+      
+    sub2: 
+      
+    Final Implication
+    SUB:
+      
+    <span class='color_blue'>(5  &lt;  val$1) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int</span>
+    |-
+    <span class='color_blue'></span>
+    Result of Abduction
+      SUB:
+        
+      <span class='color_blue'>(5  &lt;  val$1) ;
+      a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$6 <span class='color_orange'>initial</span>:int*; return = n$7 <span class='color_orange'>initial</span>:int</span>
+      |-
+      <span class='color_blue'></span>
+    returning TRUE
+    in vpath_find exp:_t$3
+    vpath_find: cannot find _t$3
+      New footprint:
+      
+      Frame fld:
+      
+      Missing fld:
+      
+      Instantiated frame:
+      &amp;a|->val$1 <span class='color_orange'>formal</span>:int; &amp;old_a|->val$1 <span class='color_orange'>formal</span>:int; &amp;p|->n$6 <span class='color_orange'>initial</span>:int*; &amp;return|->n$7 <span class='color_orange'>initial</span>:int
+      Instantiated post:
+      PROP 1 of 2:
+      <span class='color_blue'><span class='color_red'>return|callee = 0 <span class='color_orange'>update:16</span>:int*</span></span>
+      PROP 2 of 2:
+      <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(return|callee)</span> ;
+      <span class='color_red'>return|callee = _t$3 <span class='color_orange'>update:16</span>:int*</span> ;
+      <span class='color_red'>return|callee|->_t$4 <span class='color_orange'>alloc</span>:int4</span></span>
+      
+    ***** RESULTS FUNCTION CALL *******
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$6 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$7 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>n$5|->_t$0 <span class='color_orange'>alloc</span>:int4</span></span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_red'>n$5 = 0</span> ;
+    <span class='color_blue'>(5  &lt;  val$1)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$6 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$7 <span class='color_orange'>initial</span>:int</span></span>
+    ***** END RESULTS FUNCTION CALL *******
+    Instruction Returns
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_red'>n$5 = 0</span> ;
+    <span class='color_blue'>(5  &lt;  val$1)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>n$5|->_t$2 <span class='color_orange'>alloc</span>:int4</span></span>
+    
+    Instruction <span class='color_green'>*&amp;p:int*=n$5 [line 16, column 3]</span>
+    in vpath_find exp:n$5
+    vpath_find: cannot find n$5
+    .... Rearrangement Start ....
+    Exp: &amp;p
+    Prop: 
+    <span class='color_blue'>(5  &lt;  val$1); MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$9 <span class='color_orange'>initial</span>:int*; return = n$10 <span class='color_orange'>initial</span>:int ;
+    n$5|->n$8 <span class='color_orange'>alloc</span>:int4</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span>; <span class='color_blue'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>n$5 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_blue'>p|-><span class='color_red'>_t$1 <span class='color_orange'>alloc</span></span>:int4</span></span>
+    
+    Instruction <span class='color_green'>*&amp;p:int*=n$5 [line 16, column 3]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;p
+    Prop: 
+    <span class='color_blue'>n$5 = 0 ;
+    (5  &lt;  val$1) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$11 <span class='color_orange'>initial</span>:int*; return = n$12 <span class='color_orange'>initial</span>:int</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$5 = 0</span> ;
+    <span class='color_blue'>(5  &lt;  val$1)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>0 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$5); [line 16, column 3]</span>
+    in vpath_find exp:n$5
+    vpath_find: found p : int*
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>_t$1 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>p|->_t$2 <span class='color_orange'>alloc</span>:int4</span></span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$5); [line 16, column 3]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = 0 <span class='color_orange'>update:16</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>update:16</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>p|->_t$2 <span class='color_orange'>alloc</span>:int4</span></span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_blue'>(5  &lt;  val$1)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>0 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    
+    
+    
+  </LISTING></span><hr width="100%">
+<a name="session53" href="./../nodes/func.7df4935f4a5a2865191ef74f64df8754_node9.html#session53">node9#session53</a>(<a href="./../../infer.c.a09d2ebaccee92b3d3a91f3dbe3284ad.html#LINE16">16</a>) interproc<LISTING><span class='color_black'>**** [RE:Pending] func Node: 9, Procedure: func, Session: 53, Todo: 1 ****
+  PROP 1 of 1:
+  <span class='color_blue'><span class='color_red'>(val$1  &lt;=  5)</span> ;
+  <span class='color_red'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_red'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_red'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+  .... Instructions: .... 
+  <span class='color_green'>n$5=_fun_f() [line 16, column 10];
+  *&amp;p:int*=n$5 [line 16, column 3];
+  REMOVE_TEMPS(n$5); [line 16, column 3];
+  </span>
+  
+  Processing prop 1/1
+    Instruction <span class='color_green'>n$5=_fun_f() [line 16, column 10]</span>
+    Found 1 specs for function f
+    START EXECUTING SPECS FOR f from state
+    <span class='color_blue'>(val$1  &lt;=  5) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$32 <span class='color_orange'>initial</span>:int*; return = n$33 <span class='color_orange'>initial</span>:int</span>
+    EXECUTING SPEC 1/1
+    ACTUAL PRECONDITION =
+      <span class='color_blue'>(val$1  &lt;=  5) ;
+      a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$32 <span class='color_orange'>initial</span>:int*; return = n$33 <span class='color_orange'>initial</span>:int</span>
+    SPEC =
+      --------------------------- ---------- ---------------------------
+      PRE:
+      <span class='color_blue'><span class='color_blue'></span></span>
+      POST 1 of 2:
+      <span class='color_blue'><span class='color_red'>return|callee = 0 <span class='color_orange'>update:7</span>:int*</span></span>
+      POST 2 of 2:
+      <span class='color_blue'><span class='color_red'>MEMma &lt; malloc:6 &gt;  <span class='color_orange'>{vpath: }</span>(return|callee)</span> ;
+      <span class='color_red'>return|callee = _t$48 <span class='color_orange'>update:7</span>:int*</span> ;
+      <span class='color_red'>return|callee|->_t$49 <span class='color_orange'>alloc</span>:int4</span></span>
+      ----------------------------------------------------------------
+    pre_check_pure_implication
+    pi1:
+      (val$1  &lt;=  5)
+    pi2:
+      
+    returns
+    sub1: 
+      
+    sub2: 
+      
+    Final Implication
+    SUB:
+      
+    <span class='color_blue'>(val$1  &lt;=  5) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$32 <span class='color_orange'>initial</span>:int*; return = n$33 <span class='color_orange'>initial</span>:int</span>
+    |-
+    <span class='color_blue'></span>
+    Result of Abduction
+      SUB:
+        
+      <span class='color_blue'>(val$1  &lt;=  5) ;
+      a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$32 <span class='color_orange'>initial</span>:int*; return = n$33 <span class='color_orange'>initial</span>:int</span>
+      |-
+      <span class='color_blue'></span>
+    returning TRUE
+    in vpath_find exp:_t$48
+    vpath_find: cannot find _t$48
+      New footprint:
+      
+      Frame fld:
+      
+      Missing fld:
+      
+      Instantiated frame:
+      &amp;a|->val$1 <span class='color_orange'>formal</span>:int; &amp;old_a|->val$1 <span class='color_orange'>formal</span>:int; &amp;p|->n$32 <span class='color_orange'>initial</span>:int*; &amp;return|->n$33 <span class='color_orange'>initial</span>:int
+      Instantiated post:
+      PROP 1 of 2:
+      <span class='color_blue'><span class='color_red'>return|callee = 0 <span class='color_orange'>update:16</span>:int*</span></span>
+      PROP 2 of 2:
+      <span class='color_blue'><span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(return|callee)</span> ;
+      <span class='color_red'>return|callee = _t$48 <span class='color_orange'>update:16</span>:int*</span> ;
+      <span class='color_red'>return|callee|->_t$49 <span class='color_orange'>alloc</span>:int4</span></span>
+      
+    ***** RESULTS FUNCTION CALL *******
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$32 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$33 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>n$5|->_t$0 <span class='color_orange'>alloc</span>:int4</span></span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_red'>n$5 = 0</span> ;
+    <span class='color_blue'>(val$1  &lt;=  5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = n$32 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = n$33 <span class='color_orange'>initial</span>:int</span></span>
+    ***** END RESULTS FUNCTION CALL *******
+    Instruction Returns
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_red'>n$5 = 0</span> ;
+    <span class='color_blue'>(val$1  &lt;=  5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>initial</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>n$5|->_t$2 <span class='color_orange'>alloc</span>:int4</span></span>
+    
+    Instruction <span class='color_green'>*&amp;p:int*=n$5 [line 16, column 3]</span>
+    in vpath_find exp:n$5
+    vpath_find: cannot find n$5
+    .... Rearrangement Start ....
+    Exp: &amp;p
+    Prop: 
+    <span class='color_blue'>(val$1  &lt;=  5); MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(n$5) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$35 <span class='color_orange'>initial</span>:int*; return = n$36 <span class='color_orange'>initial</span>:int ;
+    n$5|->n$34 <span class='color_orange'>alloc</span>:int4</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span>; <span class='color_blue'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>n$5 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_blue'>p|-><span class='color_red'>_t$1 <span class='color_orange'>alloc</span></span>:int4</span></span>
+    
+    Instruction <span class='color_green'>*&amp;p:int*=n$5 [line 16, column 3]</span>
+    .... Rearrangement Start ....
+    Exp: &amp;p
+    Prop: 
+    <span class='color_blue'>n$5 = 0 ;
+    (val$1  &lt;=  5) ;
+    a = val$1 <span class='color_orange'>formal</span>:int; old_a = val$1 <span class='color_orange'>formal</span>:int; p = n$37 <span class='color_orange'>initial</span>:int*; return = n$38 <span class='color_orange'>initial</span>:int</span>
+    
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>n$5 = 0</span> ;
+    <span class='color_blue'>(val$1  &lt;=  5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>0 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$5); [line 16, column 3]</span>
+    in vpath_find exp:n$5
+    vpath_find: found p : int*
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>_t$1 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>p|->_t$2 <span class='color_orange'>alloc</span>:int4</span></span>
+    
+    Instruction <span class='color_green'>REMOVE_TEMPS(n$5); [line 16, column 3]</span>
+    Instruction Returns
+    PROP 1 of 1:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = 0 <span class='color_orange'>update:16</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    
+    .... After Symbolic Execution ....
+    PROP 1 of 2:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span>; <span class='color_red'>MEMma &lt; f:16 &gt;  <span class='color_orange'>{vpath: }</span>(p)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = _t$1 <span class='color_orange'>update:16</span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span> ;
+    <span class='color_red'>p|->_t$2 <span class='color_orange'>alloc</span>:int4</span></span>
+    PROP 2 of 2:
+    <span class='color_blue'><span class='color_blue'>(val$1  &lt;=  5)</span> ;
+    <span class='color_blue'>a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>old_a = val$1 <span class='color_orange'>formal</span>:int</span>; <span class='color_blue'>p = <span class='color_red'>0 <span class='color_orange'>update:16</span></span>:int*</span>; <span class='color_blue'>return = _t$0 <span class='color_orange'>initial</span>:int</span></span>
+    
+    
+    
+  </LISTING></span>
