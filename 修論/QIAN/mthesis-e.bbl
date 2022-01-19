@@ -20,6 +20,11 @@ Cristiano Calcagno and Dino Distefano.
   Joshi, editors, {\em NASA Formal Methods}, pages 459--465, Berlin,
   Heidelberg, 2011. Springer Berlin Heidelberg.
 
+\bibitem{bi}
+Cristiano Calcagno, Dino Distefano, Peter~W. O’Hearn, and Hongseok Yang.
+\newblock Compositional shape analysis by means of bi-abduction.
+\newblock {\em J. ACM}, 58(6), dec 2011.
+
 \bibitem{leakpoint}
 James Clause and Alessandro Orso.
 \newblock Leakpoint: pinpointing the causes of memory leaks.
@@ -35,6 +40,13 @@ Leonardo~Mendon{\c{c}}a de~Moura and Nikolaj Bj{\o}rner.
   Theory and Practice of Software, {ETAPS} 2008, Budapest, Hungary, March
   29-April 6, 2008. Proceedings}, volume 4963 of {\em Lecture Notes in Computer
   Science}, pages 337--340. Springer, 2008.
+
+\bibitem{npe}
+Thomas Durieux, Benoit Cornu, Lionel Seinturier, and Martin Monperrus.
+\newblock Dynamic patch generation for null pointer exceptions using
+  metaprogramming.
+\newblock In {\em 2017 IEEE 24th International Conference on Software Analysis,
+  Evolution and Reengineering (SANER)}, pages 349--358, 2017.
 
 \bibitem{leakfix}
 Qing Gao, Yingfei Xiong, Yaqing Mi, Lu~Zhang, Weikun Yang, Zhaoping Zhou, Bing
@@ -149,6 +161,13 @@ Ridwan Shariffdeen, Yannic Noller, Lars Grunske, and Abhik Roychoudhury.
   on Programming Language Design and Implementation}, PLDI 2021, page
   390^^e2^^80^^93405, 2021.
 
+\bibitem{buffer}
+Alex Shaw, Dusten Doggett, and Munawar Hafiz.
+\newblock Automatically fixing c buffer overflows using program
+  transformations.
+\newblock In {\em 2014 44th Annual IEEE/IFIP International Conference on
+  Dependable Systems and Networks}, pages 124--135, 2014.
+
 \bibitem{cp}
 Stelios Sidiroglou-Douskos, Eric Lahtinen, Fan Long, and Martin Rinard.
 \newblock Automatic error elimination by horizontal code transfer across
@@ -181,7 +200,7 @@ Rijnard van Tonder and Claire~Le Goues.
   Engineering}, ICSE '18, page 151^^e2^^80^^93162, New York, NY, USA, 2018.
   Association for Computing Machinery.
 
-\bibitem{condsyn}
+\bibitem{acs}
 Yingfei Xiong, Jie Wang, Runfa Yan, Jiachen Zhang, Shi Han, Gang Huang, and
   Lu~Zhang.
 \newblock Precise condition synthesis for program repair.

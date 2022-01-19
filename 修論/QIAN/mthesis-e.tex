@@ -64,7 +64,13 @@
     tabsize=2,
     language=C
 }
-
+\lstset{
+  style=CStyle,
+  moredelim=[is][\color{Blue}\bfseries]{<\#blue\#}{\#>},
+  moredelim=[is][\color{Orange}\bfseries]{<\#orange\#}{\#>},
+  moredelim=[is][\color{Green}\bfseries]{<\#green\#}{\#>},
+  moredelim=[is][\color{Purple}\bfseries]{<\#purple\#}{\#>},
+}
 \renewcommand{\bibname}{References}
 \pagestyle{plain}
 
@@ -116,29 +122,38 @@ In this paper, we present \textbf{HAMER}, a hybrid analysis-based memory error r
 \textbf{Contributions.} This paper makes the following contributions:
 \begin{itemize}
   \item We present a new technique for repairing memory errors based on hybrid analysis. Our approach collects the relevant information using a lightweight static analysis, then repeatedly synthesizes the patch and tests it with fuzzer.
-  \item We present HAMER~\footnote{https://github.com/QIANZECHANG/MyResearch}, a memory error repair tool that implements the proposed approach.
+  \item We present HAMER~\footnote{https://github.com/QIANZECHANG/HAMER}, a memory error repair tool that implements the proposed approach.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Background}
 
-HAMER detects bugs using existing bug detection tools. In this section, we will introduce the static analyzer (Infer~\footnote{https://fbinfer.com/}) and fuzzer (LibFuzzer~\footnote{https://llvm.org/docs/LibFuzzer.html}) that HAMER uses.
+HAMER detects bugs using existing bug detection tools. In this section, we will introduce the static analyzer (Infer~\cite{infer}~\footnote{https://fbinfer.com/}) and fuzzer (LibFuzzer~\footnote{https://llvm.org/docs/LibFuzzer.html}) that HAMER uses.
 
 \section{Infer}
 
-Infer~\cite{infer} is a static program analyzer for Java, C, and Objective-C, written in OCaml, developed by Facebook. At present Infer is tracking problems caused by null pointer dereferences and resource and memory leaks, which cause some of the more important problems. Infer is a high-performance static analyzer with high scalability and efficiency, and it is widely used by programmers and researchers. However, like other static analyzers, Infer is hard to handle some issues, such as indirect call and alias, which causes Infer to provide false-negative and false-positive alarms. As a result of this shortcoming, automated repair tools may waste time on the wrong alarms (false-positive) and have no way to fix the errors that are not discovered (false-negative).
+Infer is a static program analyzer for Java, C, and Objective-C, written in OCaml, developed by Facebook. At present Infer is tracking problems caused by null pointer dereferences and resource and memory leaks, which cause some of the more important problems. Infer is a high-performance static analyzer with high scalability and efficiency, and it is widely used by programmers and researchers. Infer automatically discovers specifications for the functions that can be proven to be memory safe using the theoretical notion of bi-abductive inference~\cite{bi}. For example, in Figure~\ref{inferexample}, the $foo$ function dynamically allocates memory through the $alloc$ function. Infer does not determine that $alloc$ occurs memory leak because $alloc$ returns $p$, meaning that $p$ is not unreachable and the responsibility for freeing $p$ is transferred to $foo$. But in $foo$, $p$ is not freed, so Infer determines that $foo$ occurs memory leak.
+
+\begin{figure}[h]
+    \lstinputlisting[xleftmargin=0.25\textwidth,linewidth=0.75\textwidth]{infer.c}
+    \caption{Example of Infer}
+    \label{inferexample}
+\end{figure}
+
+
+However, Infer is hard to handle some issues, such as indirect call and alias, which causes Infer to provide false-negative and false-positive alarms. As a result of this shortcoming, automated repair tools may waste time on the wrong alarms (false-positive) and have no opportunity to fix the errors that are not discovered (false-negative).
 
 
 \section{LibFuzzer}
 LibFuzzer is an in-process, coverage-guided, evolutionary fuzzing engine. LibFuzzer is linked with the library under test, and feeds fuzzed inputs to the library via a specific fuzzing entry point (target function); the fuzzer then tracks which areas of the code are reached, and generates mutations on the corpus of input data in order to maximize the code coverage. The code coverage information for libFuzzer is provided by LLVM's SanitizerCoverage~\footnote{https://clang.llvm.org/docs/SanitizerCoverage.html} instrumentation.
 
 
-LibFuzzer uses the information provided by the AddressSanitizer~\cite{asan}~\footnote{https://clang.llvm.org/docs/AddressSanitizer.html} to determine if an error has happened within the detected code coverage when detecting memory errors. When the program allocates memory, the allocated space is marked, and the behavior is verified for legality each time the space is accessed. These memory spaces are checked at the end of the program to see if they have been freed.
+LibFuzzer uses the information provided by the AddressSanitizer~\cite{asan}~\footnote{https://clang.llvm.org/docs/AddressSanitizer.html} to determine if an error has happened within the detected code coverage when detecting memory errors. When the program allocates memory, AddressSanitizer marks the allocated space, and the behavior is verified for legality each time the space is accessed. These memory spaces are also checked at the end of the execution to see whether they have been freed.
 
 
 
-Because LibFuzzer can only fuzz test one function argument at a time, we must test each argument independently for functions with multiple arguments. LibFuzzer may fail to mutate the inputs that go into all paths for some functions with complex input. Furthermore, LibFuzzer will stop and report errors anytime it triggers the error, thus if a function has several errors, LibFuzzer cannot ensure that all of them will be detected at the same time. The code below, for example, has two memory leaks. 
+Because LibFuzzer can only fuzz test one function argument at a time, we must test each argument independently for functions with multiple arguments. LibFuzzer may fail to mutate the inputs that can go into each path for the functions that need complicated input. Furthermore, LibFuzzer will stop and report errors anytime it triggers the error, thus if a function has several errors in different paths, LibFuzzer cannot ensure that all of them will be detected at the same time. The code below, for example, has two memory leaks. 
 
 
 \begin{minipage}{\textwidth}
@@ -148,7 +163,6 @@ Because LibFuzzer can only fuzz test one function argument at a time, we must te
 The ideal situation would be for LibFuzzer to input {\it a=5} and trigger both errors. But in most cases,  LibFuzzer inputs other values only triggers the memory leak of {\it p1} and then exits. As a result, LibFuzzer may not be able to detect all of the errors in a function at the same time (although it has the ability to do).
 
 
-\section{SAVER}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Overview}
@@ -210,13 +224,6 @@ First, we check the program with the static analyzer \mbox{Infer}, and then we m
   \label{pipeline}
 \end{figure*}
 %----------------code---------------------------
-\lstset{
-  style=CStyle,
-  moredelim=[is][\color{Blue}\bfseries]{<\#blue\#}{\#>},
-  moredelim=[is][\color{Orange}\bfseries]{<\#orange\#}{\#>},
-  moredelim=[is][\color{Green}\bfseries]{<\#green\#}{\#>},
-  moredelim=[is][\color{Purple}\bfseries]{<\#purple\#}{\#>},
-}
 
 \begin{figure*}
   \begin{subfigure}{0.47\textwidth}
@@ -484,7 +491,7 @@ We have turned the program synthesis problem into {\it Satisfiability Modulo The
   \end{tabular}
 \end{table}
 
-The quality of the test suite is the most critical part of using CBPS to synthesize expressions. CBPS will synthesize incorrect expressions if the test suite provided by the user is of poor quality. If Table~\ref{test} does not have $(x=6, output=False)$, for example, we might obtain $x<7$.
+The quality of the test suite is the most critical part of using CBPS to synthesize expressions. CBPS will synthesize incorrect expressions if the test suite provided by the user is of poor quality. If Table~\ref{test} does not have $(x=6, output=False)$, for example, we might obtain $x<7$. Obviously, CBPS can only synthesize numeric expressions.
 
 
 \subsection{Repair Algorithm}
@@ -829,9 +836,17 @@ Fixing memory errors is difficult because new and more dangerous errors are easi
 %      Related work
 %----------------------------------------------------------------------------------------
 \chapter{Related Work}
-CPR~\cite{CPR}, SemFix~\cite{semfix}, DirectFix~\cite{directfix}, Angelix~\cite{Angelix}, Extractfix~\cite{Extractfix}, Getafix~\cite{Getafix}, SAVER~\cite{SAVER}, Memfix~\cite{Memfix}, spe~\cite{melt,leakpoint,leakfix,survey,ownership,transfor,typebase,fractional,footpatch,leakchaser,defleak}
+Existing repair techniques can be categorized as general-purpose or special-purpose, depending on whether they are intended to fix all types of errors or only specific types of errors. HAMER is a special-purpose technique that focuses on fixing temporal memory errors such as memory leaks. Other specialized techniques focus on buffer overflows~\cite{buffer}, null dereferences~\cite{Getafix,npe}, etc.. 
 
-gen~\cite{par, jfix, s3, spr, prophet,semfix,directfix,Angelix,Extractfix,CPR,cp,condsyn}
+There are many studies focused on fixing memory errors~\cite{melt,leakpoint,leakfix,survey,ownership,transfor,typebase,fractional,footpatch,leakchaser,defleak,SAVER}. Among this, the most directly related to our research is MemFix~\cite{Memfix} and SAVER~\cite{SAVER}. MemFix starts by removing all deallocation statements from the program, then uses static analysis to trace and collect all heap objects and their candidate fix locations, and finally finds a set of patches that can free all dynamically allocated memory without introducing memory errors. However, MemFix cannot generate conditional deallocation statements and has limited scalability and repairability. SAVER is the state-of-the-art memory error repair technique, with high scalability and repairability. SAVER first uses Infer to detect the memory error and then collects the heap-related behavior of the program through static analysis and constructs the object flow graph. SAVER's repair algorithm converts the memory error repair problem into the relabeling problem of the object flow graph and can avoid generating wrong patches by considering the relationship between heap objects. However, due to the limitations of static analysis, SAVER cannot understand the dynamic information of the program, which makes it fail to fix some errors or generate erroneous patches. HAMER uses fuzzer to detect programs, allowing HAMER has more opportunities to fix errors (static analyzer's false-negative) and do not spend time on wrong alarms (static analyzer's false-positive). HAMER also uses fuzzer to check generated patches, preventing HAMER from generating wrong patches. HAMER's extensive repair strategy allows it to handle various kinds of memory errors. DEF\_LEAK~\cite{defleak} is a dynamic approach to detecting, eliminating, and fixing memory leaks. DEF\_LEAK exposes memory leaks through dynamic symbolic execution and generates the deallocation statement patch at the end.  However, DEF\_LEAK's repair strategy is very simple and can not fix complicated memory errors, so it does not have high repairability. Getafix~\cite{Getafix} fixes errors by learning from developers' past fixing history. Getafix has high scalability and repairability for fixing errors with simple repair patterns such as null dereference. Although fixing memory errors often only requires inserting a deallocation statement, the fix location is usually too far away from the error source, which Getafix can not handle, and Getafix is a static technique, so it cannot guarantee the correctness of the generated patch.
+
+General-purpose program repair techniques can be classified as semantics-based techniques~\cite{jfix,semfix,directfix,Angelix,Extractfix,CPR,acs} and search-based techniques~\cite{par,s3, spr, prophet,cp}. Search-based techniques search for the correct patch in a certain search space, so although it has high scalability, the quality of the generated patches is often poor and the overhead is high. Semantics-based techniques collect path constraints through symbolic execution and then synthesize patches through CBPS. Angelix~\cite{Angelix} has high scalability and can fix multi-location bugs, but like other semantics-based techniques, Angelix is prone to generating overfitting patches, therefore its repairability entirely depends on the quality of the test suite. CPR~\cite{CPR} collects essential tests for patch synthesis by exploring input and patch space through concolic execution. ExtractFix~\cite{Extractfix} improves the performance of CPBS by collecting the sanitizer's constraint and the tests triggered sanitizer. The main reason these techniques do not perform well in fixing memory errors is that they cannot identify the correct fix location and it is difficult for them to guarantee the correctness of the patches they generated. HAMER collects the candidate fix location via lightweight static analysis and uses fuzzer to find the correct fix location and verify the generated patches.
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{plain}
