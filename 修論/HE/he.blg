@@ -6,50 +6,51 @@ A level-1 auxiliary file: Chapters/Chapter_02.aux
 A level-1 auxiliary file: Chapters/Chapter_03.aux
 A level-1 auxiliary file: Chapters/Chapter_04.aux
 A level-1 auxiliary file: Chapters/Chapter_05.aux
+A level-1 auxiliary file: Chapters/Chapter_06.aux
 The style file: plain.bst
 Database file #1: bibliography/hebib.bib
 Warning--empty booktitle in Cahyanto2016StatedPO
 Warning--empty publisher in ref1
-You've used 11 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            569 strings with 5945 characters,
-and the built_in function-call counts, 3172 in all, are:
-= -- 283
-> -- 157
+            618 strings with 7348 characters,
+and the built_in function-call counts, 6136 in all, are:
+= -- 576
+> -- 320
 < -- 0
-+ -- 64
-- -- 52
-* -- 200
-:= -- 559
-add.period$ -- 33
-call.type$ -- 11
-change.case$ -- 53
++ -- 128
+- -- 108
+* -- 446
+:= -- 1067
+add.period$ -- 57
+call.type$ -- 19
+change.case$ -- 104
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 129
-empty$ -- 265
-format.name$ -- 52
-if$ -- 651
+cite$ -- 21
+duplicate$ -- 217
+empty$ -- 475
+format.name$ -- 108
+if$ -- 1241
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 17
-newline$ -- 58
-num.names$ -- 22
-pop$ -- 81
+int.to.str$ -- 19
+missing$ -- 25
+newline$ -- 98
+num.names$ -- 38
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 91
 quote$ -- 0
-skip$ -- 71
+skip$ -- 128
 stack$ -- 0
-substring$ -- 143
-swap$ -- 11
+substring$ -- 369
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
+type$ -- 64
 warning$ -- 2
-while$ -- 26
-width$ -- 13
-write$ -- 114
+while$ -- 56
+width$ -- 21
+write$ -- 202
 is.kanji.str$ -- 0
 (There were 2 warnings)
