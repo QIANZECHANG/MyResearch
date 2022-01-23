@@ -11,46 +11,46 @@ The style file: plain.bst
 Database file #1: bibliography/hebib.bib
 Warning--empty booktitle in Cahyanto2016StatedPO
 Warning--empty publisher in ref1
-You've used 19 entries,
+You've used 40 entries,
             2118 wiz_defined-function locations,
-            618 strings with 7348 characters,
-and the built_in function-call counts, 6136 in all, are:
-= -- 576
-> -- 320
-< -- 0
-+ -- 128
-- -- 108
-* -- 446
-:= -- 1067
-add.period$ -- 57
-call.type$ -- 19
-change.case$ -- 104
+            729 strings with 10528 characters,
+and the built_in function-call counts, 12486 in all, are:
+= -- 1183
+> -- 647
+< -- 3
++ -- 260
+- -- 216
+* -- 884
+:= -- 2166
+add.period$ -- 119
+call.type$ -- 40
+change.case$ -- 216
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 217
-empty$ -- 475
-format.name$ -- 108
-if$ -- 1241
+cite$ -- 42
+duplicate$ -- 454
+empty$ -- 959
+format.name$ -- 216
+if$ -- 2534
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 25
-newline$ -- 98
-num.names$ -- 38
-pop$ -- 116
+int.to.str$ -- 40
+missing$ -- 50
+newline$ -- 202
+num.names$ -- 80
+pop$ -- 239
 preamble$ -- 1
-purify$ -- 91
+purify$ -- 187
 quote$ -- 0
-skip$ -- 128
+skip$ -- 289
 stack$ -- 0
-substring$ -- 369
-swap$ -- 19
-text.length$ -- 0
+substring$ -- 684
+swap$ -- 50
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 136
 warning$ -- 2
-while$ -- 56
-width$ -- 21
-write$ -- 202
+while$ -- 118
+width$ -- 42
+write$ -- 424
 is.kanji.str$ -- 0
 (There were 2 warnings)

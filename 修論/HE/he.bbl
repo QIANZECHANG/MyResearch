@@ -1,5 +1,35 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref34}
+James~C Anderson and David~W Gerbing.
+\newblock Structural equation modeling in practice: A review and recommended
+  two-step approach.
+\newblock {\em Psychological bulletin}, 103(3):411, 1988.
+
+\bibitem{ref35}
+Richard~P Bagozzi and Lynn~W Phillips.
+\newblock Representing and testing organizational theories: A holistic
+  construal.
+\newblock {\em Administrative science quarterly}, pages 459--489, 1982.
+
+\bibitem{ref27}
+Richard~P Bagozzi and Youjae Yi.
+\newblock On the evaluation of structural equation models.
+\newblock {\em Journal of the academy of marketing science}, 16(1):74--94,
+  1988.
+
+\bibitem{ref29}
+Peter~M Bentler.
+\newblock Alpha, dimension-free, and model-based internal consistency
+  reliability.
+\newblock {\em Psychometrika}, 74(1):137--143, 2009.
+
+\bibitem{ref22}
+Peter~M Bentler and Douglas~G Bonett.
+\newblock Significance tests and goodness of fit in the analysis of covariance
+  structures.
+\newblock {\em Psychological bulletin}, 88(3):588, 1980.
+
 \bibitem{ref6}
 PM. Bentler.
 \newblock {\em Comparative fit indexes in structural models.}
@@ -9,6 +39,11 @@ PM. Bentler.
 G.~Browne, M.W.and~Mels.
 \newblock {\em RAMONA user's guide.}
 \newblock Unpublished report, Columbus, Ohio State University., 1990.
+
+\bibitem{ref25}
+Michael~W Browne.
+\newblock Alternative ways of assessing model fit.
+\newblock {\em Testing structural equation models}, 1993.
 
 \bibitem{ref3}
 R.~Browne, M.W.and~Cudeck.
@@ -30,11 +65,50 @@ Ignatius Cahyanto, Lori Pennington-Gray, Brijesh Thapa, Sivaramakrishnan
 \newblock {\em Journal of Destination Marketing and Management}, 2:253--265,
   2014.
 
+\bibitem{ref19}
+Feinian Chen, Patrick~J Curran, Kenneth~A Bollen, James Kirby, and Pamela
+  Paxton.
+\newblock An empirical evaluation of the use of fixed cutoff points in rmsea
+  test statistic in structural equation models.
+\newblock {\em Sociological methods \& research}, 36(4):462--494, 2008.
+
+\bibitem{ref33}
+Scott~R Colwell.
+\newblock The composite reliability calculator user’s guide.
+\newblock Technical report, Technical Report, https://doi. org/10.13140/RG.
+  2.1. 4298.088, 2016.
+
 \bibitem{ref11}
 Benjamin Cornwell.
 \newblock Bonded fatalities: Relational and ecological dimensions of a fire
   evacuation.
 \newblock {\em The Sociological Quarterly}, 44(4):617--638, 2003.
+
+\bibitem{ref24}
+Patrick~J Curran, Kenneth~A Bollen, Pamela Paxton, James Kirby, and Feinian
+  Chen.
+\newblock The noncentral chi-square distribution in misspecified structural
+  equation models: Finite sample results from a monte carlo simulation.
+\newblock {\em Multivariate Behavioral Research}, 37(1):1--36, 2002.
+
+\bibitem{ref18}
+Xitao Fan, Bruce Thompson, and Lin Wang.
+\newblock Effects of sample size, estimation methods, and model specification
+  on structural equation modeling fit indexes.
+\newblock {\em Structural equation modeling: a multidisciplinary journal},
+  6(1):56--83, 1999.
+
+\bibitem{ref16}
+Yi~Fan, Jiquan Chen, Gabriela Shirkey, Ranjeet John, Susie~R Wu, Hogeun Park,
+  and Changliang Shao.
+\newblock Applications of structural equation modeling (sem) in ecological
+  studies: an updated review.
+\newblock {\em Ecological Processes}, 5(1):1--12, 2016.
+
+\bibitem{ref31}
+Claes Fornell and David~F Larcker.
+\newblock Structural equation models with unobservable variables and
+  measurement error: Algebra and statistics, 1981.
 
 \bibitem{ref1}
 P.~George, D.and~Mallery.
@@ -42,10 +116,43 @@ P.~George, D.and~Mallery.
   update (4th ed.).}
 \newblock 2003.
 
+\bibitem{ref15}
+Joseph~F Hair, William~C Black, Barry~J Babin, and Rolph~E Anderson.
+\newblock {\em Multivariate Data Analysis (7th Edition)}.
+\newblock Englewood Cliffs, N J Prentice Hall, 2009.
+
 \bibitem{ref10}
 Gesine Hofinger, Robert Zinke, and Laura K{\"u}nzer.
 \newblock Human factors in evacuation simulation, planning, and guidance.
 \newblock {\em Transportation Research Procedia}, 2:603--611, 2014.
+
+\bibitem{ref21}
+Rick~H Hoyle.
+\newblock {\em Structural equation modeling for social and personality
+  psychology}.
+\newblock SAGE Publications Ltd, 2011.
+
+\bibitem{ref17}
+Li-tze Hu and Peter~M Bentler.
+\newblock Cutoff criteria for fit indexes in covariance structure analysis:
+  Conventional criteria versus new alternatives.
+\newblock {\em Structural equation modeling: a multidisciplinary journal},
+  6(1):1--55, 1999.
+
+\bibitem{ref32}
+Hair J, Anderson R, Tatham R, and Black W.
+\newblock {\em Multivariate data analysis}.
+\newblock 5th Edition, Prentice Hall, New Jersey, 1998.
+
+\bibitem{ref23}
+K~Joreskog and Dag S{\^o}rbom.
+\newblock Lisrel 8: Structural equation modeling with the simplis language.
+\newblock {\em Chicago: Scientific Software International}, 1993.
+
+\bibitem{ref20}
+Rex~B Kline.
+\newblock {\em Principles and practice of structural equation modeling}.
+\newblock Guilford publications, 2015.
 
 \bibitem{ref2}
 R.~P. McDonald and M.-H.~R. Ho.
@@ -65,6 +172,12 @@ Veng~Kheang Phun, Pharinet Pheng, Reiko Masui, Hironori Kato, and Tetsuo Yai.
 \newblock Impact of ride-hailing apps on traditional lamat services in asian
   developing cities: The phnom penh case.
 \newblock {\em Asian Transport Studies}, 6:100006, 2020.
+
+\bibitem{ref30}
+Tenko Raykov.
+\newblock Behavioral scale reliability and measurement invariance evaluation
+  using latent variable modeling.
+\newblock {\em Behavior Therapy}, 35(2):299--331, 2004.
 
 \bibitem{ref14}
 James~B Schreiber, Amaury Nora, Frances~K Stage, Elizabeth~A Barlow, and Jamie
@@ -88,6 +201,16 @@ David~L. Streiner.
 \newblock Building a better model: An introduction to structural equation
   modelling.
 \newblock {\em The Canadian Journal of Psychiatry}, 51:317 -- 324, 2006.
+
+\bibitem{ref26}
+Barbara~G Tabachnick, Linda~S Fidell, and Jodie~B Ullman.
+\newblock {\em Using multivariate statistics}, volume~5.
+\newblock Pearson Boston, MA, 2007.
+
+\bibitem{ref28}
+Barbara~G Tabachnick, Linda~S Fidell, and Jodie~B Ullman.
+\newblock {\em Using multivariate statistics}, volume~5.
+\newblock Pearson Boston, MA, 2007.
 
 \bibitem{ref9}
 Yi~Wang, Miltos Kyriakidis, and Vinh~N. Dang.
