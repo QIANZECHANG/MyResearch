@@ -1,16 +1,57 @@
-\contentsline {chapter}{List of Tables}{iv}{section*.2}% 
-\contentsline {chapter}{List of Figures}{v}{section*.4}% 
-\contentsline {chapter}{\numberline {1}Results and Discussion}{1}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}Results for Objective 1 }{1}{section.1.1}% 
-\contentsline {subsection}{\numberline {1.1.1}First Task}{1}{subsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.1.2}Second Task}{4}{subsection.1.1.2}% 
-\contentsline {section}{\numberline {1.2}Results for Objective 2 }{9}{section.1.2}% 
-\contentsline {subsection}{\numberline {1.2.1}Model 1}{10}{subsection.1.2.1}% 
-\contentsline {subsection}{\numberline {1.2.2}Model 2}{12}{subsection.1.2.2}% 
-\contentsline {subsection}{\numberline {1.2.3}Model 3}{13}{subsection.1.2.3}% 
-\contentsline {subsection}{\numberline {1.2.4}Interpretation}{14}{subsection.1.2.4}% 
-\contentsline {subsection}{\numberline {1.2.5}Model Evaluation}{15}{subsection.1.2.5}% 
-\contentsline {section}{\numberline {1.3}Results for Objective 3}{16}{section.1.3}% 
-\contentsline {subsection}{\numberline {1.3.1}Selected Score and Selected Rate}{16}{subsection.1.3.1}% 
-\contentsline {subsection}{\numberline {1.3.2}Sankey Diagram}{18}{subsection.1.3.2}% 
-\contentsline {chapter}{\textbf {References}}{30}{figure.caption.48}% 
+\contentsline {chapter}{List of Tables}{v}{section*.2}% 
+\contentsline {chapter}{List of Figures}{vii}{section*.4}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Problem Identification}{6}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Research Goal and Objective}{6}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Thesis Structure}{6}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Literature Review}{8}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}A Study on the Dissemination Way of Disaster Information to Foreign Tourists to Japan}{8}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Incorporating human factors in emergency evacuation \IeC {\textendash } An overview of behavioral factors and models}{9}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Impact of ride-hailing apps on traditional LAMAT services in Asian developing cities: The Phnom Penh Case}{11}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Survey and Data}{12}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Survey Introduction}{12}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Question description}{12}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Scenario description}{18}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Methodology }{21}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Methodology for achieving Objective - 1 }{21}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Methodology for achieving Objective - 2 }{22}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Step 1. Constructing theoretical models}{23}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Step 2. Formulate the research hypothesis}{24}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Step 3. Define variables}{27}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}Step 4. Sample data collection and processing}{27}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}Step 5. Reliability and validity testing (EFA/CFA)}{29}{subsection.4.2.5}% 
+\contentsline {subsection}{\numberline {4.2.6}Step 6. Model Fit Test}{31}{subsection.4.2.6}% 
+\contentsline {subsection}{\numberline {4.2.7}Step 7. Model adjustment and modification}{32}{subsection.4.2.7}% 
+\contentsline {subsection}{\numberline {4.2.8}Step 8. Path coefficient analysis}{33}{subsection.4.2.8}% 
+\contentsline {subsection}{\numberline {4.2.9}Step 9. Hypothesis testing and conclusion analysis}{33}{subsection.4.2.9}% 
+\contentsline {section}{\numberline {4.3}Methodology for achieving Objective - 3}{34}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Selected Rate}{34}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Selected Score}{34}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Behavior Pattern}{34}{subsection.4.3.3}% 
+\contentsline {chapter}{\numberline {5}Results and Discussion}{37}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Results for Objective 1 }{37}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}First Task}{37}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Second Task}{40}{subsection.5.1.2}% 
+\contentsline {section}{\numberline {5.2}Results for Objective 2 }{45}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Test for manifest variables }{45}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Test for latent variables }{52}{subsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.2.3}Reliability }{52}{subsection.5.2.3}% 
+\contentsline {subsection}{\numberline {5.2.4}SEM model 1}{55}{subsection.5.2.4}% 
+\contentsline {subsubsection}{Path coefficient analysis for model 1}{55}{section*.61}% 
+\contentsline {subsubsection}{Model Fit Test for SEM model 1}{58}{section*.67}% 
+\contentsline {subsubsection}{Model adjustment and modification for model 1 }{58}{section*.69}% 
+\contentsline {subsection}{\numberline {5.2.5}SEM model 2}{59}{subsection.5.2.5}% 
+\contentsline {subsubsection}{Model Fit Test for SEM model 2}{59}{section*.71}% 
+\contentsline {subsubsection}{Path coefficient analysis for model 2}{59}{section*.73}% 
+\contentsline {subsubsection}{Confirmatory Factor Analysis (CFA)}{62}{section*.78}% 
+\contentsline {subsubsection}{Hypothesis testing and conclusion analysis}{64}{section*.85}% 
+\contentsline {subsubsection}{Interpretation}{65}{section*.86}% 
+\contentsline {section}{\numberline {5.3}Results for Objective 3}{65}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Selected Score and Selected Rate}{65}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}Sankey Diagram}{71}{subsection.5.3.2}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{79}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Conclusion}{79}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Suggestion for Safety Tips}{80}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Limitations}{80}{section.6.3}% 
+\contentsline {chapter}{\textbf {References}}{81}{section.6.3}% 
