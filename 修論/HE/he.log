@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  26 JAN 2022 06:17
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  29 JAN 2022 04:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,19 +586,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
  (./Chapters/Chapter_02.tex
 Chapter 2.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-2.
+3.
 (c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
  [8
 
 
 
 
 ] [9]
-Overfull \hbox (1.58652pt too wide) in paragraph at lines 34--34
+Overfull \hbox (1.58652pt too wide) in paragraph at lines 35--35
 []\OT1/cmr/bx/n/17.28 Impact of ride-hailing apps on tra-di-tional LAMAT
  []
 
@@ -864,9 +864,6 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `c4' on page 48 undefined on input line 499.
-
 [48] [49] [50] [51] [52
 
 
@@ -930,7 +927,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [63] [64] [65]
-Overfull \hbox (10.2207pt too wide) in paragraph at lines 1029--1053
+Overfull \hbox (10.2207pt too wide) in paragraph at lines 1030--1054
  [][] 
  []
 
@@ -941,7 +938,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (10.2207pt too wide) in paragraph at lines 1085--1109
+Overfull \hbox (10.2207pt too wide) in paragraph at lines 1086--1110
  [][] 
  []
 
@@ -961,12 +958,12 @@ File: Figure/Figure26c.jpg Graphic file (type bmp)
 File: Figure/Figure26d.jpg Graphic file (type bmp)
 <Figure/Figure26d.jpg>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1143--1167
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1144--1168
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1143--1167
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1144--1168
 []$[]$[] []$[]$[] 
  []
 
@@ -979,12 +976,12 @@ File: Figure/Figure27c.jpg Graphic file (type bmp)
 File: Figure/Figure27d.jpg Graphic file (type bmp)
 <Figure/Figure27d.jpg>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1172--1196
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1173--1197
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1172--1196
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1173--1197
 []$[]$[] []$[]$[] 
  []
 
@@ -1009,12 +1006,12 @@ File: Figure/figure32c.png Graphic file (type bmp)
 File: Figure/figure32d.png Graphic file (type bmp)
 <Figure/figure32d.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1219--1243
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1220--1244
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1219--1243
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1220--1244
 []$[]$[] []$[]$[] 
  []
 
@@ -1030,12 +1027,12 @@ File: Figure/figure33c.png Graphic file (type bmp)
 File: Figure/figure33d.png Graphic file (type bmp)
 <Figure/figure33d.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1248--1272
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1249--1273
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1248--1272
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1249--1273
 []$[]$[] []$[]$[] 
  []
 
@@ -1051,12 +1048,12 @@ File: Figure/figure34c.png Graphic file (type bmp)
 File: Figure/figure34d.png Graphic file (type bmp)
 <Figure/figure34d.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1277--1301
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1278--1302
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1277--1301
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1278--1302
 []$[]$[] []$[]$[] 
  []
 
@@ -1072,12 +1069,12 @@ File: Figure/figure35c.png Graphic file (type bmp)
 File: Figure/figure35d.png Graphic file (type bmp)
 <Figure/figure35d.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1306--1330
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1307--1331
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1306--1330
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1307--1331
 []$[]$[] []$[]$[] 
  []
 
@@ -1093,12 +1090,12 @@ File: Figure/figure36c.png Graphic file (type bmp)
 File: Figure/figure36d.png Graphic file (type bmp)
 <Figure/figure36d.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1336--1360
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1337--1361
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1336--1360
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1337--1361
 []$[]$[] []$[]$[] 
  []
 
@@ -1138,12 +1135,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 11285 strings out of 492763
- 183359 string characters out of 6143311
+ 11290 strings out of 492763
+ 183394 string characters out of 6143311
  379407 words of memory out of 5000000
- 15481 multiletter control sequences out of 15000+600000
+ 15486 multiletter control sequences out of 15000+600000
  19983 words of font info for 81 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  49i,17n,82p,3974b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on he.dvi (92 pages, 369684 bytes).
+Output written on he.dvi (92 pages, 370336 bytes).
