@@ -1,0 +1,162 @@
+\documentclass[a4paper,11pt,oneside,openany]{book}
+\usepackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows,positioning}
+\begin{document}
+\tikzstyle{block} = [rectangle, draw, fill=white, text width=6.5em, minimum height=2em]
+\tikzstyle{line} = [thick,->,>=stealth]
+\tikzstyle{circle} = [draw, ellipse,fill=white, text width=6em, minimum height=4em]
+\begin{figure*}[ht]
+\hspace{-0.5cm}
+\begin{tikzpicture}[node distance = 3.5cm, on grid]
+  %node
+  \node[block] (b1){\textbf{Earthquake}};
+  \node[block, below of=b1,yshift=2.5cm ] (b2){\textbf{Tsunami}};
+  \node[block, below of=b2,yshift=2.5cm] (b3){\textbf{Typhoon}};
+  \node[block, below of=b3,yshift=2.5cm] (b4){\textbf{Fire}};
+  \node[circle, right of=b3,xshift=1.5cm] (c1){\textbf{Training\\experience}};
+  \node[circle, below of=c1,yshift=-1.5cm,xshift=2.5cm] (c2){\textbf{Disaster\\prevention\\consciousness}};
+  \node[circle, below of=c1,yshift=-1.5cm,xshift=-2.5cm] (c3){\textbf{Knowledge}};
+  \node[block, left of=c3,yshift=0.8cm] (b5){\textbf{Earthquake}};
+  \node[block, left of=c3,yshift=-0.8cm] (b6){\textbf{Response\\during\\disaster}};
+  \node[block, right of=c2,xshift=1cm] (b9){\textbf{Others-oriented}};
+  \node[block, below of=b9,yshift=1.8cm] (b10){\textbf{Anxiety}};
+  \node[block, above of=b9,yshift=-1.8cm] (b8){\textbf{Sense of\\crisis}};
+  \node[block, above of=b8,yshift=-1.8cm] (b7){\textbf{Disastrous imagination}};
+  \node[circle, below of=c1,yshift=-5.5cm] (c4){\textbf{Attitude\\toward\\Safety Tips}};
+  \node[block, below of=c4,xshift=1.5cm] (b13){\textbf{Usefulness}};
+  \node[block, right of=b13] (b14){\textbf{Possibility\\of future use}};
+  \node[block, left of=b13] (b12){\textbf{Priority of use}};
+  \node[block, left of=b12] (b11){\textbf{Trust level}};
+  \node[block, above of=b11,yshift=-1cm] (b15){\textbf{Number of\\visited Japan}};
+ %edge
+  \draw [line] (c1) -- (b1);
+  \draw [line] (c1) -- (b2);
+  \draw [line] (c1) -- (b3);
+  \draw [line] (c1) -- (b4);
+  \draw [line] (c3) -- (b5);
+  \draw [line] (c3) -- (b6);
+  \draw [line] (c2) -- (b7);
+  \draw [line] (c2) -- (b8);
+  \draw [line] (c2) -- (b9);
+  \draw [line] (c2) -- (b10);
+  \draw [line] (c4) -- (b11);
+  \draw [line] (c4) -- (b12);
+  \draw [line] (c4) -- (b13);
+  \draw [line] (c4) -- (b14);
+  \draw [line] (b15) -- (c4);
+  \draw [<->,>=latex,bend right] (c1) to (c3);
+  \draw [<->,>=latex,bend left] (c2) to (c3);
+  \draw [line] (c1) to node[fill=white]{\textbf{H3}} (c4);
+  \draw [line] (c2) to node[fill=white]{\textbf{H1}} (c4);
+  \draw [line] (c3) to node[fill=white]{\textbf{H2}} (c4);
+\end{tikzpicture}
+  \caption{HAMER pipeline}
+  \label{pipeline}
+\end{figure*}
+
+\begin{figure*}[ht]
+\hspace{-0.5cm}
+\begin{tikzpicture}[node distance = 3.5cm, on grid]
+  %node
+  \node[block] (b1){\textbf{Earthquake}};
+  \node[block, below of=b1,yshift=2.5cm] (b2){\textbf{Tsunami}};
+  \node[block, below of=b2,yshift=2.5cm] (b3){\textbf{Typhoon}};
+  \node[block, below of=b3,yshift=2.5cm] (b4){\textbf{Fire}};
+  \node[block, below of=b4,yshift=2cm] (b5){\textbf{Number of\\Earthquake}};
+  \node[block, below of=b5,yshift=2cm] (b6){\textbf{Number of\\Tsunami}};
+  \node[block, below of=b6,yshift=2cm] (b7){\textbf{Number of\\Typhoon}};
+  \node[block, below of=b7,yshift=2cm] (b8){\textbf{Number of\\Fire}};
+  \node[circle, right of=b6,xshift=1.2cm] (c1){\textbf{Training\\experience}};
+  \node[circle, right of=b3,xshift=3.8cm] (c2){\textbf{Disaster\\prevention\\consciousness}};
+  \node[block, right of=c2,xshift=1cm] (b11){\textbf{Others-oriented}};
+  \node[block, below of=b11,yshift=2cm] (b12){\textbf{Anxiety}};
+  \node[block, below of=b12,yshift=2cm] (b13){\textbf{Apathy about\\disasters}};
+  \node[block, above of=b11,yshift=-2cm] (b10){\textbf{Sense of\\crisis}};
+  \node[block, above of=b10,yshift=-2cm] (b9){\textbf{Disastrous imagination}};
+  \node[circle, right of=b8,xshift=5cm] (c3){\textbf{Knowledge}};
+  \node[block, right of=c3,xshift=0.5cm,yshift=0.8cm] (b14){\textbf{Earthquake}};
+  \node[block, right of=c3,xshift=0.5cm,yshift=-0.8cm] (b15){\textbf{Response\\during\\disaster}};
+  \node[circle, below of=c1,yshift=-5.5cm,xshift=0.5cm] (c4){\textbf{Attitude\\toward\\Safety Tips}};
+  \node[block, below of=c4,xshift=1.5cm] (b18){\textbf{Usefulness}};
+  \node[block, right of=b18] (b19){\textbf{Possibility\\of future use}};
+  \node[block, left of=b18] (b17){\textbf{Priority of use}};
+  \node[block, left of=b17] (b16){\textbf{Trust level}};
+  \node[block, above of=b16,yshift=-1cm] (b20){\textbf{Number of\\visited Japan}};
+  \node[block, above of=b20,yshift=-2cm] (b21){\textbf{Number of\\visited\\countries}};
+  \node[block, above of=b21,yshift=-2cm] (b22){\textbf{Japanese\\level}};
+  \node[block, above of=b19] (b23){\textbf{Age}};
+ %edge
+  \draw [line] (c1) -- (b1);
+  \draw [line] (c1) -- (b2);
+  \draw [line] (c1) -- (b3);
+  \draw [line] (c1) -- (b4);
+  \draw [line] (c1) -- (b5);
+  \draw [line] (c1) -- (b6);
+  \draw [line] (c1) -- (b7);
+  \draw [line] (c1) -- (b8);
+  \draw [line] (c3) -- (b14);
+  \draw [line] (c3) -- (b15);
+  \draw [line] (c2) -- (b9);
+  \draw [line] (c2) -- (b10);
+  \draw [line] (c2) -- (b11);
+  \draw [line] (c2) -- (b12);
+  \draw [line] (c2) -- (b13);
+  \draw [line] (c4) -- (b16);
+  \draw [line] (c4) -- (b17);
+  \draw [line] (c4) -- (b18);
+  \draw [line] (c4) -- (b19);
+  \draw [line] (b20) -- (c4);
+  \draw [line] (b21) -- (c4);
+  \draw [line] (b22) -- (c4);
+  \draw [line] (b23) -- (c4);
+  \draw [<->,>=latex,bend right] (c1) to (c3);
+  \draw [<->,>=latex,bend left] (c2) to (c3);
+  \draw [line] (c1) -- (c4);
+  \draw [line] (c2) -- (c4);
+  \draw [line] (c3) -- (c4);
+\end{tikzpicture}
+  \caption{sem1}
+  \label{sem1}
+\end{figure*}
+
+\begin{table}[h]
+  \caption[Frequency Description of Age]{Frequency Description of Age (N=491)}
+  \label{table28c}
+  \vspace{1cm}
+  \centering
+  \begin{tabular}{c|cccc}
+ \hline
+         & Trust level                  & Priority of use              & Usefulness                   & Possibility of future use    \\
+\hline
+Age                         & 0.000 &0.035 & 0.000 & 0.076 \\
+Number of visited countries & 0.140                        & 0.270                        & 0.009                        & 0.049                        \\
+Number of visited Japan     & 0.000                        & 0.002                        & 0.000                        & 0.000                        \\
+Japanese level              & 0.000                        & 0.032                        & 0.000                        & 0.021            \\           
+
+ \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{figure*}[ht]
+\hspace{-0.5cm}
+\begin{tikzpicture}[node distance = 3.5cm, on grid]
+  %node
+  \node[circle] (c2){\textbf{Disaster\\prevention\\consciousness}};
+  \node[block, right of=c2,xshift=1cm,yshift=-1cm] (b9){\textbf{Others-oriented}};
+  \node[block, below of=b9,yshift=1.8cm] (b10){\textbf{Anxiety}};
+  \node[block, above of=b9,yshift=-1.8cm] (b8){\textbf{Sense of\\crisis}};
+  \node[block, above of=b8,yshift=-1.8cm] (b7){\textbf{Disastrous imagination}};
+ %edge
+  \draw [line] (c2) -- (b7);
+  \draw [line] (c2) -- (b8);
+  \draw [line] (c2) -- (b9);
+  \draw [line] (c2) -- (b10);
+\end{tikzpicture}
+  \caption{HAMER pipeline}
+  \label{pipeline}
+\end{figure*}
+
+\end{document}

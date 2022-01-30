@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  29 JAN 2022 04:34
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.sjis) (TeX Live 2019/W32TeX) (preloaded format=platex 2019.11.1)  31 JAN 2022 06:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -100,7 +100,10 @@ Package color Info: Driver file: dvipdfmx.def on input line 147.
 (c:/texlive/2019/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(./thesis-preamble.tex
+(c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./thesis-preamble.tex
 (c:/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
@@ -164,7 +167,7 @@ LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \macc@depth=\count105
 \c@MaxMatrixCols=\count106
-\dotsspace@=\muskip10
+\dotsspace@=\muskip11
 \c@parentequation=\count107
 \dspbrk@lvl=\count108
 \tag@help=\toks19
@@ -345,10 +348,6 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4793.
 LaTeX Info: Redefining \href on input line 5063.
 \c@Hy@tempcnt=\count124
-(c:/texlive/2019/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
 LaTeX Info: Redefining \url on input line 5152.
 \XeTeXLinkMargin=\dimen154
 \Fld@menulength=\count125
@@ -368,8 +367,7 @@ LaTeX Info: Redefining \pageref on input line 6497.
 \c@Hfootnote=\count128
 )
 Package hyperref Info: Driver: hdvipdfm.
-
-(c:/texlive/2019/texmf-dist/tex/latex/hyperref/hdvipdfm.def
+ (c:/texlive/2019/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 File: hdvipdfm.def 2019/09/28 v7.00a Hyperref driver for dvipdfm
 \pdfm@box=\box52
 \c@Hy@AnnotLevel=\count129
@@ -403,9 +401,7 @@ LaTeX Info: Redefining \labelcpageref on input line 2370.
 LaTeX Warning: Unused global option(s):
     [a4j].
 
-(./he.aux (./Chapters/Chapter_01.aux) (./Chapters/Chapter_02.aux)
-(./Chapters/Chapter_03.aux) (./Chapters/Chapter_04.aux)
-(./Chapters/Chapter_05.aux) (./Chapters/Chapter_06.aux))
+(./he.aux (./Chapters/Chapter_06.aux))
 \openout1 = `he.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
@@ -513,421 +509,66 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3
-
-
-
-
-])
+))
 \tf@toc=\write5
 \openout5 = `he.toc'.
 
- [4] (./he.lot
-[5
+ [3
 
 
 
 
-])
+] (./he.lot)
 \tf@lot=\write6
 \openout6 = `he.lot'.
 
- [6] (./he.lof [7
+
+[4
+
+
+
+
+] (./he.lof)
+\tf@lof=\write7
+\openout7 = `he.lof'.
+
+ [5
 
 
 
 
 ])
-\tf@lof=\write7
-\openout7 = `he.lof'.
+\openout2 = `Chapters/Chapter_06.aux'.
 
- [8])
-\openout2 = `Chapters/Chapter_01.aux'.
-
- (./Chapters/Chapter_01.tex
+ (./Chapters/Chapter_06.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
-File: Figure/Figure1.png Graphic file (type bmp)
-<Figure/Figure1.png>
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 11.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 15.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 15.
+File: Figure/Figure10.png Graphic file (type bmp)
+<Figure/Figure10.png>
 [1
 
 
 
 
 
-] [2]
-File: Figure/Figure3.png Graphic file (type bmp)
-<Figure/Figure3.png>
-File: Figure/Figure4.png Graphic file (type bmp)
-<Figure/Figure4.png>
- [3]
-File: Figure/Figure2a.png Graphic file (type bmp)
-<Figure/Figure2a.png>
-File: Figure/Figure2b.png Graphic file (type bmp)
-<Figure/Figure2b.png>
-File: Figure/Figure2c.png Graphic file (type bmp)
-<Figure/Figure2c.png>
-
-
-LaTeX Warning: Float too large for page by 18.90013pt on input line 73.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4] [5] [6
-
-
-]) [7]
-\openout2 = `Chapters/Chapter_02.aux'.
-
- (./Chapters/Chapter_02.tex
-Chapter 2.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-3.
-(c:/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
- [8
-
-
-
-
-] [9]
-Overfull \hbox (1.58652pt too wide) in paragraph at lines 35--35
-[]\OT1/cmr/bx/n/17.28 Impact of ride-hailing apps on tra-di-tional LAMAT
- []
-
-[10]) [11]
-\openout2 = `Chapters/Chapter_03.aux'.
-
- (./Chapters/Chapter_03.tex
-Chapter 3.
-[12
-
-
-
-
 ]
-Overfull \hbox (8.18141pt too wide) in paragraph at lines 60--79
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (2.73625pt too wide) in paragraph at lines 197--213
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13] [14] [15] [16] [17]
-Overfull \hbox (14.1062pt too wide) in paragraph at lines 249--282
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure5a.jpg Graphic file (type bmp)
-<Figure/Figure5a.jpg>
-File: Figure/Figure5b.jpg Graphic file (type bmp)
-<Figure/Figure5b.jpg>
-
-Underfull \hbox (badness 3826) in paragraph at lines 294--294
-[]\OT1/cmr/m/n/10.95 (b) |Dense area of wooden
- []
-
-File: Figure/Figure5c.jpg Graphic file (type bmp)
-<Figure/Figure5c.jpg>
-File: Figure/Figure5d.jpg Graphic file (type bmp)
-<Figure/Figure5d.jpg>
-
-Underfull \hbox (badness 10000) in paragraph at lines 306--306
-[]\OT1/cmr/m/n/10.95 (d) |Tokyo-Wooden houses
- []
-
-File: Figure/Figure5e.jpg Graphic file (type bmp)
-<Figure/Figure5e.jpg>
-File: Figure/Figure5f.jpg Graphic file (type bmp)
-<Figure/Figure5f.jpg>
-File: Figure/Figure5g.jpg Graphic file (type bmp)
-<Figure/Figure5g.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [18
-
-
-] [19] [20]
-\openout2 = `Chapters/Chapter_04.aux'.
-
- (./Chapters/Chapter_04.tex
-Chapter 4.
-File: Figure/Figure6.jpg Graphic file (type bmp)
-<Figure/Figure6.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21
-
-
-
-
-] [22]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 62.
- [23]
-File: Figure/Figure7.png Graphic file (type bmp)
-<Figure/Figure7.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (3.95172pt too wide) in paragraph at lines 87--88
-\OT1/cmr/m/n/12 etc, Per-sonal char-ac-ter-is-tics, like haz-ard ex-pe-ri-ence,
- knowl-edge, abil-i-ties/impairments,
- []
-
-File: Figure/Figure8.png Graphic file (type bmp)
-<Figure/Figure8.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[24]
-File: Figure/Figure30.jpg Graphic file (type bmp)
-<Figure/Figure30.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25]
-Overfull \hbox (8.68709pt too wide) in paragraph at lines 125--168
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure9.png Graphic file (type bmp)
-<Figure/Figure9.png>
-[26] [27] [28] [29] [30] [31]
-
-LaTeX Warning: Reference `step 8' on page 32 undefined on input line 305.
-
-[32] [33]
-File: Figure/Figure10.png Graphic file (type bmp)
-<Figure/Figure10.png>
 File: Figure/Figure11.png Graphic file (type bmp)
 <Figure/Figure11.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[34]
 File: Figure/Figure12.png Graphic file (type bmp)
 <Figure/Figure12.png>
- [35]) [36]
-\openout2 = `Chapters/Chapter_05.aux'.
-
- (./Chapters/Chapter_05.tex
-Chapter 5.
-File: Figure/Figure13.jpg Graphic file (type bmp)
-<Figure/Figure13.jpg>
-[37
-
-
-
-
-]
-File: Figure/Figure14.jpg Graphic file (type bmp)
-<Figure/Figure14.jpg>
-File: Figure/Figure15.jpg Graphic file (type bmp)
-<Figure/Figure15.jpg>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: Figure/Figure16.jpg Graphic file (type bmp)
-<Figure/Figure16.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure17.jpg Graphic file (type bmp)
-<Figure/Figure17.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[38]
-File: Figure/Figure18.jpg Graphic file (type bmp)
-<Figure/Figure18.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[39] [40]
-File: Figure/Figure19.jpg Graphic file (type bmp)
-<Figure/Figure19.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure20.jpg Graphic file (type bmp)
-<Figure/Figure20.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure21.jpg Graphic file (type bmp)
-<Figure/Figure21.jpg>
-[41]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure22.jpg Graphic file (type bmp)
-<Figure/Figure22.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[42] [43] [44]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[45
-
-
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[46] [47]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[48] [49] [50] [51] [52
-
-
-]
-Overfull \hbox (35.17499pt too wide) in paragraph at lines 540--597
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-File: Figure/Figure24.jpg Graphic file (type bmp)
-<Figure/Figure24.jpg>
-[53] [54]
-File: Figure/Figure23.jpg Graphic file (type bmp)
-<Figure/Figure23.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[55
-
-
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[56] [57]
-File: Figure/Figure25.png Graphic file (type bmp)
-<Figure/Figure25.png>
- [58
-
-
-] [59]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[60] [61]
-File: Figure/figure31.JPG Graphic file (type bmp)
-<Figure/figure31.JPG>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[62
-
-
-] [63] [64] [65]
-Overfull \hbox (10.2207pt too wide) in paragraph at lines 1030--1054
+[2] [3]
+Overfull \hbox (10.2207pt too wide) in paragraph at lines 77--101
  [][] 
  []
 
@@ -938,7 +579,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (10.2207pt too wide) in paragraph at lines 1086--1110
+Overfull \hbox (10.2207pt too wide) in paragraph at lines 133--157
  [][] 
  []
 
@@ -948,7 +589,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[66] [67] [68] [69] [70]
+[4] [5] [6] [7] [8]
+File: Figure/Figure28.jpg Graphic file (type bmp)
+<Figure/Figure28.jpg>
 File: Figure/Figure26a.jpg Graphic file (type bmp)
 <Figure/Figure26a.jpg>
 File: Figure/Figure26b.jpg Graphic file (type bmp)
@@ -958,14 +601,17 @@ File: Figure/Figure26c.jpg Graphic file (type bmp)
 File: Figure/Figure26d.jpg Graphic file (type bmp)
 <Figure/Figure26d.jpg>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1144--1168
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 198--222
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1144--1168
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 198--222
 []$[]$[] []$[]$[] 
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: Figure/Figure27a.jpg Graphic file (type bmp)
 <Figure/Figure27a.jpg>
@@ -976,171 +622,147 @@ File: Figure/Figure27c.jpg Graphic file (type bmp)
 File: Figure/Figure27d.jpg Graphic file (type bmp)
 <Figure/Figure27d.jpg>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1173--1197
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 227--251
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1173--1197
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 227--251
 []$[]$[] []$[]$[] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: Figure/Figure28.jpg Graphic file (type bmp)
-<Figure/Figure28.jpg>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[71
+[9
 
 
 ]
 File: Figure/figure32a.png Graphic file (type bmp)
 <Figure/figure32a.png>
-File: Figure/figure32b.png Graphic file (type bmp)
-<Figure/figure32b.png>
-File: Figure/figure32c.png Graphic file (type bmp)
-<Figure/figure32c.png>
-File: Figure/figure32d.png Graphic file (type bmp)
-<Figure/figure32d.png>
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1220--1244
-[][]$[]$[] []$[]$[]
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1220--1244
-[]$[]$[] []$[]$[] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: Figure/figure33a.png Graphic file (type bmp)
 <Figure/figure33a.png>
-File: Figure/figure33b.png Graphic file (type bmp)
-<Figure/figure33b.png>
-File: Figure/figure33c.png Graphic file (type bmp)
-<Figure/figure33c.png>
-File: Figure/figure33d.png Graphic file (type bmp)
-<Figure/figure33d.png>
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1249--1273
-[][]$[]$[] []$[]$[]
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1249--1273
-[]$[]$[] []$[]$[] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: Figure/figure34a.png Graphic file (type bmp)
 <Figure/figure34a.png>
-File: Figure/figure34b.png Graphic file (type bmp)
-<Figure/figure34b.png>
-File: Figure/figure34c.png Graphic file (type bmp)
-<Figure/figure34c.png>
-File: Figure/figure34d.png Graphic file (type bmp)
-<Figure/figure34d.png>
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1278--1302
-[][]$[]$[] []$[]$[]
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1278--1302
-[]$[]$[] []$[]$[] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 File: Figure/figure35a.png Graphic file (type bmp)
 <Figure/figure35a.png>
-File: Figure/figure35b.png Graphic file (type bmp)
-<Figure/figure35b.png>
-File: Figure/figure35c.png Graphic file (type bmp)
-<Figure/figure35c.png>
-File: Figure/figure35d.png Graphic file (type bmp)
-<Figure/figure35d.png>
+File: Figure/figure36a.png Graphic file (type bmp)
+<Figure/figure36a.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1307--1331
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 271--296
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1307--1331
-[]$[]$[] []$[]$[] 
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 271--296
+[]$[]$[] []$[]$[]
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: Figure/figure36a.png Graphic file (type bmp)
-<Figure/figure36a.png>
+File: Figure/figure32b.png Graphic file (type bmp)
+<Figure/figure32b.png>
+File: Figure/figure33b.png Graphic file (type bmp)
+<Figure/figure33b.png>
+File: Figure/figure34b.png Graphic file (type bmp)
+<Figure/figure34b.png>
+File: Figure/figure35b.png Graphic file (type bmp)
+<Figure/figure35b.png>
 File: Figure/figure36b.png Graphic file (type bmp)
 <Figure/figure36b.png>
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 301--326
+[][]$[]$[] []$[]$[]
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 301--326
+[]$[]$[] []$[]$[]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: Figure/figure32c.png Graphic file (type bmp)
+<Figure/figure32c.png>
+File: Figure/figure33c.png Graphic file (type bmp)
+<Figure/figure33c.png>
+File: Figure/figure34c.png Graphic file (type bmp)
+<Figure/figure34c.png>
+File: Figure/figure35c.png Graphic file (type bmp)
+<Figure/figure35c.png>
 File: Figure/figure36c.png Graphic file (type bmp)
 <Figure/figure36c.png>
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 331--356
+[][]$[]$[] []$[]$[]
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 331--356
+[]$[]$[] []$[]$[]
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: Figure/figure32d.png Graphic file (type bmp)
+<Figure/figure32d.png>
+File: Figure/figure33d.png Graphic file (type bmp)
+<Figure/figure33d.png>
+File: Figure/figure34d.png Graphic file (type bmp)
+<Figure/figure34d.png>
+File: Figure/figure35d.png Graphic file (type bmp)
+<Figure/figure35d.png>
 File: Figure/figure36d.png Graphic file (type bmp)
 <Figure/figure36d.png>
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1337--1361
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 361--386
 [][]$[]$[] []$[]$[]
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 1337--1361
-[]$[]$[] []$[]$[] 
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 361--386
+[]$[]$[] []$[]$[]
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [72] [73] [74] [75] [76] [77] [78]
-\openout2 = `Chapters/Chapter_06.aux'.
-
- (./Chapters/Chapter_06.tex
-Chapter 6.
-[79
+) [10] [11] [12] [13] [14] [15] [16
 
 
 
-
-]) [80] [81
-
-
-
-] [82] [83]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
- [84]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
- (./he.aux (./Chapters/Chapter_01.aux)
-(./Chapters/Chapter_02.aux) (./Chapters/Chapter_03.aux)
-(./Chapters/Chapter_04.aux) (./Chapters/Chapter_05.aux)
+] [17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
+ [19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
+ (./he.aux
 (./Chapters/Chapter_06.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 285.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
-Package rerunfilecheck Info: File `he.out' has not changed.
-(rerunfilecheck)             Checksum: 938C8FCDD3C0621E5EDEC2F9CF3455E1;3680.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 288.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
 
 
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Warning: File `he.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
+Package rerunfilecheck Info: Checksums for `he.out':
+(rerunfilecheck)             Before: 3C6314564F363BE77934FD57E2469AFB;735
+(rerunfilecheck)             After:  0D65D078EC39D34754CB87DEE38D6828;775.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
- 11290 strings out of 492763
- 183394 string characters out of 6143311
+ 10821 strings out of 492763
+ 175910 string characters out of 6143311
  379407 words of memory out of 5000000
- 15486 multiletter control sequences out of 15000+600000
- 19983 words of font info for 81 fonts, out of 8000000 for 9000
+ 15092 multiletter control sequences out of 15000+600000
+ 17821 words of font info for 71 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 49i,17n,82p,3974b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,14n,82p,1944b,681s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on he.dvi (92 pages, 370336 bytes).
+Output written on he.dvi (24 pages, 72148 bytes).
