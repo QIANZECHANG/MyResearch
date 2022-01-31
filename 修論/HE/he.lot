@@ -1,5 +1,56 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Result of Selected score and Selected rate in Scenario 1}}{5}{table.caption.10}% 
-\contentsline {table}{\numberline {1.2}{\ignorespaces Result of Selected score and Selected rate in Scenario 2}}{6}{table.caption.11}% 
-\contentsline {table}{\numberline {1.3}{\ignorespaces Result of Selected score and Selected rate in Scenario 3}}{7}{table.caption.12}% 
-\contentsline {table}{\numberline {1.4}{\ignorespaces Result of Selected score and Selected rate in Scenario 4}}{8}{table.caption.13}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Survey descriptions\relax }}{9}{table.caption.11}% 
+\contentsline {table}{\numberline {3.2}{\ignorespaces Questions descriptions of Item 1}}{10}{table.caption.12}% 
+\contentsline {table}{\numberline {3.3}{\ignorespaces Questions descriptions of Item 2}}{11}{table.caption.13}% 
+\contentsline {table}{\numberline {3.4}{\ignorespaces Questions descriptions of Item 3}}{12}{table.caption.14}% 
+\contentsline {table}{\numberline {3.5}{\ignorespaces Questions descriptions of Item 4}}{13}{table.caption.15}% 
+\contentsline {table}{\numberline {3.6}{\ignorespaces Questions descriptions of Item 6}}{14}{table.caption.16}% 
+\contentsline {table}{\numberline {3.7}{\ignorespaces Scenarios descriptions\relax }}{14}{table.caption.17}% 
+\contentsline {table}{\numberline {3.8}{\ignorespaces Available selections of Behaviors\relax }}{15}{table.caption.18}% 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Result of one-sample t-test}}{22}{table.caption.26}% 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Sample data of Gender*Q17\relax }}{22}{table.caption.27}% 
+\contentsline {table}{\numberline {4.3}{\ignorespaces Chi-square test result of Gender*Q17\_1 \relax }}{22}{table.caption.28}% 
+\contentsline {table}{\numberline {4.4}{\ignorespaces Chi-square test result of Gender*Q17\_2 \relax }}{23}{table.caption.29}% 
+\contentsline {table}{\numberline {4.5}{\ignorespaces Chi-square test result of Gender*Q17\_3 \relax }}{23}{table.caption.30}% 
+\contentsline {table}{\numberline {4.6}{\ignorespaces Chi-square test result of Gender*Q17\_4 \relax }}{23}{table.caption.31}% 
+\contentsline {table}{\numberline {4.7}{\ignorespaces ANOVA test result of Age*Q17\relax }}{24}{table.caption.32}% 
+\contentsline {table}{\numberline {4.8}{\ignorespaces ANOVA test result of Number of visited countries*Q17\relax }}{25}{table.caption.33}% 
+\contentsline {table}{\numberline {4.9}{\ignorespaces ANOVA test result of Times of visited Japan*Q17\relax }}{25}{table.caption.34}% 
+\contentsline {table}{\numberline {4.10}{\ignorespaces ANOVA test result of Japanese Level*Q17\relax }}{25}{table.caption.35}% 
+\contentsline {table}{\numberline {4.11}{\ignorespaces ANOVA test result of severity of the earthquake experienced*Q17\relax }}{26}{table.caption.36}% 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Latent variables and manifest variables used for SEM. \relax }}{31}{table.caption.40}% 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Statistical Description}}{39}{table.caption.42}% 
+\contentsline {table}{\numberline {5.3}{\ignorespaces Frequency Description of Country}}{40}{table.caption.43}% 
+\contentsline {table}{\numberline {5.4}{\ignorespaces Frequency Description of Gender}}{40}{table.caption.44}% 
+\contentsline {table}{\numberline {5.5}{\ignorespaces Frequency Description of Age}}{41}{table.caption.45}% 
+\contentsline {table}{\numberline {5.6}{\ignorespaces Frequency Description of number of visited country }}{41}{table.caption.46}% 
+\contentsline {table}{\numberline {5.7}{\ignorespaces Frequency Description of times of visited Japan}}{41}{table.caption.47}% 
+\contentsline {table}{\numberline {5.8}{\ignorespaces Frequency Description of Japanese Level}}{41}{table.caption.48}% 
+\contentsline {table}{\numberline {5.9}{\ignorespaces Frequency Description of severity of the earthquake experienced}}{42}{table.caption.49}% 
+\contentsline {table}{\numberline {5.10}{\ignorespaces Correlation test result of latent variables\relax }}{42}{table.caption.50}% 
+\contentsline {table}{\numberline {5.11}{\ignorespaces Reliability test}}{43}{table.caption.51}% 
+\contentsline {table}{\numberline {5.12}{\ignorespaces Regression Weights of SEM model 1 \relax }}{45}{table.caption.55}% 
+\contentsline {table}{\numberline {5.13}{\ignorespaces Standardized Regression Weights of SEM model 1 \relax }}{46}{table.caption.56}% 
+\contentsline {table}{\numberline {5.14}{\ignorespaces Covariances of SEM model 1\relax }}{46}{table.caption.57}% 
+\contentsline {table}{\numberline {5.15}{\ignorespaces Correlations of SEM model 1\relax }}{46}{table.caption.58}% 
+\contentsline {table}{\numberline {5.16}{\ignorespaces Model fit test for SEM model 1\relax }}{47}{table.caption.60}% 
+\contentsline {table}{\numberline {5.17}{\ignorespaces Model fit test for SEM model 2\relax }}{48}{table.caption.64}% 
+\contentsline {table}{\numberline {5.18}{\ignorespaces Regression Weights of SEM model 2 \relax }}{49}{table.caption.66}% 
+\contentsline {table}{\numberline {5.19}{\ignorespaces Standardized Regression Weights of SEM model 2 \relax }}{50}{table.caption.67}% 
+\contentsline {table}{\numberline {5.20}{\ignorespaces Covariances of SEM model 2\relax }}{50}{table.caption.68}% 
+\contentsline {table}{\numberline {5.21}{\ignorespaces Correlations of SEM model 2\relax }}{50}{table.caption.69}% 
+\contentsline {table}{\numberline {5.22}{\ignorespaces Standardized Regression Weights for measuring model Consiousness\relax }}{51}{table.caption.72}% 
+\contentsline {table}{\numberline {5.23}{\ignorespaces Squared Multiple Correlations for Consciousness\relax }}{52}{table.caption.73}% 
+\contentsline {table}{\numberline {5.24}{\ignorespaces Model fit test for measuring model Consciousness\relax }}{52}{table.caption.74}% 
+\contentsline {table}{\numberline {5.25}{\ignorespaces Convergent Validity\relax }}{53}{table.caption.75}% 
+\contentsline {table}{\numberline {5.26}{\ignorespaces Discriminant Validity \relax }}{53}{table.caption.76}% 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Result of Selected score and Selected rate in Scenario 1}}{59}{table.caption.82}% 
+\contentsline {table}{\numberline {6.2}{\ignorespaces Result of Selected score and Selected rate in Scenario 2}}{60}{table.caption.83}% 
+\contentsline {table}{\numberline {6.3}{\ignorespaces Result of Selected score and Selected rate in Scenario 3}}{61}{table.caption.84}% 
+\contentsline {table}{\numberline {6.4}{\ignorespaces Result of Selected score and Selected rate in Scenario 4}}{62}{table.caption.85}% 
+\addvspace {10\p@ }
