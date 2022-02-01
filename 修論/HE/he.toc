@@ -3,53 +3,53 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Research Problem Identification}{2}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}Research Goal and Objective}{4}{section.1.3}% 
-\contentsline {section}{\numberline {1.4}Thesis Structure}{4}{section.1.4}% 
-\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}% 
-\contentsline {chapter}{\numberline {3}Survey and Data}{9}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Survey Introduction}{9}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Question description}{10}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Scenario description}{14}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Objective 1: To understand foreign visitors' perceptions on Safety Tips.}{16}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Methodology}{16}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Result}{17}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Task 1}{17}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Task 2}{19}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}Task 3}{21}{subsection.4.2.3}% 
-\contentsline {chapter}{\numberline {5}Objective 2: To explore how respondents' perceptions on Safety Tips are influenced by their characteristics.}{27}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Methodology}{27}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Step 1. Constructing theoretical models}{28}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}Step 2. Formulate the research hypothesis}{28}{subsection.5.1.2}% 
-\contentsline {subsection}{\numberline {5.1.3}Step 3. Define variables}{32}{subsection.5.1.3}% 
-\contentsline {subsection}{\numberline {5.1.4}Step 4. Sample data collection and processing}{32}{subsection.5.1.4}% 
-\contentsline {subsection}{\numberline {5.1.5}Step 5. Reliability and validity testing (EFA/CFA)}{34}{subsection.5.1.5}% 
-\contentsline {subsection}{\numberline {5.1.6}Step 6. Model Fit Test}{36}{subsection.5.1.6}% 
-\contentsline {subsection}{\numberline {5.1.7}Step 7. Model adjustment and modification}{37}{subsection.5.1.7}% 
-\contentsline {subsection}{\numberline {5.1.8}Step 8. Path coefficient analysis}{37}{subsection.5.1.8}% 
-\contentsline {subsection}{\numberline {5.1.9}Step 9. Hypothesis testing and conclusion analysis}{38}{subsection.5.1.9}% 
-\contentsline {section}{\numberline {5.2}Result}{38}{section.5.2}% 
-\contentsline {subsection}{\numberline {5.2.1}Test for latent variables }{38}{subsection.5.2.1}% 
-\contentsline {subsection}{\numberline {5.2.2}Reliability }{39}{subsection.5.2.2}% 
-\contentsline {subsection}{\numberline {5.2.3}SEM model 1}{44}{subsection.5.2.3}% 
-\contentsline {subsubsection}{Path coefficient analysis}{44}{section*.53}% 
-\contentsline {subsubsection}{Model Fit Test}{47}{section*.59}% 
-\contentsline {subsubsection}{Model adjustment and modification}{47}{section*.61}% 
-\contentsline {subsection}{\numberline {5.2.4}SEM model 2}{48}{subsection.5.2.4}% 
-\contentsline {subsubsection}{Model Fit Test}{48}{section*.63}% 
-\contentsline {subsubsection}{Path coefficient analysis}{48}{section*.65}% 
-\contentsline {subsubsection}{Confirmatory Factor Analysis (CFA)}{51}{section*.70}% 
-\contentsline {subsubsection}{Hypothesis testing and conclusion analysis}{53}{section*.77}% 
-\contentsline {subsubsection}{Interpretation}{54}{section*.78}% 
-\contentsline {chapter}{\numberline {6}Objective 3: To explore categories of information seeking and evacuation behaviors.}{55}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Methodology}{55}{section.6.1}% 
-\contentsline {subsection}{\numberline {6.1.1}Selected Rate}{55}{subsection.6.1.1}% 
-\contentsline {subsection}{\numberline {6.1.2}Selected Score}{56}{subsection.6.1.2}% 
-\contentsline {subsection}{\numberline {6.1.3}Sankey Diagram of behavior categories}{56}{subsection.6.1.3}% 
-\contentsline {section}{\numberline {6.2}Result}{57}{section.6.2}% 
-\contentsline {subsection}{\numberline {6.2.1}Selected Score and Selected Rate}{57}{subsection.6.2.1}% 
-\contentsline {subsection}{\numberline {6.2.2}Sankey Diagram of behavior categories}{63}{subsection.6.2.2}% 
-\contentsline {chapter}{\numberline {7}Conclusion}{70}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Conclusion}{70}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}Suggestion for Safety Tips}{71}{section.7.2}% 
-\contentsline {section}{\numberline {7.3}Limitations}{71}{section.7.3}% 
-\contentsline {chapter}{\textbf {References}}{72}{section.7.3}% 
+\contentsline {section}{\numberline {1.3}Research Goal and Objective}{5}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Thesis Structure}{5}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}Survey and Data}{10}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Survey Introduction}{10}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Question description}{11}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Scenario description}{15}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Foreign visitors' perceptions on Safety Tips.}{17}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Methodology}{17}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Result}{18}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Task 1}{18}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Task 2}{21}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Task 3}{23}{subsection.4.2.3}% 
+\contentsline {chapter}{\numberline {5}Effect of characteristics on perception}{29}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Methodology}{29}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Step 1. Constructing theoretical models}{30}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Step 2. Formulate the research hypothesis}{30}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1.3}Step 3. Define variables}{34}{subsection.5.1.3}% 
+\contentsline {subsection}{\numberline {5.1.4}Step 4. Sample data collection and processing}{34}{subsection.5.1.4}% 
+\contentsline {subsection}{\numberline {5.1.5}Step 5. Reliability and validity testing (EFA/CFA)}{35}{subsection.5.1.5}% 
+\contentsline {subsection}{\numberline {5.1.6}Step 6. Model Fit Test}{37}{subsection.5.1.6}% 
+\contentsline {subsection}{\numberline {5.1.7}Step 7. Model adjustment and modification}{38}{subsection.5.1.7}% 
+\contentsline {subsection}{\numberline {5.1.8}Step 8. Path coefficient analysis}{39}{subsection.5.1.8}% 
+\contentsline {subsection}{\numberline {5.1.9}Step 9. Hypothesis testing and conclusion analysis}{40}{subsection.5.1.9}% 
+\contentsline {section}{\numberline {5.2}Result}{40}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Test for latent variables }{40}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Reliability }{44}{subsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.2.3}SEM model 1}{46}{subsection.5.2.3}% 
+\contentsline {subsubsection}{Path coefficient analysis}{46}{section*.52}% 
+\contentsline {subsubsection}{Model Fit Test}{50}{section*.58}% 
+\contentsline {subsubsection}{Model adjustment and modification}{50}{section*.60}% 
+\contentsline {subsection}{\numberline {5.2.4}SEM model 2}{51}{subsection.5.2.4}% 
+\contentsline {subsubsection}{Model Fit Test}{51}{section*.62}% 
+\contentsline {subsubsection}{Path coefficient analysis}{51}{section*.64}% 
+\contentsline {subsubsection}{Confirmatory Factor Analysis (CFA)}{54}{section*.69}% 
+\contentsline {subsubsection}{Hypothesis testing and conclusion analysis}{56}{section*.76}% 
+\contentsline {subsubsection}{Discussions}{57}{section*.77}% 
+\contentsline {chapter}{\numberline {6}Disaster response behaviors}{58}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Methodology}{58}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}Selected Rate}{58}{subsection.6.1.1}% 
+\contentsline {subsection}{\numberline {6.1.2}Selected Score}{58}{subsection.6.1.2}% 
+\contentsline {subsection}{\numberline {6.1.3}Sankey diagram of behavior categorization and behavior patterns}{59}{subsection.6.1.3}% 
+\contentsline {section}{\numberline {6.2}Result}{60}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}Selected Score and Selected Rate}{60}{subsection.6.2.1}% 
+\contentsline {subsection}{\numberline {6.2.2}Sankey diagram of behavior categorization and behavior patterns}{66}{subsection.6.2.2}% 
+\contentsline {chapter}{\numberline {7}Conclusion}{75}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Conclusion}{75}{section.7.1}% 
+\contentsline {section}{\numberline {7.2}Suggestion for Safety Tips}{76}{section.7.2}% 
+\contentsline {section}{\numberline {7.3}Limitations}{76}{section.7.3}% 
+\contentsline {chapter}{\textbf {References}}{77}{section.7.3}% 
